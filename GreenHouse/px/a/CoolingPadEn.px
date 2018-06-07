@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="converters"/>
+  <module name="gx"/>
+  <module name="kitPx"/>
+</import>
+<content>
+<ScrollPane>
+
+  <CanvasPane name="content" viewSize="200.0,125.0">
+
+    <Label layout="0.0,25.0,200.0,105.0" background="#ffffc0"/>
+
+    <Label layout="0.0,0.0,200.0,30.0" image="file:^GreenHouse/image/Common/YE.png" font="bold 15.0pt Microsoft JhengHei" foreground="black"/>
+
+    <Label layout="0.0,0.0,200.0,30.0" text="CoolingPad" font="bold 18.0pt Microsoft JhengHei" foreground="black"/>
+
+    <Label layout="28.0,40.0,90.0,42.0" text="Switch" font="bold 18.0pt Microsoft JhengHei" foreground="black"/>
+
+    <Label layout="115.0,40.0,42.0,42.0" font="18.0pt Microsoft JhengHei">
+      <ValueBinding ord="station:|slot:/GH/area$(area)/CoolingPad/valControl/out/value">
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value="Open"/>
+          <String name="falseValue" value="Close"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Label>
+
+    <ImageButton layout="5.0,90.0,60.0,30.0" text="&#x624b;&#x52d5;&#x958b;&#x555f;">
+      <ActionBinding ord="station:|slot:/GH/area$(area)/CoolingPad/emergencyActive/fireVoidAction" widgetEvent="actionPerformed"/>
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+    </ImageButton>
+
+    <ImageButton layout="71.0,90.0,60.0,30.0" text="&#x624b;&#x52d5;&#x95dc;&#x9589;">
+      <ActionBinding ord="station:|slot:/GH/area$(area)/CoolingPad/emergencyInactive/fireVoidAction" widgetEvent="actionPerformed"/>
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+    </ImageButton>
+
+    <ImageButton layout="135.0,90.0,60.0,30.0" text="&#x7cfb;&#x7d71;&#x63a7;&#x5236;">
+      <ActionBinding ord="station:|slot:/GH/area$(area)/CoolingPad/emergencyAuto/fireVoidAction" widgetEvent="actionPerformed"/>
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+    </ImageButton>
+
+  </CanvasPane>
+
+</ScrollPane>
+</content>
+</px>

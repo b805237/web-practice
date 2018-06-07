@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="converters"/>
+  <module name="gx"/>
+  <module name="schedule"/>
+  <module name="wbutil"/>
+  <module name="workbench"/>
+</import>
+<content>
+<ScrollPane>
+
+  <CanvasPane name="content" viewSize="1000.0,550.0" valign="top">
+
+    <Scheduler layout="200.0,0.0,800.0,550.0">
+      <WbViewBinding ord="station:|slot:/GH/area3/Schedule/Irrigation"/>
+    </Scheduler>
+
+    <PxInclude layout="0.0,0.0,200.0,550.0" ord="file:^GreenHouse/px/b/LeftBar.px" variables="Select=s:c|topbar=s:$36"/>
+
+  </CanvasPane>
+
+</ScrollPane>
+</content>
+</px>

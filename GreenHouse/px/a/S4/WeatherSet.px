@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="converters"/>
+  <module name="gx"/>
+  <module name="kitPx"/>
+  <module name="workbench"/>
+</import>
+<content>
+<ScrollPane>
+
+  <CanvasPane name="content" viewSize="490.0,150.0">
+
+    <PxInclude layout="0.0,0.0,490.0,150.0" ord="file:^GreenHouse/px/a/Weather0.px" variables="area=s:$34"/>
+
+  </CanvasPane>
+
+</ScrollPane>
+</content>
+</px>

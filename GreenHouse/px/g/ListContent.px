@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="converters"/>
+  <module name="gx"/>
+</import>
+<content>
+<ScrollPane>
+
+  <CanvasPane name="content" viewSize="990.0,30.0">
+
+    <Label layout="0.0,0.0,130.0,30.0" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#bed2dc">
+      <ValueBinding ord="station:|slot:/GH/areaName/area$(area)">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+      <ValueBinding ord="station:|slot:/GH/Topbar/$(Style)1/out/value">
+        <IBooleanToSimple name="background">
+          <Brush name="trueValue" value="#666699"/>
+          <Brush name="falseValue" value="#666699"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="275.0,0.0,165.0,30.0" font="bold 16.0pt Microsoft JhengHei" foreground="#202020" background="#bed2dc">
+      <ValueBinding ord="station:|slot:/GH/area$(area)/$(device)/$u8a2d$u5099$u9023$u7dda$u7570$u5e38/out/value">
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value="&#x7570;&#x5e38;"/>
+          <String name="falseValue" value="&#x6b63;&#x5e38;"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+      <ValueBinding ord="station:|slot:/GH/Topbar/$(Style)1/out/value">
+        <IBooleanToSimple name="background">
+          <Brush name="trueValue" value="#d2d2d4"/>
+          <Brush name="falseValue" value="#d2d2d4"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="445.0,0.0,305.0,30.0" font="bold 16.0pt Microsoft JhengHei" foreground="#202020" background="#bed2dc">
+      <ValueBinding ord="station:|slot:/GH/area$(area)/$(device)/JSONObjDecomposer/okTime">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+      <ValueBinding ord="station:|slot:/GH/Topbar/$(Style)1/out/value">
+        <IBooleanToSimple name="background">
+          <Brush name="trueValue" value="#b4b4b6"/>
+          <Brush name="falseValue" value="#b4b4b6"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="755.0,0.0,235.0,30.0" font="bold 16.0pt Microsoft JhengHei" foreground="#202020" background="#bed2dc">
+      <ValueBinding ord="station:|slot:/GH/GreenHouse$(area)$(device)/Ip_port_id">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+      <ValueBinding ord="station:|slot:/GH/Topbar/$(Style)1/out/value">
+        <IBooleanToSimple name="background">
+          <Brush name="trueValue" value="#d2d2d4"/>
+          <Brush name="falseValue" value="#d2d2d4"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="135.0,0.0,135.0,30.0" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#bed2dc">
+      <ValueBinding ord="station:|slot:/GH/area$(area)/$(device)/DisplayName/out/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+      <ValueBinding ord="station:|slot:/GH/Topbar/$(Style)1/out/value">
+        <IBooleanToSimple name="background">
+          <Brush name="trueValue" value="#8dafb1"/>
+          <Brush name="falseValue" value="#8dafb1"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Label>
+
+  </CanvasPane>
+
+</ScrollPane>
+</content>
+</px>

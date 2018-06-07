@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+  <title>Test</title>
+  
+	<!-- Javascript -->
+		<!-- bajaScript model -->
+    	<script type="text/javascript" src="js/bajascript/bs.min.js"></script>
+	<!-- End Javascript -->
+	
+	<!-- Javascript Code-->
+		<script type="text/javascript">
+		
+		function random(minNum,maxNum)
+		{
+			var n = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
+			return n;
+		}
+		
+		var room = ['/D03/F01E1/R125','/D03/F01E1/R126','/D03/F01E1/R127','/D03/F01E1/R128','/D03/F01E1/R129','/D03/F01E1/R130','/D03/F01E1/R131','/D03/F01E1/R132','/D03/F01E1/R133','/D03/F01E1/R134','/D03/F01E1/R135','/D03/F01E1/R136','/D03/F01E1/R137','/D03/F01E1/R138','/D03/F01E1/R139','/D03/F01E1/R140','/D03/F01E1/R141','/D03/F01E1/R142','/D03/F01E1/R143','/D03/F01E1/R144','/D03/F01E1/R145','/D03/F01E1/R146','/D03/F01E1/R147','/D03/F01E1/R148','/D03/F01E1/R149','/D03/F01W1/R101','/D03/F01W1/R102','/D03/F01W1/R103','/D03/F01W1/R104','/D03/F01W1/R105','/D03/F01W1/R106','/D03/F01W1/R107','/D03/F01W1/R108','/D03/F01W1/R109','/D03/F01W1/R110','/D03/F01W1/R111','/D03/F01W1/R112','/D03/F01W1/R113','/D03/F01W1/R114','/D03/F01W1/R115','/D03/F01W1/R116','/D03/F01W1/R117','/D03/F01W1/R118','/D03/F01W1/R119','/D03/F01W1/R120','/D03/F01W1/R121','/D03/F01W1/R122','/D03/F01W1/R123','/D03/F01W1/R124'];
+		
+		function Init()
+		{	// 啟動baja
+			baja.start();
+			//for(b=2;b<100;b++)
+			for(b=0;b<room.length;b++)
+			{	// 
+				var check_in_datetime = "2017/" + random(1,12) + "/" + random(1,29) + " " + random(0,23) + ":" + random(0,59) + ":" + random(0,59);
+				var check_out_datetime = null;
+				//var fk_chart_id = room[random(0,48)];
+				var fk_chart_id = room[b];
+				var people_count = random(1,10);
+				var out_datetime = random(0,1);
+				
+				if ( out_datetime == 1 )
+				{
+					var previous = new Date(check_in_datetime);
+					previous.setDate((previous.getDate()+random(1,7)));
+					check_out_datetime = previous.getFullYear() + "/" + (previous.getMonth()+1) + "/" + previous.getDate() + " " + random(0,23) + ":" + random(0,59) + ":" + random(0,59);
+				}
+
+				if ( out_datetime == 1 )
+				{
+					var sql = 	"INSERT INTO [HJC_TEST].[dbo].[tems_dorm_set] ([fk_chart_id],[check_in_datetime],[people_count],[check_out_datetime],[create_datetime]) VALUES " + 
+								"('"+fk_chart_id+"','"+check_in_datetime+"','"+people_count+"','"+check_out_datetime+"','"+check_in_datetime+"')";
+				}
+				else
+				{
+					var sql = 	"INSERT INTO [HJC_TEST].[dbo].[tems_dorm_set] ([fk_chart_id],[check_in_datetime],[people_count],[check_out_datetime],[create_datetime]) VALUES " + 
+								"('"+fk_chart_id+"','"+check_in_datetime+"','"+people_count+"',"+check_out_datetime+",'"+check_in_datetime+"')";
+				}
+				
+				baja.outln(sql);
+			}
+		}
+		</script>
+	<!-- END Javascript Code-->
+</head>
+
+<body onload="Init();" onunload="baja.stop();">
+	test
+	<pre id="bajaScriptOut"></pre>
+</body>
+</html>

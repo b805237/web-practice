@@ -1,0 +1,292 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+
+<head>
+	<title>桃園智慧溫室系統</title>
+	<!-- CSS -->
+	<!-- Bootstrap -->
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+	<!-- Top bar -->
+	<link href="css/bar.css" rel="stylesheet" type="text/css">
+	<!-- 樣式 -->
+	<link href="css/main.css" rel="stylesheet" type="text/css">
+	<!-- 廣告輪播樣式 -->
+	<link href="css/abgneBlock.css" rel="stylesheet" type="text/css">
+	<!-- End CSS -->
+
+	<!-- Javascript -->
+	<!-- bajaScript model -->
+	<script type="text/javascript" src="js/bajascript/bs.min.js"></script>
+	<!-- jQuery 套件工具 -->
+	<script src="js/jquery/jquery.js"></script>
+	<!-- Web相關函數 -->
+	<script type="text/javascript" src="js/WebTool.js"></script>
+	<!-- Niagara資料讀取 -->
+	<script type="text/javascript" src="js/NiagaraDataJson.js"></script>
+	<!-- Slot處理函數 -->
+	<script type="text/javascript" src="js/SlotData.js"></script>
+	<!-- topbar網頁聯結 -->
+	<script type="text/javascript" src="set/topbar.js"></script>
+	<!-- Rightbar -->
+	<script type="text/javascript" src="set/board.js"></script>
+	<!-- 一般工具 -->
+	<script src="js/temsUtil.js"></script>
+	<!-- 縮圖工具 -->
+	<script src="js/image-scale.js"></script>
+	<!-- End Javascript -->
+
+	<!-- CSS SET -->
+	<style type="text/css">
+	
+	.li02-btn-name{
+		float:left;
+		position:relative;
+		left:100px;
+		top:-25px;
+	}
+	.li02-btn-name2{
+		float:left;
+		z-index: 620;
+		position:relative;
+		left:284px;
+		top:-55px;
+	}
+	#li02-01-n{
+		margin-right:15px;
+	}
+	</style>
+	<!-- End CSS SET -->
+
+	<!-- Javascript Code-->
+	<script type="text/javascript">
+		// 縮放畫面時，調整比例
+		
+		$(document).ready(function(){
+		    $(window).resize(function() {
+		        ScaleBody("page-body");
+		    });
+			$("#iframe01").load(function()
+			   { // 頁面編號
+					var li = window.location.hash.substr(1);
+					var tempOp = 0;
+					switch(li)
+					{
+						case "li02_01":
+							tempOp = 0;
+						break;
+						case "li02_02":
+							tempOp = 1;
+						break;
+						case "li02_03":
+							tempOp = 2;
+						break;
+						case "li02_04":
+							tempOp = 3;
+						break;
+						case "li02_05":
+							tempOp = 4;
+						break;
+						case "li02_06":
+							tempOp = 5;
+						break;
+					}
+				// 先取得必要的元素並用 jQuery 包裝
+				// 再來取得 $block 的高度及設定動畫時間
+				var $block = $('#abgneBlock'),
+					$slides = $('ul.list', $block),
+					_width = $block.width(),
+					$li = $('li', $slides),
+					_animateSpeed = 600;
+				// 產生 li 選項
+				var _str = '';
+				//var ControlName = ["溫室","太陽能"];
+				for(var i=0, j=$li.length;i<j;i++){
+					// 每一個 li 都有自己的 className = playerControl_號碼
+					_str += '<li class="playerControl_' + (i+1) + '"></li>';				
+					//_str += '<li class="playerControl_1">' + ControlName[i] + '</li>';
+				}
+				
+				// 產生 ul 並把 li 選項加到其中
+				// 並幫 li 加上 mouseover 事件
+				$('<ul class="playerControl"></ul>').html(_str).appendTo($slides.parent()).css('top', function(){
+					// 把 .playerControl 移到位置
+					return (10);
+				}).find('li').mouseover(function(){
+					var $this = $(this);
+					$this.addClass('current').siblings('.current').removeClass('current');
+					// 移動位置到相對應的號碼
+					$slides.stop().animate({
+						left: _width * $this.index() * -1
+					}, _animateSpeed);
+					//alert(document.getElementById("abgneBlock").innerHTML);
+					return false;
+				}).eq(tempOp).mouseover();
+				
+				   });
+		});
+		// 初始化
+		function Init() {
+			// 縮放比例
+			ScaleBody("page-body");
+			// 啟動baja
+			baja.start();
+			// 網頁聯結
+			menuInit();
+			
+			// 使用者資訊
+			postForJSON('/tatungService/user/getUserInfo',
+				'', function (ret) {
+					document.getElementById("userInfo").innerHTML = '　| ' + ret.userName + '　你好!!';
+				})
+			//alert((''+li).indexOf('li02'));
+		}
+	</script>
+	<!-- END Javascript Code-->
+
+	<body onload="Init();" onunload="baja.stop();">
+		<div id="page-body" class="container">
+			<!-- Top Bar -->
+			<div class="col-sm-12 left-content">
+				<div class="row logout">
+					<div class="col-sm-7">
+						<b id="scale-text"></b>
+						　
+						<b id="url-text" style="color:#FFFFFF;"></b>
+					</div>
+					<div class="col-sm-4">
+						<span id="userInfo" style="color:#000000;float:right;"></span>
+						<div>
+							<a href="#" id="english">English</a>
+							<img src="images/flag/united_states_of_america_flag.png" class="scale" width="6%" data-scale="best-fill' data-align='center" style="float:right;margin:3px"></img>
+							<img src="images/flag/united_kingdom_flag.png" class="scale" width="6%" data-scale="best-fill' data-align='center" style="float:right;margin:3px"></img>
+						</div>
+						<div>
+							<a href="#" id="chinese">Chinese</a>
+							<img src="images/flag/taiwan_flag.png" class="scale" width="5%" data-scale="best-fill' data-align='center" style="float:right;margin:3px"></img>
+						</div>
+					</div>
+					<a href="#" id="out">| 登出</a>
+				</div>
+				<div class="row header-top">
+					<header>
+						<div class="header-home-btn">
+							<ul class="list-unstyled">
+							<li><a href="#" id="0"><img src="images/menu/logo.svg" alt=""></a></li>
+							</ul>
+						</div>
+						<div class="header-btn">
+							<ul class="list-unstyled" id="menu01">
+							</ul>
+							
+						</div>
+						<div class="logo_btn">
+							<ul class="list-unstyled">
+							<li><a href="#" id="0"><img src="images/menu/logo_tatung.svg" alt=""></a></li>
+							</ul>
+						</div>
+						
+					</header>
+				</div>
+			</div>
+			<!-- End Top Bar -->
+			<div class="deviceAlarm" style="pointer-events: none;">
+				<embed id="deviceAlarm" src="images/menu/btn06_Alarm.svg" width="100" height="50" type="image/svg+xml"></embed>
+			</div>
+			<div class="limitAlarm" style="pointer-events: none;">
+				<embed id="limitAlarm" src="images/menu/btn07_Alarm.svg" width="100" height="50" type="image/svg+xml"></embed>
+			</div>
+			<div class="alarmNumber" style="pointer-events: none;">
+				<embed id="alarmNumber" src="images/bar_alarm.svg" width="30" height="30" type="image/svg+xml"></embed>
+			</div>
+			<div class="alarmNumber2" style="pointer-events: none;">
+				<embed id="alarmNumber2" src="images/bar_alarm.svg" width="30" height="30" type="image/svg+xml"></embed>
+			</div>
+			
+			<!-- Side Bar -->
+			<div id="side-bar">
+				<div id="Test" class="col-sm-12 content" style="background-color:#dcdcdc; height:32px">
+					<div class="row home_and_back_btn" >
+						<a href="#" id="home" class="home_btn"> <img src="images/home_green.png" width="24" height="24" alt=""/> 回首頁</a>
+					</div>
+					<div class="row home_and_back_btn" >
+						<a href="javascript:history.back(-1);" class="back_btn"> <img src="images/return_green.png" width="24" height="24" alt=""/> 回上頁</a>
+					</div>
+					
+					<div class="sidebar1-btn" id="menu02d" style="z-index:1;">
+						<ul class="list-unstyled" id="menu02">
+						</ul>
+						<div class="li02-btn-name" style="pointer-events: none;" >
+							<embed id="li02_01_n" src="images/menu/btn02_01_normal2.svg" width="98" height="25" type="image/svg+xml"></embed>							
+							<embed id="li02_02_n" src="images/menu/btn02_02_normal2.svg" width="96" height="25" type="image/svg+xml"></embed>							
+							<embed id="li02_03_n" src="images/menu/btn02_03_normal2.svg" width="96" height="25" type="image/svg+xml"></embed>
+							<embed id="li02_04_n" src="images/menu/btn02_04_normal2.svg" width="96" height="25" type="image/svg+xml"></embed>
+							<embed id="li02_05_n" src="images/menu/btn02_05_normal2.svg" width="96" height="25" type="image/svg+xml"></embed>
+							<embed id="li02_06_n" src="images/menu/btn02_06_normal2.svg" width="96" height="25" type="image/svg+xml" ></embed>
+						</div>
+						<div class="li02-btn-name2" style="pointer-events: none;" >
+							<embed id="li02_01_c" src="images/menu/btn02_01_click2.svg" width="98" height="25" type="image/svg+xml"></embed>
+							<embed id="li02_02_c" src="images/menu/btn02_02_click2.svg" width="96" height="25" type="image/svg+xml"></embed>
+							<embed id="li02_03_c" src="images/menu/btn02_03_click2.svg" width="96" height="25" type="image/svg+xml"></embed>
+							<embed id="li02_04_c" src="images/menu/btn02_04_click2.svg" width="96" height="25" type="image/svg+xml"></embed>
+							<embed id="li02_05_c" src="images/menu/btn02_05_click2.svg" width="96" height="25" type="image/svg+xml"></embed>
+							<embed id="li02_06_c" src="images/menu/btn02_06_click2.svg" width="96" height="25" type="image/svg+xml"></embed>
+						</div>
+					</div>
+					
+					<div class="col-sm-0 content" style="background-color:#fffff;">
+						<div class="sidebar2-btn" id="menu03Style">
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		
+			<!-- End Side Bar -->
+			
+			<!-- Board -->
+			
+			<div id="board-body" class="board">
+				<div id="abgneBlock" style="margin-top:5px;">
+					<ul class="list">
+						<li><a target="_blank" href="#"><embed id="board-img-01" src="images/board-01.svg" width="200" height="550" type="image/svg+xml"></embed></a></li>
+						<li><a target="_blank" href="#"><embed id="board-img-02" src="images/board-02.svg" width="200" height="550" type="image/svg+xml"></embed></a></li>
+						<li><a target="_blank" href="#"><embed id="board-img-03" src="images/board-03.svg" width="200" height="550" type="image/svg+xml"></embed></a></li>
+						<li><a target="_blank" href="#"><embed id="board-img-04" src="images/board-04.svg" width="200" height="550" type="image/svg+xml"></embed></a></li>
+						<li><a target="_blank" href="#"><embed id="board-img-05" src="images/board-05.svg" width="200" height="550" type="image/svg+xml"></embed></a></li>
+						<li><a target="_blank" href="#"><embed id="board-img-06" src="images/board-06.svg" width="200" height="550" type="image/svg+xml"></embed></a></li>
+					</ul>
+				</div>
+			</div> 
+			<!-- End Board -->
+			<input type = "hidden"  id = "li02_01Temp" value = "">
+			<input type = "hidden"  id = "li02_02Temp" value = "">
+			<input type = "hidden"  id = "li02_03Temp" value = "">
+			<input type = "hidden"  id = "li02_04Temp" value = "">
+			<input type = "hidden"  id = "li02_05Temp" value = "">
+			<input type = "hidden"  id = "li02_06Temp" value = "">
+			<!-- MAIN -->
+			<div id="wrapper">
+				<div class="main">
+					<!-- MAIN CONTENT -->
+					<div class="main-content">
+						<div class="container-fluid">
+							<!-- 1 Row -->
+							<div class="row">
+								<div class="col-md-12" style="margin-top:-5px; ">
+									<iframe id="iframe01"  width="1000"  height="550" align="left" scrolling="no" frameborder="0"></iframe>
+								</div>
+							</div>
+							<!-- END 1 Row -->
+							<!-- 2 Row botton board -->
+							
+						</div>
+						<!-- END MAIN CONTENT -->
+					</div>
+				</div>
+				<!-- END MAIN -->
+			</div>
+	</body>
+<!-- Niagara Data Debug -->
+<!--<pre id="bajaScriptOut"></pre>-->
+</html>

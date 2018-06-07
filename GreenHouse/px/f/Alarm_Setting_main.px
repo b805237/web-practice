@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="converters"/>
+  <module name="gx"/>
+  <module name="kitPx"/>
+  <module name="workbench"/>
+</import>
+<content>
+<ScrollPane>
+
+  <CanvasPane name="content" viewSize="1000.0,550.0" valign="top">
+
+    <Label layout="905.0,75.0,88.0,35.0" background="#b4b4b6"/>
+
+    <Label layout="905.0,115.0,88.0,35.0" background="#b4b4b6"/>
+
+    <Label layout="905.0,155.0,88.0,35.0" background="#b4b4b6"/>
+
+    <Label layout="905.0,195.0,88.0,35.0" background="#b4b4b6"/>
+
+    <Label layout="905.0,235.0,88.0,35.0" background="#b4b4b6"/>
+
+    <Label layout="905.0,275.0,88.0,35.0" background="#b4b4b6"/>
+
+    <Label layout="815.0,75.0,88.0,35.0" background="#d2d2d4"/>
+
+    <Label layout="815.0,115.0,88.0,35.0" background="#d2d2d4"/>
+
+    <Label layout="815.0,155.0,88.0,35.0" background="#d2d2d4"/>
+
+    <Label layout="815.0,195.0,88.0,35.0" background="#d2d2d4"/>
+
+    <Label layout="815.0,235.0,88.0,35.0" background="#d2d2d4"/>
+
+    <Label layout="815.0,275.0,88.0,35.0" background="#d2d2d4"/>
+
+    <Label layout="725.0,75.0,88.0,35.0" background="#b4b4b6"/>
+
+    <Label layout="725.0,115.0,88.0,35.0" background="#b4b4b6"/>
+
+    <Label layout="725.0,155.0,88.0,35.0" background="#b4b4b6"/>
+
+    <Label layout="725.0,195.0,88.0,35.0" background="#b4b4b6"/>
+
+    <Label layout="725.0,235.0,88.0,35.0" background="#b4b4b6"/>
+
+    <Label layout="725.0,275.0,88.0,35.0" background="#b4b4b6"/>
+
+    <Label layout="545.0,275.0,88.0,35.0" background="#b4b4b6"/>
+
+    <Label layout="545.0,235.0,88.0,35.0" background="#b4b4b6"/>
+
+    <Label layout="545.0,195.0,88.0,35.0" background="#b4b4b6"/>
+
+    <Label layout="545.0,155.0,88.0,35.0" background="#b4b4b6"/>
+
+    <Label layout="545.0,115.0,88.0,35.0" background="#b4b4b6"/>
+
+    <Label layout="545.0,75.0,88.0,35.0" background="#b4b4b6"/>
+
+    <Label layout="635.0,275.0,88.0,35.0" background="#d2d2d4"/>
+
+    <Label layout="635.0,235.0,88.0,35.0" background="#d2d2d4"/>
+
+    <Label layout="635.0,195.0,88.0,35.0" background="#d2d2d4"/>
+
+    <Label layout="635.0,155.0,88.0,35.0" background="#d2d2d4"/>
+
+    <Label layout="635.0,115.0,88.0,35.0" background="#d2d2d4"/>
+
+    <Label layout="635.0,75.0,88.0,35.0" background="#d2d2d4"/>
+
+    <Label layout="450.0,275.0,88.0,35.0" background="#d2d2d4"/>
+
+    <Label layout="450.0,235.0,88.0,35.0" background="#d2d2d4"/>
+
+    <Label layout="450.0,195.0,88.0,35.0" background="#d2d2d4"/>
+
+    <Label layout="450.0,155.0,88.0,35.0" background="#d2d2d4"/>
+
+    <Label layout="450.0,115.0,88.0,35.0" background="#d2d2d4"/>
+
+    <Label layout="450.0,75.0,88.0,35.0" background="#d2d2d4"/>
+
+    <Label layout="360.0,275.0,88.0,35.0" background="#b4b4b6"/>
+
+    <Label layout="360.0,235.0,88.0,35.0" background="#b4b4b6"/>
+
+    <Label layout="360.0,195.0,88.0,35.0" background="#b4b4b6"/>
+
+    <Label layout="360.0,155.0,88.0,35.0" background="#b4b4b6"/>
+
+    <Label layout="360.0,115.0,88.0,35.0" background="#b4b4b6"/>
+
+    <Label layout="360.0,75.0,88.0,35.0" background="#b4b4b6"/>
+
+    <Label layout="268.0,75.0,88.0,35.0" background="#d2d2d4"/>
+
+    <Label layout="268.0,115.0,88.0,35.0" background="#d2d2d4"/>
+
+    <Label layout="268.0,155.0,88.0,35.0" background="#d2d2d4"/>
+
+    <Label layout="268.0,195.0,88.0,35.0" background="#d2d2d4"/>
+
+    <Label layout="268.0,235.0,88.0,35.0" background="#d2d2d4"/>
+
+    <Label layout="268.0,275.0,88.0,35.0" background="#d2d2d4"/>
+
+    <Label layout="175.0,75.0,88.0,35.0" background="#b4b4b6"/>
+
+    <Label layout="175.0,115.0,88.0,35.0" background="#b4b4b6"/>
+
+    <Label layout="175.0,155.0,88.0,35.0" background="#b4b4b6"/>
+
+    <Label layout="175.0,195.0,88.0,35.0" background="#b4b4b6"/>
+
+    <Label layout="175.0,235.0,88.0,35.0" background="#b4b4b6"/>
+
+    <Label layout="175.0,275.0,88.0,35.0" background="#b4b4b6"/>
+
+    <Label layout="85.0,155.0,88.0,35.0" background="#d2d2d4"/>
+
+    <Label layout="85.0,195.0,88.0,35.0" background="#d2d2d4"/>
+
+    <Label layout="85.0,235.0,88.0,35.0" background="#d2d2d4"/>
+
+    <Label layout="85.0,275.0,88.0,35.0" background="#d2d2d4"/>
+
+    <Label layout="85.0,115.0,88.0,35.0" background="#d2d2d4"/>
+
+    <Label layout="85.0,75.0,88.0,35.0" background="#d2d2d4"/>
+
+    <Label layout="85.0,45.0,88.0,30.0" text="&#x6eab;&#x5ea6;&#x4e0a;&#x9650;" font="bold 18.0pt Microsoft JhengHei" foreground="white" background="#a39b86"/>
+
+    <Label layout="175.0,45.0,88.0,30.0" text="&#x6eab;&#x5ea6;&#x4e0b;&#x9650;" font="bold 18.0pt Microsoft JhengHei" foreground="white" background="#a39b86"/>
+
+    <Label layout="268.0,45.0,88.0,30.0" text="&#x6fd5;&#x5ea6;&#x4e0a;&#x9650;" font="bold 18.0pt Microsoft JhengHei" foreground="white" background="#a39b86"/>
+
+    <Label layout="361.0,45.0,87.0,30.0" text="&#x6fd5;&#x5ea6;&#x4e0b;&#x9650;" font="bold 18.0pt Microsoft JhengHei" foreground="white" background="#a39b86"/>
+
+    <SaveButton layout="890.0,510.0,100.0,30.0" image="module://icons/x16/save.png">
+      <WsAnnotation name="wsAnnotation" value="14,14,8"/>
+    </SaveButton>
+
+    <Label layout="451.0,45.0,87.0,30.0" text="&#x7167;&#x5ea6;&#x4e0a;&#x9650;" font="bold 18.0pt Microsoft JhengHei" foreground="white" background="#a39b86"/>
+
+    <Label layout="85.0,10.0,453.0,35.0" text="&#x65e5;&#x9593;" font="bold 18.0pt Microsoft JhengHei UI" foreground="white" background="#8dafb1"/>
+
+    <Label layout="545.0,10.0,448.0,35.0" text="&#x591c;&#x9593;" font="bold 18.0pt Microsoft JhengHei UI" foreground="white" background="#8dafb1"/>
+
+    <Label layout="145.0,84.0,30.0,20.0" text="&#xb0;C" font="bold 16.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="311.0,79.0,44.0,26.0" text="g/m3" font="bold 8.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="235.0,84.0,30.0,25.0" text="&#xb0;C" font="bold 16.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="508.0,84.0,30.0,20.0" text="lux" font="bold 16.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="0.0,115.0,80.0,35.0" font="bold 18.0pt Microsoft JhengHei UI" foreground="white" background="#666699">
+      <ValueBinding ord="station:|slot:/GH/areaName/area2">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="545.0,45.0,88.0,30.0" text="&#x6eab;&#x5ea6;&#x4e0a;&#x9650;" font="bold 18.0pt Microsoft JhengHei" foreground="white" background="#a39b86"/>
+
+    <Label layout="635.0,45.0,87.0,30.0" text="&#x6eab;&#x5ea6;&#x4e0b;&#x9650;" font="bold 18.0pt Microsoft JhengHei" foreground="white" background="#a39b86"/>
+
+    <Label layout="725.0,45.0,88.0,30.0" text="&#x6fd5;&#x5ea6;&#x4e0a;&#x9650;" font="bold 18.0pt Microsoft JhengHei" foreground="white" background="#a39b86"/>
+
+    <Label layout="815.0,45.0,88.0,30.0" text="&#x6fd5;&#x5ea6;&#x4e0b;&#x9650;" font="bold 18.0pt Microsoft JhengHei" foreground="white" background="#a39b86"/>
+
+    <Label layout="905.0,45.0,88.0,30.0" text="&#x7167;&#x5ea6;&#x4e0a;&#x9650;" font="bold 18.0pt Microsoft JhengHei" foreground="white" background="#a39b86"/>
+
+    <Label layout="605.0,84.0,30.0,25.0" text="&#xb0;C" font="bold 16.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="695.0,84.0,30.0,25.0" text="&#xb0;C" font="bold 16.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="962.0,84.0,30.0,20.0" text="lux" font="bold 16.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="145.0,124.0,30.0,25.0" text="&#xb0;C" font="bold 16.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="235.0,124.0,30.0,25.0" text="&#xb0;C" font="bold 16.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="508.0,124.0,30.0,20.0" text="lux" font="bold 16.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="605.0,124.0,30.0,25.0" text="&#xb0;C" font="bold 16.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="695.0,124.0,30.0,25.0" text="&#xb0;C" font="bold 16.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="962.0,124.0,30.0,20.0" text="lux" font="bold 16.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="0.0,155.0,80.0,35.0" font="bold 18.0pt Microsoft JhengHei UI" foreground="white" background="#666699">
+      <ValueBinding ord="station:|slot:/GH/areaName/area3">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="145.0,164.0,30.0,25.0" text="&#xb0;C" font="bold 16.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="235.0,164.0,30.0,25.0" text="&#xb0;C" font="bold 16.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="508.0,164.0,30.0,20.0" text="lux" font="bold 16.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="0.0,195.0,80.0,35.0" font="bold 18.0pt Microsoft JhengHei UI" foreground="white" background="#666699">
+      <ValueBinding ord="station:|slot:/GH/areaName/area4">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="605.0,164.0,30.0,25.0" text="&#xb0;C" font="bold 16.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="695.0,164.0,30.0,25.0" text="&#xb0;C" font="bold 16.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="962.0,164.0,30.0,20.0" text="lux" font="bold 16.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="145.0,204.0,30.0,25.0" text="&#xb0;C" font="bold 16.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="235.0,204.0,30.0,25.0" text="&#xb0;C" font="bold 16.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="508.0,204.0,30.0,20.0" text="lux" font="bold 16.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="605.0,204.0,30.0,25.0" text="&#xb0;C" font="bold 16.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="695.0,204.0,30.0,25.0" text="&#xb0;C" font="bold 16.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="962.0,204.0,30.0,20.0" text="lux" font="bold 16.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="0.0,235.0,80.0,35.0" font="bold 18.0pt Microsoft JhengHei UI" foreground="white" background="#666699">
+      <ValueBinding ord="station:|slot:/GH/areaName/area5">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="145.0,244.0,30.0,25.0" text="&#xb0;C" font="bold 16.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="235.0,244.0,30.0,25.0" text="&#xb0;C" font="bold 16.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="508.0,244.0,30.0,20.0" text="lux" font="bold 16.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="0.0,275.0,80.0,35.0" font="bold 18.0pt Microsoft JhengHei UI" foreground="white" background="#666699">
+      <ValueBinding ord="station:|slot:/GH/areaName/area6">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="605.0,244.0,30.0,25.0" text="&#xb0;C" font="bold 16.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="695.0,244.0,30.0,25.0" text="&#xb0;C" font="bold 16.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="962.0,244.0,30.0,20.0" text="lux" font="bold 16.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="145.0,284.0,30.0,25.0" text="&#xb0;C" font="bold 16.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="235.0,284.0,30.0,25.0" text="&#xb0;C" font="bold 16.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="508.0,284.0,30.0,20.0" text="lux" font="bold 16.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="605.0,284.0,30.0,25.0" text="&#xb0;C" font="bold 16.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="695.0,284.0,30.0,25.0" text="&#xb0;C" font="bold 16.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="962.0,284.0,30.0,20.0" text="lux" font="bold 16.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="311.0,120.0,44.0,25.0" text="g/m3" font="bold 8.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="311.0,159.0,44.0,26.0" text="g/m3" font="bold 8.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="311.0,199.0,44.0,26.0" text="g/m3" font="bold 8.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="311.0,239.0,44.0,26.0" text="g/m3" font="bold 8.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="311.0,279.0,44.0,26.0" text="g/m3" font="bold 8.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="401.0,79.0,44.0,26.0" text="g/m3" font="bold 8.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="401.0,120.0,44.0,25.0" text="g/m3" font="bold 8.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="401.0,159.0,44.0,26.0" text="g/m3" font="bold 8.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="401.0,199.0,44.0,26.0" text="g/m3" font="bold 8.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="401.0,239.0,44.0,26.0" text="g/m3" font="bold 8.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="401.0,279.0,44.0,26.0" text="g/m3" font="bold 8.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="771.0,79.0,44.0,26.0" text="g/m3" font="bold 8.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="771.0,120.0,44.0,25.0" text="g/m3" font="bold 8.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="771.0,159.0,44.0,26.0" text="g/m3" font="bold 8.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="771.0,199.0,44.0,26.0" text="g/m3" font="bold 8.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="771.0,239.0,44.0,26.0" text="g/m3" font="bold 8.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="771.0,279.0,44.0,26.0" text="g/m3" font="bold 8.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="860.0,79.0,45.0,26.0" text="g/m3" font="bold 8.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="860.0,120.0,45.0,25.0" text="g/m3" font="bold 8.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="860.0,159.0,45.0,26.0" text="g/m3" font="bold 8.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="860.0,199.0,45.0,26.0" text="g/m3" font="bold 8.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="860.0,239.0,45.0,26.0" text="g/m3" font="bold 8.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="860.0,279.0,45.0,26.0" text="g/m3" font="bold 8.0pt Microsoft JhengHei" foreground="#606060"/>
+
+    <Label layout="0.0,75.0,80.0,35.0" font="bold 18.0pt Microsoft JhengHei UI" foreground="white" background="#666699">
+      <ValueBinding ord="station:|slot:/GH/areaName/area1">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <GenericFieldEditor layout="110.0,85.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area1/CoolingSolSelectorDay/InsideTempDay/OutOfRangeAlarmExt/offnormalAlgorithm/highLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="200.0,85.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area1/CoolingSolSelectorDay/InsideTempDay/OutOfRangeAlarmExt/offnormalAlgorithm/lowLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="280.0,85.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area1/CoolingSolSelectorDay/InsideHumidityDay/OutOfRangeAlarmExt/offnormalAlgorithm/highLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="370.0,85.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area1/CoolingSolSelectorDay/InsideHumidityDay/OutOfRangeAlarmExt/offnormalAlgorithm/lowLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="570.0,85.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area1/CoolingSolSelectorNight/InsideTempNight/OutOfRangeAlarmExt/offnormalAlgorithm/highLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="660.0,85.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area1/CoolingSolSelectorNight/InsideTempNight/OutOfRangeAlarmExt/offnormalAlgorithm/lowLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="740.0,85.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area1/CoolingSolSelectorNight/InsideHumidityNight/OutOfRangeAlarmExt/offnormalAlgorithm/highLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="830.0,85.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area1/CoolingSolSelectorNight/InsideHumidityNight/OutOfRangeAlarmExt/offnormalAlgorithm/lowLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="470.0,85.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area1/CoolingSolSelectorDay/InsideLuxDay/OutOfRangeAlarmExt/offnormalAlgorithm/highLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="925.0,85.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area1/CoolingSolSelectorNight/InsideLuxDay/OutOfRangeAlarmExt/offnormalAlgorithm/highLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="110.0,125.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area2/CoolingSolSelectorDay/InsideTempDay/OutOfRangeAlarmExt/offnormalAlgorithm/highLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="200.0,125.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area2/CoolingSolSelectorDay/InsideTempDay/OutOfRangeAlarmExt/offnormalAlgorithm/lowLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="280.0,125.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area2/CoolingSolSelectorDay/InsideHumidityDay/OutOfRangeAlarmExt/offnormalAlgorithm/highLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="370.0,125.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area2/CoolingSolSelectorDay/InsideHumidityDay/OutOfRangeAlarmExt/offnormalAlgorithm/lowLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="470.0,125.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area2/CoolingSolSelectorDay/InsideLuxDay/OutOfRangeAlarmExt/offnormalAlgorithm/highLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="570.0,125.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area2/CoolingSolSelectorNight/InsideTempNight/OutOfRangeAlarmExt/offnormalAlgorithm/highLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="660.0,125.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area2/CoolingSolSelectorNight/InsideTempNight/OutOfRangeAlarmExt/offnormalAlgorithm/lowLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="740.0,125.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area2/CoolingSolSelectorNight/InsideHumidityNight/OutOfRangeAlarmExt/offnormalAlgorithm/highLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="830.0,125.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area2/CoolingSolSelectorNight/InsideHumidityNight/OutOfRangeAlarmExt/offnormalAlgorithm/lowLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="925.0,125.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area2/CoolingSolSelectorNight/InsideLuxDay/OutOfRangeAlarmExt/offnormalAlgorithm/highLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor enabled="false" layout="925.0,165.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area3/CoolingSolSelectorNight/InsideLuxDay/OutOfRangeAlarmExt/offnormalAlgorithm/highLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor enabled="false" layout="830.0,165.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area3/CoolingSolSelectorNight/InsideHumidityNight/OutOfRangeAlarmExt/offnormalAlgorithm/lowLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor enabled="false" layout="740.0,165.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area3/CoolingSolSelectorNight/InsideHumidityNight/OutOfRangeAlarmExt/offnormalAlgorithm/highLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor enabled="false" layout="660.0,165.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area3/CoolingSolSelectorNight/InsideTempNight/OutOfRangeAlarmExt/offnormalAlgorithm/lowLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor enabled="false" layout="570.0,165.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area3/CoolingSolSelectorNight/InsideTempNight/OutOfRangeAlarmExt/offnormalAlgorithm/highLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor enabled="false" layout="470.0,165.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area3/CoolingSolSelectorDay/InsideLuxDay/OutOfRangeAlarmExt/offnormalAlgorithm/highLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor enabled="false" layout="370.0,165.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area3/CoolingSolSelectorDay/InsideHumidityDay/OutOfRangeAlarmExt/offnormalAlgorithm/lowLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor enabled="false" layout="280.0,165.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area3/CoolingSolSelectorDay/InsideHumidityDay/OutOfRangeAlarmExt/offnormalAlgorithm/highLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor enabled="false" layout="200.0,165.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area3/CoolingSolSelectorDay/InsideTempDay/OutOfRangeAlarmExt/offnormalAlgorithm/lowLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor enabled="false" layout="110.0,165.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area3/CoolingSolSelectorDay/InsideTempDay/OutOfRangeAlarmExt/offnormalAlgorithm/highLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor enabled="false" layout="925.0,205.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area4/CoolingSolSelectorNight/InsideLuxDay/OutOfRangeAlarmExt/offnormalAlgorithm/highLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor enabled="false" layout="830.0,205.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area4/CoolingSolSelectorNight/InsideHumidityNight/OutOfRangeAlarmExt/offnormalAlgorithm/lowLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor enabled="false" layout="740.0,205.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area4/CoolingSolSelectorNight/InsideHumidityNight/OutOfRangeAlarmExt/offnormalAlgorithm/highLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor enabled="false" layout="660.0,205.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area4/CoolingSolSelectorNight/InsideTempNight/OutOfRangeAlarmExt/offnormalAlgorithm/lowLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor enabled="false" layout="570.0,205.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area4/CoolingSolSelectorNight/InsideTempNight/OutOfRangeAlarmExt/offnormalAlgorithm/highLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor enabled="false" layout="470.0,205.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area4/CoolingSolSelectorDay/InsideLuxDay/OutOfRangeAlarmExt/offnormalAlgorithm/highLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor enabled="false" layout="370.0,205.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area4/CoolingSolSelectorDay/InsideHumidityDay/OutOfRangeAlarmExt/offnormalAlgorithm/lowLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor enabled="false" layout="280.0,205.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area4/CoolingSolSelectorDay/InsideHumidityDay/OutOfRangeAlarmExt/offnormalAlgorithm/highLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor enabled="false" layout="200.0,205.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area4/CoolingSolSelectorDay/InsideTempDay/OutOfRangeAlarmExt/offnormalAlgorithm/lowLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor enabled="false" layout="110.0,205.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area4/CoolingSolSelectorDay/InsideTempDay/OutOfRangeAlarmExt/offnormalAlgorithm/highLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor enabled="false" layout="110.0,245.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area5/CoolingSolSelectorDay/InsideTempDay/OutOfRangeAlarmExt/offnormalAlgorithm/highLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor enabled="false" layout="200.0,285.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area6/CoolingSolSelectorDay/InsideTempDay/OutOfRangeAlarmExt/offnormalAlgorithm/lowLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor enabled="false" layout="280.0,285.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area6/CoolingSolSelectorDay/InsideHumidityDay/OutOfRangeAlarmExt/offnormalAlgorithm/highLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor enabled="false" layout="370.0,285.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area6/CoolingSolSelectorDay/InsideHumidityDay/OutOfRangeAlarmExt/offnormalAlgorithm/lowLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor enabled="false" layout="470.0,285.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area6/CoolingSolSelectorDay/InsideLuxDay/OutOfRangeAlarmExt/offnormalAlgorithm/highLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor enabled="false" layout="570.0,285.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area6/CoolingSolSelectorNight/InsideTempNight/OutOfRangeAlarmExt/offnormalAlgorithm/highLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor enabled="false" layout="660.0,285.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area6/CoolingSolSelectorNight/InsideTempNight/OutOfRangeAlarmExt/offnormalAlgorithm/lowLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor enabled="false" layout="740.0,285.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area6/CoolingSolSelectorNight/InsideHumidityNight/OutOfRangeAlarmExt/offnormalAlgorithm/highLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor enabled="false" layout="830.0,285.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area6/CoolingSolSelectorNight/InsideHumidityNight/OutOfRangeAlarmExt/offnormalAlgorithm/lowLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor enabled="false" layout="925.0,285.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area6/CoolingSolSelectorNight/InsideLuxDay/OutOfRangeAlarmExt/offnormalAlgorithm/highLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor enabled="false" layout="925.0,245.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area5/CoolingSolSelectorNight/InsideLuxDay/OutOfRangeAlarmExt/offnormalAlgorithm/highLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor enabled="false" layout="830.0,245.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area5/CoolingSolSelectorNight/InsideHumidityNight/OutOfRangeAlarmExt/offnormalAlgorithm/lowLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor enabled="false" layout="740.0,245.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area5/CoolingSolSelectorNight/InsideHumidityNight/OutOfRangeAlarmExt/offnormalAlgorithm/highLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor enabled="false" layout="660.0,245.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area5/CoolingSolSelectorNight/InsideTempNight/OutOfRangeAlarmExt/offnormalAlgorithm/lowLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor enabled="false" layout="570.0,245.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area5/CoolingSolSelectorNight/InsideTempNight/OutOfRangeAlarmExt/offnormalAlgorithm/highLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor enabled="false" layout="470.0,245.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area5/CoolingSolSelectorDay/InsideLuxDay/OutOfRangeAlarmExt/offnormalAlgorithm/highLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor enabled="false" layout="370.0,245.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area5/CoolingSolSelectorDay/InsideHumidityDay/OutOfRangeAlarmExt/offnormalAlgorithm/lowLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor enabled="false" layout="280.0,245.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area5/CoolingSolSelectorDay/InsideHumidityDay/OutOfRangeAlarmExt/offnormalAlgorithm/highLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor enabled="false" layout="200.0,245.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area5/CoolingSolSelectorDay/InsideTempDay/OutOfRangeAlarmExt/offnormalAlgorithm/lowLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor enabled="false" layout="110.0,285.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area6/CoolingSolSelectorDay/InsideTempDay/OutOfRangeAlarmExt/offnormalAlgorithm/highLimit"/>
+    </GenericFieldEditor>
+
+  </CanvasPane>
+
+</ScrollPane>
+</content>
+</px>

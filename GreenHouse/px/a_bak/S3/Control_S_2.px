@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="converters"/>
+  <module name="gx"/>
+  <module name="kitPx"/>
+</import>
+<content>
+<ScrollPane>
+
+  <CanvasPane name="content" viewSize="1000.0,550.0" valign="top">
+
+    <Label layout="0.0,100.0,200.0,30.0" image="file:^GreenHouse/image/icon/YE.png"/>
+
+    <Label layout="200.0,95.0,800.0,355.0" image="file:^GreenHouse/image/Control_935x375.jpg" halign="left" valign="top"/>
+
+    <Label layout="0.0,195.0,200.0,31.0" text="&#x3000;&#x3000;&#x53f3;&#x5074; &#x5929;&#x7a97;" font="bold 20.0pt Microsoft JhengHei" foreground="#404040" halign="left">
+      <ValueBinding hyperlink="file:^GreenHouse/px/a/S3/Control_S_5.px"/>
+    </Label>
+
+    <Label layout="0.0,227.0,200.0,31.0" text="&#x3000;&#x3000;&#x5de6;&#x5074; &#x5929;&#x7a97;" font="bold 20.0pt Microsoft JhengHei" foreground="#404040" halign="left">
+      <ValueBinding hyperlink="file:^GreenHouse/px/a/S3/Control_S_6.px"/>
+    </Label>
+
+    <Label layout="0.0,323.0,200.0,31.0" text="&#x3000;&#x3000;&#x5167;&#x906e;&#x5149;&#x7db2;" font="bold 20.0pt Microsoft JhengHei" foreground="#404040" halign="left">
+      <ValueBinding hyperlink="file:^GreenHouse/px/a/S3/Control_S_9.px"/>
+    </Label>
+
+    <Label layout="0.0,355.0,200.0,31.0" text="&#x3000;&#x3000;&#x5167;&#x4fdd;&#x6eab;&#x7db2;" font="bold 20.0pt Microsoft JhengHei" foreground="#404040" halign="left">
+      <ValueBinding hyperlink="file:^GreenHouse/px/a/S3/Control_S_10.px"/>
+    </Label>
+
+    <Label layout="0.0,387.0,200.0,31.0" text="&#x3000;&#x3000;&#x5167;&#x5faa;&#x74b0;&#x6247;" font="bold 20.0pt Microsoft JhengHei" foreground="#404040" halign="left">
+      <ValueBinding hyperlink="file:^GreenHouse/px/a/S3/Control_S_11.px"/>
+    </Label>
+
+    <Label layout="0.0,291.0,200.0,31.0" text="&#x3000;&#x3000;&#x5916;&#x5074; &#x5074;&#x7a97;" font="bold 20.0pt Microsoft JhengHei" foreground="#404040" halign="left">
+      <ValueBinding hyperlink="file:^GreenHouse/px/a/S3/Control_S_8.px"/>
+    </Label>
+
+    <Label layout="0.0,70.0,200.0,31.0" text="&#x3000;&#x3000;&#x5074;&#x6372;" font="bold 20.0pt Microsoft JhengHei" foreground="#404040" halign="left">
+      <ValueBinding hyperlink="file:^GreenHouse/px/a/S3/Control_S_1.px"/>
+    </Label>
+
+    <Label layout="0.0,99.0,200.0,31.0" text="&#x3000;&#x3000;&#x5674;&#x9727;" font="bold 20.0pt Microsoft JhengHei" foreground="#404040" halign="left">
+      <ValueBinding hyperlink="file:^GreenHouse/px/a/S3/Control_S_2.px"/>
+    </Label>
+
+    <Label layout="0.0,131.0,200.0,31.0" text="&#x3000;&#x3000;&#x6f86;&#x704c;" font="bold 20.0pt Microsoft JhengHei" foreground="#404040" halign="left">
+      <ValueBinding hyperlink="file:^GreenHouse/px/a/S3/Control_S_3.px"/>
+    </Label>
+
+    <Label layout="0.0,163.0,200.0,31.0" text="&#x3000;&#x3000;&#x6c34;&#x7246;" font="bold 20.0pt Microsoft JhengHei" foreground="#404040" halign="left">
+      <ValueBinding hyperlink="file:^GreenHouse/px/a/S3/Control_S_4.px"/>
+    </Label>
+
+    <Label layout="0.0,419.0,200.0,31.0" text="&#x3000;&#x3000;&#x63db;&#x6c23;&#x98a8;&#x6247;" font="bold 20.0pt Microsoft JhengHei" foreground="#404040" halign="left">
+      <ValueBinding hyperlink="file:^GreenHouse/px/a/S3/Control_S_12.px"/>
+    </Label>
+
+    <Label layout="0.0,483.0,200.0,31.0" text="&#x3000;&#x3000;&#x7a7a;&#x8abf;&#x9001;&#x98a8;&#x6a5f;" font="bold 20.0pt Microsoft JhengHei" foreground="#404040" halign="left">
+      <ValueBinding hyperlink="file:^GreenHouse/px/a/S3/Control_S_14.px"/>
+    </Label>
+
+    <Label layout="0.0,451.0,200.0,31.0" text="&#x3000;&#x3000;&#x51b0;&#x6c34;&#x4e3b;&#x6a5f;" font="bold 20.0pt Microsoft JhengHei" foreground="#404040" halign="left">
+      <ValueBinding hyperlink="file:^GreenHouse/px/a/S3/Control_S_13.px"/>
+    </Label>
+
+    <Label layout="0.0,259.0,200.0,31.0" text="&#x3000;&#x3000;&#x5167;&#x5074; &#x5074;&#x7a97;" font="bold 20.0pt Microsoft JhengHei" foreground="#404040" halign="left">
+      <ValueBinding hyperlink="file:^GreenHouse/px/a/S3/Control_S_7.px"/>
+    </Label>
+
+    <Label layout="0.0,15.0,200.0,45.0" font="bold 20.0pt Microsoft JhengHei" foreground="#404040" background="white" halign="left">
+      <ValueBinding ord="station:|slot:/Home/GreenHouse/RightBar/c13/out/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <ToggleButton layout="162.0,72.0,25.0,25.0" styleClasses="selected" font="bold 18.0pt Microsoft JhengHei" foreground="black" buttonStyle="none" selected="true">
+      <SetPointBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Set_S1" widgetEvent="actionPerformed" widgetProperty="selected">
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value=""/>
+          <String name="falseValue" value=""/>
+        </IBooleanToSimple>
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^GreenHouse/image/Common/GC.png"/>
+          <Image name="falseValue" value="file:^GreenHouse/image/Common/grayC.png"/>
+        </IBooleanToSimple>
+      </SetPointBinding>
+      <WsAnnotation name="wsAnnotation" value="58,58,8"/>
+    </ToggleButton>
+
+    <Label layout="162.0,165.0,25.0,25.0" image="file:^GreenHouse/image/Common/OC.png"/>
+
+    <Label layout="162.0,453.0,25.0,25.0" image="file:^GreenHouse/image/Common/OC.png"/>
+
+    <Label layout="162.0,485.0,25.0,25.0" image="file:^GreenHouse/image/Common/OC.png"/>
+
+    <ToggleButton layout="162.0,103.0,25.0,25.0" styleClasses="selected" font="bold 18.0pt Microsoft JhengHei" foreground="black" buttonStyle="none" selected="true">
+      <SetPointBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Set_S2" widgetEvent="actionPerformed" widgetProperty="selected">
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value=""/>
+          <String name="falseValue" value=""/>
+        </IBooleanToSimple>
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^GreenHouse/image/Common/GC.png"/>
+          <Image name="falseValue" value="file:^GreenHouse/image/Common/grayC.png"/>
+        </IBooleanToSimple>
+      </SetPointBinding>
+      <WsAnnotation name="wsAnnotation" value="58,58,8"/>
+    </ToggleButton>
+
+    <ToggleButton layout="162.0,135.0,25.0,25.0" styleClasses="selected" font="bold 18.0pt Microsoft JhengHei" foreground="black" buttonStyle="none" selected="true">
+      <SetPointBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Set_S3" widgetEvent="actionPerformed" widgetProperty="selected">
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value=""/>
+          <String name="falseValue" value=""/>
+        </IBooleanToSimple>
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^GreenHouse/image/Common/GC.png"/>
+          <Image name="falseValue" value="file:^GreenHouse/image/Common/grayC.png"/>
+        </IBooleanToSimple>
+      </SetPointBinding>
+      <WsAnnotation name="wsAnnotation" value="58,58,8"/>
+    </ToggleButton>
+
+    <ToggleButton layout="162.0,196.0,25.0,25.0" styleClasses="selected" font="bold 18.0pt Microsoft JhengHei" foreground="black" buttonStyle="none" selected="true">
+      <SetPointBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Set_S5" widgetEvent="actionPerformed" widgetProperty="selected">
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value=""/>
+          <String name="falseValue" value=""/>
+        </IBooleanToSimple>
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^GreenHouse/image/Common/GC.png"/>
+          <Image name="falseValue" value="file:^GreenHouse/image/Common/grayC.png"/>
+        </IBooleanToSimple>
+      </SetPointBinding>
+      <WsAnnotation name="wsAnnotation" value="58,58,8"/>
+    </ToggleButton>
+
+    <ToggleButton layout="162.0,228.0,25.0,25.0" styleClasses="selected" font="bold 18.0pt Microsoft JhengHei" foreground="black" buttonStyle="none" selected="true">
+      <SetPointBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Set_S6" widgetEvent="actionPerformed" widgetProperty="selected">
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value=""/>
+          <String name="falseValue" value=""/>
+        </IBooleanToSimple>
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^GreenHouse/image/Common/GC.png"/>
+          <Image name="falseValue" value="file:^GreenHouse/image/Common/grayC.png"/>
+        </IBooleanToSimple>
+      </SetPointBinding>
+      <WsAnnotation name="wsAnnotation" value="58,58,8"/>
+    </ToggleButton>
+
+    <ToggleButton layout="162.0,260.0,25.0,25.0" styleClasses="selected" font="bold 18.0pt Microsoft JhengHei" foreground="black" buttonStyle="none" selected="true">
+      <SetPointBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Set_S7" widgetEvent="actionPerformed" widgetProperty="selected">
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value=""/>
+          <String name="falseValue" value=""/>
+        </IBooleanToSimple>
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^GreenHouse/image/Common/GC.png"/>
+          <Image name="falseValue" value="file:^GreenHouse/image/Common/grayC.png"/>
+        </IBooleanToSimple>
+      </SetPointBinding>
+      <WsAnnotation name="wsAnnotation" value="58,58,8"/>
+    </ToggleButton>
+
+    <ToggleButton layout="162.0,292.0,25.0,25.0" styleClasses="selected" font="bold 18.0pt Microsoft JhengHei" foreground="black" buttonStyle="none" selected="true">
+      <SetPointBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Set_S8" widgetEvent="actionPerformed" widgetProperty="selected">
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value=""/>
+          <String name="falseValue" value=""/>
+        </IBooleanToSimple>
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^GreenHouse/image/Common/GC.png"/>
+          <Image name="falseValue" value="file:^GreenHouse/image/Common/grayC.png"/>
+        </IBooleanToSimple>
+      </SetPointBinding>
+      <WsAnnotation name="wsAnnotation" value="58,58,8"/>
+    </ToggleButton>
+
+    <ToggleButton layout="162.0,323.0,25.0,25.0" styleClasses="selected" font="bold 18.0pt Microsoft JhengHei" foreground="black" buttonStyle="none" selected="true">
+      <SetPointBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Set_S9" widgetEvent="actionPerformed" widgetProperty="selected">
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value=""/>
+          <String name="falseValue" value=""/>
+        </IBooleanToSimple>
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^GreenHouse/image/Common/GC.png"/>
+          <Image name="falseValue" value="file:^GreenHouse/image/Common/grayC.png"/>
+        </IBooleanToSimple>
+      </SetPointBinding>
+      <WsAnnotation name="wsAnnotation" value="58,58,8"/>
+    </ToggleButton>
+
+    <ToggleButton layout="162.0,355.0,25.0,25.0" styleClasses="selected" font="bold 18.0pt Microsoft JhengHei" foreground="black" buttonStyle="none" selected="true">
+      <SetPointBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Set_S10" widgetEvent="actionPerformed" widgetProperty="selected">
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value=""/>
+          <String name="falseValue" value=""/>
+        </IBooleanToSimple>
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^GreenHouse/image/Common/GC.png"/>
+          <Image name="falseValue" value="file:^GreenHouse/image/Common/grayC.png"/>
+        </IBooleanToSimple>
+      </SetPointBinding>
+      <WsAnnotation name="wsAnnotation" value="58,58,8"/>
+    </ToggleButton>
+
+    <ToggleButton layout="162.0,388.0,25.0,25.0" styleClasses="selected" font="bold 18.0pt Microsoft JhengHei" foreground="black" buttonStyle="none" selected="true">
+      <SetPointBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Set_S11" widgetEvent="actionPerformed" widgetProperty="selected">
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value=""/>
+          <String name="falseValue" value=""/>
+        </IBooleanToSimple>
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^GreenHouse/image/Common/GC.png"/>
+          <Image name="falseValue" value="file:^GreenHouse/image/Common/grayC.png"/>
+        </IBooleanToSimple>
+      </SetPointBinding>
+      <WsAnnotation name="wsAnnotation" value="58,58,8"/>
+    </ToggleButton>
+
+    <ToggleButton layout="162.0,420.0,25.0,25.0" styleClasses="selected" font="bold 18.0pt Microsoft JhengHei" foreground="black" buttonStyle="none" selected="true">
+      <SetPointBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Set_S12" widgetEvent="actionPerformed" widgetProperty="selected">
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value=""/>
+          <String name="falseValue" value=""/>
+        </IBooleanToSimple>
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^GreenHouse/image/Common/GC.png"/>
+          <Image name="falseValue" value="file:^GreenHouse/image/Common/grayC.png"/>
+        </IBooleanToSimple>
+      </SetPointBinding>
+      <WsAnnotation name="wsAnnotation" value="58,58,8"/>
+    </ToggleButton>
+
+    <ToggleButton layout="920.0,45.0,65.0,65.0" font="bold 18.0pt Microsoft JhengHei" foreground="black" buttonStyle="none">
+      <SetPointBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Set_Sun" widgetEvent="actionPerformed" widgetProperty="selected">
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value=""/>
+          <String name="falseValue" value=""/>
+        </IBooleanToSimple>
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^GreenHouse/image/Common/sun_65.png"/>
+          <Image name="falseValue" value="file:^GreenHouse/image/Common/moon_65.png"/>
+        </IBooleanToSimple>
+      </SetPointBinding>
+      <WsAnnotation name="wsAnnotation" value="58,58,8"/>
+    </ToggleButton>
+
+    <Label layout="765.0,205.0,200.0,155.0" background="#ffffc0"/>
+
+    <Label layout="765.0,180.0,200.0,30.0" image="file:^GreenHouse/image/Common/YE.png" font="bold 20.0pt Microsoft JhengHei" foreground="black"/>
+
+    <Label layout="765.0,180.0,200.0,30.0" text="&#x5674;&#x9727;" font="bold 22.0pt Microsoft JhengHei" foreground="black"/>
+
+    <Label layout="773.0,210.0,90.0,42.0" text="&#x958b;&#x95dc;&#x72c0;&#x614b;:" font="bold 20.0pt Microsoft JhengHei" foreground="black"/>
+
+    <ToggleButton layout="865.0,315.0,90.0,42.0" font="bold 18.0pt Microsoft JhengHei" foreground="black" buttonStyle="none">
+      <SetPointBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Set_Auto" widgetEvent="actionPerformed" widgetProperty="selected">
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value=""/>
+          <String name="falseValue" value=""/>
+        </IBooleanToSimple>
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^GreenHouse/image/Common/on.png"/>
+          <Image name="falseValue" value="file:^GreenHouse/image/Common/off.png"/>
+        </IBooleanToSimple>
+      </SetPointBinding>
+      <WsAnnotation name="wsAnnotation" value="58,58,8"/>
+    </ToggleButton>
+
+    <Label layout="773.0,245.0,90.0,42.0" text="&#x6301;&#x7e8c;&#x6642;&#x9593;:" font="bold 20.0pt Microsoft JhengHei" foreground="black"/>
+
+    <Label layout="773.0,280.0,90.0,42.0" text="&#x9593;&#x6b47;&#x6642;&#x9593;:" font="bold 20.0pt Microsoft JhengHei" foreground="black"/>
+
+    <ToggleButton layout="885.0,215.0,30.0,30.0" styleClasses="selected" font="bold 20.0pt Microsoft JhengHei" foreground="black" buttonStyle="none" selected="true">
+      <SetPointBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Set_S2" widgetEvent="actionPerformed" widgetProperty="selected">
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value=""/>
+          <String name="falseValue" value=""/>
+        </IBooleanToSimple>
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^GreenHouse/image/icon/G.png"/>
+          <Image name="falseValue" value="file:^GreenHouse/image/icon/R.png"/>
+        </IBooleanToSimple>
+      </SetPointBinding>
+      <WsAnnotation name="wsAnnotation" value="58,58,8"/>
+    </ToggleButton>
+
+    <Label layout="773.0,315.0,90.0,42.0" text="&#x7cfb;&#x7d71;&#x63a7;&#x5236;:" font="bold 20.0pt Microsoft JhengHei" foreground="black"/>
+
+    <Label layout="860.0,245.0,90.0,42.0" text="10 &#x79d2;" font="bold 20.0pt Microsoft JhengHei" foreground="black"/>
+
+    <Label layout="860.0,280.0,90.0,42.0" text="30 &#x79d2;" font="bold 20.0pt Microsoft JhengHei" foreground="black"/>
+
+  </CanvasPane>
+
+</ScrollPane>
+</content>
+</px>

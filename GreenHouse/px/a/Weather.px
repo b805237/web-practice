@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="converters"/>
+  <module name="gx"/>
+  <module name="kitPx"/>
+</import>
+<content>
+<ScrollPane>
+
+  <CanvasPane name="content" viewSize="100.0,30.0">
+
+    <Label layout="0.0,0.0,100.0,30.0" background="#d2d2d4"/>
+
+    <ImageButton layout="0.0,0.0,100.0,30.0" styleClasses="toolbar" text="&#x65e5;&#x9593;&#x6a21;&#x5f0f;" image="file:^GreenHouse/image/sun_30.png" buttonStyle="toolBar">
+      <ValueBinding ord="station:|slot:/GH/area$(area)/CoolingSolSelectorDay/Enable/out/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+      <WsAnnotation name="wsAnnotation" value="10,10,8"/>
+    </ImageButton>
+
+    <ImageButton layout="0.0,0.0,100.0,30.0" styleClasses="toolbar" text="&#x591c;&#x9593;&#x6a21;&#x5f0f;" image="file:^GreenHouse/image/night_30.png" buttonStyle="toolBar">
+      <ValueBinding ord="station:|slot:/GH/area$(area)/CoolingSolSelectorNight/Enable/out/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+      <WsAnnotation name="wsAnnotation" value="10,10,8"/>
+    </ImageButton>
+
+    <ImageButton layout="0.0,0.0,100.0,30.0" styleClasses="toolbar" text="&#x9632;&#x98b1;&#x6a21;&#x5f0f;" image="file:^GreenHouse/image/typhoon_30.png" buttonStyle="toolBar">
+      <ValueBinding ord="station:|slot:/GH/area$(area)/Schedule/TyphoonStat/out/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+      <WsAnnotation name="wsAnnotation" value="10,10,8"/>
+    </ImageButton>
+
+    <Label layout="0.0,0.0,100.0,30.0">
+      <ValueBinding hyperlink="file:^GreenHouse/px/a/S$(area)/WeatherSetHyperLink.px"/>
+    </Label>
+
+  </CanvasPane>
+
+</ScrollPane>
+</content>
+</px>

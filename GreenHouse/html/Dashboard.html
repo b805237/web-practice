@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+
+<head>
+	<title>桃園智慧溫室系統</title>
+	<!-- CSS -->
+	<!-- Bootstrap -->
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+	<!-- Top bar -->
+	<link href="css/bar.css" rel="stylesheet" type="text/css">
+	<!-- 樣式 -->
+	<link href="css/main.css" rel="stylesheet" type="text/css">
+	<!-- End CSS -->
+
+	<!-- Javascript -->
+	<!-- bajaScript model -->
+	<script type="text/javascript" src="js/bajascript/bs.min.js"></script>
+	<!-- jQuery 套件工具 -->
+	<script src="js/jquery/jquery.js"></script>
+	<!-- Web相關函數 -->
+	<script type="text/javascript" src="js/WebTool.js"></script>
+	<!-- Niagara資料讀取 -->
+	<script type="text/javascript" src="js/NiagaraDataJson.js"></script>
+	<!-- Slot處理函數 -->
+	<script type="text/javascript" src="js/SlotData.js"></script>
+	<!-- topbar網頁聯結 -->
+	<script type="text/javascript" src="set/topbar.js"></script>
+	<!-- 一般工具 -->
+	<script src="js/temsUtil.js"></script>
+	<!-- End Javascript -->
+
+	<!-- CSS SET -->
+	<style type="text/css">
+	</style>
+	<!-- End CSS SET -->
+
+	<!-- Javascript Code-->
+	<script type="text/javascript">
+		// 縮放畫面時，調整比例
+		$(document).ready(function(){
+		    $(window).resize(function() {
+		        ScaleBody("page-body");
+		    });
+		});
+		// 初始化
+		function Init() {
+			// 縮放比例
+			ScaleBody("page-body");
+			// 啟動baja
+			baja.start();
+			// 網頁聯結
+			menuInit();
+			/*
+			// 使用者資訊
+			postForJSON('/tatungService/user/getUserInfo',
+				'', function (ret) {
+					document.getElementById("userInfo").innerHTML = ret.userName + '　你好!!';
+				})
+			*/
+		}
+	</script>
+	<!-- END Javascript Code-->
+
+	<body onload="Init();" onunload="baja.stop();">
+		<div id="page-body" class="container">
+
+
+			<!-- MAIN -->
+			<div id="wrapper">
+				<div class="main">
+					<!-- MAIN CONTENT -->
+					<div class="main-content">
+						<div class="container-fluid">
+							<!-- 1 Row -->
+							<div class="row">
+								<div class="col-md-12" style="margin-top:-5px;">
+									<!--內容-->
+									<iframe src="DashboardMain.html" width="1000" height="559" align="center" scrolling="no" frameborder="0"></iframe>
+								</div>
+							</div>
+							<!-- END 1 Row -->
+							<!-- 2 Row botton board -->
+							
+						</div>
+						<!-- END MAIN CONTENT -->
+					</div>
+				</div>
+				<!-- END MAIN -->
+			</div>
+	</body>
+<!-- Niagara Data Debug -->
+<!--<pre id="bajaScriptOut"></pre>-->
+</html>

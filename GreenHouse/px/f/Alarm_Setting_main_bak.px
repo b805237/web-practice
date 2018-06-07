@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="converters"/>
+  <module name="gx"/>
+  <module name="kitPx"/>
+  <module name="workbench"/>
+</import>
+<content>
+<ScrollPane>
+
+  <CanvasPane name="content" viewSize="1000.0,550.0" valign="top">
+
+    <BoundLabel layout="50.0,30.0,450.0,420.0" background="#bed2dc" border="1.5 solid black">
+      <BoundLabelBinding>
+        <ObjectToString name="text"/>
+      </BoundLabelBinding>
+      <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    </BoundLabel>
+
+    <Label layout="50.0,30.0,450.0,40.0" font="bold 18.0pt Microsoft JhengHei UI" foreground="white" background="#1e6e8c">
+      <ValueBinding ord="station:|slot:/GH/GreenHouse/RightBar/a13/out/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <BoundLabel layout="510.0,30.0,450.0,420.0" background="#bed2dc" border="1.5 solid black">
+      <BoundLabelBinding>
+        <ObjectToString name="text"/>
+      </BoundLabelBinding>
+      <WsAnnotation name="wsAnnotation" value="2,2,8"/>
+    </BoundLabel>
+
+    <Label layout="510.0,30.0,450.0,40.0" font="bold 18.0pt Microsoft JhengHei UI" foreground="white" background="#1e6e8c">
+      <ValueBinding ord="station:|slot:/GH/GreenHouse/RightBar/b12/out/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <GenericFieldEditor layout="175.0,125.0,pref,pref">
+      <WbFieldEditorBinding ord="station:|slot:/GH/GreenHouse/Strawberry/TempAlarm/Strawberry_Temp/offnormalAlgorithm/highLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="175.0,165.0,pref,pref">
+      <WbFieldEditorBinding ord="station:|slot:/GH/GreenHouse/Strawberry/TempAlarm/Strawberry_Temp/offnormalAlgorithm/lowLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="360.0,125.0,pref,pref">
+      <WbFieldEditorBinding ord="station:|slot:/GH/GreenHouse/Strawberry/HumidityAlarm/OutOfRangeAlarmExt/offnormalAlgorithm/highLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="360.0,165.0,pref,pref">
+      <WbFieldEditorBinding ord="station:|slot:/GH/GreenHouse/Strawberry/HumidityAlarm/OutOfRangeAlarmExt/offnormalAlgorithm/lowLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="635.0,125.0,pref,pref">
+      <WbFieldEditorBinding ord="station:|slot:/GH/GreenHouse/Flower/TempAlarm/Strawberry_Temp/offnormalAlgorithm/highLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="635.0,165.0,pref,pref">
+      <WbFieldEditorBinding ord="station:|slot:/GH/GreenHouse/Flower/TempAlarm/Strawberry_Temp/offnormalAlgorithm/lowLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="810.0,125.0,pref,pref">
+      <WbFieldEditorBinding ord="station:|slot:/GH/GreenHouse/Flower/HumidityAlarm/OutOfRangeAlarmExt/offnormalAlgorithm/highLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="810.0,165.0,pref,pref">
+      <WbFieldEditorBinding ord="station:|slot:/GH/GreenHouse/Flower/HumidityAlarm/OutOfRangeAlarmExt/offnormalAlgorithm/lowLimit"/>
+    </GenericFieldEditor>
+
+    <Label layout="104.0,124.0,68.0,20.0" text="&#x9ad8;&#x6eab;&#x8a2d;&#x5b9a;" font="bold 15.0pt Microsoft YaHei"/>
+
+    <Label layout="104.0,164.0,68.0,20.0" text="&#x4f4e;&#x6eab;&#x8a2d;&#x5b9a;" font="bold 15.0pt Microsoft YaHei"/>
+
+    <Label layout="289.0,124.0,68.0,20.0" text="&#x9ad8;&#x6fd5;&#x8a2d;&#x5b9a;" font="bold 15.0pt Microsoft YaHei"/>
+
+    <Label layout="289.0,164.0,68.0,20.0" text="&#x4f4e;&#x6fd5;&#x8a2d;&#x5b9a;" font="bold 15.0pt Microsoft YaHei"/>
+
+    <Label layout="564.0,124.0,68.0,20.0" text="&#x9ad8;&#x6eab;&#x8a2d;&#x5b9a;" font="bold 15.0pt Microsoft YaHei"/>
+
+    <Label layout="564.0,164.0,68.0,20.0" text="&#x4f4e;&#x6eab;&#x8a2d;&#x5b9a;" font="bold 15.0pt Microsoft YaHei"/>
+
+    <Label layout="739.0,124.0,68.0,20.0" text="&#x9ad8;&#x6fd5;&#x8a2d;&#x5b9a;" font="bold 15.0pt Microsoft YaHei"/>
+
+    <Label layout="739.0,164.0,68.0,20.0" text="&#x4f4e;&#x6fd5;&#x8a2d;&#x5b9a;" font="bold 15.0pt Microsoft YaHei"/>
+
+    <SaveButton layout="870.0,463.0,100.0,30.0" image="module://icons/x16/save.png">
+      <WsAnnotation name="wsAnnotation" value="14,14,8"/>
+    </SaveButton>
+
+    <Label layout="104.0,204.0,68.0,20.0" text="&#x9ad8;&#x5149;&#x8a2d;&#x5b9a;" font="bold 15.0pt Microsoft YaHei"/>
+
+    <GenericFieldEditor layout="175.0,205.0,pref,pref">
+      <WbFieldEditorBinding ord="station:|slot:/Home/Test1/in16/value"/>
+    </GenericFieldEditor>
+
+    <Label layout="564.0,204.0,68.0,20.0" text="&#x9ad8;&#x5149;&#x8a2d;&#x5b9a;" font="bold 15.0pt Microsoft YaHei"/>
+
+    <GenericFieldEditor layout="635.0,205.0,pref,pref">
+      <WbFieldEditorBinding ord="station:|slot:/Home/Test2/in16/value"/>
+    </GenericFieldEditor>
+
+    <Label layout="52.0,70.0,446.0,30.0" text="&#x65e5;&#x9593;" font="bold 18.0pt Microsoft JhengHei UI" foreground="white" background="#00bebe"/>
+
+    <Label layout="512.0,70.0,446.0,30.0" text="&#x65e5;&#x9593;" font="bold 18.0pt Microsoft JhengHei UI" foreground="white" background="#00bebe"/>
+
+    <Label layout="52.0,250.0,446.0,30.0" text="&#x591c;&#x9593;" font="bold 18.0pt Microsoft JhengHei UI" foreground="white" background="#00bebe"/>
+
+    <Label layout="512.0,250.0,446.0,30.0" text="&#x591c;&#x9593;" font="bold 18.0pt Microsoft JhengHei UI" foreground="white" background="#00bebe"/>
+
+    <GenericFieldEditor layout="175.0,305.0,pref,pref">
+      <WbFieldEditorBinding ord="station:|slot:/GH/GreenHouse/Strawberry/TempAlarm/Strawberry_Temp/offnormalAlgorithm/highLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="175.0,345.0,pref,pref">
+      <WbFieldEditorBinding ord="station:|slot:/GH/GreenHouse/Strawberry/TempAlarm/Strawberry_Temp/offnormalAlgorithm/lowLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="360.0,305.0,pref,pref">
+      <WbFieldEditorBinding ord="station:|slot:/GH/GreenHouse/Strawberry/HumidityAlarm/OutOfRangeAlarmExt/offnormalAlgorithm/highLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="360.0,345.0,pref,pref">
+      <WbFieldEditorBinding ord="station:|slot:/GH/GreenHouse/Strawberry/HumidityAlarm/OutOfRangeAlarmExt/offnormalAlgorithm/lowLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="635.0,305.0,pref,pref">
+      <WbFieldEditorBinding ord="station:|slot:/GH/GreenHouse/Flower/TempAlarm/Strawberry_Temp/offnormalAlgorithm/highLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="635.0,345.0,pref,pref">
+      <WbFieldEditorBinding ord="station:|slot:/GH/GreenHouse/Flower/TempAlarm/Strawberry_Temp/offnormalAlgorithm/lowLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="810.0,305.0,pref,pref">
+      <WbFieldEditorBinding ord="station:|slot:/GH/GreenHouse/Flower/HumidityAlarm/OutOfRangeAlarmExt/offnormalAlgorithm/highLimit"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="810.0,345.0,pref,pref">
+      <WbFieldEditorBinding ord="station:|slot:/GH/GreenHouse/Flower/HumidityAlarm/OutOfRangeAlarmExt/offnormalAlgorithm/lowLimit"/>
+    </GenericFieldEditor>
+
+    <Label layout="104.0,304.0,68.0,20.0" text="&#x9ad8;&#x6eab;&#x8a2d;&#x5b9a;" font="bold 15.0pt Microsoft YaHei"/>
+
+    <Label layout="104.0,344.0,68.0,20.0" text="&#x4f4e;&#x6eab;&#x8a2d;&#x5b9a;" font="bold 15.0pt Microsoft YaHei"/>
+
+    <Label layout="289.0,304.0,68.0,20.0" text="&#x9ad8;&#x6fd5;&#x8a2d;&#x5b9a;" font="bold 15.0pt Microsoft YaHei"/>
+
+    <Label layout="289.0,344.0,68.0,20.0" text="&#x4f4e;&#x6fd5;&#x8a2d;&#x5b9a;" font="bold 15.0pt Microsoft YaHei"/>
+
+    <Label layout="564.0,304.0,68.0,20.0" text="&#x9ad8;&#x6eab;&#x8a2d;&#x5b9a;" font="bold 15.0pt Microsoft YaHei"/>
+
+    <Label layout="564.0,344.0,68.0,20.0" text="&#x4f4e;&#x6eab;&#x8a2d;&#x5b9a;" font="bold 15.0pt Microsoft YaHei"/>
+
+    <Label layout="739.0,304.0,68.0,20.0" text="&#x9ad8;&#x6fd5;&#x8a2d;&#x5b9a;" font="bold 15.0pt Microsoft YaHei"/>
+
+    <Label layout="739.0,344.0,68.0,20.0" text="&#x4f4e;&#x6fd5;&#x8a2d;&#x5b9a;" font="bold 15.0pt Microsoft YaHei"/>
+
+    <Label layout="104.0,384.0,68.0,20.0" text="&#x9ad8;&#x5149;&#x8a2d;&#x5b9a;" font="bold 15.0pt Microsoft YaHei"/>
+
+    <GenericFieldEditor layout="175.0,385.0,pref,pref">
+      <WbFieldEditorBinding ord="station:|slot:/Home/Test1/in16/value"/>
+    </GenericFieldEditor>
+
+    <Label layout="564.0,384.0,68.0,20.0" text="&#x9ad8;&#x5149;&#x8a2d;&#x5b9a;" font="bold 15.0pt Microsoft YaHei"/>
+
+    <GenericFieldEditor layout="635.0,385.0,pref,pref">
+      <WbFieldEditorBinding ord="station:|slot:/Home/Test2/in16/value"/>
+    </GenericFieldEditor>
+
+  </CanvasPane>
+
+</ScrollPane>
+</content>
+</px>

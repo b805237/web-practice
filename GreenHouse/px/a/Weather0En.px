@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="converters"/>
+  <module name="gx"/>
+  <module name="kitPx"/>
+  <module name="workbench"/>
+</import>
+<content>
+<ScrollPane>
+
+  <CanvasPane name="content" viewSize="490.0,150.0">
+
+    <Label layout="386.0,0.0,104.0,38.0" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#a39b86"/>
+
+    <Label layout="247.0,41.0,137.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <Label layout="108.0,41.0,137.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="15.0,41.0,91.0,38.0" font="bold 14.0pt Microsoft YaHei" foreground="white" background="#666699">
+      <ValueBinding ord="station:|slot:/GH/areaName/area$(area)">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="108.0,1.0,137.0,38.0" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#a39b86">
+      <ValueBinding ord="station:|slot:/GH/area$(area)/Schedule/Weather/AM_Mode">
+        <IBooleanToSimple name="background">
+          <Brush name="trueValue" value="#8dafb1"/>
+          <Brush name="falseValue" value="#a39b86"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="247.0,1.0,137.0,38.0" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#a39b86"/>
+
+    <Label layout="160.0,49.0,30.0,20.0" text="&#xff1a;" font="bold 12.0pt Microsoft JhengHei"/>
+
+    <Label layout="300.0,49.0,30.0,20.0" text="&#xff1a;" font="bold 12.0pt Microsoft JhengHei"/>
+
+    <ToggleButton layout="110.0,6.0,135.0,30.0" text="Day Mode Start" image="file:^GreenHouse/image/sun_30.png" font="bold 12.0pt Microsoft JhengHei" foreground="white" buttonStyle="none">
+      <WsAnnotation name="wsAnnotation" value="58,58,8"/>
+    </ToggleButton>
+
+    <ToggleButton layout="247.0,0.0,135.0,40.0" styleClasses="selected" text="Night Mode Start" image="file:^GreenHouse/image/night_30.png" font="bold 12.0pt Microsoft JhengHei" foreground="white" textIconGap="1.0" buttonStyle="none" selected="true">
+      <WsAnnotation name="wsAnnotation" value="58,58,8"/>
+      <ValueBinding ord="station:|slot:/GH/area1/Schedule/Weather/PM_Mode">
+        <IBooleanToSimple name="background">
+          <Brush name="trueValue" value="#8dafb1"/>
+          <Brush name="falseValue" value="#a39b86"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </ToggleButton>
+
+    <ToggleButton layout="387.0,0.0,105.0,40.0" text="TY Mode" image="file:^GreenHouse/image/typhoon_30.png" font="bold 12.0pt Microsoft JhengHei" foreground="white" buttonStyle="none">
+      <WsAnnotation name="wsAnnotation" value="58,58,8"/>
+      <ValueBinding ord="station:|slot:/GH/area$(area)/Schedule/Weather/Typhoon_Mode">
+        <IBooleanToSimple name="background">
+          <Brush name="trueValue" value="#8dafb1"/>
+          <Brush name="falseValue" value="#a39b86"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </ToggleButton>
+
+    <Label layout="386.0,40.0,104.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <SaveButton layout="390.0,120.0,100.0,30.0" image="module://icons/x16/save.png">
+      <WsAnnotation name="wsAnnotation" value="14,14,8"/>
+    </SaveButton>
+
+    <ToggleButton layout="385.0,41.0,52.0,38.0" text="Open" font="bold 12.0pt Microsoft JhengHei" foreground="black">
+      <SetPointBinding ord="station:|slot:/GH/GreenHouse/Weather/area$(area)/Typhoon_Mode" widgetEvent="actionPerformed" widgetProperty="selected">
+        <IBooleanToSimple name="foreground">
+          <Brush name="trueValue" value="red"/>
+          <Brush name="falseValue" value="black"/>
+        </IBooleanToSimple>
+      </SetPointBinding>
+      <WsAnnotation name="wsAnnotation" value="58,58,8"/>
+    </ToggleButton>
+
+    <ToggleButton layout="438.0,41.0,52.0,38.0" text="Close" font="bold 12.0pt Microsoft JhengHei" foreground="black">
+      <SetPointBinding ord="station:|slot:/GH/GreenHouse/Weather/area$(area)/Typhoon_Mode" widgetEvent="actionPerformed" widgetProperty="selected">
+        <IBooleanToSimple name="foreground">
+          <Brush name="trueValue" value="red"/>
+          <Brush name="falseValue" value="black"/>
+        </IBooleanToSimple>
+      </SetPointBinding>
+      <WsAnnotation name="wsAnnotation" value="58,58,8"/>
+    </ToggleButton>
+
+    <GenericFieldEditor layout="135.0,50.0,30.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area$(area)/Schedule/Weather/AM_Hour"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="185.0,50.0,30.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area$(area)/Schedule/Weather/AM_Min"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="275.0,50.0,30.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area$(area)/Schedule/Weather/PM_Hour"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="325.0,50.0,30.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area$(area)/Schedule/Weather/PM_Min"/>
+    </GenericFieldEditor>
+
+  </CanvasPane>
+
+</ScrollPane>
+</content>
+</px>

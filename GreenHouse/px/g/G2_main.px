@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="gx"/>
+</import>
+<content>
+<ScrollPane>
+
+  <CanvasPane name="content" viewSize="1000.0,550.0" valign="top">
+
+    <Picture layout="5.0,80.0,220.0,190.0" image="file:^GreenHouse/PDF/air.JPG" scale="fitRatio"/>
+
+    <Label layout="7.0,20.0,220.0,55.0" text="&#x8fb2;&#x535a;&#x7528;&#x7a7a;&#x8abf;&#x7bb1;" font="bold 16.0pt Microsoft JhengHei" foreground="#1e6e8c"/>
+
+    <BorderPane layout="5.0,80.0,220.0,190.0" padding="0.0" border="1.0 solid black">
+
+      <Label name="content">
+        <ValueBinding hyperlink="file:^GreenHouse/PDF/air.pdf"/>
+      </Label>
+
+    </BorderPane>
+
+    <Picture layout="260.0,80.0,220.0,190.0" image="file:^GreenHouse/PDF/ADAM-4017.png" scale="fitRatio"/>
+
+    <BorderPane layout="260.0,80.0,220.0,190.0" padding="0.0" border="1.0 solid black">
+
+      <Label name="content">
+        <ValueBinding hyperlink="file:^GreenHouse/PDF/ADAM-4017_DS20130415102708.pdf"/>
+      </Label>
+
+    </BorderPane>
+
+    <Label layout="260.0,25.0,220.0,55.0" text="ADAM-4017" font="bold 16.0pt Microsoft JhengHei" foreground="#1e6e8c"/>
+
+    <Picture layout="515.0,80.0,220.0,190.0" image="file:^GreenHouse/PDF/ADAM-4055.png" scale="fitRatio"/>
+
+    <BorderPane layout="515.0,80.0,220.0,190.0" padding="0.0" border="1.0 solid black">
+
+      <Label name="content">
+        <ValueBinding hyperlink="file:^GreenHouse/PDF/ADAM-405520160804092929.pdf"/>
+      </Label>
+
+    </BorderPane>
+
+    <Label layout="515.0,25.0,220.0,55.0" text="ADAM-4055" font="bold 16.0pt Microsoft JhengHei" foreground="#1e6e8c"/>
+
+    <Picture layout="770.0,80.0,220.0,190.0" image="file:^GreenHouse/PDF/ARK-2121F.png" scale="fitRatio"/>
+
+    <BorderPane layout="770.0,80.0,220.0,190.0" padding="0.0" border="1.0 solid black">
+
+      <Label name="content">
+        <ValueBinding hyperlink="file:^GreenHouse/PDF/ARK-2121F_DS(10.05.15)20151012144943.pdf"/>
+      </Label>
+
+    </BorderPane>
+
+    <Label layout="770.0,25.0,220.0,55.0" text="ARK-2121F" font="bold 16.0pt Microsoft JhengHei" foreground="#1e6e8c"/>
+
+    <Picture layout="260.0,350.0,220.0,190.0" image="file:^GreenHouse/PDF/LED77150.png" scale="fitRatio"/>
+
+    <BorderPane layout="260.0,350.0,220.0,190.0" padding="0.0" border="1.0 solid black">
+
+      <Label name="content">
+        <ValueBinding hyperlink="file:^GreenHouse/PDF/LED&#x986f;&#x793a;&#x5668;Display&#x7522;&#x54c1;(No77150)-&#x7fa4;&#x4e9e;&#x96fb;&#x5b50;.pdf"/>
+      </Label>
+
+    </BorderPane>
+
+    <Label layout="260.0,295.0,220.0,55.0" text="LED&#x986f;&#x793a;&#x5668;" font="bold 16.0pt Microsoft JhengHei" foreground="#1e6e8c"/>
+
+    <Picture layout="515.0,350.0,220.0,190.0" image="file:^GreenHouse/PDF/LoRa-Gateway.png" scale="fitRatio"/>
+
+    <BorderPane layout="515.0,350.0,220.0,190.0" padding="0.0" border="1.0 solid black">
+
+      <Label name="content">
+        <ValueBinding hyperlink="file:^GreenHouse/PDF/LoRa Getway G08.pptx"/>
+      </Label>
+
+    </BorderPane>
+
+    <Label layout="515.0,295.0,220.0,55.0" text="LoRa Getway G08" font="bold 16.0pt Microsoft JhengHei" foreground="#1e6e8c"/>
+
+    <Picture layout="770.0,350.0,220.0,190.0" image="file:^GreenHouse/PDF/TatungMeter.png" scale="fitRatio"/>
+
+    <BorderPane layout="770.0,350.0,220.0,190.0" padding="0.0" border="1.0 solid black">
+
+      <Label name="content">
+        <ValueBinding hyperlink="file:^GreenHouse/PDF/&#x5927;&#x540c;EBA&#x4e09;&#x76f8;&#x96fb;&#x8868;.pdf"/>
+      </Label>
+
+    </BorderPane>
+
+    <Label layout="770.0,295.0,220.0,55.0" text="&#x5927;&#x540c;EBA&#x4e09;&#x76f8;&#x96fb;&#x8868;" font="bold 16.0pt Microsoft JhengHei" foreground="#1e6e8c"/>
+
+    <Picture layout="0.0,350.0,220.0,190.0" image="file:^GreenHouse/PDF/JACE8000.png" scale="fitRatio"/>
+
+    <BorderPane layout="0.0,350.0,220.0,190.0" padding="0.0" border="1.0 solid black">
+
+      <Label name="content">
+        <ValueBinding hyperlink="file:^GreenHouse/PDF/JACE 8000 data sheet.pdf"/>
+      </Label>
+
+    </BorderPane>
+
+    <Label layout="0.0,295.0,220.0,55.0" text="JACE8000" font="bold 16.0pt Microsoft JhengHei" foreground="#1e6e8c"/>
+
+  </CanvasPane>
+
+</ScrollPane>
+</content>
+</px>

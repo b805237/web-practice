@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="converters"/>
+  <module name="gx"/>
+  <module name="kitPx"/>
+</import>
+<content>
+<ScrollPane>
+
+  <CanvasPane name="content" viewSize="190.0,240.0">
+
+    <Label layout="0.0,31.0,190.0,210.0" background="#00bebe"/>
+
+    <Label layout="0.0,0.0,190.0,30.0" text="&#x6eab;&#x5ba4;&#x74b0;&#x5883;" font="bold 20.0pt Microsoft JhengHei" foreground="white" background="#1e6e8c"/>
+
+    <BoundLabel layout="95.0,41.0,38.0,26.0" text="623" font="bold 18.0pt Microsoft JhengHei" foreground="white" textToIconAlign="center"/>
+
+    <Label layout="15.0,44.0,70.0,20.0" text="&#x5ba4;&#x5916;&#x7167;&#x5ea6;" font="bold 18.0pt Microsoft JhengHei" foreground="white" halign="left" textIconGap="15.0"/>
+
+    <BoundLabel layout="155.0,44.0,30.0,20.0" text="lux" font="bold 18.0pt Microsoft JhengHei" foreground="white" halign="left" textToIconAlign="center"/>
+
+    <BoundLabel layout="95.0,74.0,38.0,28.0" font="bold 18.0pt Microsoft JhengHei" foreground="white" textToIconAlign="center">
+      <ValueBinding ord="station:|slot:/Home/GreenHouse/TempSensor1/Humidity/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </BoundLabel>
+
+    <BoundLabel layout="155.0,77.0,30.0,20.0" text="%" font="bold 18.0pt Microsoft JhengHei" foreground="white" halign="left" textToIconAlign="center"/>
+
+    <Label layout="15.0,77.0,70.0,20.0" text="&#x5ba4;&#x5916;&#x6fd5;&#x5ea6;" font="bold 18.0pt Microsoft JhengHei" foreground="white" halign="left" textIconGap="15.0"/>
+
+    <BoundLabel layout="155.0,109.0,30.0,20.0" text="&#xb0;C" font="bold 18.0pt Microsoft JhengHei" foreground="white" halign="left" textToIconAlign="center"/>
+
+    <Label layout="15.0,109.0,70.0,20.0" text="&#x5ba4;&#x5916;&#x6eab;&#x5ea6;" font="bold 18.0pt Microsoft JhengHei" foreground="white" halign="left" textIconGap="15.0"/>
+
+    <BoundLabel layout="95.0,106.0,38.0,28.0" font="bold 18.0pt Microsoft JhengHei" foreground="white" textToIconAlign="center">
+      <ValueBinding ord="station:|slot:/Home/GreenHouse/TempSensor1/Temp/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </BoundLabel>
+
+    <BoundLabel layout="155.0,139.0,30.0,20.0" text="%" font="bold 18.0pt Microsoft JhengHei" foreground="white" halign="left" textToIconAlign="center"/>
+
+    <Label layout="15.0,140.5,70.0,20.0" text="&#x5ba4;&#x5167;&#x6fd5;&#x5ea6;" font="bold 18.0pt Microsoft JhengHei" foreground="white" halign="left" textIconGap="15.0"/>
+
+    <BoundLabel layout="155.0,171.0,30.0,20.0" text="&#xb0;C" font="bold 18.0pt Microsoft JhengHei" foreground="white" halign="left" textToIconAlign="center"/>
+
+    <Label layout="15.0,171.0,70.0,20.0" text="&#x5ba4;&#x5167;&#x6eab;&#x5ea6;" font="bold 18.0pt Microsoft JhengHei" foreground="white" halign="left" textIconGap="15.0"/>
+
+    <BoundLabel layout="95.0,136.0,38.0,28.0" font="bold 18.0pt Microsoft JhengHei" foreground="white" textToIconAlign="center">
+      <ValueBinding ord="station:|slot:/Home/GreenHouse/Strawberry/TempSensor/Humidity_indoor/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </BoundLabel>
+
+    <BoundLabel layout="95.0,168.0,38.0,28.0" font="bold 18.0pt Microsoft JhengHei" foreground="white" textToIconAlign="center">
+      <ValueBinding ord="station:|slot:/Home/GreenHouse/Strawberry/TempSensor/Temp_indoor/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </BoundLabel>
+
+    <Label layout="15.0,201.0,75.0,20.0" text="&#x63a7;&#x5236;&#x72c0;&#x614b;" font="bold 18.0pt Microsoft JhengHei" foreground="white" halign="left" textIconGap="15.0"/>
+
+    <Label layout="95.0,201.0,80.0,20.0" text="&#x7cfb;&#x7d71;&#x81ea;&#x52d5;" font="bold 18.0pt Microsoft JhengHei" foreground="white" halign="left" textIconGap="15.0"/>
+
+  </CanvasPane>
+
+</ScrollPane>
+</content>
+</px>

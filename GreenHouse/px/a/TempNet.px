@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="converters"/>
+  <module name="gx"/>
+  <module name="kitPx"/>
+</import>
+<content>
+<ScrollPane>
+
+  <CanvasPane name="content" viewSize="200.0,160.0">
+
+    <Label layout="0.0,25.0,200.0,135.0" background="#ffffc0"/>
+
+    <Label layout="0.0,0.0,200.0,30.0" image="file:^GreenHouse/image/Common/YE.png" font="bold 15.0pt Microsoft JhengHei" foreground="black"/>
+
+    <Label layout="0.0,0.0,200.0,30.0" text="&#x5167;&#x4fdd;&#x6eab;&#x7db2;" font="bold 18.0pt Microsoft JhengHei" foreground="black"/>
+
+    <Label layout="28.0,40.0,90.0,42.0" text="&#x958b;&#x95dc;&#x72c0;&#x614b;:" font="bold 18.0pt Microsoft JhengHei" foreground="black"/>
+
+    <Label layout="115.0,40.0,42.0,42.0" font="bold 18.0pt Microsoft JhengHei">
+      <ValueBinding ord="station:|slot:/GH/area$(area)/TempNet/Status/out/value">
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value="&#x6536;&#x8d77;"/>
+          <String name="falseValue" value="&#x653e;&#x4e0b;"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Label>
+
+    <ImageButton layout="106.0,90.0,60.0,30.0" text="&#x624b;&#x52d5;&#x6536;&#x8d77;" foreground="black">
+      <ActionBinding ord="station:|slot:/GH/area$(area)/TempNet/emergencyActive/fireVoidAction" widgetEvent="actionPerformed"/>
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+      <ValueBinding ord="station:|slot:/GH/area$(area)/TempNet/open_M/out/value">
+        <IBooleanToSimple name="background">
+          <Brush name="trueValue" value="white"/>
+          <Brush name="falseValue" value="#aaaaaa"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </ImageButton>
+
+    <ImageButton layout="40.0,90.0,60.0,30.0" text="&#x624b;&#x52d5;&#x653e;&#x4e0b;" foreground="black">
+      <ActionBinding ord="station:|slot:/GH/area$(area)/TempNet/emergencyInactive/fireVoidAction" widgetEvent="actionPerformed"/>
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+      <ValueBinding ord="station:|slot:/GH/area$(area)/TempNet/close_M/out/value">
+        <IBooleanToSimple name="background">
+          <Brush name="trueValue" value="white"/>
+          <Brush name="falseValue" value="#aaaaaa"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </ImageButton>
+
+    <ImageButton layout="105.0,125.0,60.0,30.0" text="&#x7cfb;&#x7d71;&#x63a7;&#x5236;" foreground="black">
+      <ActionBinding ord="station:|slot:/GH/area$(area)/TempNet/emergencyAuto/fireVoidAction" widgetEvent="actionPerformed"/>
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+      <ValueBinding ord="station:|slot:/GH/area$(area)/TempNet/ControlStatus/overridden/value">
+        <IBooleanToSimple name="background">
+          <Brush name="trueValue" value="#aaaaaa"/>
+          <Brush name="falseValue" value="white"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </ImageButton>
+
+    <ImageButton layout="40.0,125.0,60.0,30.0" text="&#x624b;&#x52d5;&#x66ab;&#x505c;" foreground="black" background="#aaaaaa">
+      <ActionBinding ord="station:|slot:/GH/area$(area)/TempNet/emergencyStop/fireVoidAction" widgetEvent="actionPerformed"/>
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+    </ImageButton>
+
+  </CanvasPane>
+
+</ScrollPane>
+</content>
+</px>

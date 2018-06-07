@@ -1,0 +1,1065 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="converters"/>
+  <module name="gx"/>
+  <module name="kitPx"/>
+  <module name="workbench"/>
+</import>
+<content>
+<ScrollPane>
+
+  <CanvasPane name="content" viewSize="1000.0,550.0" valign="top">
+
+    <Label layout="522.0,113.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="569.0,113.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <Label layout="236.0,113.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="0.0,113.0,91.0,38.0" font="bold 14.0pt Microsoft YaHei" foreground="white" background="#666699">
+      <ValueBinding ord="station:|slot:/GH/areaName/area1">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="522.0,45.0,45.0,65.0" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#a39b86"/>
+
+    <Label layout="0.0,153.0,91.0,38.0" font="bold 14.0pt Microsoft YaHei" foreground="white" background="#666699">
+      <ValueBinding ord="station:|slot:/GH/areaName/area2">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="0.0,193.0,91.0,38.0" font="bold 14.0pt Microsoft YaHei" foreground="white" background="#666699">
+      <ValueBinding ord="station:|slot:/GH/areaName/area3">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="0.0,233.0,91.0,38.0" font="bold 14.0pt Microsoft YaHei" foreground="white" background="#666699">
+      <ValueBinding ord="station:|slot:/GH/areaName/area4">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="0.0,273.0,91.0,38.0" font="bold 14.0pt Microsoft YaHei" foreground="white" background="#666699">
+      <ValueBinding ord="station:|slot:/GH/areaName/area5">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="0.0,313.0,91.0,38.0" font="bold 14.0pt Microsoft YaHei" foreground="white" background="#666699">
+      <ValueBinding ord="station:|slot:/GH/areaName/area6">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="95.0,45.0,45.0,65.0" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#a39b86"/>
+
+    <Label layout="95.0,113.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <GenericFieldEditor layout="527.0,121.0,35.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area1/Spritz/SetSpritzRunTime/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="574.0,121.0,35.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area1/Spritz/SetSpritzRestTime/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="100.0,121.0,35.0,20.0" styleClasses="readonly">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area1/CoolingSolSelectorDay/SetTempLimit/fallback/value"/>
+    </GenericFieldEditor>
+
+    <Label layout="142.0,113.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="142.0,45.0,45.0,65.0" text="%" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#a39b86"/>
+
+    <Label layout="189.0,45.0,45.0,65.0" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#a39b86"/>
+
+    <Label layout="189.0,113.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/JACE01/points/Area1_SolB_Temp/out/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="236.0,45.0,45.0,65.0" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#a39b86"/>
+
+    <GenericFieldEditor layout="147.0,121.0,35.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area1/CoolingSolSelectorDay/SetSolBPercent/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="241.0,121.0,35.0,20.0" styleClasses="readonly">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area1/CoolingSolSelectorDay/SetSolBGap/fallback/value"/>
+    </GenericFieldEditor>
+
+    <Label layout="142.0,5.0,187.0,38.0" text="&#x5929;&#x7a97;&#x901a;&#x98a8;" font="bold 22.0pt Microsoft JhengHei" foreground="white" background="#8dafb1"/>
+
+    <Label layout="332.0,5.0,187.0,38.0" text="&#x906e;&#x852d;&#x964d;&#x6eab;" font="bold 22.0pt Microsoft JhengHei" foreground="white" background="#8dafb1"/>
+
+    <Label layout="95.0,50.0,45.0,20.0" text="&#x76ee;&#x6a19;" font="bold 16.0pt Microsoft JhengHei" foreground="white"/>
+
+    <Label layout="95.0,70.0,45.0,20.0" text="&#x6eab;&#x5ea6;" font="bold 16.0pt Microsoft JhengHei" foreground="white"/>
+
+    <Label layout="95.0,90.0,45.0,20.0" text="(&#x2103;)" font="bold 16.0pt Microsoft JhengHei" foreground="white"/>
+
+    <Label layout="189.0,50.0,45.0,20.0" text="&#x555f;&#x52d5;" font="bold 16.0pt Microsoft JhengHei" foreground="white"/>
+
+    <Label layout="189.0,70.0,45.0,20.0" text="&#x6eab;&#x5ea6;" font="bold 16.0pt Microsoft JhengHei" foreground="white"/>
+
+    <Label layout="189.0,90.0,45.0,20.0" text="(&#x2103;)" font="bold 16.0pt Microsoft JhengHei" foreground="white"/>
+
+    <Label layout="236.0,50.0,45.0,20.0" text="&#x4e0d;&#x611f;" font="bold 16.0pt Microsoft JhengHei" foreground="white"/>
+
+    <Label layout="236.0,70.0,45.0,20.0" text="&#x5e36;" font="bold 16.0pt Microsoft JhengHei" foreground="white"/>
+
+    <Label layout="236.0,90.0,45.0,20.0" text="(&#x2103;)" font="bold 16.0pt Microsoft JhengHei" foreground="white"/>
+
+    <Label layout="95.0,153.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <Label layout="142.0,153.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="189.0,153.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/JACE01/points/Area2_SolB_Temp/out/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="236.0,153.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="426.0,113.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="332.0,113.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="332.0,45.0,45.0,65.0" text="%" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#a39b86"/>
+
+    <Label layout="379.0,45.0,45.0,65.0" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#a39b86"/>
+
+    <Label layout="379.0,113.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/JACE01/points/Area1_SolC_Temp/out/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="426.0,45.0,45.0,65.0" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#a39b86"/>
+
+    <GenericFieldEditor layout="337.0,121.0,35.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area1/CoolingSolSelectorDay/SetSolCPercent/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="431.0,121.0,35.0,20.0" styleClasses="readonly">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area1/CoolingSolSelectorDay/SetSolCGap/fallback/value"/>
+    </GenericFieldEditor>
+
+    <Label layout="379.0,50.0,45.0,20.0" text="&#x555f;&#x52d5;" font="bold 16.0pt Microsoft JhengHei" foreground="white"/>
+
+    <Label layout="379.0,70.0,45.0,20.0" text="&#x6eab;&#x5ea6;" font="bold 16.0pt Microsoft JhengHei" foreground="white"/>
+
+    <Label layout="379.0,90.0,45.0,20.0" text="(&#x2103;)" font="bold 16.0pt Microsoft JhengHei" foreground="white"/>
+
+    <Label layout="426.0,50.0,45.0,20.0" text="&#x4e0d;&#x611f;" font="bold 16.0pt Microsoft JhengHei" foreground="white"/>
+
+    <Label layout="426.0,70.0,45.0,20.0" text="&#x5e36;" font="bold 16.0pt Microsoft JhengHei" foreground="white"/>
+
+    <Label layout="426.0,90.0,45.0,20.0" text="(&#x2103;)" font="bold 16.0pt Microsoft JhengHei" foreground="white"/>
+
+    <Label layout="332.0,153.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="426.0,153.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="522.0,5.0,281.0,38.0" text="&#x5674;&#x9727;&#x964d;&#x6eab;" font="bold 22.0pt Microsoft JhengHei" foreground="white" background="#8dafb1"/>
+
+    <Label layout="710.0,113.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="616.0,113.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="616.0,45.0,45.0,65.0" text="%" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#a39b86"/>
+
+    <Label layout="663.0,45.0,45.0,65.0" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#a39b86"/>
+
+    <Label layout="663.0,113.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/JACE01/points/Area1_SolD_Temp/out/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="710.0,45.0,45.0,65.0" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#a39b86"/>
+
+    <GenericFieldEditor layout="621.0,121.0,35.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area1/CoolingSolSelectorDay/SetSolDPercent/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="715.0,121.0,35.0,20.0" styleClasses="readonly">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area1/CoolingSolSelectorDay/SetSolDGap/fallback/value"/>
+    </GenericFieldEditor>
+
+    <Label layout="663.0,50.0,45.0,20.0" text="&#x555f;&#x52d5;" font="bold 16.0pt Microsoft JhengHei" foreground="white"/>
+
+    <Label layout="663.0,70.0,45.0,20.0" text="&#x6eab;&#x5ea6;" font="bold 16.0pt Microsoft JhengHei" foreground="white"/>
+
+    <Label layout="663.0,90.0,45.0,20.0" text="(&#x2103;)" font="bold 16.0pt Microsoft JhengHei" foreground="white"/>
+
+    <Label layout="710.0,50.0,45.0,20.0" text="&#x4e0d;&#x611f;" font="bold 16.0pt Microsoft JhengHei" foreground="white"/>
+
+    <Label layout="710.0,70.0,45.0,20.0" text="&#x5e36;" font="bold 16.0pt Microsoft JhengHei" foreground="white"/>
+
+    <Label layout="710.0,90.0,45.0,20.0" text="(&#x2103;)" font="bold 16.0pt Microsoft JhengHei" foreground="white"/>
+
+    <Label layout="616.0,153.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="710.0,153.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="521.0,50.0,45.0,20.0" text="&#x6301;&#x7e8c;" font="bold 16.0pt Microsoft JhengHei" foreground="white"/>
+
+    <Label layout="521.0,70.0,45.0,20.0" text="&#x6642;&#x9593;" font="bold 16.0pt Microsoft JhengHei" foreground="white"/>
+
+    <Label layout="521.0,90.0,45.0,20.0" text="(&#x79d2;)" font="bold 16.0pt Microsoft JhengHei" foreground="white"/>
+
+    <Label layout="569.0,153.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <Label layout="569.0,45.0,45.0,65.0" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#a39b86"/>
+
+    <Label layout="569.0,50.0,45.0,20.0" text="&#x9593;&#x6b47;" font="bold 16.0pt Microsoft JhengHei" foreground="white"/>
+
+    <Label layout="569.0,70.0,45.0,20.0" text="&#x6642;&#x9593;" font="bold 16.0pt Microsoft JhengHei" foreground="white"/>
+
+    <Label layout="569.0,90.0,45.0,20.0" text="(&#x79d2;)" font="bold 16.0pt Microsoft JhengHei" foreground="white"/>
+
+    <Label layout="522.0,153.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="807.0,5.0,187.0,38.0" text="&#x7a7a;&#x8abf;&#x964d;&#x6eab;" font="bold 22.0pt Microsoft JhengHei" foreground="white" background="#8dafb1"/>
+
+    <Label layout="807.0,113.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="807.0,45.0,45.0,65.0" text="%" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#a39b86"/>
+
+    <Label layout="854.0,45.0,45.0,65.0" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#a39b86"/>
+
+    <Label layout="854.0,113.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/JACE01/points/Area1_SolF_Temp/out/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <GenericFieldEditor layout="812.0,121.0,35.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area1/CoolingSolSelectorDay/SetSolFPercent/fallback/value"/>
+    </GenericFieldEditor>
+
+    <Label layout="854.0,50.0,45.0,20.0" text="&#x555f;&#x52d5;" font="bold 16.0pt Microsoft JhengHei" foreground="white"/>
+
+    <Label layout="854.0,70.0,45.0,20.0" text="&#x6eab;&#x5ea6;" font="bold 16.0pt Microsoft JhengHei" foreground="white"/>
+
+    <Label layout="854.0,90.0,45.0,20.0" text="(&#x2103;)" font="bold 16.0pt Microsoft JhengHei" foreground="white"/>
+
+    <Label layout="807.0,153.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <SaveButton layout="890.0,510.0,100.0,30.0" image="module://icons/x16/save.png">
+      <WsAnnotation name="wsAnnotation" value="14,14,8"/>
+    </SaveButton>
+
+    <GenericFieldEditor layout="527.0,161.0,35.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area2/Spritz/SetSpritzRunTime/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="574.0,161.0,35.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area2/Spritz/SetSpritzRestTime/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="100.0,161.0,35.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area2/CoolingSolSelectorDay/SetTempLimit/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="147.0,161.0,35.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area2/CoolingSolSelectorDay/SetSolBPercent/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="241.0,161.0,35.0,20.0" styleClasses="readonly">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area2/CoolingSolSelectorDay/SetSolBGap/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="337.0,161.0,35.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area2/CoolingSolSelectorDay/SetSolCPercent/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="431.0,161.0,35.0,20.0" styleClasses="readonly">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area2/CoolingSolSelectorDay/SetSolCGap/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="621.0,161.0,35.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area2/CoolingSolSelectorDay/SetSolDPercent/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="715.0,161.0,35.0,20.0" styleClasses="readonly">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area2/CoolingSolSelectorDay/SetSolDGap/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="812.0,161.0,35.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area2/CoolingSolSelectorDay/SetSolFPercent/fallback/value"/>
+    </GenericFieldEditor>
+
+    <Label layout="379.0,153.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/JACE01/points/Area2_SolC_Temp/out/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="854.0,153.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/JACE01/points/Area2_SolF_Temp/out/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="663.0,153.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/JACE01/points/Area2_SolD_Temp/out/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="95.0,193.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <Label layout="142.0,193.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="189.0,193.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6">
+      <ValueBinding ord="station:|slot:/GH/area3/CoolingSolSelectorDay/SolBTemp/out/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="236.0,193.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="332.0,193.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="426.0,193.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="616.0,193.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="710.0,193.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="569.0,193.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <Label layout="522.0,193.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="807.0,193.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <GenericFieldEditor layout="527.0,201.0,35.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area3/Spritz/SetSpritzRunTime/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="574.0,201.0,35.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area3/Spritz/SetSpritzRestTime/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="100.0,201.0,35.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area3/CoolingSolSelectorDay/SetTempLimit/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="147.0,201.0,35.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area3/CoolingSolSelectorDay/SetSolBPercent/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="241.0,201.0,35.0,20.0" styleClasses="readonly">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area3/CoolingSolSelectorDay/SetSolBGap/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="337.0,201.0,35.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area3/CoolingSolSelectorDay/SetSolCPercent/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="431.0,201.0,35.0,20.0" styleClasses="readonly">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area3/CoolingSolSelectorDay/SetSolCGap/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="621.0,201.0,35.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area3/CoolingSolSelectorDay/SetSolDPercent/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="715.0,201.0,35.0,20.0" styleClasses="readonly">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area3/CoolingSolSelectorDay/SetSolDGap/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="812.0,201.0,35.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area3/CoolingSolSelectorDay/SetSolFPercent/fallback/value"/>
+    </GenericFieldEditor>
+
+    <Label layout="379.0,193.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6">
+      <ValueBinding ord="station:|slot:/GH/area3/CoolingSolSelectorDay/SolCTemp/out/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="854.0,193.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6">
+      <ValueBinding ord="station:|slot:/GH/area3/CoolingSolSelectorDay/SolFTemp/out/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="663.0,193.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6">
+      <ValueBinding ord="station:|slot:/GH/area3/CoolingSolSelectorDay/SolDTemp/out/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="95.0,233.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <Label layout="142.0,233.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="189.0,233.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6">
+      <ValueBinding ord="station:|slot:/GH/area4/CoolingSolSelectorDay/SolBTemp/out/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="236.0,233.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="332.0,233.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="426.0,233.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="616.0,233.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="710.0,233.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="569.0,233.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <Label layout="522.0,233.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="807.0,233.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <GenericFieldEditor layout="527.0,241.0,35.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area4/Spritz/SetSpritzRunTime/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="574.0,241.0,35.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area4/Spritz/SetSpritzRestTime/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="100.0,241.0,35.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area4/CoolingSolSelectorDay/SetTempLimit/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="147.0,241.0,35.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area4/CoolingSolSelectorDay/SetSolBPercent/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="241.0,241.0,35.0,20.0" styleClasses="readonly">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area4/CoolingSolSelectorDay/SetSolBGap/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="337.0,241.0,35.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area4/CoolingSolSelectorDay/SetSolCPercent/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="431.0,241.0,35.0,20.0" styleClasses="readonly">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area4/CoolingSolSelectorDay/SetSolCGap/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="621.0,241.0,35.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area4/CoolingSolSelectorDay/SetSolDPercent/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="715.0,241.0,35.0,20.0" styleClasses="readonly">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area4/CoolingSolSelectorDay/SetSolDGap/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="812.0,241.0,35.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area4/CoolingSolSelectorDay/SetSolFPercent/fallback/value"/>
+    </GenericFieldEditor>
+
+    <Label layout="379.0,233.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6">
+      <ValueBinding ord="station:|slot:/GH/area4/CoolingSolSelectorDay/SolCTemp/out/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="854.0,233.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6">
+      <ValueBinding ord="station:|slot:/GH/area4/CoolingSolSelectorDay/SolFTemp/out/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="663.0,233.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6">
+      <ValueBinding ord="station:|slot:/GH/area4/CoolingSolSelectorDay/SolDTemp/out/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="95.0,273.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <Label layout="142.0,273.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="236.0,273.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="332.0,273.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="426.0,273.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="616.0,273.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="710.0,273.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="569.0,273.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <Label layout="522.0,273.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="807.0,273.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <GenericFieldEditor layout="527.0,281.0,35.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area5/Spritz/SetSpritzRunTime/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="574.0,281.0,35.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area5/Spritz/SetSpritzRestTime/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="100.0,281.0,35.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area5/CoolingSolSelectorDay/SetTempLimit/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="147.0,281.0,35.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area5/CoolingSolSelectorDay/SetSolBPercent/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="241.0,281.0,35.0,20.0" styleClasses="readonly">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area5/CoolingSolSelectorDay/SetSolBGap/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="337.0,281.0,35.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area5/CoolingSolSelectorDay/SetSolCPercent/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="431.0,281.0,35.0,20.0" styleClasses="readonly">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area5/CoolingSolSelectorDay/SetSolCGap/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="621.0,281.0,35.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area5/CoolingSolSelectorDay/SetSolDPercent/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="715.0,281.0,35.0,20.0" styleClasses="readonly">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area5/CoolingSolSelectorDay/SetSolDGap/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="812.0,281.0,35.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area5/CoolingSolSelectorDay/SetSolFPercent/fallback/value"/>
+    </GenericFieldEditor>
+
+    <Label layout="95.0,313.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <Label layout="142.0,313.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="236.0,313.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="332.0,313.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="426.0,313.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="616.0,313.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="710.0,313.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="569.0,313.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <Label layout="522.0,313.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="807.0,313.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <GenericFieldEditor layout="527.0,321.0,35.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area6/Spritz/SetSpritzRunTime/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="574.0,321.0,35.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area6/Spritz/SetSpritzRestTime/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="100.0,321.0,35.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area6/CoolingSolSelectorDay/SetTempLimit/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="147.0,321.0,35.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area6/CoolingSolSelectorDay/SetSolBPercent/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="241.0,321.0,35.0,20.0" styleClasses="readonly">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area6/CoolingSolSelectorDay/SetSolBGap/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="337.0,321.0,35.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area6/CoolingSolSelectorDay/SetSolCPercent/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="431.0,321.0,35.0,20.0" styleClasses="readonly">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area6/CoolingSolSelectorDay/SetSolCGap/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="621.0,321.0,35.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area6/CoolingSolSelectorDay/SetSolDPercent/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="715.0,321.0,35.0,20.0" styleClasses="readonly">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area6/CoolingSolSelectorDay/SetSolDGap/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="812.0,321.0,35.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area6/CoolingSolSelectorDay/SetSolFPercent/fallback/value"/>
+    </GenericFieldEditor>
+
+    <Label layout="283.0,45.0,46.0,65.0" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#a39b86"/>
+
+    <Label layout="473.0,45.0,46.0,65.0" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#a39b86"/>
+
+    <Label layout="757.0,45.0,46.0,65.0" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#a39b86"/>
+
+    <Label layout="283.0,55.0,46.0,20.0" text="&#x662f;&#x5426;" font="bold 16.0pt Microsoft JhengHei" foreground="white"/>
+
+    <Label layout="283.0,75.0,46.0,20.0" text="&#x555f;&#x7528;" font="bold 16.0pt Microsoft JhengHei" foreground="white"/>
+
+    <Label layout="473.0,55.0,46.0,20.0" text="&#x662f;&#x5426;" font="bold 16.0pt Microsoft JhengHei" foreground="white"/>
+
+    <Label layout="473.0,75.0,46.0,20.0" text="&#x555f;&#x7528;" font="bold 16.0pt Microsoft JhengHei" foreground="white"/>
+
+    <Label layout="757.0,55.0,46.0,20.0" text="&#x662f;&#x5426;" font="bold 16.0pt Microsoft JhengHei" foreground="white"/>
+
+    <Label layout="757.0,75.0,46.0,20.0" text="&#x555f;&#x7528;" font="bold 16.0pt Microsoft JhengHei" foreground="white"/>
+
+    <Label layout="283.0,313.0,46.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <Label layout="283.0,273.0,46.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <Label layout="283.0,233.0,46.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <Label layout="283.0,193.0,46.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <Label layout="283.0,153.0,46.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <Label layout="283.0,113.0,46.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <Label layout="473.0,313.0,46.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <Label layout="473.0,273.0,46.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <Label layout="473.0,233.0,46.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <Label layout="473.0,193.0,46.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <Label layout="473.0,153.0,46.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <Label layout="473.0,113.0,46.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <Label layout="757.0,313.0,46.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <Label layout="757.0,273.0,46.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <Label layout="757.0,233.0,46.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <Label layout="757.0,193.0,46.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <Label layout="757.0,153.0,46.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <Label layout="757.0,113.0,46.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <ToggleButton layout="283.0,113.0,46.0,38.0" styleClasses="selected" selected="true">
+      <SetPointBinding ord="station:|slot:/GH/area1/CoolingSolSelectorDay/SetSolBEnable/out/value" widgetEvent="actionPerformed" widgetProperty="selected">
+        <IStatusToBrush name="foreground" mode="foreground"/>
+        <IStatusToBrush name="background"/>
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value="&#x555f;&#x7528;"/>
+          <String name="falseValue" value="&#x95dc;&#x9589;"/>
+        </IBooleanToSimple>
+      </SetPointBinding>
+      <WsAnnotation name="wsAnnotation" value="58,58,8"/>
+    </ToggleButton>
+
+    <ToggleButton layout="473.0,113.0,46.0,38.0" styleClasses="selected" selected="true">
+      <SetPointBinding ord="station:|slot:/GH/area1/CoolingSolSelectorDay/SetSolCEnable/out/value" widgetEvent="actionPerformed" widgetProperty="selected">
+        <IStatusToBrush name="foreground" mode="foreground"/>
+        <IStatusToBrush name="background"/>
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value="&#x555f;&#x7528;"/>
+          <String name="falseValue" value="&#x95dc;&#x9589;"/>
+        </IBooleanToSimple>
+      </SetPointBinding>
+      <WsAnnotation name="wsAnnotation" value="58,58,8"/>
+    </ToggleButton>
+
+    <ToggleButton layout="757.0,113.0,46.0,38.0" styleClasses="selected" selected="true">
+      <SetPointBinding ord="station:|slot:/GH/area1/CoolingSolSelectorDay/SetSolDEnable/out/value" widgetEvent="actionPerformed" widgetProperty="selected">
+        <IStatusToBrush name="foreground" mode="foreground"/>
+        <IStatusToBrush name="background"/>
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value="&#x555f;&#x7528;"/>
+          <String name="falseValue" value="&#x95dc;&#x9589;"/>
+        </IBooleanToSimple>
+      </SetPointBinding>
+      <WsAnnotation name="wsAnnotation" value="58,58,8"/>
+    </ToggleButton>
+
+    <Label layout="901.0,45.0,45.0,65.0" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#a39b86"/>
+
+    <Label layout="901.0,50.0,45.0,20.0" text="&#x7a7a;&#x8abf;" font="bold 16.0pt Microsoft JhengHei" foreground="white"/>
+
+    <Label layout="901.0,70.0,45.0,20.0" text="&#x6eab;&#x5ea6;" font="bold 16.0pt Microsoft JhengHei" foreground="white"/>
+
+    <Label layout="901.0,90.0,45.0,20.0" text="(&#x2103;)" font="bold 16.0pt Microsoft JhengHei" foreground="white"/>
+
+    <Label layout="901.0,273.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="901.0,313.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="901.0,233.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="901.0,193.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="901.0,153.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="901.0,113.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="948.0,45.0,46.0,65.0" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#a39b86"/>
+
+    <Label layout="948.0,55.0,46.0,20.0" text="&#x662f;&#x5426;" font="bold 16.0pt Microsoft JhengHei" foreground="white"/>
+
+    <Label layout="948.0,75.0,46.0,20.0" text="&#x555f;&#x7528;" font="bold 16.0pt Microsoft JhengHei" foreground="white"/>
+
+    <Label layout="948.0,313.0,46.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <Label layout="948.0,273.0,46.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <Label layout="948.0,233.0,46.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <Label layout="948.0,193.0,46.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <Label layout="948.0,153.0,46.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <Label layout="948.0,113.0,46.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <ToggleButton layout="948.0,113.0,46.0,38.0" styleClasses="selected" selected="true">
+      <SetPointBinding ord="station:|slot:/GH/area1/CoolingSolSelectorDay/SetSolFEnable/out/value" widgetEvent="actionPerformed" widgetProperty="selected">
+        <IStatusToBrush name="foreground" mode="foreground"/>
+        <IStatusToBrush name="background"/>
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value="&#x555f;&#x7528;"/>
+          <String name="falseValue" value="&#x95dc;&#x9589;"/>
+        </IBooleanToSimple>
+      </SetPointBinding>
+      <WsAnnotation name="wsAnnotation" value="58,58,8"/>
+    </ToggleButton>
+
+    <GenericFieldEditor layout="906.0,121.0,35.0,20.0" styleClasses="readonly">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area1/CoolingSolSelectorDay/SetFCUTemp/fallback/value"/>
+    </GenericFieldEditor>
+
+    <ToggleButton layout="283.0,153.0,46.0,38.0">
+      <SetPointBinding ord="station:|slot:/GH/area2/CoolingSolSelectorDay/SetSolBEnable/out/value" widgetEvent="actionPerformed" widgetProperty="selected">
+        <IStatusToBrush name="foreground" mode="foreground"/>
+        <IStatusToBrush name="background"/>
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value="&#x555f;&#x7528;"/>
+          <String name="falseValue" value="&#x95dc;&#x9589;"/>
+        </IBooleanToSimple>
+      </SetPointBinding>
+      <WsAnnotation name="wsAnnotation" value="58,58,8"/>
+    </ToggleButton>
+
+    <ToggleButton layout="473.0,153.0,46.0,38.0">
+      <SetPointBinding ord="station:|slot:/GH/area2/CoolingSolSelectorDay/SetSolCEnable/out/value" widgetEvent="actionPerformed" widgetProperty="selected">
+        <IStatusToBrush name="foreground" mode="foreground"/>
+        <IStatusToBrush name="background"/>
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value="&#x555f;&#x7528;"/>
+          <String name="falseValue" value="&#x95dc;&#x9589;"/>
+        </IBooleanToSimple>
+      </SetPointBinding>
+      <WsAnnotation name="wsAnnotation" value="58,58,8"/>
+    </ToggleButton>
+
+    <ToggleButton layout="757.0,153.0,46.0,38.0">
+      <SetPointBinding ord="station:|slot:/GH/area2/CoolingSolSelectorDay/SetSolDEnable/out/value" widgetEvent="actionPerformed" widgetProperty="selected">
+        <IStatusToBrush name="foreground" mode="foreground"/>
+        <IStatusToBrush name="background"/>
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value="&#x555f;&#x7528;"/>
+          <String name="falseValue" value="&#x95dc;&#x9589;"/>
+        </IBooleanToSimple>
+      </SetPointBinding>
+      <WsAnnotation name="wsAnnotation" value="58,58,8"/>
+    </ToggleButton>
+
+    <ToggleButton layout="948.0,153.0,46.0,38.0">
+      <SetPointBinding ord="station:|slot:/GH/area2/CoolingSolSelectorDay/SetSolFEnable/out/value" widgetEvent="actionPerformed" widgetProperty="selected">
+        <IStatusToBrush name="foreground" mode="foreground"/>
+        <IStatusToBrush name="background"/>
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value="&#x555f;&#x7528;"/>
+          <String name="falseValue" value="&#x95dc;&#x9589;"/>
+        </IBooleanToSimple>
+      </SetPointBinding>
+      <WsAnnotation name="wsAnnotation" value="58,58,8"/>
+    </ToggleButton>
+
+    <GenericFieldEditor layout="906.0,161.0,35.0,20.0" styleClasses="readonly">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area2/CoolingSolSelectorDay/SetFCUTemp/fallback/value"/>
+    </GenericFieldEditor>
+
+    <Label layout="854.0,273.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6">
+      <ValueBinding ord="station:|slot:/GH/area5/CoolingSolSelectorDay/SolFTemp/out/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="854.0,313.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6">
+      <ValueBinding ord="station:|slot:/GH/area6/CoolingSolSelectorDay/SolFTemp/out/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="663.0,273.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6">
+      <ValueBinding ord="station:|slot:/GH/area5/CoolingSolSelectorDay/SolDTemp/out/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="663.0,313.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6">
+      <ValueBinding ord="station:|slot:/GH/area6/CoolingSolSelectorDay/SolDTemp/out/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="379.0,273.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6">
+      <ValueBinding ord="station:|slot:/GH/area5/CoolingSolSelectorDay/SolCTemp/out/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="379.0,313.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6">
+      <ValueBinding ord="station:|slot:/GH/area6/CoolingSolSelectorDay/SolCTemp/out/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="189.0,273.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6">
+      <ValueBinding ord="station:|slot:/GH/area5/CoolingSolSelectorDay/SolBTemp/out/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="189.0,313.0,45.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6">
+      <ValueBinding ord="station:|slot:/GH/area6/CoolingSolSelectorDay/SolBTemp/out/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <ToggleButton layout="283.0,193.0,46.0,38.0">
+      <SetPointBinding ord="station:|slot:/GH/area3/CoolingSolSelectorDay/SetSolBEnable/out/value" widgetEvent="actionPerformed" widgetProperty="selected">
+        <IStatusToBrush name="foreground" mode="foreground"/>
+        <IStatusToBrush name="background"/>
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value="&#x555f;&#x7528;"/>
+          <String name="falseValue" value="&#x95dc;&#x9589;"/>
+        </IBooleanToSimple>
+      </SetPointBinding>
+      <WsAnnotation name="wsAnnotation" value="58,58,8"/>
+    </ToggleButton>
+
+    <ToggleButton layout="473.0,193.0,46.0,38.0">
+      <SetPointBinding ord="station:|slot:/GH/area3/CoolingSolSelectorDay/SetSolCEnable/out/value" widgetEvent="actionPerformed" widgetProperty="selected">
+        <IStatusToBrush name="foreground" mode="foreground"/>
+        <IStatusToBrush name="background"/>
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value="&#x555f;&#x7528;"/>
+          <String name="falseValue" value="&#x95dc;&#x9589;"/>
+        </IBooleanToSimple>
+      </SetPointBinding>
+      <WsAnnotation name="wsAnnotation" value="58,58,8"/>
+    </ToggleButton>
+
+    <ToggleButton layout="757.0,193.0,46.0,38.0">
+      <SetPointBinding ord="station:|slot:/GH/area3/CoolingSolSelectorDay/SetSolDEnable/out/value" widgetEvent="actionPerformed" widgetProperty="selected">
+        <IStatusToBrush name="foreground" mode="foreground"/>
+        <IStatusToBrush name="background"/>
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value="&#x555f;&#x7528;"/>
+          <String name="falseValue" value="&#x95dc;&#x9589;"/>
+        </IBooleanToSimple>
+      </SetPointBinding>
+      <WsAnnotation name="wsAnnotation" value="58,58,8"/>
+    </ToggleButton>
+
+    <ToggleButton layout="948.0,193.0,46.0,38.0">
+      <SetPointBinding ord="station:|slot:/GH/area3/CoolingSolSelectorDay/SetSolFEnable/out/value" widgetEvent="actionPerformed" widgetProperty="selected">
+        <IStatusToBrush name="foreground" mode="foreground"/>
+        <IStatusToBrush name="background"/>
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value="&#x555f;&#x7528;"/>
+          <String name="falseValue" value="&#x95dc;&#x9589;"/>
+        </IBooleanToSimple>
+      </SetPointBinding>
+      <WsAnnotation name="wsAnnotation" value="58,58,8"/>
+    </ToggleButton>
+
+    <GenericFieldEditor layout="906.0,201.0,35.0,20.0" styleClasses="readonly">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area3/CoolingSolSelectorDay/SetFCUTemp/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="906.0,241.0,35.0,20.0" styleClasses="readonly">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area4/CoolingSolSelectorDay/SetFCUTemp/fallback/value"/>
+    </GenericFieldEditor>
+
+    <ToggleButton layout="948.0,233.0,46.0,38.0">
+      <SetPointBinding ord="station:|slot:/GH/area4/CoolingSolSelectorDay/SetSolFEnable/out/value" widgetEvent="actionPerformed" widgetProperty="selected">
+        <IStatusToBrush name="foreground" mode="foreground"/>
+        <IStatusToBrush name="background"/>
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value="&#x555f;&#x7528;"/>
+          <String name="falseValue" value="&#x95dc;&#x9589;"/>
+        </IBooleanToSimple>
+      </SetPointBinding>
+      <WsAnnotation name="wsAnnotation" value="58,58,8"/>
+    </ToggleButton>
+
+    <ToggleButton layout="757.0,233.0,46.0,38.0">
+      <SetPointBinding ord="station:|slot:/GH/area4/CoolingSolSelectorDay/SetSolDEnable/out/value" widgetEvent="actionPerformed" widgetProperty="selected">
+        <IStatusToBrush name="foreground" mode="foreground"/>
+        <IStatusToBrush name="background"/>
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value="&#x555f;&#x7528;"/>
+          <String name="falseValue" value="&#x95dc;&#x9589;"/>
+        </IBooleanToSimple>
+      </SetPointBinding>
+      <WsAnnotation name="wsAnnotation" value="58,58,8"/>
+    </ToggleButton>
+
+    <ToggleButton layout="473.0,233.0,46.0,38.0">
+      <SetPointBinding ord="station:|slot:/GH/area4/CoolingSolSelectorDay/SetSolCEnable/out/value" widgetEvent="actionPerformed" widgetProperty="selected">
+        <IStatusToBrush name="foreground" mode="foreground"/>
+        <IStatusToBrush name="background"/>
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value="&#x555f;&#x7528;"/>
+          <String name="falseValue" value="&#x95dc;&#x9589;"/>
+        </IBooleanToSimple>
+      </SetPointBinding>
+      <WsAnnotation name="wsAnnotation" value="58,58,8"/>
+    </ToggleButton>
+
+    <ToggleButton layout="283.0,233.0,46.0,38.0">
+      <SetPointBinding ord="station:|slot:/GH/area4/CoolingSolSelectorDay/SetSolBEnable/out/value" widgetEvent="actionPerformed" widgetProperty="selected">
+        <IStatusToBrush name="foreground" mode="foreground"/>
+        <IStatusToBrush name="background"/>
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value="&#x555f;&#x7528;"/>
+          <String name="falseValue" value="&#x95dc;&#x9589;"/>
+        </IBooleanToSimple>
+      </SetPointBinding>
+      <WsAnnotation name="wsAnnotation" value="58,58,8"/>
+    </ToggleButton>
+
+    <GenericFieldEditor layout="906.0,321.0,35.0,20.0" styleClasses="readonly">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area6/CoolingSolSelectorDay/SetFCUTemp/fallback/value"/>
+    </GenericFieldEditor>
+
+    <ToggleButton layout="948.0,313.0,46.0,38.0">
+      <SetPointBinding ord="station:|slot:/GH/area6/CoolingSolSelectorDay/SetSolFEnable/out/value" widgetEvent="actionPerformed" widgetProperty="selected">
+        <IStatusToBrush name="foreground" mode="foreground"/>
+        <IStatusToBrush name="background"/>
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value="&#x555f;&#x7528;"/>
+          <String name="falseValue" value="&#x95dc;&#x9589;"/>
+        </IBooleanToSimple>
+      </SetPointBinding>
+      <WsAnnotation name="wsAnnotation" value="58,58,8"/>
+    </ToggleButton>
+
+    <ToggleButton layout="757.0,313.0,46.0,38.0">
+      <SetPointBinding ord="station:|slot:/GH/area6/CoolingSolSelectorDay/SetSolDEnable/out/value" widgetEvent="actionPerformed" widgetProperty="selected">
+        <IStatusToBrush name="foreground" mode="foreground"/>
+        <IStatusToBrush name="background"/>
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value="&#x555f;&#x7528;"/>
+          <String name="falseValue" value="&#x95dc;&#x9589;"/>
+        </IBooleanToSimple>
+      </SetPointBinding>
+      <WsAnnotation name="wsAnnotation" value="58,58,8"/>
+    </ToggleButton>
+
+    <ToggleButton layout="473.0,313.0,46.0,38.0">
+      <SetPointBinding ord="station:|slot:/GH/area6/CoolingSolSelectorDay/SetSolCEnable/out/value" widgetEvent="actionPerformed" widgetProperty="selected">
+        <IStatusToBrush name="foreground" mode="foreground"/>
+        <IStatusToBrush name="background"/>
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value="&#x555f;&#x7528;"/>
+          <String name="falseValue" value="&#x95dc;&#x9589;"/>
+        </IBooleanToSimple>
+      </SetPointBinding>
+      <WsAnnotation name="wsAnnotation" value="58,58,8"/>
+    </ToggleButton>
+
+    <ToggleButton layout="283.0,313.0,46.0,38.0">
+      <SetPointBinding ord="station:|slot:/GH/area6/CoolingSolSelectorDay/SetSolBEnable/out/value" widgetEvent="actionPerformed" widgetProperty="selected">
+        <IStatusToBrush name="foreground" mode="foreground"/>
+        <IStatusToBrush name="background"/>
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value="&#x555f;&#x7528;"/>
+          <String name="falseValue" value="&#x95dc;&#x9589;"/>
+        </IBooleanToSimple>
+      </SetPointBinding>
+      <WsAnnotation name="wsAnnotation" value="58,58,8"/>
+    </ToggleButton>
+
+    <ToggleButton layout="948.0,273.0,46.0,38.0">
+      <SetPointBinding ord="station:|slot:/GH/area5/CoolingSolSelectorDay/SetSolFEnable/out/value" widgetEvent="actionPerformed" widgetProperty="selected">
+        <IStatusToBrush name="foreground" mode="foreground"/>
+        <IStatusToBrush name="background"/>
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value="&#x555f;&#x7528;"/>
+          <String name="falseValue" value="&#x95dc;&#x9589;"/>
+        </IBooleanToSimple>
+      </SetPointBinding>
+      <WsAnnotation name="wsAnnotation" value="58,58,8"/>
+    </ToggleButton>
+
+    <GenericFieldEditor layout="906.0,281.0,35.0,20.0" styleClasses="readonly">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area5/CoolingSolSelectorDay/SetFCUTemp/fallback/value"/>
+    </GenericFieldEditor>
+
+    <ToggleButton layout="757.0,273.0,46.0,38.0">
+      <SetPointBinding ord="station:|slot:/GH/area5/CoolingSolSelectorDay/SetSolDEnable/out/value" widgetEvent="actionPerformed" widgetProperty="selected">
+        <IStatusToBrush name="foreground" mode="foreground"/>
+        <IStatusToBrush name="background"/>
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value="&#x555f;&#x7528;"/>
+          <String name="falseValue" value="&#x95dc;&#x9589;"/>
+        </IBooleanToSimple>
+      </SetPointBinding>
+      <WsAnnotation name="wsAnnotation" value="58,58,8"/>
+    </ToggleButton>
+
+    <ToggleButton layout="473.0,273.0,46.0,38.0">
+      <SetPointBinding ord="station:|slot:/GH/area5/CoolingSolSelectorDay/SetSolCEnable/out/value" widgetEvent="actionPerformed" widgetProperty="selected">
+        <IStatusToBrush name="foreground" mode="foreground"/>
+        <IStatusToBrush name="background"/>
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value="&#x555f;&#x7528;"/>
+          <String name="falseValue" value="&#x95dc;&#x9589;"/>
+        </IBooleanToSimple>
+      </SetPointBinding>
+      <WsAnnotation name="wsAnnotation" value="58,58,8"/>
+    </ToggleButton>
+
+    <ToggleButton layout="283.0,273.0,46.0,38.0">
+      <SetPointBinding ord="station:|slot:/GH/area5/CoolingSolSelectorDay/SetSolBEnable/out/value" widgetEvent="actionPerformed" widgetProperty="selected">
+        <IStatusToBrush name="foreground" mode="foreground"/>
+        <IStatusToBrush name="background"/>
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value="&#x555f;&#x7528;"/>
+          <String name="falseValue" value="&#x95dc;&#x9589;"/>
+        </IBooleanToSimple>
+      </SetPointBinding>
+      <WsAnnotation name="wsAnnotation" value="58,58,8"/>
+    </ToggleButton>
+
+  </CanvasPane>
+
+</ScrollPane>
+</content>
+</px>

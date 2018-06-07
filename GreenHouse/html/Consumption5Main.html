@@ -1,0 +1,487 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>能耗监视-建筑能耗</title>
+	<!-- CSS -->
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+		<!-- Top bar -->
+		<link href="css/bar.css" rel="stylesheet" type="text/css">
+		<!-- 樣式 tems-->
+		<link href="css/main-tems.css" rel="stylesheet" type="text/css">
+		<!-- timepicker 日期選取工具 -->
+	    <link href="css/Timepicker/jquery-ui.css" rel="stylesheet">
+	    <link href="css/Timepicker/jquery-ui-timepicker-addon.css" rel="stylesheet">
+	<!-- End CSS -->
+	<!-- CSS SET -->
+	<style type="text/css">
+	/* 調整container畫面大小、位置 */
+	.container{
+		padding-right: 0px;
+ 		padding-left: 0px;
+		width:1150;
+		float:left;
+	}
+	/* 調整panel區塊間距 */
+	.panel {
+	  margin-top: 5px;
+	  margin-bottom: 5px;
+	}
+	/* 調整jqgrid文字顏色 */
+	.ui-th-column, .ui-jqgrid .ui-jqgrid-htable th.ui-th-column {color: #1e6e8c;}
+	.ui-jqgrid tr.jqgrow td {color: #1e6e8c;}
+	.ui-jqgrid .ui-pg-selbox {color: #1e6e8c;}
+	/* 調整container1頂部間距 */
+	#container1{padding-top: 10px;}
+	/* 中間Table設置 */
+	#table table, th, td {
+		border: 1px solid white;
+		text-align: center;
+	}
+	#table .titleRow {
+		color:#ffffff;
+		background-color: #00bebe;
+		font-size: 14px;
+	}
+	#table .titleColumn {
+		color:#ffffff;
+		background-color: #1e6e8c;
+		font-size: 14px;
+	}
+	#table .dataRow0 {
+		color:#1e6e8c;
+		background-color: #e4eff4;
+		font-size: 14px;
+	}
+	#table .dataRow1 {
+		color:#1e6e8c;
+		background-color: #bed2dc;
+		font-size: 14px;
+	}
+	//
+	</style>
+	<!-- End CSS SET -->
+	<!-- Javascript -->
+		<!-- jQuery 套件工具 -->
+		<script src="js/jquery/jquery.js"></script>
+		<!-- jQuery 套件工具 螢幕畫面鎖定(遮罩)套件-->
+		<script src="js/jquery/jquery.blockUI.js"></script>
+		<!-- Web相關函數 -->
+		<script type="text/javascript" src="js/WebTool.js"></script>
+		<!-- 時間相關函數 -->
+		<script type="text/javascript" src="js/TimeTool.js"></script>
+		<!-- echarts 圖表 -->
+		<script type="text/javascript" src="js/echarts/echarts.js"></script>
+		<script type="text/javascript" src="js/echarts/macarons.js"></script>
+		<!-- 圖表設定與函數 -->
+		<script type="text/javascript" src="js/GraphChart.js"></script>
+		<!-- timepicker 日期選取工具 -->
+		<script src="js/Timepicker/jquery-ui.js"></script>
+		<script src="js/Timepicker/jquery-ui-timepicker-addon.js"></script>
+		<script src="js/Timepicker/jquery-ui-sliderAccess.js"></script>
+	    <!-- timepicker 日曆 -->
+	    <script type="text/javascript" src="js/CalendarTool.js"></script>
+		<!-- servlet套件 -->
+	    <script src="js/temsUtil.js"></script>
+	    <script src="js/ServletTool.js"></script>
+		<!-- Excel套件 -->
+		<script type="text/javascript" src="js/js-xlsx/Blob.js"></script>
+		<script type="text/javascript" src="js/js-xlsx/FileSaver.js"></script>
+	    <script type="text/javascript" src="js/js-xlsx/shim.min.js"></script>
+		<script type="text/javascript" src="js/js-xlsx/xlsx.full.min.js"></script>
+	<!-- End Javascript -->
+	
+	<!-- Javascript Code-->
+	<script type="text/javascript">
+	// 預設參數
+	var DateSection = new Array();
+	DateSection["month"] = "myMonthSection";
+	DateSection["year"] = "myYearSection";
+	// 預設參數-日期
+	var today = new Date();
+	var DefaultDate = new Array();
+	//
+	DefaultDate["month1"] = today.customFormat("#YYYY##MM#");
+	DefaultDate["year1"] = today.customFormat("#YYYY#");
+	// 能源數字代號
+	var EnergyDigitalCode = new Array();
+	EnergyDigitalCode["power"] = 1;
+	EnergyDigitalCode["water"] = 2;
+	//
+	function Init()
+	{	// 預設值
+		dateClick("month");		// dateButton
+		energyClick("power");	// energyButton
+	}
+	// 資料選擇
+	function dataSelect()
+	{	// 資料檢查
+		var dataMsg = dataCheck();
+		if ( dataMsg.status == 1 )
+		{	// 資料檢查成功，設定資料
+			var getData = dataMsg.data;
+			for(var key in getData)
+				eval("var " + key + " = '" + getData[key] + "'");
+			// 能源分枝-建築分項 & 標題
+			switch (energyType)
+			{
+				case "power":
+					var buildingType = { "/A01/TOTAL/E001/":"行政楼" , "/D03/TOTAL/E001/":"宿舍三" , "/D04/TOTAL/E001/":"宿舍四" };
+					var title = "总用电量 统计期间 ("+dateFoematISO(TimeSection1)+")";
+					var energyName = "电量";
+					var energyUnit = "kWh";
+					break;
+				case "water":
+					var buildingType = { "/A01/TOTAL/W001/":"行政楼" , "/D03/TOTAL/W001/":"宿舍三" , "/D04/TOTAL/W001/":"宿舍四" };
+					var title = "总用水量 统计期间 ("+dateFoematISO(TimeSection1)+")";
+					var energyName = "水量";
+					var energyUnit = "m³";
+					break;
+			}
+			// 日期分枝
+			switch (dateType)
+			{	// 日期
+				case "month":
+					// 時間週期 Array(yyyymm)
+					var timePeriod = datePeriodComparison(dateFoematISO(TimeSection1),dateType);
+					// 建築總用電量 and 能源項目
+					var selectSQL1 = " fk_device_id like '%TOTAL%' ";
+					var selectSQL2 = " source_type = '"+ EnergyDigitalCode[energyType] +"' ";
+					// 資料庫
+					var DBSql = new Array();
+					for(a=0;a<timePeriod.length;a++)
+					{	// 時間週期
+						var timeSQL =	" rawdata_yyyymm = '"+ timePeriod[a].date +"' " ;
+						var mainSQL	=	"Select fk_device_id as unit,usage as value FROM tems_usage_month" ;
+						var orderSQL =	" order by fk_device_id";	// 依序
+						// SQL
+						var sql = mainSQL + " where " + selectSQL1 + " and " + selectSQL2 + " and " + timeSQL + orderSQL;
+						DBSql.push(sql);
+					}
+					break;
+				case "year":
+					// 時間週期 Array(yyyy)
+					var timePeriod = datePeriodComparison(dateFoematISO(TimeSection1),dateType);
+					// 建築總用電量 and 能源項目
+					var selectSQL1 = " fk_device_id like '%TOTAL%' ";
+					var selectSQL2 = " source_type = '"+ EnergyDigitalCode[energyType] +"' ";
+					// 資料庫
+					var DBSql = new Array();
+					for(a=0;a<timePeriod.length;a++)
+					{	// 時間週期
+						var timeSQL = " ( rawdata_yyyymm between '"+ timePeriod[a].date +"01' and '"+ timePeriod[a].date +"12' ) " ;
+						var mainSQL	=	"Select fk_device_id as unit,usage as value FROM tems_usage_month" ;
+						var orderSQL =	" order by fk_device_id";	// 依序
+						// SQL
+						var sql = mainSQL + " where " + selectSQL1 + " and " + selectSQL2 + " and " + timeSQL + orderSQL;
+						DBSql.push(sql);
+					}
+					break;
+			}
+			// 日期名稱[當期,(環比,)同比]
+			var datePeriod = $.map(timePeriod, function(value){
+				return value.period + "(" + dateFoematISO(value.date) + ")";
+			});
+			// ItemBarChart參數設定(柱狀圖)
+			var system1 = new Object();
+			system1.id = "container1";
+			system1.item = buildingType;
+			system1.set = BarChartSet(datePeriod,title,"建筑名称",energyName,energyUnit);
+			// CreateTable設定
+			var system2 = new Object();
+			system2.id = "table";
+			system2.item = buildingType;
+			system2.unit = energyUnit;
+			// 標題物件
+			if ( dateType == "year" )
+				var headerName = [	{main:"建筑名称",title:[]},
+									{main:datePeriod[0],title:["当期("+system2.unit+")","占总耗能"]},
+									{main:datePeriod[1],title:["去年同期("+system2.unit+")","占总耗能","增减额","增減比"]}];
+			else
+				var headerName = [	{main:"建筑名称",title:[]},
+									{main:datePeriod[0],title:["当期("+system2.unit+")","占总耗能"]},
+									{main:datePeriod[1],title:["上期("+system2.unit+")","占总耗能","增减额","增減比"]},
+									{main:datePeriod[2],title:["去年同期("+system2.unit+")","占总耗能","增减额","增減比"]}];
+			//
+			system2.title = headerName;
+			// ItemPieChart參數設定(圓餅圖)
+			var system3 = new Object();
+			system3.id = "container2";
+			system3.item = buildingType;
+			system3.set = ItemPieChartSet(datePeriod,energyUnit,objectValues(buildingType));
+			// 資料呈現
+			// SQL語法與取值
+			var cmdSQL = document.getElementById("cmd");
+			cmdSQL.value = JSON.stringify(DBSql);
+			postForJSON('/tatungService/dbCmd/queryMultiData', formToMap('formSQL'), function (ret) 
+			{	// 產生-分項查詢
+				getMultiData(ret,function (status,msg,data)
+				{
+					if ( status == 1 )
+					{	// 成功，呈現畫面
+						ItemBarChart(data,system1);
+						CreateTable(data,system2);
+						PieChart(data,system3);
+						// 呈現Excel按鈕
+						document.getElementById('excel').style.display = "";
+					}
+					else
+					{	// 失敗
+						alert("分項查詢，建置失败\n原因："+msg);
+					}
+				});
+			});
+		}
+	}
+	// 表格匯出設定
+	var excelSystem = new Object();
+	excelSystem.tableID = "table";
+	excelSystem.sheetName = "建筑能耗";
+	excelSystem.fileName = "export";
+	// 表格匯出為Excel
+	function tableToExcel(type, fn, dl) 
+	{
+		var elt = document.getElementById(excelSystem.tableID);
+		var wb = XLSX.utils.table_to_book(elt, {sheet:excelSystem.sheetName});
+		return dl ?
+			XLSX.write(wb, {bookType:type, bookSST:true, type: 'base64'}) :
+			XLSX.writeFile(wb, fn || (excelSystem.fileName + '.' + (type || 'xlsx')));
+	}
+	// 日期click動作
+	function dateClick(dateType)
+	{	// calendar切換
+		inputSwitch("mySection1",DateSection[dateType]+"1",DefaultDate[dateType+"1"]);
+		// button切換
+		buttonSwitch("dateButton",dateType,"","btnSelect");
+		document.getElementById("dateType").value = dateType;
+	}
+	// 能源click動作
+	function energyClick(energyType)
+	{	// button切換
+		buttonSwitch("energyButton",energyType,"","btnSelect");
+		document.getElementById("energyType").value = energyType;
+	}
+	/*
+	動態產生 Table
+	Object data			Niagara資料
+	Object systemSet	函數相關設定
+	
+	String id			table ID
+	Object item			分項物件(x軸)
+	Object title		標題物件
+	*/
+	function CreateTable(data,systemSet)
+	{
+		var table = document.getElementById(systemSet.id);
+		// 清除表格
+		table.innerHTML = "";
+		// 參數
+		var headerName = systemSet.title;	// 標題物件
+		var item = systemSet.item;			// 分項物件
+		// 建立表格標題
+		// header 標題
+		var mainHeader = table.insertRow(0);
+		var titleHeader = table.insertRow(1);
+		var titleNumber = 0;
+		for(a=0;a<headerName.length;a++)
+		{	// main標題
+			var cellMain = mainHeader.insertCell(a);
+			cellMain.innerHTML = headerName[a].main;
+			if ( a==0 )
+				cellMain.className = 'titleColumn';
+			else
+				cellMain.className = 'titleRow';
+			// title標題
+			if ( headerName[a].title.length == 0 )
+				cellMain.rowSpan = 2;
+			else
+				cellMain.colSpan = headerName[a].title.length;
+			for(b=0;b<headerName[a].title.length;b++)
+			{
+				var cellTitle = titleHeader.insertCell(titleNumber);
+				cellTitle.innerHTML = headerName[a].title[b];
+				cellTitle.className = 'titleRow';
+				titleNumber++;
+			}
+		}
+		// 資料分項
+		// 依照item順序放值，不存在需放入null，每個item都需對應到值(包含零 or null)
+		// 為避免資料庫中間有不連續資料(如只有item1,2,4)，需用loop檢查
+		var sum = new Array();			// 計算總和
+		var datagroup = new Array();	// item資料
+		for(a=0;a<data.length;a++)
+		{
+			var dataset = new Array();
+			for(var key in item)
+			{	// 暫存值
+				var temp = null;
+				// loop檢查
+				for(b=0;b<data[a].length;b++)
+				{	// item key要與unit符合
+					if ( data[a][b].unit == key )
+					{	// 數值判斷，小於零顯示N/A
+						if ( data[a][b].value < 0 )
+							temp = "N/A";
+						else
+							temp = data[a][b].value;
+						break;
+					}
+				}
+				dataset.push(temp);
+			}
+			datagroup.push(dataset);
+			// 計算總和
+			var sumPeriod = 0;
+			for(b=0;b<data[a].length;b++)
+			{
+				var temp = parseFloat(data[a][b].value);
+				// 需去掉異常資料(小於零)
+				if ( temp >= 0 )
+					sumPeriod += temp;
+			}
+			sum.push(sumPeriod);
+		}
+		// 將分項物件轉換為分項矩陣，便於Loop依序處理『建立表格內容』
+		var itemArray = objectValues(item);
+		// 建立表格內容
+		for(a=0;a<itemArray.length;a++)
+		{	// 格子編號
+			var cellNumber = 0;
+			// 標題往下取2
+			var dataRow = table.insertRow(a+2);
+			// 能耗類別
+			var cellData = dataRow.insertCell(cellNumber++);
+			cellData.innerHTML = itemArray[a];
+			cellData.className = 'titleColumn';
+			// 當期
+			var cellData = dataRow.insertCell(cellNumber++);
+			cellData.innerHTML = tableValue(datagroup[0][a]);
+			cellData.className = 'dataRow'+(a%2);
+			// 佔總耗能
+			var cellData = dataRow.insertCell(cellNumber++);
+			cellData.innerHTML = tablePercent(datagroup[0][a],sum[0]);
+			cellData.className = 'dataRow'+(a%2);
+			// Loop
+			for(b=1;b<datagroup.length;b++)
+			{	// 上期or去年同期
+				var cellData = dataRow.insertCell(cellNumber++);
+				cellData.innerHTML = tableValue(datagroup[b][a]);
+				cellData.className = 'dataRow'+(a%2);
+				// 佔總耗能
+				var cellData = dataRow.insertCell(cellNumber++);
+				cellData.innerHTML = tablePercent(datagroup[b][a],sum[b]);
+				cellData.className = 'dataRow'+(a%2);
+				// 增減額
+				var cellData = dataRow.insertCell(cellNumber++);
+				cellData.innerHTML = tableIncrease(datagroup[0][a],datagroup[b][a]);
+				cellData.className = 'dataRow'+(a%2);
+				// 增減比
+				var cellData = dataRow.insertCell(cellNumber++);
+				cellData.innerHTML = tableRate(datagroup[0][a],datagroup[b][a]);
+				cellData.className = 'dataRow'+(a%2);
+			}
+		}
+	}
+	// table數據格式化
+	function tableValue(valueString)
+	{
+		if ( valueString == null )
+			return "-";
+		else if ( valueString == "N/A" )
+			return "N/A(数值异常)";
+		else
+			return parseFloat(valueString).toFixed(2);
+	}
+	function tablePercent(valueString,valueSum)
+	{
+		if ( valueString == null || valueSum == null  || valueString == 0 )
+			return "-";
+		else if ( valueString == "N/A")
+			return "-";
+		else
+		{	
+			var rate = 100 * parseFloat(valueString) / parseFloat(valueSum);
+			return rate.toFixed(2) + "%";
+		}
+	}
+	function tableIncrease(valueThis,valuePre)
+	{
+		if ( valueThis == null || valuePre == null )
+			return "-";
+		else if ( valueThis == "N/A" || valuePre == "N/A" )
+			return "-";
+		else
+		{
+			var increase = parseFloat(valueThis) - parseFloat(valuePre);
+			return increase.toFixed(2);
+		}
+	}
+	function tableRate(valueThis,valuePre)
+	{
+		if ( valueThis == null || valuePre == null )
+			return "-";
+		else if ( valueThis == "N/A" || valuePre == "N/A" )
+			return "-";
+		else
+		{
+			var increase = parseFloat(valueThis) - parseFloat(valuePre);
+			var rate = 100 * increase / parseFloat(valuePre);
+			return rate.toFixed(2) + "%";
+		}
+	}
+	</script>
+	<!-- END Javascript Code-->
+</head>
+<body onload="Init();">
+<div class="container">
+	<!-- MAIN -->
+	<div id="wrapper">
+		<div class="main">
+			<!-- MAIN CONTENT -->
+			<div class="main-content">
+			<div class="container-fluid">
+			<!-- 1 Row -->
+			<div class="row">
+				<div class="col-md-12">
+					<div class="panel">
+						<button id = "power"  	name="energyButton" type="button" onclick="energyClick(this.id)">电</button>
+						<button id = "water" 	name="energyButton" type="button" onclick="energyClick(this.id)">水</button>
+						<input type = "hidden" id = "energyType" value = "">
+						&nbsp
+						&nbsp
+						<button id = "month"  	name="dateButton" type="button" onclick="dateClick(this.id);">月</button>
+						<button id = "year" 	name="dateButton" type="button" onclick="dateClick(this.id);">年</button>
+						<input type = "hidden" id = "dateType" value = "">
+						&nbsp
+						<input type="text" id="myDaySection1" 	name="mySection1" placeholder="资料日期" size="14" readonly>
+						<input type="text" id="myMonthSection1" name="mySection1" placeholder="资料日期" size="14" readonly>
+						<input type="text" id="myYearSection1" 	name="mySection1" placeholder="资料日期" size="14" readonly>
+						&nbsp
+						<button onclick="dataSelect();">查询</button>
+						
+						<button id = "excel" value="" onclick="tableToExcel('xlsx');" style= "display:none;">EXCEL</button>
+						<!--<button>PDF</button>-->
+						<!-- SQL語法 -->
+						<form id="formSQL">
+							<input type = "hidden" id="cmd" name="cmd" value = "">
+						</form>
+						
+						<div id="container1" style="height: 200px; margin: 0 auto"></div>
+						<table align="center" width="900px" id="table"></table>
+						<div id="container2" style="height: 150px; margin: 0 auto"></div>
+					</div>
+				</div>
+			</div>
+			<!-- END 1 Row -->
+			</div>
+			</div>
+			<!-- END MAIN CONTENT -->
+			<!-- Niagara Data Debug -->
+			<!--<pre id="bajaScriptOut"></pre>-->
+		</div>
+		<!-- END MAIN -->
+	</div>
+</div>
+</body>
+</html>

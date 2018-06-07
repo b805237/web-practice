@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>告警內容</title>
+	<!-- CSS -->
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+		<!-- Top bar -->
+		<link href="css/bar.css" rel="stylesheet" type="text/css">
+		<!-- 樣式 -->
+		<link href="css/main.css" rel="stylesheet" type="text/css">
+	<!-- End CSS -->
+	<!-- CSS SET -->
+	<style type="text/css">
+
+	</style>
+	<!-- End CSS SET -->
+	
+	<!-- Javascript -->
+
+	<!-- End Javascript -->
+	
+	<!-- Javascript Code-->
+	<script type="text/javascript">
+	// 顯示倒數秒數
+	function showTime(second,text)
+	{
+		var temp = "更新秒數：" + second + "秒後";
+		document.getElementById(text).innerHTML = temp;
+		// 網頁重整
+		if( second == 0 )
+		    window.location.reload();
+		// 倒數
+		second -= 1;
+		// 每秒執行一次,showTime()
+		var tempFun = "showTime(" + second + ",'" + text + "')";
+		setTimeout(tempFun,1000);
+	}
+	//
+	function Init()
+	{	// 執行showTime()
+		showTime(100,'time-text');
+	}
+	</script>
+	<!-- END Javascript Code-->
+</head>
+
+<body onload="Init();">
+	<b id="time-text" class="col-sm-12" style="float:right;"></b>
+	<iframe id="px1" src="../px/f/Alarm_Contain_main.px" width="1000" height="595" align="center" scrolling="no" frameborder="0"></iframe>
+</div>
+</body>
+</html>

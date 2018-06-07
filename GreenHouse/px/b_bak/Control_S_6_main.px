@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="gx"/>
+  <module name="kitPx"/>
+  <module name="workbench"/>
+</import>
+<content>
+<ScrollPane>
+
+  <CanvasPane name="content" viewSize="1000.0,500.0" valign="top">
+
+    <Label layout="305.0,60.0,385.0,158.0" background="white"/>
+
+    <Label layout="398.0,180.0,292.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#bbeedd"/>
+
+    <Label layout="398.0,140.0,292.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#bed2dc"/>
+
+    <Label layout="397.0,97.0,293.0,40.0" text="&#x5149;&#x7167;&#x88dc;&#x5149; &#x6642;&#x9593;&#x8d77;&#x8fc4;" font="bold 18.0pt Microsoft YaHei" foreground="white" background="#1e6e8c"/>
+
+    <GenericFieldEditor layout="405.0,148.0,70.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Window/SetTemp_AM"/>
+    </GenericFieldEditor>
+
+    <Label layout="305.0,140.0,91.0,38.0" text="&#x8349;&#x8393;&#x5340;" font="bold 14.0pt Microsoft YaHei" foreground="white" background="#1e6e8c"/>
+
+    <Label layout="305.0,180.0,91.0,38.0" text="&#x82b1;&#x5349;&#x5340;" font="bold 14.0pt Microsoft YaHei" foreground="white" background="#1e6e8c"/>
+
+    <Label layout="470.0,148.0,30.0,20.0" text="&#x2103;"/>
+
+    <Label layout="470.0,188.0,30.0,20.0" text="&#x2103;"/>
+
+    <GenericFieldEditor layout="405.0,188.0,70.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Flower/Window/SetTemp_AM"/>
+    </GenericFieldEditor>
+
+    <SaveButton layout="790.0,360.0,100.0,30.0" image="module://icons/x16/save.png">
+      <WsAnnotation name="wsAnnotation" value="14,14,8"/>
+    </SaveButton>
+
+  </CanvasPane>
+
+</ScrollPane>
+</content>
+</px>

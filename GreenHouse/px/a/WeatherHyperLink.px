@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="converters"/>
+  <module name="gx"/>
+  <module name="kitPx"/>
+  <module name="workbench"/>
+</import>
+<content>
+<ScrollPane>
+
+  <CanvasPane name="content" viewSize="800.0,550.0">
+
+    <Label layout="400.0,20.0,137.0,65.0" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#a39b86"/>
+
+    <Label layout="260.0,90.0,137.0,48.0" font="bold 14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <Label layout="120.0,90.0,137.0,48.0" font="bold 14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="120.0,20.0,137.0,65.0" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#a39b86"/>
+
+    <Label layout="260.0,20.0,137.0,65.0" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#a39b86"/>
+
+    <Label layout="170.0,90.0,27.0,40.0" text="&#xff1a;" font="bold 12.0pt Microsoft JhengHei"/>
+
+    <Label layout="318.0,85.0,22.0,53.0" text="&#xff1a;" font="bold 12.0pt Microsoft JhengHei"/>
+
+    <Label layout="400.0,90.0,137.0,48.0" font="bold 14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <SaveButton layout="690.0,510.0,100.0,30.0" image="module://icons/x16/save.png">
+      <WsAnnotation name="wsAnnotation" value="14,14,8"/>
+    </SaveButton>
+
+    <GenericFieldEditor layout="145.0,100.0,32.0,25.0" styleClasses="readonly">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area$(area)/Schedule/AM_Hour/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="195.0,100.0,32.0,25.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area$(area)/Schedule/AM_Min/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="293.0,100.0,27.0,30.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area$(area)/Schedule/PM_Hour/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="343.0,100.0,27.0,30.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area$(area)/Schedule/PM_Min/fallback/value"/>
+    </GenericFieldEditor>
+
+    <Label layout="260.0,20.0,132.0,65.0" text="&#x591c;&#x9593;&#x958b;&#x59cb;&#x6642;&#x9593;" image="file:^GreenHouse/image/night_30.png" font="bold 16.0pt Microsoft JhengHei" foreground="white" halign="left"/>
+
+    <Label layout="120.0,20.0,132.0,65.0" text="&#x65e5;&#x9593;&#x958b;&#x59cb;&#x6642;&#x9593;" image="file:^GreenHouse/image/sun_30.png" font="bold 16.0pt Microsoft JhengHei" foreground="white" halign="left"/>
+
+    <Label layout="400.0,20.0,135.0,65.0" text="&#x9632;&#x98b1;&#x6a21;&#x5f0f;" image="file:^GreenHouse/image/typhoon_30.png" font="bold 16.0pt Microsoft JhengHei" foreground="white"/>
+
+    <ImageButton layout="400.0,90.0,66.0,48.0" text="&#x555f;&#x52d5;" font="bold 16.0pt Microsoft JhengHei">
+      <ActionBinding ord="station:|slot:/GH/area1/Schedule/setTyphoonOn/fireTopic" widgetEvent="actionPerformed"/>
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+    </ImageButton>
+
+    <ImageButton layout="469.0,90.0,66.0,48.0" text="&#x89e3;&#x9664;" font="bold 16.0pt Microsoft JhengHei">
+      <ActionBinding ord="station:|slot:/GH/area1/Schedule/setTyphoonOff/fireTopic" widgetEvent="actionPerformed"/>
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+    </ImageButton>
+
+    <Label layout="260.0,140.0,137.0,48.0" font="bold 14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <Label layout="120.0,140.0,137.0,48.0" font="bold 14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="170.0,140.0,27.0,40.0" text="&#xff1a;" font="bold 12.0pt Microsoft JhengHei"/>
+
+    <Label layout="318.0,135.0,22.0,53.0" text="&#xff1a;" font="bold 12.0pt Microsoft JhengHei"/>
+
+    <Label layout="400.0,140.0,137.0,48.0" font="bold 14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <GenericFieldEditor layout="145.0,150.0,32.0,25.0" styleClasses="readonly">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area$(area)/Schedule/AM_Hour/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="195.0,150.0,32.0,25.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area$(area)/Schedule/AM_Min/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="293.0,150.0,27.0,30.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area$(area)/Schedule/PM_Hour/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="343.0,150.0,27.0,30.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area$(area)/Schedule/PM_Min/fallback/value"/>
+    </GenericFieldEditor>
+
+    <ImageButton layout="400.0,140.0,66.0,48.0" text="&#x555f;&#x52d5;" font="bold 16.0pt Microsoft JhengHei">
+      <ActionBinding ord="station:|slot:/GH/area1/Schedule/setTyphoonOn/fireTopic" widgetEvent="actionPerformed"/>
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+    </ImageButton>
+
+    <ImageButton layout="469.0,140.0,66.0,48.0" text="&#x89e3;&#x9664;" font="bold 16.0pt Microsoft JhengHei">
+      <ActionBinding ord="station:|slot:/GH/area1/Schedule/setTyphoonOff/fireTopic" widgetEvent="actionPerformed"/>
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+    </ImageButton>
+
+    <Label layout="260.0,191.0,137.0,48.0" font="bold 14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <Label layout="120.0,191.0,137.0,48.0" font="bold 14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="170.0,191.0,27.0,40.0" text="&#xff1a;" font="bold 12.0pt Microsoft JhengHei"/>
+
+    <Label layout="318.0,186.0,22.0,53.0" text="&#xff1a;" font="bold 12.0pt Microsoft JhengHei"/>
+
+    <Label layout="400.0,191.0,137.0,48.0" font="bold 14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <GenericFieldEditor layout="145.0,201.0,32.0,25.0" styleClasses="readonly">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area$(area)/Schedule/AM_Hour/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="195.0,201.0,32.0,25.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area$(area)/Schedule/AM_Min/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="293.0,201.0,27.0,30.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area$(area)/Schedule/PM_Hour/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="343.0,201.0,27.0,30.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area$(area)/Schedule/PM_Min/fallback/value"/>
+    </GenericFieldEditor>
+
+    <ImageButton layout="400.0,191.0,66.0,48.0" text="&#x555f;&#x52d5;" font="bold 16.0pt Microsoft JhengHei">
+      <ActionBinding ord="station:|slot:/GH/area1/Schedule/setTyphoonOn/fireTopic" widgetEvent="actionPerformed"/>
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+    </ImageButton>
+
+    <ImageButton layout="469.0,191.0,66.0,48.0" text="&#x89e3;&#x9664;" font="bold 16.0pt Microsoft JhengHei">
+      <ActionBinding ord="station:|slot:/GH/area1/Schedule/setTyphoonOff/fireTopic" widgetEvent="actionPerformed"/>
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+    </ImageButton>
+
+    <Label layout="260.0,241.0,137.0,48.0" font="bold 14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <Label layout="120.0,241.0,137.0,48.0" font="bold 14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="170.0,241.0,27.0,40.0" text="&#xff1a;" font="bold 12.0pt Microsoft JhengHei"/>
+
+    <Label layout="318.0,236.0,22.0,53.0" text="&#xff1a;" font="bold 12.0pt Microsoft JhengHei"/>
+
+    <Label layout="400.0,241.0,137.0,48.0" font="bold 14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <GenericFieldEditor layout="145.0,251.0,32.0,25.0" styleClasses="readonly">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area$(area)/Schedule/AM_Hour/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="195.0,251.0,32.0,25.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area$(area)/Schedule/AM_Min/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="293.0,251.0,27.0,30.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area$(area)/Schedule/PM_Hour/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="343.0,251.0,27.0,30.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area$(area)/Schedule/PM_Min/fallback/value"/>
+    </GenericFieldEditor>
+
+    <ImageButton layout="400.0,241.0,66.0,48.0" text="&#x555f;&#x52d5;" font="bold 16.0pt Microsoft JhengHei">
+      <ActionBinding ord="station:|slot:/GH/area1/Schedule/setTyphoonOn/fireTopic" widgetEvent="actionPerformed"/>
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+    </ImageButton>
+
+    <ImageButton layout="469.0,241.0,66.0,48.0" text="&#x89e3;&#x9664;" font="bold 16.0pt Microsoft JhengHei">
+      <ActionBinding ord="station:|slot:/GH/area1/Schedule/setTyphoonOff/fireTopic" widgetEvent="actionPerformed"/>
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+    </ImageButton>
+
+    <Label layout="260.0,291.0,137.0,48.0" font="bold 14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <Label layout="120.0,291.0,137.0,48.0" font="bold 14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="170.0,291.0,27.0,40.0" text="&#xff1a;" font="bold 12.0pt Microsoft JhengHei"/>
+
+    <Label layout="318.0,301.0,22.0,53.0" text="&#xff1a;" font="bold 12.0pt Microsoft JhengHei"/>
+
+    <Label layout="400.0,291.0,137.0,48.0" font="bold 14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <GenericFieldEditor layout="145.0,301.0,32.0,25.0" styleClasses="readonly">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area$(area)/Schedule/AM_Hour/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="195.0,301.0,32.0,25.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area$(area)/Schedule/AM_Min/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="293.0,301.0,27.0,30.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area$(area)/Schedule/PM_Hour/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="343.0,301.0,27.0,30.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area$(area)/Schedule/PM_Min/fallback/value"/>
+    </GenericFieldEditor>
+
+    <ImageButton layout="400.0,291.0,66.0,48.0" text="&#x555f;&#x52d5;" font="bold 16.0pt Microsoft JhengHei">
+      <ActionBinding ord="station:|slot:/GH/area1/Schedule/setTyphoonOn/fireTopic" widgetEvent="actionPerformed"/>
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+    </ImageButton>
+
+    <ImageButton layout="469.0,291.0,66.0,48.0" text="&#x89e3;&#x9664;" font="bold 16.0pt Microsoft JhengHei">
+      <ActionBinding ord="station:|slot:/GH/area1/Schedule/setTyphoonOff/fireTopic" widgetEvent="actionPerformed"/>
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+    </ImageButton>
+
+    <Label layout="260.0,341.0,137.0,48.0" font="bold 14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <Label layout="120.0,341.0,137.0,48.0" font="bold 14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="170.0,341.0,27.0,40.0" text="&#xff1a;" font="bold 12.0pt Microsoft JhengHei"/>
+
+    <Label layout="318.0,336.0,22.0,53.0" text="&#xff1a;" font="bold 12.0pt Microsoft JhengHei"/>
+
+    <Label layout="400.0,341.0,137.0,48.0" font="bold 14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <GenericFieldEditor layout="145.0,351.0,32.0,25.0" styleClasses="readonly">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area$(area)/Schedule/AM_Hour/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="195.0,351.0,32.0,25.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area$(area)/Schedule/AM_Min/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="293.0,351.0,27.0,30.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area$(area)/Schedule/PM_Hour/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="343.0,351.0,27.0,30.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area$(area)/Schedule/PM_Min/fallback/value"/>
+    </GenericFieldEditor>
+
+    <ImageButton layout="400.0,341.0,66.0,48.0" text="&#x555f;&#x52d5;" font="bold 16.0pt Microsoft JhengHei">
+      <ActionBinding ord="station:|slot:/GH/area1/Schedule/setTyphoonOn/fireTopic" widgetEvent="actionPerformed"/>
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+    </ImageButton>
+
+    <ImageButton layout="469.0,341.0,66.0,48.0" text="&#x89e3;&#x9664;" font="bold 16.0pt Microsoft JhengHei">
+      <ActionBinding ord="station:|slot:/GH/area1/Schedule/setTyphoonOff/fireTopic" widgetEvent="actionPerformed"/>
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+    </ImageButton>
+
+    <Label layout="25.0,90.0,91.0,48.0" font="bold 14.0pt Microsoft YaHei" foreground="white" background="#666699">
+      <ValueBinding ord="station:|slot:/GH/areaName/area1">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="25.0,140.0,91.0,48.0" font="bold 14.0pt Microsoft YaHei" foreground="white" background="#666699">
+      <ValueBinding ord="station:|slot:/GH/areaName/area2">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="25.0,190.0,91.0,48.0" font="bold 14.0pt Microsoft YaHei" foreground="white" background="#666699">
+      <ValueBinding ord="station:|slot:/GH/areaName/area3">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="25.0,240.0,91.0,48.0" font="bold 14.0pt Microsoft YaHei" foreground="white" background="#666699">
+      <ValueBinding ord="station:|slot:/GH/areaName/area4">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="25.0,290.0,91.0,48.0" font="bold 14.0pt Microsoft YaHei" foreground="white" background="#666699">
+      <ValueBinding ord="station:|slot:/GH/areaName/area5">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="25.0,340.0,91.0,48.0" font="bold 14.0pt Microsoft YaHei" foreground="white" background="#666699">
+      <ValueBinding ord="station:|slot:/GH/areaName/area6">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="540.0,90.0,137.0,48.0" font="bold 14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <Label layout="540.0,20.0,137.0,65.0" text="&#x76ee;&#x524d;&#x6a21;&#x5f0f;" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#a39b86"/>
+
+    <ImageButton layout="540.0,90.0,137.0,48.0" styleClasses="toolbar" text="&#x65e5;&#x9593;&#x6a21;&#x5f0f;" image="file:^GreenHouse/image/sun_30.png" font="bold 16.0pt Microsoft JhengHei" buttonStyle="toolBar">
+      <ValueBinding ord="station:|slot:/GH/area1/CoolingSolSelectorDay/Enable/out/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+      <WsAnnotation name="wsAnnotation" value="10,10,8"/>
+    </ImageButton>
+
+    <ImageButton layout="540.0,90.0,137.0,48.0" styleClasses="toolbar" text="&#x591c;&#x9593;&#x6a21;&#x5f0f;" image="file:^GreenHouse/image/night_30.png" font="bold 16.0pt Microsoft JhengHei" buttonStyle="toolBar">
+      <ValueBinding ord="station:|slot:/GH/area1/CoolingSolSelectorNight/Enable/out/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+      <WsAnnotation name="wsAnnotation" value="10,10,8"/>
+    </ImageButton>
+
+    <ImageButton layout="540.0,90.0,137.0,48.0" styleClasses="toolbar" text="&#x9632;&#x98b1;&#x6a21;&#x5f0f;" image="file:^GreenHouse/image/typhoon_30.png" font="bold 16.0pt Microsoft JhengHei" buttonStyle="toolBar">
+      <ValueBinding ord="station:|slot:/GH/area1/Schedule/TyphoonStat/out/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+      <WsAnnotation name="wsAnnotation" value="10,10,8"/>
+    </ImageButton>
+
+    <Label layout="540.0,140.0,137.0,48.0" font="bold 14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <ImageButton layout="540.0,140.0,137.0,48.0" styleClasses="toolbar" text="&#x65e5;&#x9593;&#x6a21;&#x5f0f;" image="file:^GreenHouse/image/sun_30.png" font="bold 16.0pt Microsoft JhengHei" buttonStyle="toolBar">
+      <ValueBinding ord="station:|slot:/GH/area2/CoolingSolSelectorDay/Enable/out/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+      <WsAnnotation name="wsAnnotation" value="10,10,8"/>
+    </ImageButton>
+
+    <ImageButton layout="540.0,140.0,137.0,48.0" styleClasses="toolbar" text="&#x591c;&#x9593;&#x6a21;&#x5f0f;" image="file:^GreenHouse/image/night_30.png" font="bold 16.0pt Microsoft JhengHei" buttonStyle="toolBar">
+      <ValueBinding ord="station:|slot:/GH/area2/CoolingSolSelectorNight/Enable/out/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+      <WsAnnotation name="wsAnnotation" value="10,10,8"/>
+    </ImageButton>
+
+    <ImageButton layout="540.0,140.0,137.0,48.0" styleClasses="toolbar" text="&#x9632;&#x98b1;&#x6a21;&#x5f0f;" image="file:^GreenHouse/image/typhoon_30.png" font="bold 16.0pt Microsoft JhengHei" buttonStyle="toolBar">
+      <ValueBinding ord="station:|slot:/GH/area2/Schedule/TyphoonStat/out/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+      <WsAnnotation name="wsAnnotation" value="10,10,8"/>
+    </ImageButton>
+
+    <Label layout="540.0,190.0,137.0,48.0" font="bold 14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <ImageButton layout="540.0,190.0,137.0,48.0" styleClasses="toolbar" text="&#x65e5;&#x9593;&#x6a21;&#x5f0f;" image="file:^GreenHouse/image/sun_30.png" font="bold 16.0pt Microsoft JhengHei" buttonStyle="toolBar">
+      <ValueBinding ord="station:|slot:/GH/area3/CoolingSolSelectorDay/Enable/out/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+      <WsAnnotation name="wsAnnotation" value="10,10,8"/>
+    </ImageButton>
+
+    <ImageButton layout="540.0,190.0,137.0,48.0" styleClasses="toolbar" text="&#x591c;&#x9593;&#x6a21;&#x5f0f;" image="file:^GreenHouse/image/night_30.png" font="bold 16.0pt Microsoft JhengHei" buttonStyle="toolBar">
+      <ValueBinding ord="station:|slot:/GH/area3/CoolingSolSelectorNight/Enable/out/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+      <WsAnnotation name="wsAnnotation" value="10,10,8"/>
+    </ImageButton>
+
+    <ImageButton layout="540.0,190.0,137.0,48.0" styleClasses="toolbar" text="&#x9632;&#x98b1;&#x6a21;&#x5f0f;" image="file:^GreenHouse/image/typhoon_30.png" font="bold 16.0pt Microsoft JhengHei" buttonStyle="toolBar">
+      <ValueBinding ord="station:|slot:/GH/area3/Schedule/TyphoonStat/out/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+      <WsAnnotation name="wsAnnotation" value="10,10,8"/>
+    </ImageButton>
+
+    <Label layout="540.0,240.0,137.0,48.0" font="bold 14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <ImageButton layout="540.0,240.0,137.0,48.0" styleClasses="toolbar" text="&#x65e5;&#x9593;&#x6a21;&#x5f0f;" image="file:^GreenHouse/image/sun_30.png" font="bold 16.0pt Microsoft JhengHei" buttonStyle="toolBar">
+      <ValueBinding ord="station:|slot:/GH/area4/CoolingSolSelectorDay/Enable/out/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+      <WsAnnotation name="wsAnnotation" value="10,10,8"/>
+    </ImageButton>
+
+    <ImageButton layout="540.0,240.0,137.0,48.0" styleClasses="toolbar" text="&#x591c;&#x9593;&#x6a21;&#x5f0f;" image="file:^GreenHouse/image/night_30.png" font="bold 16.0pt Microsoft JhengHei" buttonStyle="toolBar">
+      <ValueBinding ord="station:|slot:/GH/area4/CoolingSolSelectorNight/Enable/out/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+      <WsAnnotation name="wsAnnotation" value="10,10,8"/>
+    </ImageButton>
+
+    <ImageButton layout="540.0,240.0,137.0,48.0" styleClasses="toolbar" text="&#x9632;&#x98b1;&#x6a21;&#x5f0f;" image="file:^GreenHouse/image/typhoon_30.png" font="bold 16.0pt Microsoft JhengHei" buttonStyle="toolBar">
+      <ValueBinding ord="station:|slot:/GH/area4/Schedule/TyphoonStat/out/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+      <WsAnnotation name="wsAnnotation" value="10,10,8"/>
+    </ImageButton>
+
+    <Label layout="540.0,290.0,137.0,48.0" font="bold 14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <ImageButton layout="540.0,290.0,137.0,48.0" styleClasses="toolbar" text="&#x65e5;&#x9593;&#x6a21;&#x5f0f;" image="file:^GreenHouse/image/sun_30.png" font="bold 16.0pt Microsoft JhengHei" buttonStyle="toolBar">
+      <ValueBinding ord="station:|slot:/GH/area5/CoolingSolSelectorDay/Enable/out/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+      <WsAnnotation name="wsAnnotation" value="10,10,8"/>
+    </ImageButton>
+
+    <ImageButton layout="540.0,290.0,137.0,48.0" styleClasses="toolbar" text="&#x591c;&#x9593;&#x6a21;&#x5f0f;" image="file:^GreenHouse/image/night_30.png" font="bold 16.0pt Microsoft JhengHei" buttonStyle="toolBar">
+      <ValueBinding ord="station:|slot:/GH/area5/CoolingSolSelectorNight/Enable/out/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+      <WsAnnotation name="wsAnnotation" value="10,10,8"/>
+    </ImageButton>
+
+    <ImageButton layout="540.0,290.0,137.0,48.0" styleClasses="toolbar" text="&#x9632;&#x98b1;&#x6a21;&#x5f0f;" image="file:^GreenHouse/image/typhoon_30.png" font="bold 16.0pt Microsoft JhengHei" buttonStyle="toolBar">
+      <ValueBinding ord="station:|slot:/GH/area5/Schedule/TyphoonStat/out/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+      <WsAnnotation name="wsAnnotation" value="10,10,8"/>
+    </ImageButton>
+
+    <Label layout="540.0,340.0,137.0,48.0" font="bold 14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <ImageButton layout="540.0,340.0,137.0,48.0" styleClasses="toolbar" text="&#x65e5;&#x9593;&#x6a21;&#x5f0f;" image="file:^GreenHouse/image/sun_30.png" font="bold 16.0pt Microsoft JhengHei" buttonStyle="toolBar">
+      <ValueBinding ord="station:|slot:/GH/area6/CoolingSolSelectorDay/Enable/out/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+      <WsAnnotation name="wsAnnotation" value="10,10,8"/>
+    </ImageButton>
+
+    <ImageButton layout="540.0,340.0,137.0,48.0" styleClasses="toolbar" text="&#x591c;&#x9593;&#x6a21;&#x5f0f;" image="file:^GreenHouse/image/night_30.png" font="bold 16.0pt Microsoft JhengHei" buttonStyle="toolBar">
+      <ValueBinding ord="station:|slot:/GH/area6/CoolingSolSelectorNight/Enable/out/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+      <WsAnnotation name="wsAnnotation" value="10,10,8"/>
+    </ImageButton>
+
+    <ImageButton layout="540.0,340.0,137.0,48.0" styleClasses="toolbar" text="&#x9632;&#x98b1;&#x6a21;&#x5f0f;" image="file:^GreenHouse/image/typhoon_30.png" font="bold 16.0pt Microsoft JhengHei" buttonStyle="toolBar">
+      <ValueBinding ord="station:|slot:/GH/area6/Schedule/TyphoonStat/out/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+      <WsAnnotation name="wsAnnotation" value="10,10,8"/>
+    </ImageButton>
+
+  </CanvasPane>
+
+</ScrollPane>
+</content>
+</px>

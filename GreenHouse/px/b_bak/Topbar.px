@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="converters"/>
+  <module name="gx"/>
+</import>
+<content>
+<ScrollPane>
+
+  <CanvasPane name="content" viewSize="250.0,25.0">
+
+    <Label layout="125.0,0.0,125.0,25.0" text="&#x82b1;&#x5349;&#x5340;" font="bold 17.0pt Microsoft JhengHei" foreground="#bed2dc" background="#bed2dc">
+      <ValueBinding ord="station:|slot:/Home/GreenHouse/Topbar/$(Select)2/out/value" hyperlink="file:^GreenHouse/px/b/Control_F_1.px">
+        <IBooleanToSimple name="background">
+          <Brush name="trueValue" value="#00bebe"/>
+          <Brush name="falseValue" value="#1e6e8c"/>
+        </IBooleanToSimple>
+        <IBooleanToSimple name="foreground">
+          <Brush name="trueValue" value="#1e6e8c"/>
+          <Brush name="falseValue" value="#bed2dc"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="0.0,0.0,125.0,25.0" text="&#x8349;&#x8393;&#x5340;" font="bold 17.0pt Microsoft JhengHei" foreground="#1e6e8c" background="#bed2dc">
+      <ValueBinding ord="station:|slot:/Home/GreenHouse/Topbar/$(Select)1/out/value" hyperlink="file:^GreenHouse/px/b/Control_S_1.px">
+        <IBooleanToSimple name="background">
+          <Brush name="trueValue" value="#00bebe"/>
+          <Brush name="falseValue" value="#1e6e8c"/>
+        </IBooleanToSimple>
+        <IBooleanToSimple name="foreground">
+          <Brush name="trueValue" value="#1e6e8c"/>
+          <Brush name="falseValue" value="#bed2dc"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Label>
+
+  </CanvasPane>
+
+</ScrollPane>
+</content>
+</px>

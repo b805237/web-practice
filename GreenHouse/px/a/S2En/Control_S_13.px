@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="converters"/>
+  <module name="gx"/>
+  <module name="kitPx"/>
+</import>
+<content>
+<ScrollPane>
+
+  <CanvasPane name="content" viewSize="1000.0,550.0" valign="top">
+
+    <PxInclude layout="0.0,0.0,200.0,550.0" ord="file:^GreenHouse/px/a/LeftBarDemo.px" variables="Select=s:i|area=s:$32"/>
+
+    <Label layout="200.0,0.0,800.0,550.0" image="file:^GreenHouse/image/Control2.png" halign="left" valign="top"/>
+
+    <Polygon stroke="#f9ec7c" pen="4.0" geom="220.0,360.0 220.0,520.0 640.0,520.0 640.0,360.0 "/>
+
+    <PxInclude layout="790.0,380.0,200.0,160.0" ord="file:^GreenHouse/px/a/WCH.px" variables="area=s:$32"/>
+
+    <PxInclude layout="900.0,0.0,100.0,30.0" ord="file:^GreenHouse/px/a/Weather.px" variables="area=s:$32"/>
+
+  </CanvasPane>
+
+</ScrollPane>
+</content>
+</px>

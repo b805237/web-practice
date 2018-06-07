@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="converters"/>
+  <module name="gx"/>
+  <module name="kitPx"/>
+</import>
+<content>
+<ScrollPane>
+
+  <CanvasPane name="content" viewSize="1360.0,765.0" valign="top">
+
+    <PxInclude layout="0.0,15.0,1360.0,80.0" ord="file:^GreenHouse/px/TopBar.px" variables="Select=s:h"/>
+
+    <PxInclude layout="1180.0,100.0,180.0,580.0" ord="file:^GreenHouse/px/Right.px"/>
+
+    <PxInclude layout="0.0,100.0,140.0,60.0" ord="file:^GreenHouse/px/TopBar2.px"/>
+
+    <Label layout="420.0,260.0,300.0,220.0" image="file:^HJC/image/Info/HJC2s.jpg">
+      <ValueBinding hyperlink="file:^HJC/image/Info/HJC2.pdf"/>
+    </Label>
+
+    <Label layout="80.0,260.0,300.0,220.0" image="file:^HJC/image/Info/HJC1s.jpg">
+      <PopupBinding ord="file:^HJC/image/Info/HJC1.jpg" title="&#x8fa6;&#x516c;&#x5927;&#x6a13;" position="100.0,300.0" size="1024.0,768.0"/>
+    </Label>
+
+    <Label layout="140.0,490.0,180.0,30.0" text="&#x5e73;&#x9762;&#x5716;" font="bold 18.0pt Microsoft JhengHei">
+      <ValueBinding/>
+    </Label>
+
+    <Label layout="450.0,490.0,240.0,30.0" text="&#x6eab;&#x5ba4;&#x76e3;&#x63a7;&#x7cfb;&#x7d71;&#x5716;" font="bold 18.0pt Microsoft JhengHei"/>
+
+    <Label layout="760.0,260.0,300.0,220.0" image="file:^HJC/image/Info/HJC3s.jpg">
+      <ValueBinding hyperlink="file:^HJC/image/Info/HJC3.dwg"/>
+    </Label>
+
+    <Label layout="785.0,485.0,240.0,30.0" text="&#x7cfb;&#x7d71;&#x67b6;&#x69cb;&#x793a;&#x610f;&#x5716;" font="bold 18.0pt Microsoft JhengHei"/>
+
+  </CanvasPane>
+
+</ScrollPane>
+</content>
+</px>

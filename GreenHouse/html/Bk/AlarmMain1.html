@@ -1,0 +1,301 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>能耗监视-能耗查询</title>
+	<!-- CSS -->
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+		<!-- Top bar -->
+		<link href="css/bar.css" rel="stylesheet" type="text/css">
+		<!-- 樣式 tems-->
+		<link href="css/main-tems.css" rel="stylesheet" type="text/css">
+		<!-- jqGrid 擴充外掛 -->
+		<link href="css/jquery/jquery-ui.css" rel="stylesheet" type="text/css">
+	    <link href="css/jquery/ui.jqgrid.css" rel="stylesheet" type="text/css">
+		<!-- timepicker 日期選取工具 -->
+	    <link href="css/Timepicker/jquery-ui.css" rel="stylesheet">
+	    <link href="css/Timepicker/jquery-ui-timepicker-addon.css" rel="stylesheet">
+	<!-- End CSS -->
+	<!-- CSS SET -->
+	<style type="text/css">
+	/* 調整container畫面大小、位置 */
+	.container{
+		padding-right: 0px;
+ 		padding-left: 0px;
+		width:1150;
+		float:left;
+	}
+	/* 調整panel區塊間距 */
+	.panel {
+	  margin-top: 5px;
+	  margin-bottom: 5px;
+	}
+	/* 調整jqgrid文字顏色 */
+	.ui-th-column, .ui-jqgrid .ui-jqgrid-htable th.ui-th-column {color: #1e6e8c;}
+	.ui-jqgrid tr.jqgrow td {color: #1e6e8c;}
+	.ui-jqgrid .ui-pg-selbox {color: #1e6e8c;}
+	/* 調整container1頂部間距 */
+	#container1{padding-top: 10px;}
+	</style>
+	<!-- End CSS SET -->
+	<!-- Javascript -->
+		<!-- bajaScript model -->
+		<script type="text/javascript" src="js/bajascript/bs.min.js"></script>
+		<!-- jQuery 套件工具 -->
+		<script src="js/jquery/jquery.js"></script>
+		<!-- Web相關函數 -->
+		<script type="text/javascript" src="js/WebTool.js"></script>
+		<!-- 時間相關函數 -->
+		<script type="text/javascript" src="js/TimeTool.js"></script>
+		<!-- Niagara資料讀取 -->
+		<script type="text/javascript" src="js/NiagaraDataJson.js"></script>
+		<!-- jqGrid 擴充外掛 -->
+	    <script src="js/jquery/jquery.jqGrid.js"></script>
+	    <script src="js/jquery/grid.locale-cn.js"></script>
+		<!-- 表格設定 -->
+    	<script type="text/javascript" src="js/TableGrid.js"></script>
+		<!-- timepicker 日期選取工具 -->
+		<script src="js/Timepicker/jquery-ui.min.js"></script>
+		<script src="js/Timepicker/jquery-ui-timepicker-addon.js"></script>
+		<script src="js/Timepicker/jquery-ui-sliderAccess.js"></script>
+	    <!-- timepicker 日曆 -->
+	    <script type="text/javascript" src="js/CalendarTool.js"></script>
+		<!-- 查詢語法函數 -->
+    	<script type="text/javascript" src="js/QueryLanguage.js"></script>
+		<!-- Data轉CSV -->
+	    <script type="text/javascript" src="js/Data2CSV.js"></script>
+		<!-- PDF 套件工具 -->
+	    <script type="text/javascript" src="js/PDF/pdfmake.js"></script>
+	    <script type="text/javascript" src="js/PDF/vfs_fonts.js"></script>
+		<!-- Data轉PDF -->
+	    <script type="text/javascript" src="js/Data2PDF.js"></script>
+		
+	<!-- End Javascript -->
+	
+	<!-- Javascript Code-->
+	<script type="text/javascript">
+	// 初始表參數設定
+	var DBname = "[Test].[dbo].[alarm]";	// 資料庫名稱
+	var slot = "station:|slot:/Drivers/RdbmsNetwork/SqlServerDatabase";	// RDBMS slot名稱
+	var titleName = {	'index':'序號','startdate':'警告時間', 'enddate':'結束時間', 'building':'樓別', 'floor':'樓層',
+						'system':'系統', 'alarm_context':'警報內容', 'alarm_status':'警報狀態', 'confirm_status':'確認狀態'};
+	var titleWidth = {	'index':'hidden','startdate':90, 'enddate':90, 'building':90, 'floor':90,
+						'system':90, 'alarm_context':90, 'alarm_status':90, 'confirm_status':90};
+	var rowType = {	'index':'key','startdate':'datetime', 'enddate':'datetime', 'building':'select', 'floor':'select',
+					'system':'select', 'alarm_context':'text', 'alarm_status':'select', 'confirm_status':'select'};
+	var rowOptions = new Object();
+		rowOptions.building = {"A":"辦公大樓", "B":"檔證大樓", "C":"職務宿舍"};
+		rowOptions.floor = {"B2F":"B2F", "B1F":"B1F", "1F":"1F", "2F":"2F", "3F":"3F", "4F":"4F", "5F":"5F", "6F":"6F"};
+		rowOptions.system = {"S1":"消防系統", "S2":"給排水系統", "S3":"監視系統", "S4":"停管系統", "S5":"照明系統", "S6":"門禁系統"};
+		rowOptions.alarm_status = {0:"警報",1:"正常"};
+		rowOptions.confirm_status = {0:"未確認",1:"已確認"};
+		
+	// 系統參數設定
+	var system2 = new Object();
+		system2.set = EditTableGridSet(titleName,titleWidth,rowType,rowOptions,260,"pager");
+		system2.id = "grid";
+		system2.width = 1100;
+		// 資料類型
+		system2.data_type = rowType;
+		// 資料代號轉換類型
+		system2.data_code = rowOptions;
+		// 資料庫名稱
+		system2.db_name = DBname;
+		// RDBMS slot名稱
+		system2.slot = slot;
+		// EXCEL-CSV
+		system2.excel = true;
+		// PDF
+		system2.pdf = true;
+	
+	function Init()
+	{	// 啟動baja
+		baja.start();
+		var sql = "SELECT * FROM [Test].[dbo].[alarm] order by startdate";
+		
+		var DBbql = [slot + "|sql:" + sql];
+		NiagaraDataJson(DBbql,"EditTableGrid",system2);
+	}
+	// 查詢條件組合SQL
+	function pageSelectSQL()
+	{
+		var temp = "";
+		var myBuilding = document.getElementById("myBuilding").value;
+		var myFloor = document.getElementById("myFloor").value;
+		var mySystem = document.getElementById("mySystem").value;
+		var myAlarmStatus = document.getElementById("myAlarmStatus").value;
+		var myConfirmStatus = document.getElementById("myConfirmStatus").value;
+		
+		if ( myBuilding != "ALL")
+			temp += " and building = '" + myBuilding +"' ";
+		if ( myFloor != "ALL")
+			temp += " and floor = '" + myFloor +"' ";
+		if ( mySystem != "ALL")
+			temp += " and system = '" + mySystem +"' ";
+		if ( myFloor != "ALL")
+			temp += " and floor = '" + myFloor +"' ";
+		if ( myAlarmStatus != "ALL")
+			temp += " and alarm_status = '" + myAlarmStatus +"' ";
+		if ( myConfirmStatus != "ALL")
+			temp += " and confirm_status = '" + myConfirmStatus +"' ";
+		return temp;
+	}
+	// 查詢條件組合DBsql
+	function selectDBsql(TimeSection1,TimeSection2)
+	{
+		// SQL語法
+		var mainSQL = "SELECT * FROM [Test].[dbo].[alarm]";
+		var selectSQL = pageSelectSQL();
+		var timeSQL = " ( startdate between convert(datetime,'"+ TimeSection1 +"') and convert(datetime,'"+ TimeSection2 +"') ) " ;
+		var orderSQL = " order by startdate";
+		var SQL = mainSQL + " where " + timeSQL + selectSQL + orderSQL;
+		var DBsql = slot + "|sql:" + SQL;
+		return DBsql;
+	}
+	// 查詢條件檢查
+	function selectCheck()
+	{
+		var tempcheck = 1;
+		var TimeSection1 = document.getElementById("myTimeSection1").value;
+		var TimeSection2 = document.getElementById("myTimeSection2").value;
+		if( TimeSection1 == "" || TimeSection2 == "" )
+		{
+			alert("请选择资料日期");
+			tempcheck = 0;
+		}
+		else
+		{
+			var Time1 = new Date(TimeSection1);
+			var Time2 = new Date(TimeSection2);
+			if ( Time1 > Time2 )
+			{
+				alert("资料起日不能超过资料迄日");
+				tempcheck = 0;
+			}
+		}
+		return tempcheck;
+	}
+	// 查詢
+	function mySelect()
+	{	//
+		var checkpoint = 1;
+		var TimeSection1 = document.getElementById("myTimeSection1").value;
+		var TimeSection2 = document.getElementById("myTimeSection2").value;
+		// 查詢條件檢查
+		checkpoint = selectCheck();
+		//
+		if (checkpoint == 1)
+		{	// 查詢條件組合DBsql
+			var DBsql = [selectDBsql(TimeSection1,TimeSection2)];
+			NiagaraDataJson(DBsql,"EditTableGrid",system2);
+			alert(DBsql);
+		}
+	}
+	// 輸出CSV
+	function mySelectCSV(data)
+	{	// 資料轉換成CSV
+		JSONToCSVConvertor(data, "警告報表", true ,titleName);
+	}
+	// 輸出PDF
+	function mySelectPDF(data)
+	{	// 資料轉換成PDF
+		PDFObject(data,"MyReport");
+	}
+	</script>
+	<!-- END Javascript Code-->
+</head>
+<body onload="Init();">
+<div class="container">
+	<!-- MAIN -->
+	<div id="wrapper">
+		<div class="main">
+			<!-- MAIN CONTENT -->
+			<div class="main-content">
+			<div class="container-fluid">
+			<!-- 1 Row -->
+			<div class="row">
+				<div class="col-md-12">
+					<div class="panel">
+						时间区间：
+						<!--
+						<button id = "today"  		name="timeButton" type="button" onclick="timeClick(this.id);">今天</button>
+						<button id = "yesterday" 	name="timeButton" type="button" onclick="timeClick(this.id);">昨天</button>
+						<button id = "weekToDate"	name="timeButton" type="button" onclick="timeClick(this.id);">本周</button>
+						&nbsp
+						-->
+						<input type="text" id="myTimeSection1" placeholder="资料起日">
+						至
+						<input type="text" id="myTimeSection2" placeholder="资料迄日">
+						<br><br>
+						樓別：
+						<select id="myBuilding" >
+						<option value="ALL" selected>ALL</option>
+						<option value="A">辦公大樓</option>
+						<option value="B">檔證大樓</option>
+						<option value="C">職務宿舍</option>
+						</select>
+						&nbsp
+						樓層：
+						<select id="myFloor" >
+						<option value="ALL" selected>ALL</option>
+						<option value="B2F">B2F</option>
+						<option value="B1F">B1F</option>
+						<option value="1F">1F</option>
+						<option value="2F">2F</option>
+						<option value="3F">3F</option>
+						<option value="4F">4F</option>
+						<option value="5F">5F</option>
+						<option value="6F">6F</option>
+						</select>
+						&nbsp
+						系統：
+						<select id="mySystem" >
+						<option value="ALL" selected>ALL</option>
+						<option value="S1">消防系統</option>
+						<option value="S2">給排水系統</option>
+						<option value="S3">監視系統</option>
+						<option value="S4">停管系統</option>
+						<option value="S5">照明系統</option>
+						<option value="S6">門禁系統</option>
+						</select>
+						&nbsp
+						警告狀態：
+						<select id="myAlarmStatus" >
+						<option value="ALL" selected>ALL</option>
+						<option value="0">警報</option>
+						<option value="1">正常</option>
+						</select>
+						&nbsp
+						確認狀態：
+						<select id="myConfirmStatus" >
+						<option value="ALL" selected>ALL</option>
+						<option value="0">未確認</option>
+						<option value="1">已確認</option>
+						</select>
+						&nbsp
+						<button onclick="mySelect();">查询</button>
+						<button id = "excel" value="" onclick="mySelectCSV(this.value);">EXCEL</button>
+						<button id = "pdf" value="" onclick="mySelectPDF(this.value);">PDF</button>
+						<br>
+						<br>
+						<button id = "add" value="" >新增</button>
+						<button id = "update" value="" >修改</button>
+						<button id = "delete" value="" >刪除</button>
+						<div id="pager"></div>
+						<table id="grid"></table>
+					</div>
+				</div>
+			</div>
+			<!-- END 1 Row -->
+			</div>
+			</div>
+			<!-- END MAIN CONTENT -->
+			<!-- Niagara Data Debug -->
+			<pre id="bajaScriptOut"></pre>
+		</div>
+		<!-- END MAIN -->
+	</div>
+</div>
+</body>
+</html>

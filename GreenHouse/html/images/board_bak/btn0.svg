@@ -1,0 +1,12 @@
+<svg width="100" height="60" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <g>
+  <title>background</title>
+  <rect fill="#1e6d8c" id="canvas_background" height="62" width="102" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <image xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAZCAYAAAArK+5dAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAMoSURBVHjanJZNaF1VEMd/56VpalGpYiB+bAQpuFCrVUmtIm2DVCwxRhdKtFm4ajelKnTjzr24aYqKG8EqEREVBReC0pimCoIKdiOiIrSxVk1L8kLvO+fn4p2X3nfzPtSB4d47Z87MmZn/zLmkJC3Wdl5ZkeXlJsfoC+qiuhijh1vyer19b/l9eVno5qAiH3M97aoa7OSgRhcK4TIDYx1U9rT0elGt12JKECPEyAfVtRj5MMamzv92oGtOTqbEbuBn4KeUeKDR4Kt+xgE29PReg4EBAJ4GngI2Ao1ajeeGhrgBmO13QFJypzqfkjdXUZSSw+pCLuob6v2ZX1Ub6gn12g5FvkWdLwpHUa9XT2YjMyl5m7pTfUX9S53tBOHMx9Xz6svqDnWb+nq2NaeOhJRsoWYCeBG4FTgH/An8DhwFTgO7gBZmBD4HtgIHgZuAa4Bh4HvgJeWjjJQ2zE9m75vzCQ/Znw5k3atUU3K8bHMNRUIIgUngV2DCZmBX98cJW/JzHPgFeKIjTAM8D0Rlu3Iki4f+hYOB/DyibM9pPLTeQeBJ5TjwB3BOGU+JL4EZ4DAwVzI6l2UzKbGQEo8pZ4HzwDshsL/UrZKS0+qJtdzpnpT8rtFoQ8yVGRlzpRoRo6Tktyn5YGl2zaXk1FoNQuBARkurIJ+FwFKtxnSuBcB1wMXMw6VmfDYE/ga+KDXYsRA42IrgEXWhOnJT8vGUnI+X5feWkHN3qalOpeREdQqrX6fkXtRP8jju1EjvtkJV7yw5uCOncr/6dpe9D6sfbwB2A2eAqQo6CmBbCDSAtzqNc2AfcDvwGjBYHUXAGDH6Xq8uKgpHY1wfQYzSaHhfr70xOku9LuoxdbWy/kNRuO/ChSZS1NHS2j0xytKSFIWPqqcre+vq0ZUVCfW6bNoEwAhwF3AF8BtwqiiasQ4ONkdvCCwCKiMhwKVLzVQNNpMzCtwI1IFvgLOrq7Q5WDfLS9fhNLAD2Jtz+ykwD7xZ0Wuj1dUeF05l09YMgh/z91SetH3v5K4RlGgSmAA2V+QrwPuZ/1sEmq+75gkfCoFnuuhd1KaD0h9IG/0zAOyLxxscY2syAAAAAElFTkSuQmCC" id="svg_2" height="24" width="24" y="2" x="37"/>
+  <text fill="#bed2dc" font-weight="bold" xml:space="preserve" text-anchor="start" font-family="Microsoft JhengHei UI" font-size="18" id="svg_4" y="50" x="12.984375" stroke-width="0" stroke="#000">桃園地院</text>
+ </g>
+</svg>

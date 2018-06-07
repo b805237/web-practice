@@ -1,0 +1,441 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>歷史資料查詢</title>
+	<!-- CSS -->
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+		<!-- Top bar -->
+		<link href="css/bar.css" rel="stylesheet" type="text/css">
+		<!-- 樣式 tems-->
+		<link href="css/main-tems.css" rel="stylesheet" type="text/css">
+		<!-- jqGrid 擴充外掛 -->
+	    <link href="css/jquery/ui.jqgrid.css" rel="stylesheet" type="text/css">
+		<!-- timepicker 日期選取工具 -->
+	    <link href="css/Timepicker/jquery-ui.css" rel="stylesheet">
+	    <link href="css/Timepicker/jquery-ui-timepicker-addon.css" rel="stylesheet">
+	    <!-- 樹狀清單工具 -->
+		<link href="css/fancytree/skin-win8/ui.fancytree.css" rel="stylesheet">
+	<!-- End CSS -->
+	<!-- CSS SET -->
+	<style type="text/css">
+	/* 調整container畫面大小、位置 */
+	.container{
+		padding-right: 0px;
+ 		padding-left: 0px;
+		width:1150;
+		float:left;
+	}
+	/* 調整panel區塊間距 */
+	.panel {
+	  margin-top: 5px;
+	  margin-bottom: 5px;
+	}
+	/* 調整jqgrid文字顏色 */
+	.ui-th-column, .ui-jqgrid .ui-jqgrid-htable th.ui-th-column {color: #1e6e8c;}
+	.ui-jqgrid tr.jqgrow td {color: #1e6e8c;}
+	.ui-jqgrid .ui-pg-selbox {color: #1e6e8c;}
+	/* 調整container1頂部間距 */
+	#container1{padding-top: 10px;}
+	/* 設備選擇外框設定 */
+	/*
+	ul { height: 150px; overflow: auto; width: 250px; border: 1px solid #E7E7E7;}
+	ul { list-style-type: none; margin: 0; padding: 0; overflow-x: auto; }
+	*/
+	/* Table設置 */
+	#table-board .titleMax {
+		border: 2px solid white;
+		text-align: center;
+		width: 120px;
+		height: 30px;
+		color:#ffffff;
+		background-color: #ff5023;
+		font-size: 16px;
+		font-weight:bold;
+	}
+	#table-board .titleMin {
+		border: 2px solid white;
+		text-align: center;
+		width: 120px;
+		height: 30px;
+		color:#ffffff;
+		background-color: #ffbf00;
+		font-size: 16px;
+		font-weight:bold;
+	}
+	#table-board .titleSum {
+		border: 2px solid white;
+		text-align: center;
+		width: 120px;
+		height: 30px;
+		color:#ffffff;
+		background-color: #1e6e8c;
+		font-size: 16px;
+		font-weight:bold;
+	}
+	#table-board .dataRow {
+		border: 2px solid white;
+		text-align: left;
+		width: 180px;
+		height: 30px;
+		color:#1e6e8c;
+		background-color: #bed2dc;
+		font-size: 16px;
+		padding-left: 10px;
+		font-weight:bold;
+	}
+	/* 提示框滾動軸設置 */
+	#scrolltooltip { 
+		height: 400px;
+		overflow-y: scroll; 
+	}
+	//
+	
+	.col-md-12{
+		position: absolute;
+	}
+	</style>
+	<!-- End CSS SET -->
+	<!-- Javascript -->
+		<!-- bajaScript model -->
+		<script type="text/javascript" src="js/bajascript/bs.min.js"></script>
+		<!-- Niagara資料讀取 -->
+		<script type="text/javascript" src="js/NiagaraDataJson.js"></script>
+		<!-- Slot處理函數 -->
+		<script type="text/javascript" src="js/SlotData.js"></script>
+		<!-- jQuery 套件工具 -->
+		<script src="js/jquery/jquery.js"></script>
+		<!-- jQuery 套件工具 螢幕畫面鎖定(遮罩)套件-->
+		<script src="js/jquery/jquery.blockUI.js"></script>
+		<!-- Web相關函數 -->
+		<script type="text/javascript" src="js/WebTool.js"></script>
+		<!-- 樹狀清單工具 -->
+		<script src="js/fancytree/jquery-ui.custom.js"></script>
+		<script src="js/fancytree/jquery.fancytree.js"></script>
+		<!-- 時間相關函數 -->
+		<script type="text/javascript" src="js/TimeTool.js"></script>
+		<!-- echarts 圖表 -->
+		<script type="text/javascript" src="js/echarts/echarts.js"></script>
+		<script type="text/javascript" src="js/echarts/macarons.js"></script>
+		<!-- 圖表設定與函數 -->
+		<script type="text/javascript" src="js/GraphChart-1.js"></script>
+		<!-- jqGrid 擴充外掛 -->
+	    <script src="js/jquery/jquery.jqGrid.js"></script>
+	    <script src="js/jquery/grid.locale-tw.js"></script>
+		<!-- 表格設定 -->
+    	<script type="text/javascript" src="js/TableGrid.js"></script>
+		<!-- timepicker 日期選取工具 -->
+		<script src="js/Timepicker/jquery-ui.js"></script>
+		<script src="js/Timepicker/jquery-ui-timepicker-addon.js"></script>
+		<script src="js/Timepicker/jquery-ui-sliderAccess.js"></script>
+	    <!-- timepicker 日曆 -->
+	    <script type="text/javascript" src="js/CalendarTool.js"></script>
+		<!-- servlet套件 -->
+	    <script src="js/temsUtil.js"></script>
+	    <script src="js/ServletTool.js"></script>
+		<!-- Data轉CSV -->
+	    <script type="text/javascript" src="js/Data2CSV.js"></script>
+	<!-- End Javascript -->
+	<!-- CSS SET -->
+	<style type="text/css">
+	/* 調整container畫面大小、位置 */
+	.container{
+		padding-right: 0px;
+ 		padding-left: 0px;
+		width:1000;
+		float:left;
+	}
+	/* 調整panel區塊間距 */
+	.panel {
+	  margin-top: 5px;
+	  margin-bottom: 5px;
+	}
+
+	/* 調整jqgrid文字顏色 */
+	.ui-th-column, .ui-jqgrid .ui-jqgrid-htable th.ui-th-column {color: #1e6e8c;}
+	.ui-jqgrid tr.jqgrow td {color: #1e6e8c;}
+	.ui-jqgrid .ui-pg-selbox {color: #1e6e8c;}
+	/* 調整container1頂部間距 */
+	#container1{padding-top: 10px;}
+	/* 設備選擇外框設定 */
+	/*
+	ul { height: 150px; overflow: auto; width: 250px; border: 1px solid #E7E7E7;}
+	ul { list-style-type: none; margin: 0; padding: 0; overflow-x: auto; }
+	*/
+	/* Table設置 */
+	#table-board .titleMax {
+		border: 2px solid white;
+		text-align: center;
+		width: 120px;
+		height: 30px;
+		color:#ffffff;
+		background-color: #ff5023;
+		font-size: 16px;
+		font-weight:bold;
+	}
+	#table-board .titleMin {
+		border: 2px solid white;
+		text-align: center;
+		width: 120px;
+		height: 30px;
+		color:#ffffff;
+		background-color: #ffbf00;
+		font-size: 16px;
+		font-weight:bold;
+	}
+	#table-board .titleSum {
+		border: 2px solid white;
+		text-align: center;
+		width: 120px;
+		height: 30px;
+		color:#ffffff;
+		background-color: #1e6e8c;
+		font-size: 16px;
+		font-weight:bold;
+	}
+	#table-board .dataRow {
+		border: 2px solid white;
+		text-align: left;
+		width: 180px;
+		height: 30px;
+		color:#1e6e8c;
+		background-color: #bed2dc;
+		font-size: 16px;
+		padding-left: 10px;
+		font-weight:bold;
+	}
+	/* 提示框滾動軸設置 */
+	#scrolltooltip { 
+		height: 400px;
+		overflow-y: scroll; 
+	}
+	//
+	</style>
+	<!-- Javascript Code-->
+	<script type="text/javascript">
+	var dataNameSelect;
+	var chartStatus = 1;
+	function Init(){
+		baja.start();
+		buttonSet();
+		areaClick("area1");
+	}
+	function buttonSet(){
+		var areaName1 = "station:|slot:/GH/RightBar/a_areaName/out/value";
+		var areaName2 = "station:|slot:/GH/RightBar/b_areaName/out/value";
+		var areaName3 = "station:|slot:/GH/RightBar/c_areaName/out/value";
+		var areaName4 = "station:|slot:/GH/RightBar/d_areaName/out/value";
+		var areaName5 = "station:|slot:/GH/RightBar/e_areaName/out/value";
+		var areaName6 = "station:|slot:/GH/RightBar/f_areaName/out/value";
+		var button01 = new Object();
+		button01.htmlid ="area1";
+		var button02 = new Object();
+		button02.htmlid ="area2";
+		var button03 = new Object();
+		button03.htmlid ="area3";
+		var button04 = new Object();
+		button04.htmlid ="area4";
+		var button05 = new Object();
+		button05.htmlid ="area5";
+		var button06 = new Object();
+		button06.htmlid ="area6";
+		NiagaraSlotData(areaName1,"SlotData2HTML",button01);
+		NiagaraSlotData(areaName2,"SlotData2HTML",button02);
+		NiagaraSlotData(areaName3,"SlotData2HTML",button03);
+		NiagaraSlotData(areaName4,"SlotData2HTML",button04);
+		NiagaraSlotData(areaName5,"SlotData2HTML",button05);
+		NiagaraSlotData(areaName6,"SlotData2HTML",button06);
+		
+	}
+	function areaClick(areaType)
+	{	// button切換
+		buttonSwitch("areaButton",areaType,"","btnSelect");
+		document.getElementById("areaType").value = areaType;
+	}
+	function dateFormat(myDate){
+		return myDate.substring(0,10)+myDate.substring(11,17);
+	}
+	function RawdataChartSet(){
+		var areaType
+		var areaSelect = document.getElementById("areaType").value;
+		switch(areaSelect){
+			case "area1" :
+				areaType = "Strawberry";
+				break;
+			case "area2" :
+				areaType = "Flower";
+				break;
+		}
+		var area = [areaType,"Outside"];
+		//設備新增
+		var dataType = ["Temp","Humidity"];
+		var deviceMenu = ["CycleFan" , "Skylight" , "TempNet"  , "ShadowNet" , "WindowOutside" , "WindowInside" ];
+		var dataName = ["","","室外溫度","室外濕度","內循環扇","天窗","內保溫網","內遮光網","外側窗","內側窗"];
+		if(areaType == "Strawberry"){
+			dataName[0] = "草莓區溫度";
+			dataName[1] = "草莓區濕度";
+			dataName[10] = "冰水主機";
+			deviceMenu[6] = "WCH";
+		}else if(areaType == "Flower"){
+			dataName[0] = "花卉區溫度";
+			dataName[1] = "花卉區濕度";
+		}else{
+			alert("請選擇區域！");
+			chartStatus = 0;
+		}
+		
+		if(chartStatus != 0){
+			var myDateSelect1 = document.getElementById("myTimeSection1").value;
+			var myDateSelect2 = document.getElementById("myTimeSection2").value;
+			var title = document.getElementById(areaSelect).innerHTML+" 歷史曲線("+ myDateSelect1+")～("+myDateSelect2+")";
+			var xName = "時間";
+			var yName = "";
+			var yUnit = "";
+			var yTitle = "";
+			var system = new Object();
+			system.id = "chart";
+			system.set = LineChartSet(dataName,title,xName,yName,yUnit,null);
+			//溫濕度查詢
+			var orderSQL = "ORDER BY date";
+			var timeSQL = "AND rawdata_date between '"+myDateSelect1+"' and '"+myDateSelect2+"'";
+			var DBSql = new Array();
+			for(var i=0 ; i<area.length ; i++){
+				for(var a=0 ; a<dataType.length ; a++){
+					var selectSQL = "WHERE fk_device_id = '"+area[i]+dataType[a]+"'";
+					var mainSQL = "SELECT fk_device_id as device,rawdata_date as date,value as value FROM tems_test5";
+					var sql = mainSQL+" "+selectSQL+" "+timeSQL+" "+orderSQL;
+					DBSql.push(sql);
+					//alert(sql);
+				}
+			}
+			//設備查詢
+
+			var mainSQL2 = "SELECT fk_device_id as device , rawdata_date as date , status as value  FROM tems_test4";
+			for(var i=0 ; i<deviceMenu.length ; i++){
+				var selectSQL2 = "where fk_device_id = '"+deviceMenu[i]+"'";
+				var areaSQL = "And area = '"+areaType+"'";
+				var sql = mainSQL2+" "+selectSQL2+" "+areaSQL+" "+timeSQL+" "+orderSQL;
+				//alert(sql);
+				DBSql.push(sql);
+			}
+			//表格設定
+			
+			// 資料標題行
+			var titleName = { 'device':'設備名稱', 'date':'日期', 'value':'值'};
+			// 資料標題寬度
+			var titleWidth = { 'device':160, 'date':160, 'value':140 };
+			// 資料類型
+			var rowType = {	'device':'select', 'date':'date', 'value':'text'};
+			// 表格設定
+			var gridID = "grid2"
+			var pagerID = "pager2";
+			var gridHeight = 165;
+			var gridWidth = 950;
+			// 對照表(主要用於資料欄位select)
+			var dataKey = new Object();
+			dataKey={"StrawberryTemp":"草莓區溫度",
+					 "StrawberryHumidity":"草莓區濕度",
+					 "FlowerTemp":"花卉區溫度",
+					 "FlowerHumidity":"花卉區濕度",
+					 "OutsideHumidity":"室外濕度",
+					 "OutsideTemp":"室外溫度",
+					 "CycleFan":"內循環扇",
+					 "Skylight":"天窗",
+					 "TempNet":"內保溫網",
+					 "ShadowNet":"內遮光網",
+					 "WindowOutside":"外側窗",
+					 "WindowInside":"內側窗",
+					 "WCH":"冰水主機"
+					 };
+			
+			var rowOptions = new Object();
+			rowOptions.device = dataKey
+			// 表格參數設定
+			var system2 = new Object();
+				system2.set = TableGridSet(titleName,titleWidth,rowType,rowOptions,gridHeight,pagerID);
+				system2.id = gridID;
+				system2.width = gridWidth;
+				// 資料類型
+				system2.data_type = rowType;
+				// 資料代號轉換類型
+				system2.data_code = rowOptions;
+			
+			var cmdSQL = document.getElementById("cmd");
+				cmdSQL.value = JSON.stringify(DBSql);
+				postForJSON('/tatungService/dbCmd/queryMultiData', formToMap('formSQL'), function (ret) 
+				{	
+					getMultiData(ret,function (status,msg,data)
+					{
+						if ( status == 1 )
+						{	
+							//alert(JSON.stringify(data));
+							
+							// 成功，呈現畫面
+							LineChart(data,system);
+							TableGrid(data,system2);
+						}
+						else
+						{	// 失敗
+							alert("歷史資料查詢，建置失敗\n原因："+msg);
+						}
+					});
+			});
+		}
+	}
+		</script>
+	<!-- END Javascript Code-->
+</head>
+<body onload="Init();" onunload="baja.stop();">
+<div class="container">
+	<!-- MAIN -->
+	<div id="wrapper">
+		<div class="main">
+			<!-- MAIN CONTENT -->
+			<div class="main-content">
+			<div class="container-fluid">
+					<div class="row">
+						<div class='col-md-12' >
+							<div class="panel">
+								<input type="text" id="myTimeSection1" 	name="mySection1" placeholder="資料起日" size="14" readonly>
+								
+								至
+								<input type="text" id="myTimeSection2" 	name="mySection2" placeholder="資料迄日" size="14" readonly>
+								&nbsp
+								&nbsp
+								<button id = "area1" name="areaButton" type="button" onclick="areaClick(this.id)" value=""></button>
+								<button id = "area2" name="areaButton" type="button" onclick="areaClick(this.id)" value=""></button>
+								<button id = "area3" name="areaButton" type="button" onclick="areaClick(this.id)" value=""></button>
+								<button id = "area4" name="areaButton" type="button" onclick="areaClick(this.id)" value=""></button>
+								<button id = "area5" name="areaButton" type="button" onclick="areaClick(this.id)" value=""></button>
+								<button id = "area6" name="areaButton" type="button" onclick="areaClick(this.id)" value=""></button>
+								<input type = "hidden" id = "areaType" value = "">
+								&nbsp
+								&nbsp
+								<button onclick="RawdataChartSet();">查詢</button>
+							</div>
+						</div>
+					<div class='col-md-12' id="chart" style="width:980px;height:250px;">
+					</div>
+					</div>
+				<div class="row">
+					<div class="col-md-12" >
+						<div class="panel" id="table2">
+							<div id="pager2"></div>
+							<table id="grid2"></table>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			</div>
+			<!-- SQL語法 -->
+			<form id="formSQL">
+				<input type = "hidden" id="cmd" name="cmd" value = "">
+			</form>
+		</div>
+		<!-- END MAIN -->
+	</div>
+</div>
+</body>
+</html>

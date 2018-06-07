@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="gx"/>
+</import>
+<content>
+<ScrollPane>
+
+  <CanvasPane name="content" viewSize="1160.0,580.0" scale="fitRatio">
+
+    <Label layout="0.0,0.0,1170.0,580.0" background="#1e6e8c"/>
+
+    <Label layout="820.0,30.0,215.00000000000023,190.0" background="white"/>
+
+    <Picture layout="580.0,360.0,479.9999999999999,320.0" image="file:^HJC/image/water.jpg" scale="fitRatio"/>
+
+    <Label layout="140.0,245.0,209.99999999999997,20.0" text="&#x5efa;&#x7b51;&#x603b;&#x9762;&#x79ef;&#xff1a;" font="bold 16.0pt Microsoft JhengHei" foreground="white" halign="right"/>
+
+    <Label layout="445.0,245.0,109.99999999999994,15.0" text="&#x5e73;&#x65b9;&#x7c73;" font="bold 16.0pt Microsoft JhengHei" foreground="white" halign="right"/>
+
+    <Label layout="720.0,245.0,115.0,20.0" text="&#x7efc;&#x5408;&#x80fd;&#x8017;&#xff1a;" font="bold 16.0pt Microsoft JhengHei" foreground="white"/>
+
+    <Label layout="945.0,245.0,130.0,20.0" text="&#x5343;&#x514b;&#x6807;&#x51c6;&#x5a92;" font="bold 16.0pt Microsoft JhengHei" foreground="white"/>
+
+    <Label layout="140.0,270.0,209.99999999999997,20.0" text="&#x5355;&#x4f4d;&#x9762;&#x79ef;&#x7efc;&#x5408;&#x80fd;&#x8017;&#xff1a;" font="bold 16.0pt Microsoft JhengHei" foreground="white" halign="right"/>
+
+    <Label layout="385.00000000000006,270.0,169.99999999999994,20.0" text="&#x5343;&#x514b;&#x6807;&#x51c6;&#x5a92;/&#x5e73;&#x65b9;&#x7c73;" font="bold 16.0pt Microsoft JhengHei" foreground="white" halign="right"/>
+
+    <Label layout="690.0,270.0,160.0,20.0" text="&#x7d2f;&#x8ba1;&#x51cf;&#x78b3;&#x91cf;&#xff1a;" font="bold 16.0pt Microsoft JhengHei" foreground="white"/>
+
+    <Label layout="950.0,270.0,100.0,20.0" text="&#x516c;&#x65a4;" font="bold 16.0pt Microsoft JhengHei" foreground="white" halign="right"/>
+
+    <Label layout="100.0,295.0,250.0,20.0" text="&#x540c;&#x7c7b;&#x5efa;&#x7b51;&#x5e73;&#x5747;&#x5355;&#x4f4d;&#x9762;&#x79ef;&#x7efc;&#x5408;&#x80fd;&#x8017;&#xff1a;" font="bold 16.0pt Microsoft JhengHei" foreground="white" halign="right"/>
+
+    <Label layout="385.00000000000006,295.0,169.99999999999994,20.0" text="&#x5343;&#x514b;&#x6807;&#x51c6;&#x5a92;/&#x5e73;&#x65b9;&#x7c73;" font="bold 16.0pt Microsoft JhengHei" foreground="white" halign="right"/>
+
+    <Label layout="575.0,295.0,250.0,20.0" text="&#x76f8;&#x8f83;&#x540c;&#x7c7b;&#x5efa;&#x7b51;&#x5355;&#x4f4d;&#x9762;&#x79ef;&#x7efc;&#x5408;&#x80fd;&#x8017;&#xff1a;" font="bold 16.0pt Microsoft JhengHei" foreground="white" halign="left"/>
+
+    <Label layout="979.9999999999998,295.0,80.00000000000011,20.0" text="&#x2191;12%" font="bold 20.0pt Microsoft JhengHei" foreground="white"/>
+
+    <Picture layout="75.0,360.0,500.0,180.0" image="file:^HJC/image/meter.jpg" scale="fitRatio"/>
+
+    <Label layout="845.0,30.0,170.0,50.0" text="784,393kg" font="26.0pt Microsoft JhengHei" foreground="#1e6e8c" background="white"/>
+
+    <Picture layout="90.0,30.0,280.0,190.0" image="file:^HJC/image/water-pie.jpg" scale="fitRatio"/>
+
+    <Picture layout="405.0,20.0,360.0,210.0" image="file:^HJC/image/Dashboard/CO2_year.png" scale="fitRatio"/>
+
+    <Picture layout="840.0,75.0,170.0,135.0" image="file:^HJC/image/Dashboard/CO2-1.gif" scale="fitRatio"/>
+
+    <Label layout="100.0,34.99999999999997,190.00000000000006,30.00000000000003" text="&#x7528;&#x7535;&#x5206;&#x9879;&#x80fd;&#x8017;&#x5360;&#x6bd4;" font="bold 18.0pt Microsoft JhengHei" foreground="#1e6e8c" background="white"/>
+
+    <Label layout="515.0,20.0,30.0,30.00000000000003" text="CO" font="bold 18.0pt Microsoft JhengHei" foreground="#1e6e8c" background="white"/>
+
+    <Label layout="545.0,30.0,14.999999999999943,20.0" text="2" font="bold 14.0pt Microsoft JhengHei" foreground="#1e6e8c" background="white" halign="left"/>
+
+    <Label layout="555.0,20.0,125.0,30.00000000000003" text="&#x5e74;&#x5ea6;&#x6392;&#x653e;&#x5bf9;&#x6bd4;" font="bold 18.0pt Microsoft JhengHei" foreground="#1e6e8c" background="white" halign="left"/>
+
+    <Label layout="230.0,370.0,184.99999999999997,30.00000000000003" text="&#x7535;&#x8017;&#x5e74;&#x5ea6;&#x5bf9;&#x6bd4;" font="bold 18.0pt Microsoft JhengHei" foreground="#1e6e8c" background="white"/>
+
+  </CanvasPane>
+
+</ScrollPane>
+</content>
+</px>

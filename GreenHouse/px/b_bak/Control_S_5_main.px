@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="gx"/>
+  <module name="kitPx"/>
+  <module name="workbench"/>
+</import>
+<content>
+<ScrollPane>
+
+  <CanvasPane name="content" viewSize="1000.0,500.0" valign="top">
+
+    <Label layout="95.0,225.0,755.0,158.0" background="white"/>
+
+    <Label layout="95.0,45.0,640.0,158.0" background="white"/>
+
+    <Label layout="298.0,125.0,108.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#bed2dc"/>
+
+    <Label layout="408.0,125.0,108.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#bed2dc"/>
+
+    <Label layout="518.0,125.0,108.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#bed2dc"/>
+
+    <Label layout="628.0,125.0,108.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#bed2dc"/>
+
+    <Label layout="518.0,165.0,108.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#bbeedd"/>
+
+    <Label layout="738.0,307.0,108.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#bed2dc"/>
+
+    <Label layout="738.0,347.0,108.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#bbeedd"/>
+
+    <Label layout="628.0,347.0,108.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#bbeedd"/>
+
+    <Label layout="628.0,307.0,108.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#bed2dc"/>
+
+    <Label layout="518.0,307.0,108.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#bed2dc"/>
+
+    <Label layout="518.0,347.0,108.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#bbeedd"/>
+
+    <Label layout="408.0,347.0,108.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#bbeedd"/>
+
+    <Label layout="408.0,307.0,108.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#bed2dc"/>
+
+    <Label layout="298.0,307.0,108.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#bed2dc"/>
+
+    <Label layout="298.0,347.0,108.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#bbeedd"/>
+
+    <Label layout="188.0,307.0,108.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#bed2dc"/>
+
+    <Label layout="188.0,347.0,108.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#bbeedd"/>
+
+    <Label layout="628.0,165.0,108.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#bbeedd"/>
+
+    <Label layout="408.0,165.0,108.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#bbeedd"/>
+
+    <Label layout="298.0,165.0,108.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#bbeedd"/>
+
+    <Label layout="188.0,165.0,108.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#bbeedd"/>
+
+    <Label layout="188.0,125.0,108.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#bed2dc"/>
+
+    <GenericFieldEditor layout="195.0,133.0,70.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Spray/SetTemp_AM/value"/>
+    </GenericFieldEditor>
+
+    <Label layout="95.0,125.0,91.0,38.0" text="&#x8349;&#x8393;&#x5340;" font="bold 14.0pt Microsoft YaHei" foreground="white" background="#1e6e8c"/>
+
+    <Label layout="187.0,78.0,108.0,45.0" text="&#x5e06;&#x5e03;&#x65e5;&#x9593;&#xa;&#x6eab;&#x5ea6;&#x8a2d;&#x5b9a;" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#00bfb2"/>
+
+    <Label layout="297.0,78.0,108.0,45.0" text="&#x5e06;&#x5e03;&#x591c;&#x9593;&#xa;&#x6eab;&#x5ea6;&#x8a2d;&#x5b9a;" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#00bfb2"/>
+
+    <Label layout="517.0,78.0,108.0,45.0" text="&#x5e03;&#x958b;&#x555f;&#x79d2;&#x6578;&#xa;&#x591c;&#x9593;&#x6eab;&#x5ea6;&#x8a2d;&#x5b9a;" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#00bfb2"/>
+
+    <Label layout="408.0,78.0,108.0,45.0" text="&#x5e06;&#x5e03;&#x6eab;&#x5ea6;&#xa;&#x4e0d;&#x5e36;&#x611f;" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#00bfb2"/>
+
+    <Label layout="627.0,78.0,108.0,45.0" text="&#x5e06;&#x5e03;&#x81ea;&#x52d5;&#x72c0;&#x614b;" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#00bfb2"/>
+
+    <Label layout="95.0,165.0,91.0,38.0" text="&#x82b1;&#x5349;&#x5340;" font="bold 14.0pt Microsoft YaHei" foreground="white" background="#1e6e8c"/>
+
+    <Label layout="188.0,217.0,657.0,40.0" text="&#x6c34;&#x7246;&#x6cf5;&#x6d66;" font="bold 22.0pt Microsoft JhengHei" foreground="white" background="#1e6e8c"/>
+
+    <Label layout="95.0,307.0,91.0,38.0" text="&#x8349;&#x8393;&#x5340;" font="bold 14.0pt Microsoft YaHei" foreground="white" background="#1e6e8c"/>
+
+    <Label layout="95.0,347.0,91.0,38.0" text="&#x82b1;&#x5349;&#x5340;" font="bold 14.0pt Microsoft YaHei" foreground="white" background="#1e6e8c"/>
+
+    <Label layout="260.0,133.0,30.0,20.0" text="&#x2103;"/>
+
+    <GenericFieldEditor layout="305.0,133.0,70.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Spray/SetTemp_PM/value"/>
+    </GenericFieldEditor>
+
+    <Label layout="370.0,133.0,30.0,20.0" text="&#x2103;"/>
+
+    <GenericFieldEditor layout="415.0,133.0,70.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Spray/delay_Temp/value"/>
+    </GenericFieldEditor>
+
+    <Label layout="480.0,133.0,30.0,20.0" text="&#x2103;"/>
+
+    <GenericFieldEditor layout="530.0,133.0,70.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Spray/WorkTime_AM"/>
+    </GenericFieldEditor>
+
+    <Label layout="595.0,133.0,30.0,20.0" text="&#x79d2;"/>
+
+    <GenericFieldEditor layout="530.0,315.0,70.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Spray/WorkTime_AM"/>
+    </GenericFieldEditor>
+
+    <Label layout="595.0,315.0,30.0,20.0" text="&#x79d2;"/>
+
+    <GenericFieldEditor layout="640.0,315.0,70.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Spray/DelayTime_AM"/>
+    </GenericFieldEditor>
+
+    <Label layout="705.0,315.0,30.0,20.0" text="&#x79d2;"/>
+
+    <GenericFieldEditor layout="195.0,173.0,70.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Flower/Spray/SetTemp_AM/value"/>
+    </GenericFieldEditor>
+
+    <Label layout="260.0,173.0,30.0,20.0" text="&#x2103;"/>
+
+    <GenericFieldEditor layout="305.0,173.0,70.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Flower/Spray/SetTemp_PM/value"/>
+    </GenericFieldEditor>
+
+    <Label layout="370.0,173.0,30.0,20.0" text="&#x2103;"/>
+
+    <GenericFieldEditor layout="415.0,173.0,70.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Flower/Spray/delay_Temp/value"/>
+    </GenericFieldEditor>
+
+    <Label layout="480.0,173.0,30.0,20.0" text="&#x2103;"/>
+
+    <GenericFieldEditor layout="530.0,173.0,70.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Flower/Spray/WorkTime_AM"/>
+    </GenericFieldEditor>
+
+    <Label layout="595.0,173.0,30.0,20.0" text="&#x79d2;"/>
+
+    <GenericFieldEditor layout="530.0,355.0,70.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Flower/Spray/WorkTime_AM"/>
+    </GenericFieldEditor>
+
+    <Label layout="595.0,355.0,30.0,20.0" text="&#x79d2;"/>
+
+    <GenericFieldEditor layout="640.0,355.0,70.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Flower/Spray/DelayTime_AM"/>
+    </GenericFieldEditor>
+
+    <Label layout="705.0,355.0,30.0,20.0" text="&#x79d2;"/>
+
+    <SaveButton layout="888.0,400.0,100.0,30.0" image="module://icons/x16/save.png">
+      <WsAnnotation name="wsAnnotation" value="14,14,8"/>
+    </SaveButton>
+
+    <Label layout="187.0,38.0,548.0,38.0" text="&#x6c34;&#x7246;&#x5074;&#x7a97;" font="bold 22.0pt Microsoft JhengHei" foreground="white" background="#1e6e8c"/>
+
+    <Label layout="188.0,260.0,108.0,45.0" text="&#x6cf5;&#x6d66;&#x65e5;&#x9593;&#xa;&#x6eab;&#x5ea6;&#x8a2d;&#x5b9a;" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#00bfb2"/>
+
+    <Label layout="298.0,260.0,108.0,45.0" text="&#x6cf5;&#x6d66;&#x591c;&#x9593;&#xa;&#x6eab;&#x5ea6;&#x8a2d;&#x5b9a;" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#00bfb2"/>
+
+    <Label layout="408.0,260.0,108.0,45.0" text="&#x6eab;&#x5ea6;&#x4e0d;&#x611f;&#x5e36;" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#00bfb2"/>
+
+    <Label layout="518.0,260.0,108.0,45.0" text="&#x65e5;&#x9593;ON&#xa;&#x6642;&#x9593;&#x8a2d;&#x5b9a;" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#00bfb2"/>
+
+    <Label layout="628.0,260.0,108.0,45.0" text="&#x65e5;&#x9593;OFF&#xa;&#x6642;&#x9593;&#x8a2d;&#x5b9a;" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#00bfb2"/>
+
+    <Label layout="738.0,260.0,108.0,45.0" text="&#x6cf5;&#x6d66;&#xa;&#x81ea;&#x52d5;&#x72c0;&#x614b;" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#00bfb2"/>
+
+    <GenericFieldEditor layout="195.0,315.0,70.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Spray/SetTemp_AM/value"/>
+    </GenericFieldEditor>
+
+    <Label layout="260.0,315.0,30.0,20.0" text="&#x2103;"/>
+
+    <GenericFieldEditor layout="195.0,355.0,70.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Flower/Spray/SetTemp_AM/value"/>
+    </GenericFieldEditor>
+
+    <Label layout="260.0,355.0,30.0,20.0" text="&#x2103;"/>
+
+    <GenericFieldEditor layout="305.0,315.0,70.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Spray/SetTemp_PM/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="305.0,355.0,70.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Flower/Spray/SetTemp_PM/value"/>
+    </GenericFieldEditor>
+
+    <Label layout="370.0,315.0,30.0,20.0" text="&#x2103;"/>
+
+    <Label layout="370.0,355.0,30.0,20.0" text="&#x2103;"/>
+
+    <Label layout="480.0,315.0,30.0,20.0" text="&#x2103;"/>
+
+    <Label layout="480.0,355.0,30.0,20.0" text="&#x2103;"/>
+
+    <GenericFieldEditor layout="415.0,315.0,70.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Spray/delay_Temp/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="415.0,355.0,70.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Flower/Spray/delay_Temp/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="760.0,315.0,70.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Spray/System_Control"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="760.0,355.0,70.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Flower/Spray/System_Control"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="650.0,135.0,70.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Spray/System_Control"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="650.0,175.0,70.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Flower/Spray/System_Control"/>
+    </GenericFieldEditor>
+
+  </CanvasPane>
+
+</ScrollPane>
+</content>
+</px>

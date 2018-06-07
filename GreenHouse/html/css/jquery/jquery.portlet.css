@@ -1,0 +1,65 @@
+/*
+ * jquery.portlet 1.1.2
+ *
+ * Copyright (c) 2012
+ *   咖啡兔 (http://www.kafeitu.me)
+ *
+ * Dual licensed under the GPL (http://www.gnu.org/licenses/gpl.html)
+ * and MIT (http://www.opensource.org/licenses/mit-license.php) licenses.
+ *
+ * See Detail: http://www.kafeitu.me/jquery-ui-portlet.html
+ */
+/* modified */
+.ui-portlet {
+	display: table;
+}
+
+.ui-portlet-column {
+	float: left;
+	padding-bottom: 100px;
+}
+
+.ui-portlet-header {
+	padding: .4em 0.7em;
+	border-radius: 0 !important;
+	color: white;
+	border: 0 !important;
+}
+
+.ui-portlet-header .ui-icon {
+	float: right;
+}
+
+.ui-portlet-item {
+	margin: 0 1em 1em 0;
+	/*overflow: auto;*/ /* modified */
+	border: 3px solid #ddd;
+}
+
+.ui-portlet-content {
+	padding: 0.3em;
+	overflow-y:auto; /* modified: 會撐破 .ui-portlet-item 框 */
+	/* modified: 以下加入一般畫面的設定 */
+	font: normal 16px Segoe UI,Tahoma,Helvetica,"微軟正黑體","正黑體","細明體",sans-serif;
+	color: #222;
+	letter-spacing: .4px;
+	line-height: 1.4;
+	min-height: 100px;
+}
+
+.ui-portlet-header .ui-portlet-header-icon {
+	float: left;
+	margin: 0 0.2em 0 -0.5em;
+	min-height: 1.5em; /* modified: 新加 */
+	min-width: 1.5em; /* modified: 新加 */
+}
+
+.ui-sortable-placeholder {
+	border: 1px dotted black;
+	visibility: visible !important;
+	height: 50px !important;
+}
+
+.ui-sortable-placeholder * {
+	visibility: hidden;
+}

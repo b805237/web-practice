@@ -1,0 +1,212 @@
+	<!--看板大小-->
+	<svg width="200" height="550" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	
+	<!--	CSS		-->
+	<style type="text/css" >
+		.area-tittle text{
+			fill:#ffffff;
+			font-size:20px;
+			font-weight:bold;
+			font-family:Microsoft JhengHei UI;
+			stroke-opacity:null;
+			stroke-width:0;
+			stroke:null;
+			text-anchor:start;
+		}
+		.tittle2 text{
+			font-weight:bold;
+			font-family:Microsoft JhengHei UI;
+			font-size:18px;
+			stroke:null;
+			xml:space:preserve;
+			fill:#ffffff;
+			stroke-width:0;
+			stroke-opacity:null;
+			text-anchor:start;
+		}
+		.area-tittle2 , .area-tittle3 text{
+			fill:#ffffff;
+			font-size:15px;
+			font-weight:bold;
+			font-family:Microsoft JhengHei UI;
+			stroke-opacity:null;
+			stroke-width:0;
+			stroke:null;
+			text-anchor:start;
+		}
+		
+		.area-background rect , .area-tittle2 rect , .time rect{
+			fill:#5c718e;
+			width:200px;
+			stroke-opacity:null;
+			stroke-width:null;
+			stroke:null;
+			xml:space:preserve;
+		}
+		
+		.outside , .device text{
+			font-weight:bold;
+			font-family:Microsoft JhengHei UI;
+			font-size:15px;
+			stroke:null;
+			xml:space:preserve;
+			fill:#000000;
+			stroke-width:0;
+			stroke-opacity:null;
+			text-anchor:start;
+		}
+		
+		.time text{
+			font-weight:bold;
+			fill:#ffffff;
+			font-size=15px;
+			xml:space:preserve;
+			text-anchor:start;
+			font-family:Microsoft JhengHei UI;
+			fill-opacity:null;
+			stroke-width:0;
+			stroke:null;
+			letter-spacing:2px;
+		}
+		.time2 text{
+			font-weight:bold;
+			fill:#ffffff;
+			font-size=10px;
+			xml:space:preserve;
+			text-anchor:start;
+			font-family:Microsoft JhengHei UI;
+			fill-opacity:null;
+			stroke-width:0;
+			stroke:null;
+		}
+		
+		.values1 , .values2 , .values3 text{
+			font-weight:bold;
+			font-family:Microsoft JhengHei UI;
+			font-size:15px;
+			stroke:null;
+			xml:space:preserve;
+			fill:#000000;
+			stroke-width:0;
+			stroke-opacity:null;
+			text-anchor:start;
+		}
+	</style>
+	<g>
+		<title>資訊看板</title>
+		<!--	背景	-->
+		<!--	區域	-->
+		
+		<g id="background" class="background_color">
+			<rect fill="#e1e3eb" id="canvas_background" height="552" width="202" y="0" x="0"/>
+		</g>
+		<!--	標題	-->
+		<g id="tittle2_id" class="tittle2">
+			<rect fill="#5c718e" id="canvas_background" height="35" width="200" y="35" x="0"/>
+			<rect fill="#5c718e" id="canvas_background" height="30" width="200" y="158" x="0"/>
+			<rect fill="#5c718e" id="canvas_background" height="30" width="200" y="350" x="0"/>
+			<text  x="42" y="63" >室外</text>
+			<text  x="42" y="181" >溫室環境</text>
+			<text  x="42" y="372" >能耗資訊</text>
+			<image  height="29" width="29" y="158" x="12"   xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHEAAABJCAYAAAAKV8kQAAAACXBIWXMAABcSAAAXEgFnn9JSAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABVZJREFUeNrsnE9oFFccx2dfY6GxQqSltQcbivTPpUW8eAl6ac/xFsGToT14y6ElvZqDaRGao4csBAVDpYekBA+tCqmgpqApqJTYf9BGiA0GS2NSm+hM3+913jiz7sy8mfd7M0n4fuGxM7vm+d33/b3ffjY7Gy8IAo9pfLP+ZG2VbhnntB0joae5DeSp3/efrMjbJTm6OebkMtYXJNW3ARar2w98P+ZpeIOE+CjmaZpjzoZK0l6rcrwQO/9Ljp1evfpFjj36hJ5uw2u8IQ9/r9HThByHWu47LMc5m0kFg7FpCvCxv6ZOwtuu0HBdGogHKFuqJwNsyMNLNXrqkYXU2+b+MduJBYOxA3Qw9+esuuPX+7d15ZPhnhoWq1uOk3Rwe2FG3XHv72jz7QkDrkNTVEiLy3ejO/5Zf+iFHWyizhCVsfkHP0fhUZh0Hlb+VA2LNSlHBy3QxTtf/d/r15e9H+5e1o+fDIOuUsNhd/LO/3jmqdGboywFbxNiUxtrXhtKPvD0vCt8AlWpT4692sO/j1cTnsLK75DjdJWdQYY0SAdf32p6i8vz0QPfzn3JUvDCwli/NvbHg58SD9L5hblzusoGK6x89fpyZ3HWm53/Lklea8vx4joYBl6FLlFISyv3VGjP7ASGgi8b4ow2plvCMz3t1qhHj1cIFAqwaLc1rw61/QcULAXMBRRFAKt57bgqpFZRwdNGsCl4UdLYLm0s9T2HqvzjVQFFBFhUVPdXFtJfA64OsQGFKWBd+e18BH7tRDvUpuBFWWPULrOMacihJ1ABUCjAol3WrmXFRQFzAYUpYI3fGMl+k21Z8KKsMWqXJqIn4BgoIsAavz5i9ANcQGEKWO3aKGfBC5fGKgCKTMDKTN4tQavXW3pb0wpYBQp+0kWIpYw5BopcwEoTB1DkAdb49S8K/WBLwe81LXjh2phDoDACrLy2GgOKmSoBK6vgY7+YGOMKsSdsg6WNOQCKQoBlCBS7GAjaGLAy26rcKLGCn+YIcUq/gbYxxgwUhQGrAoIuDFiGBX8gr+DzQpzgMsYIFKUAywVQcABWVsHTxjEpeJFjrJfTGBNQlAYsbqDgAKzstjoSL/hmmRBn9CcUnMYsgcIasDiBgguwDAu+P63g00Ic1sbGb/AulgVQsAAWJ1BwAVbmi//N0dyCFynGPnZpTAOF/qTDECjYAIsLKDgBK5sjsgtepBlT/d2hMfUfyfkNgSICrLRPKDhbvSFQDHADVtmCF2nGqI26NFYAKBKA5aKNlgSKE9yAVbbgRZ3GDIHCGWBZAIUzwCpQ8APtQoyMtV5u4b7yU4HCKWCVBArngGVY8CdaQ0wYc91GM4EiiICiOwj8T1wDVgmgcA5Yeb8saS14sRGMJYCiEQHFZKMhnqsCsAoAxXRVgJXVVmMvK7TxekSV5FcQKCoDrAJAcbBKwMoreL0BG/R9hbDvQ5tUAgFufnXog6Nn91tNdOi9j7zedz9Urcb2rcDYke9ZPL3z6j5v8P1TqvV8duGY1VyffnDKe/uVfd7nF49ZQZb2xLnmAnW8BdoplgAhQggRQogQQkSIEEKEECKEEBEihBAhhAghRIQIIUQIIUIpij7Zp0+cbfTy9teiW9u5uDy9vvMtddu5bYf1XJ3P70jMaeuJc83p750GqOUtshNjl8CVroqX5FhaWbC+nI+uZeHwRLtnd9eb3ur6Q2/e8kuyu+UO6tz2ovq6Ov3VRltPHM+P1pvWPdqJuFAqW7hQCgKdQggRIUIIEUKIEEJEiBBChBAihBARIoQQIYQIIUSECCFECCFC5YQLpbbCTvQD/xGWYfOKNuF/AgwAGsdWz3tlWnMAAAAASUVORK5CYII=" />
+			<image  height="28" width="28" y="352" x="12" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGoAAAB0CAYAAABt/ad8AAAACXBIWXMAABcSAAAXEgFnn9JSAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABTJJREFUeNrs3c1PE0EYBvCBlA+BpDUmYIwJ+HFUW8NFYyIkcvBgQv8DloNe5erJetKjXPXQ5ejJcte4eNELCaCJFzHFgxFDQpuIIn7UebezZSlbul3odt7u8yQTpS1t6a8zOzP7MR2lUkkggWLIMiJLJowX68TnHRgpG+YLAooBEqCYIAGKCRKgmCABKgDS9CKgWCCZa4ACEqB4IwGKCRKgmCAByhtKOyRA1cjChl5IlFjVzwlZ0qI8K9yOMWXJN+m5R9w18pBZksWSpeAFlZFlRpZ4G1cWq8lQ94/w+YrKw3RD0Q9TaPS0Slx1bOgLkImpps5G+vdnS2yuPhVbX1+0zV/bm7goBpMPQ33Nb8v3xHbhXeDf7z85IY6fuy06Y/1C1VIrppo8G4leYOf7J3yXWxyqKH+3191fMIN6fUn7zvWXQNIoVCN/brx1fkx37t6xgk9Hs+xsVSpOvAJVkk0fom8w4AUU0syZCc90D5yV3cU7LP/AjnIXN9Qk5Gfld1OyufrEVyfOFxT153sSF/C19pnugTP+mzSfX6RYgPexLFxzUMxSaPJzL/itdM6w6EibvqrQ/JOFerMvNJE67vOx9LhX6Eyg14cACgEUoILHUBvfkqvkGtgYA6rZY0HVY8x6dE8nVU/oMViOpnt+mBDCGP2n+FtWoS9y8CH/TZ8SYriv8pi7CtQAT2ugUkLtSV4uyjbudRnJHpitSJVhqXhJiHiXfdOUq4lEQm76Kh96+s0ukhM6PIvwiru3E5YJovChUk5tyv+oMbQvAkubXl91TQIW43GUg0W1D1iaD3iBxWhmgppJD6yc6r4DSnOsSTVoTgBKf6xk1LDYTMpGHYvV7HmUsdjt5ogqlnZQSzfkJ94FLO2hknH5iV8HFoumD1iMtlGNYs2ttTeW1p0JwsrfFCIVr49lLLY3ls5QdoNGOxKpZqV8nALugZUXavcKoJoX2m0/d0isuKpZKUA1Nwaw+Ax4gcVoZiLyWJymkCKNxW2uL7JYHI89J6wHUcPiepJARpbpIFizH3licT6bw6zGokOj64WOynVdEpsNFvfTbvZgPb9SPjS67i+teWKN6/yHxgT/mOpf+1qw2dFdjHpYrscTFp1JUkSNCqlmOR9+gJrlgAGKCRaggAWotseKifbMoToYfmABpQHWkoYXEGr3yxcQ1mWn2+23GVwqAqoVca5R1BAWoDTBMkcBxQJrapgXVtQuscMWK4rXQmKJFdWLVrHDivLVxVhhRf0ycGywcL2+BrFG+gClA9baQVh0Zknu6p6bcmG9wRiM9mDRsROWLEnCSiWEyHwony1CNWnmfPkME5V59TuAakEKqmbZWIRCx2F4hK79bqDp0wNrzuM+2o7NqvtDnWNHjaqNZagy7rrdatUbAlT9WDq8CTR9TAIoQCGt3kZVb2APiil4LPkddkbCgGpkBWxL8FnyG00fElLTR4v3fl645esJOS75jRqFAApQiN5QPXLbgmjWgegd2gNl7yzrH5rwvSYsEkINkhbHTlT2scx3qkGp1BuUvbVHwNKkJlVZ5Kh7npElLUuSVmQ+fe2Z+FV4H/hFdF/ym0OqVhGnPcmmM44aF+X9/2MeD9Q+jSz5zSy083LGPeB19mpSMUSAuaga0WXJb27Jq02SVWtmwhJ8lhdvZMlvjKOOMhzPW4ocFCFlR/fVGEQnKA+kaRHiwY2ACo5kgkYjKCAxgAISAyggNZ6OUqkU1mvR+GyM1teNdwFJ+xoFJH6dCSAxgAISAyggMYACUsD8F2AA6ezoB2PNKisAAAAASUVORK5CYII="/>
+			<image  height="24" width="24" y="43" x="12"   xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGEAAABkCAYAAACWy14QAAAACXBIWXMAABcSAAAXEgFnn9JSAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABWVJREFUeNrsnc1vG1UUxW8cxx67ceOoaZw0TWtnkaYqKAXUVIAQkShI7aYm+4qKNUgsESyaDf8AldjSqKxYFHYs+FywSiVKKSIREqRIbdxCQ53YjR03H7zzOo7ccWPsdMZjz5wjXSUZO87k/mbOu8/jN7dja2tLqKbquIrzKtIqDquYCTInjiuuYtJMOqLH8niSEJxR0kw4kn+28oHi+obM/ZOV4sMNefFQv95GCPbbDBI/XvlAtliSub+zOvkL93N6W6o3RghO28xNlWwk/TcV2UKp5gsRgs02gyMdRz1+rleEYIPNLJhH/W5VL4RJM/wgwzzix8wIVz54J1eQa5l7KvF5yeRW7fh7A41AuOCnw3+9mJeg0a1tpXykN2ozdSrRkB2t5xblwfwVTyS5M9onXX1HJRgb0t8/9n9ubmkA3/6xKD8sZBzflwYh3JLs1YttmfRAeK8YByYkMnJKoqlTEgjFZCebOTN6UJKqhPwrm2/Kvnl6YMZRbgydlEgKiX9NrNWMwzbjXwghZTE40pH4UN+YOFHNEEKt2dOJd6XnxDvicDVDCLUUHprYnq3+lFly3WZ8PSZ892dm+z2athi77Kw+4MGB0F7ty9BmaUVK9+Zkcy2nv1IOQECyu8emJKxKP+sgaNVmKSfF27NSWPhGVlVsrq0w+08DwVDe26MGQdTddZ8pqi5HmYjoLX0oueuXZOWXGcJoFEJHZ1gS6csNJf/JQLp1FRMbPy/LVz+WleszvoYQaKj66H/mqQFYYfS+/IEGizGFEGorbZ4KjuwEwA6d+357QCeEal0Sy/vojuyIOisS6c98CSJQB4C3mrYzPgVRC8J0MwFYQeDNN79DwBjg2kUcgNh/+hNfl6j4FIHrNSMmfwCBWbf1rFhTkz7MwDHp8yoEjAMtUS9arwFUVlOPZuF5BeJrWZ69KOu5256BMCmWj3K0tJcq2+o+8qZER96Q3M+fegbCdFsObF179Awc70+1+8CMs+DVtq4yLNeN2xHCe0K5CiHZTmOBVyGkmQpC8D2EeLsPyF6AMMk0uA/hONNACIRglqeUyxDGmYbWmTFThEAIlMsQfmUa3BWuJzxbx/OmVVwoLs7K3S/Ptew/Y8enA92CQDUoI9gpg7FondsiVb+P9XC+gxCPhKTXCNe5LSQDZjKxgNDoCkpcbeOZ0KDefmHUltcZsBzZlcIKoDuW5VcFva1Q9dydFqyU99NzEDZKBekMVVsAFg1mC2uPbbuvt5Us29bkpeGEAhCRr36/pde5IeF2r3dLVViS5yAAwOc3FuTG3X93/RrPD+7TX5H4Ziy78uQ8IV96yMkaRQiEQBECIVCEQAgUIRACRQiEQBECIVCEQAgUIRACRQiEQBECIVCEQAgUIRACRQiEQBECIVCEQAgUIRBCu2vqWFLOjA5XraZsVXlqudSD+S/0OmastkTXb0S5T3K5yV0rtvzyFIT8/BV9/2x0HETPtWjqdTFC3fLc4D4dEICgD1s9HcMJYZdCoyTAQCzJ+7oJE2CgDWQwdkCO7o/rOK3sCstdcXZcyyy52o3Q84vJ0VYMIT9+pO8+Hx151JcTtoVlsgirbQU6OgjBKeHO8uhkhUAjpVq2BR1LxPW6Zqdty7f3trDaFoCU2wbDttCZ/OTBfh1O2xZvMGJq1eyECNtCTx+MJXuOTOlmGjvZll3VFiE8QehSgqi0rYh5pjhRbRFCA7YFWW3LjmqLEByyLdzQRHdAV7b1f13QCcEh24ob1baFABirbRFCk20Lgm1l8qu7g4CG18bQBDNeD5TSiu58hQj2HNbWFRl+RX1/aNu2dgUBvpc4e5kZtlfLvJ7gvm7+J8AAJk9eIaRaZPUAAAAASUVORK5CYII=" />
+			
+		</g>
+		<g id="area" class="area-tittle">
+			<rect fill="#5c718e" x="0" y="0"  width="200" height="40" />
+			<text  x="42" y="33" id="areaName"></text>							  
+			<image id="areaImage" height="25" width="29" y="10" x="10" xlink:href="data:image/png;base64,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" />		
+		</g>
+		<!--
+		<g id="area3" class="area-tittle3">
+			<text  x="41" y="339">花卉區</text>
+			<image  height="23" width="27" y="321" x="10" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAZCAMAAAD63NUrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAMAUExURUxpcTvDsDvEsTzGszzJtTzKtjvDsDvDsD3KtjvDsDvDsTvFsTvEsTvEsTvDsDvDsDvDsDvDsDvDsDvFszvFsTvEsTzGszvDsDvEsDvGsjzFsjrDsDzFszvEsDvEsTvEsTvEsTvEsTvEsDvEsDvDsDvDsDvEsDvEsDvHszzDsTvEsTvFsjvEsDvFsjvEsTvDrzvDsTvEsTvDsDvFsjvDsDvEsDvDsDvEsDvDsTvDsDvDsDvDsDzEsjvDsDvDsP///23j2DSvnv7+//7//zvEsf/+/zSunT7Esf7//jzDsPz+/z3EsW7j2DWxoP3+/jawn////zWvnhikkfj4+CG7pnDk2RulkjzGsjm+q/f39zfDsC/Aq/3//yusmjrCrzXDrzi7qefn5x+nlPv5+RejkPX19R+7pf39/i+tmyO8pyq+qvv7+zWzoe3u7vHx8TStnTSwn2nj2DzDsfv6+iKoliy/qljg02bj2GPi1/Dw8CiqmSm+qfz9/Ti6qDCvnTrBrja0ozrArSe9qF7h1CWplyW9qOvr6znEsTHCrl7j1yK9pzPBrTe4pj/Gs+/6+Fri1EO2punq6UbHtfLy8jiwoKjb0/f9/Wvj2P/+/vH9+y/BrDe2pd708TKwn8Dm4Pv+/v/7/VnMvHzYy/T09HHHu4nRx4/Tyuv496HZ0c/r58vq5l7Ovk3IuIHZza3l3dn08VPf0eb49bXx60m3qPX8/H/Ow//5+pfWza/d1lLKurLn38zw63Tm23fKvmHBtPP6+VW8rZLd08fu6SCynWrSw9Ly7cbp5Jbs5Xvn3Nbw7LLh2jyyovn8/Lri3dvx7nLUxmXOwHjXyIXaz4nq4cTz76Pj2mbDthipla3w6pzYz/nz9P/z9Pbu7zvEsMDs5Suwnbvp5Cy4pNL28o7r41q/sZbf1b/z7qjv6WzFuef185zi2dv49Y3c0pvt5uL39CGsmaLu54Ln3Sa3oqfk28r08PLr6z3CrxGhjhu3ovn6+kvCsQefit/o55fLxYLc0LPs5R9DEVAAAAABdFJOUwBA5thmAAABH0lEQVR42oSSsUoDQRCGv9lb4VCiIlaCNj6AjXgYEsHGwiaFlYVgYeMr2FiJLyBoYedbBLQI4fDEWrC1sFZI9IjrncXunpfTcH8zO//H7CyzI3iFmUQASa5S74mLqkVJ/axMww0qekgLuj7NH308OrrFv+qBTITQQ6GLrC0iUqIaReCTmT5A9EsDlC7SIQDzTPkLIq2ajh3vcgoQi4Fz6zV9V7lCZoHuDsCJd+2LGwOAxeHavbVzN0EbOgBcpEmjCxyujNe6iV6HBzmrmzdUaLB3+6YMzL0DZ5W+Rbk2AOGn6xuPwfYRAA7GyiTl0bYu94EFmyQmQJbteWkAJN/PGdtP1nnJNMaVvRJ+MWIEd84x9f9bsxs1e1Wzk5P2+WcA1t1JM3QxZgUAAAAASUVORK5CYII=" />
+		</g>
+		-->
+		<!--	室外區	-->
+		<g id="item_id" class="outside">
+			<text y="105"  x="15" id="item1">溫度</text>
+			<text y="106"  x="162.5" id="unit1">°C</text>
+			<text y="123"  x="15" id="item2">濕度</text>
+			<text y="123"  x="162.5" id="unit2"> %</text>
+			<text y="141"  x="15" id="item3">本日最高溫</text>
+			<text y="141"  x="162.5" id="unit3">°C</text>
+			<!--
+			<text y="366" x="153">°C</text>
+			<text y="366" x="20.5">溫度</text>
+			<text y="390" x="20.5">濕度</text>
+			<text y="414" x="21">天窗</text>
+			<text y="438" x="21">內遮光網</text>
+			<text y="488" x="21">降溫系統</text>
+			<text y="464" x="21">內保溫幕</text>
+			<text y="390" x="156">%</text>
+			-->
+		</g>
+		<!--	溫室環境+太陽能	-->
+		<g id="device_id" class="device">
+			<text y="223" x="15" id="item4">溫度</text>
+			<text y="223" x="162.5" id="unit4">°C</text>
+			<text y="241" x="15" id="item5">濕度</text>
+			<text y="241" x="162.5" id="unit5">%</text>
+			<text y="259" x="15" id="item6">天窗</text>
+			<text y="259" x="162.5" id="unit6"></text>
+			<text y="277" x="15" id="item7">內循環扇</text>
+			<text y="277" x="162.5" id="unit7"></text>
+			<text y="295" x="15" id="item8">內遮光網</text>
+			<text y="295" x="162.5" id="unit8"></text>
+			<text y="313" x="15" id="item9">內保溫幕</text>
+			<text y="313" x="162.5" id="unit9"></text>
+			<text y="331" x="15" id="item10">冰水主機</text>
+			<text y="331" x="162.5" id="unit10"></text>
+			<text y="408" x="15" id="item11">太陽能</text>
+			<text y="408" x="162.5" id="unit11"></text>
+			<text y="426"  x="15" id="item12">月發電量</text>
+			<text y="426"  x="162.5" id="unit12">kWh</text>
+			<text y="444"  x="15" id="item13">總發電量</text>
+			<text y="444"  x="162.5" id="unit13">kWh</text>
+			<text y="475"  x="15" id="item14">當月用電量</text>
+			<text y="475"  x="162.5" id="unit14">kWh</text>
+			<text y="493"  x="15" id="item15">累積用電量</text>
+			<text y="493"  x="162.5" id="unit15">kWh</text>
+		</g>
+		<!--	日期	-->
+		<g id="time_id" class="time">
+		  <rect x="0" y="505" height="45" />
+		  <text y="525" x="47" id="date">YYYY/MM/DD</text>
+		</g>
+		<g id="time_id2" class="time2">
+		  <text y="543" x="120.5" id="time" font-size="13px">hh:mm</text>
+		  <text y="543" x="47" id="weekday" font-size="13px">星期</text>
+		  <text y="543" x="98" id="apm" font-size="13px">AM</text>
+		</g>
+		<!--	各項value	-->
+		<g id="item_value" class="values1">
+			<text y="105"  x="100" id="value1"></text>
+			<text y="123"  x="100" id="value2"></text>
+			<text y="141" x="100" id="value3"></text>
+			<text y="223" x="100" id="value4"></text>
+			<text y="241" x="100" id="value5"></text>
+			<text y="259" x="100" id="value6"></text>
+			<text y="277" x="100" id="value7"></text>
+			<text y="295" x="100" id="value8"></text>
+			<text y="313" x="100" id="value9"></text>
+			<text y="331" x="100" id="value10"></text>
+			<text y="408" x="100" id="value11"></text>
+			<text y="426" x="100" id="value12"></text>
+			<text y="444" x="100" id="value13"></text>
+			<text y="475" x="100" id="value14"></text>
+			<text y="493" x="100" id="value15"></text>
+		</g>
+		<!--
+		<g id="item_value3" class="values3">
+			<text y="366" x="111" id="value11"></text>
+			<text y="390" x="111" id="value12"></text>
+			<text y="414" x="111" id="value13"></text>
+			<text y="438" x="111" id="value14"></text>
+			<text y="464" x="111" id="value15"></text>
+			<text y="488" x="111" id="value16"></text>
+		</g>
+		-->
+	</g>
+</svg>

@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="converters"/>
+  <module name="gx"/>
+</import>
+<content>
+<ScrollPane>
+
+  <CanvasPane name="content" viewSize="200.0,550.0">
+
+    <Label layout="0.0,40.0,200.0,30.0" image="file:^GreenHouse/image/common/YE.png">
+      <ValueBinding ord="station:|slot:/GH/Topbar/$(Select)2/out/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="0.0,210.0,200.0,30.0" image="file:^GreenHouse/image/common/YE.png">
+      <ValueBinding ord="station:|slot:/GH/Topbar/$(Select)6/out/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="0.0,100.0,200.0,30.0" image="file:^GreenHouse/image/common/YE.png">
+      <ValueBinding ord="station:|slot:/GH/Topbar/$(Select)7/out/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="0.0,240.0,200.0,30.0" image="file:^GreenHouse/image/common/YE.png">
+      <ValueBinding ord="station:|slot:/GH/Topbar/$(Select)8/out/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="0.0,380.0,200.0,30.0" image="file:^GreenHouse/image/common/YE.png">
+      <ValueBinding ord="station:|slot:/GH/Topbar/$(Select)14/out/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="0.0,430.0,200.0,30.0" image="file:^GreenHouse/image/common/YE.png">
+      <ValueBinding ord="station:|slot:/GH/Topbar/$(Select)13/out/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="0.0,350.0,200.0,30.0" image="file:^GreenHouse/image/common/YE.png">
+      <ValueBinding ord="station:|slot:/GH/Topbar/$(Select)12/out/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="0.0,320.0,200.0,30.0" image="file:^GreenHouse/image/common/YE.png">
+      <ValueBinding ord="station:|slot:/GH/Topbar/$(Select)11/out/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="0.0,290.0,200.0,30.0" image="file:^GreenHouse/image/common/YE.png">
+      <ValueBinding ord="station:|slot:/GH/Topbar/$(Select)10/out/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="0.0,70.0,200.0,30.0" image="file:^GreenHouse/image/common/YE.png">
+      <ValueBinding ord="station:|slot:/GH/Topbar/$(Select)5/out/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="0.0,180.0,200.0,30.0" image="file:^GreenHouse/image/common/YE.png">
+      <ValueBinding ord="station:|slot:/GH/Topbar/$(Select)4/out/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="0.0,150.0,200.0,30.0" image="file:^GreenHouse/image/common/YE.png">
+      <ValueBinding ord="station:|slot:/GH/Topbar/$(Select)3/out/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="0.0,10.0,200.0,30.0" image="file:^GreenHouse/image/common/YE.png">
+      <ValueBinding ord="station:|slot:/GH/Topbar/$(Select)1/out/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="0.0,10.0,200.0,31.0" text="&#x3000;&#x53f3;&#x5074; &#x5929;&#x7a97;" font="bold 15.0pt Microsoft JhengHei" foreground="#404040" halign="left">
+      <ValueBinding hyperlink="file:^GreenHouse/px/a/S$(area)/Control_S_5.px"/>
+    </Label>
+
+    <Label layout="0.0,40.0,200.0,31.0" text="&#x3000;&#x5de6;&#x5074; &#x5929;&#x7a97;" font="bold 15.0pt Microsoft JhengHei" foreground="#404040" halign="left">
+      <ValueBinding hyperlink="file:^GreenHouse/px/a/S$(area)/Control_S_6.px"/>
+    </Label>
+
+    <Label layout="0.0,150.0,200.0,31.0" text="&#x3000;&#x5167;&#x906e;&#x5149;&#x7db2;" font="bold 15.0pt Microsoft JhengHei" foreground="#404040" halign="left">
+      <ValueBinding hyperlink="file:^GreenHouse/px/a/S$(area)/Control_S_9.px"/>
+    </Label>
+
+    <Label layout="0.0,180.0,200.0,31.0" text="&#x3000;&#x5167;&#x4fdd;&#x6eab;&#x7db2;" font="bold 15.0pt Microsoft JhengHei" foreground="#404040" halign="left">
+      <ValueBinding hyperlink="file:^GreenHouse/px/a/S$(area)/Control_S_10.px"/>
+    </Label>
+
+    <Label layout="0.0,100.0,200.0,31.0" text="&#x3000;&#x5167;&#x5faa;&#x74b0;&#x6247;" font="bold 15.0pt Microsoft JhengHei" foreground="#404040" halign="left">
+      <ValueBinding hyperlink="file:^GreenHouse/px/a/S$(area)/Control_S_11.px"/>
+    </Label>
+
+    <Label layout="0.0,320.0,200.0,31.0" text="&#x3000;&#x5916;&#x5074; &#x63a8;&#x7a97;" font="bold 15.0pt Microsoft JhengHei" foreground="#404040" halign="left">
+      <ValueBinding hyperlink="file:^GreenHouse/px/a/S$(area)/Control_S_8.px"/>
+    </Label>
+
+    <Label layout="0.0,380.0,200.0,31.0" text="&#x3000;&#x5074;&#x3000;&#x3000;&#x6372;" font="bold 15.0pt Microsoft JhengHei" foreground="#404040" halign="left">
+      <ValueBinding hyperlink="file:^GreenHouse/px/a/S$(area)/Control_S_1.px"/>
+    </Label>
+
+    <Label layout="0.0,70.0,200.0,31.0" text="&#x3000;&#x5674;&#x3000;&#x3000;&#x9727;" font="bold 15.0pt Microsoft JhengHei" foreground="#404040" halign="left">
+      <ValueBinding hyperlink="file:^GreenHouse/px/a/S$(area)/Control_S_2.px"/>
+    </Label>
+
+    <Label layout="0.0,430.0,200.0,31.0" text="&#x3000;&#x6f86;&#x3000;&#x3000;&#x704c;" font="bold 15.0pt Microsoft JhengHei" foreground="#404040" halign="left">
+      <ValueBinding hyperlink="file:^GreenHouse/px/a/S$(area)/Control_S_3.px"/>
+    </Label>
+
+    <Label layout="0.0,210.0,200.0,31.0" text="&#x3000;&#x6c34;&#x3000;&#x3000;&#x7246;" font="bold 15.0pt Microsoft JhengHei" foreground="#404040" halign="left">
+      <ValueBinding hyperlink="file:^GreenHouse/px/a/S$(area)/Control_S_4.px"/>
+    </Label>
+
+    <Label layout="0.0,240.0,200.0,31.0" text="&#x3000;&#x8ca0;&#x58d3;&#x98a8;&#x6247;" font="bold 15.0pt Microsoft JhengHei" foreground="#404040" halign="left">
+      <ValueBinding hyperlink="file:^GreenHouse/px/a/S$(area)/Control_S_12.px"/>
+    </Label>
+
+    <Label layout="0.0,350.0,200.0,31.0" text="&#x3000;&#x7a7a;&#x3000;&#x3000;&#x8abf;" font="bold 15.0pt Microsoft JhengHei" foreground="#404040" halign="left">
+      <ValueBinding hyperlink="file:^GreenHouse/px/a/S$(area)/Control_S_14.px"/>
+    </Label>
+
+    <Label layout="0.0,290.0,200.0,31.0" text="&#x3000;&#x5167;&#x5074; &#x63a8;&#x7a97;" font="bold 15.0pt Microsoft JhengHei" foreground="#404040" halign="left">
+      <ValueBinding hyperlink="file:^GreenHouse/px/a/S$(area)/Control_S_7.px"/>
+    </Label>
+
+    <Label layout="0.0,420.0,10.0,130.0" background="#e6e0d0"/>
+
+    <Label layout="0.0,140.0,10.0,140.0" background="#e6e0d0"/>
+
+    <Label layout="0.0,280.0,10.0,140.0" background="#efefef"/>
+
+    <Label layout="0.0,0.0,10.0,140.0" background="#efefef"/>
+
+    <Label layout="157.0,12.0,25.0,25.0">
+      <ValueBinding ord="station:|slot:/GH/area$(area)/DormerWindowR/Status/out/value">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^GreenHouse/image/Common/GC.png"/>
+          <Image name="falseValue" value="file:^GreenHouse/image/Common/OC.png"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+      <ValueBinding ord="station:|slot:/GH/area$(area)/DormerWindowR/$u8a2d$u5099$u9023$u7dda$u7570$u5e38/out/value">
+        <IBooleanToSimple name="visible">
+          <Boolean name="trueValue" value="false"/>
+          <Boolean name="falseValue" value="true"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="157.0,42.0,25.0,25.0">
+      <ValueBinding ord="station:|slot:/GH/area$(area)/DormerWindowL/Status/out/value">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^GreenHouse/image/Common/GC.png"/>
+          <Image name="falseValue" value="file:^GreenHouse/image/Common/OC.png"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+      <ValueBinding ord="station:|slot:/GH/area$(area)/DormerWindowL/$u8a2d$u5099$u9023$u7dda$u7570$u5e38/out/value">
+        <IBooleanToSimple name="visible">
+          <Boolean name="trueValue" value="false"/>
+          <Boolean name="falseValue" value="true"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="157.0,153.0,25.0,25.0">
+      <ValueBinding ord="station:|slot:/GH/area$(area)/Obscure/Status/out/value">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^GreenHouse/image/Common/OC.png"/>
+          <Image name="falseValue" value="file:^GreenHouse/image/Common/GC.png"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+      <ValueBinding ord="station:|slot:/GH/area$(area)/Obscure/$u8a2d$u5099$u9023$u7dda$u7570$u5e38/out/value">
+        <IBooleanToSimple name="visible">
+          <Boolean name="trueValue" value="false"/>
+          <Boolean name="falseValue" value="true"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="157.0,183.0,25.0,25.0">
+      <ValueBinding ord="station:|slot:/GH/area$(area)/TempNet/Status/out/value">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^GreenHouse/image/Common/OC.png"/>
+          <Image name="falseValue" value="file:^GreenHouse/image/Common/GC.png"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+      <ValueBinding ord="station:|slot:/GH/area$(area)/TempNet/$u8a2d$u5099$u9023$u7dda$u7570$u5e38/out/value">
+        <IBooleanToSimple name="visible">
+          <Boolean name="trueValue" value="false"/>
+          <Boolean name="falseValue" value="true"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="157.0,72.0,25.0,25.0">
+      <ValueBinding ord="station:|slot:/GH/area$(area)/Spritz/valControl/out/value">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^GreenHouse/image/Common/GC.png"/>
+          <Image name="falseValue" value="file:^GreenHouse/image/Common/OC.png"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+      <ValueBinding ord="station:|slot:/GH/area$(area)/Spritz/$u8a2d$u5099$u9023$u7dda$u7570$u5e38/out/value">
+        <IBooleanToSimple name="visible">
+          <Boolean name="trueValue" value="false"/>
+          <Boolean name="falseValue" value="true"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="157.0,213.0,25.0,25.0" image="file:^GreenHouse/image/Common/grayC.png">
+      <ValueBinding ord="station:|slot:/GH/area$(area)/CoolingPad/$u8a2d$u5099$u9023$u7dda$u7570$u5e38/out/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="157.0,102.0,25.0,25.0">
+      <ValueBinding ord="station:|slot:/GH/area$(area)/CirculatingFan/valControl/out/value">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^GreenHouse/image/Common/GC.png"/>
+          <Image name="falseValue" value="file:^GreenHouse/image/Common/OC.png"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+      <ValueBinding ord="station:|slot:/GH/area$(area)/CirculatingFan/$u8a2d$u5099$u9023$u7dda$u7570$u5e38/out/value">
+        <IBooleanToSimple name="visible">
+          <Boolean name="trueValue" value="false"/>
+          <Boolean name="falseValue" value="true"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="157.0,242.0,25.0,25.0">
+      <ValueBinding ord="station:|slot:/GH/area$(area)/NPFan/valControl/out/value">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^GreenHouse/image/Common/GC.png"/>
+          <Image name="falseValue" value="file:^GreenHouse/image/Common/OC.png"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+      <ValueBinding ord="station:|slot:/GH/area$(area)/NPFan/$u8a2d$u5099$u9023$u7dda$u7570$u5e38/out/value">
+        <IBooleanToSimple name="visible">
+          <Boolean name="trueValue" value="false"/>
+          <Boolean name="falseValue" value="true"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="157.0,292.0,25.0,25.0">
+      <ValueBinding ord="station:|slot:/GH/area$(area)/WindowInside/Status/out/value">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^GreenHouse/image/Common/GC.png"/>
+          <Image name="falseValue" value="file:^GreenHouse/image/Common/OC.png"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+      <ValueBinding ord="station:|slot:/GH/area$(area)/WindowInside/$u8a2d$u5099$u9023$u7dda$u7570$u5e38/out/value">
+        <IBooleanToSimple name="visible">
+          <Boolean name="trueValue" value="false"/>
+          <Boolean name="falseValue" value="true"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="157.0,322.0,25.0,25.0">
+      <ValueBinding ord="station:|slot:/GH/area$(area)/WindowOutside/Status/out/value">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^GreenHouse/image/Common/GC.png"/>
+          <Image name="falseValue" value="file:^GreenHouse/image/Common/OC.png"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+      <ValueBinding ord="station:|slot:/GH/area$(area)/WindowOutside/$u8a2d$u5099$u9023$u7dda$u7570$u5e38/out/value">
+        <IBooleanToSimple name="visible">
+          <Boolean name="trueValue" value="false"/>
+          <Boolean name="falseValue" value="true"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="157.0,351.0,25.0,25.0">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/JACE01/points/Area$(area)_FCU_Status/out/value">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^GreenHouse/image/Common/GC.png"/>
+          <Image name="falseValue" value="file:^GreenHouse/image/Common/OC.png"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+      <ValueBinding ord="station:|slot:/GH/area$(area)/Area$(area)_FCU/$u8a2d$u5099$u9023$u7dda$u7570$u5e38/out/value">
+        <IBooleanToSimple name="visible">
+          <Boolean name="trueValue" value="false"/>
+          <Boolean name="falseValue" value="true"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="157.0,431.0,25.0,25.0">
+      <ValueBinding ord="station:|slot:/GH/area$(area)/Irrigation/valControl/out/value">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^GreenHouse/image/Common/GC.png"/>
+          <Image name="falseValue" value="file:^GreenHouse/image/Common/OC.png"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+      <ValueBinding ord="station:|slot:/GH/area$(area)/Irrigation/$u8a2d$u5099$u9023$u7dda$u7570$u5e38/out/value">
+        <IBooleanToSimple name="visible">
+          <Boolean name="trueValue" value="false"/>
+          <Boolean name="falseValue" value="true"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="157.0,382.0,25.0,25.0">
+      <ValueBinding ord="station:|slot:/GH/area$(area)/Shutter/valControl/out/value">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^GreenHouse/image/Common/GC.png"/>
+          <Image name="falseValue" value="file:^GreenHouse/image/Common/OC.png"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+      <ValueBinding ord="station:|slot:/GH/area$(area)/Shutter/$u8a2d$u5099$u9023$u7dda$u7570$u5e38/out/value">
+        <IBooleanToSimple name="visible">
+          <Boolean name="trueValue" value="false"/>
+          <Boolean name="falseValue" value="true"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="157.0,12.0,25.0,25.0" image="file:^GreenHouse/image/Common/grayC.png">
+      <ValueBinding ord="station:|slot:/GH/area$(area)/DormerWindowR/$u8a2d$u5099$u9023$u7dda$u7570$u5e38/out/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="157.0,42.0,25.0,25.0" image="file:^GreenHouse/image/Common/grayC.png">
+      <ValueBinding ord="station:|slot:/GH/area$(area)/DormerWindowL/$u8a2d$u5099$u9023$u7dda$u7570$u5e38/out/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="157.0,153.0,25.0,25.0" image="file:^GreenHouse/image/Common/grayC.png">
+      <ValueBinding ord="station:|slot:/GH/area$(area)/Obscure/$u8a2d$u5099$u9023$u7dda$u7570$u5e38/out/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="157.0,183.0,25.0,25.0" image="file:^GreenHouse/image/Common/grayC.png">
+      <ValueBinding ord="station:|slot:/GH/area$(area)/TempNet/$u8a2d$u5099$u9023$u7dda$u7570$u5e38/out/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="157.0,72.0,25.0,25.0" image="file:^GreenHouse/image/Common/grayC.png">
+      <ValueBinding ord="station:|slot:/GH/area$(area)/Spritz/$u8a2d$u5099$u9023$u7dda$u7570$u5e38/out/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="157.0,102.0,25.0,25.0" image="file:^GreenHouse/image/Common/grayC.png">
+      <ValueBinding ord="station:|slot:/GH/area$(area)/CirculatingFan/$u8a2d$u5099$u9023$u7dda$u7570$u5e38/out/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="157.0,242.0,25.0,25.0" image="file:^GreenHouse/image/Common/grayC.png">
+      <ValueBinding ord="station:|slot:/GH/area$(area)/NPFan/$u8a2d$u5099$u9023$u7dda$u7570$u5e38/out/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="157.0,292.0,25.0,25.0" image="file:^GreenHouse/image/Common/grayC.png">
+      <ValueBinding ord="station:|slot:/GH/area$(area)/WindowInside/$u8a2d$u5099$u9023$u7dda$u7570$u5e38/out/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="157.0,322.0,25.0,25.0" image="file:^GreenHouse/image/Common/grayC.png">
+      <ValueBinding ord="station:|slot:/GH/area$(area)/WindowOutside/$u8a2d$u5099$u9023$u7dda$u7570$u5e38/out/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="157.0,351.0,25.0,25.0" image="file:^GreenHouse/image/Common/grayC.png">
+      <ValueBinding ord="station:|slot:/GH/area$(area)/Area$(area)_FCU/$u8a2d$u5099$u9023$u7dda$u7570$u5e38/out/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="157.0,431.0,25.0,25.0" image="file:^GreenHouse/image/Common/grayC.png">
+      <ValueBinding ord="station:|slot:/GH/area$(area)/Irrigation/$u8a2d$u5099$u9023$u7dda$u7570$u5e38/out/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="157.0,382.0,25.0,25.0" image="file:^GreenHouse/image/Common/grayC.png">
+      <ValueBinding ord="station:|slot:/GH/area$(area)/Shutter/$u8a2d$u5099$u9023$u7dda$u7570$u5e38/out/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="157.0,213.0,25.0,25.0">
+      <ValueBinding ord="station:|slot:/GH/area$(area)/CoolingPad/valControl/out/value">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^GreenHouse/image/Common/GC.png"/>
+          <Image name="falseValue" value="file:^GreenHouse/image/Common/OC.png"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+      <ValueBinding ord="station:|slot:/GH/area$(area)/CoolingPad/$u8a2d$u5099$u9023$u7dda$u7570$u5e38/out/value">
+        <IBooleanToSimple name="visible">
+          <Boolean name="trueValue" value="false"/>
+          <Boolean name="falseValue" value="true"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="132.0,12.0,25.0,25.0" image="file:^GreenHouse/image/icon02.png">
+      <ValueBinding ord="station:|slot:/GH/area$(area)/DormerWindowR/ControlStatus/overridden/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="132.0,42.0,25.0,25.0" image="file:^GreenHouse/image/icon02.png">
+      <ValueBinding ord="station:|slot:/GH/area$(area)/DormerWindowL/ControlStatus/overridden/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="132.0,72.0,25.0,25.0" image="file:^GreenHouse/image/icon02.png">
+      <ValueBinding ord="station:|slot:/GH/area$(area)/Spritz/ControlStatus/overridden/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="132.0,102.0,25.0,25.0" image="file:^GreenHouse/image/icon02.png">
+      <ValueBinding ord="station:|slot:/GH/area$(area)/CirculatingFan/ControlStatus/overridden/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="132.0,153.0,25.0,25.0" image="file:^GreenHouse/image/icon02.png">
+      <ValueBinding ord="station:|slot:/GH/area$(area)/Obscure/ControlStatus/overridden/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="132.0,183.0,25.0,25.0" image="file:^GreenHouse/image/icon02.png">
+      <ValueBinding ord="station:|slot:/GH/area$(area)/TempNet/ControlStatus/overridden/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="132.0,213.0,25.0,25.0" image="file:^GreenHouse/image/icon02.png">
+      <ValueBinding ord="station:|slot:/GH/area$(area)/CoolingPad/ControlStatus/overridden/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="132.0,242.0,25.0,25.0" image="file:^GreenHouse/image/icon02.png">
+      <ValueBinding ord="station:|slot:/GH/area$(area)/NPFan/ControlStatus/overridden/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="132.0,292.0,25.0,25.0" image="file:^GreenHouse/image/icon02.png">
+      <ValueBinding ord="station:|slot:/GH/area$(area)/WindowInside/ControlStatus/overridden/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="132.0,322.0,25.0,25.0" image="file:^GreenHouse/image/icon02.png">
+      <ValueBinding ord="station:|slot:/GH/area$(area)/WindowOutside/ControlStatus/overridden/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="132.0,351.0,25.0,25.0" image="file:^GreenHouse/image/icon02.png">
+      <ValueBinding ord="station:|slot:/GH/area$(area)/Air/ControlStatus/overridden/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="132.0,382.0,25.0,25.0" image="file:^GreenHouse/image/icon02.png">
+      <ValueBinding ord="station:|slot:/GH/area$(area)/Shutter/ControlStatus/overridden/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="132.0,431.0,25.0,25.0" image="file:^GreenHouse/image/icon02.png">
+      <ValueBinding ord="station:|slot:/GH/area$(area)/Irrigation/ControlStatus/overridden/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+    </Label>
+
+  </CanvasPane>
+
+</ScrollPane>
+</content>
+</px>

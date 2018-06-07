@@ -1,0 +1,15 @@
+<svg width="100" height="25" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+
+ <g>
+  <title>background</title>
+  <rect x="-1" y="-1" width="102" height="27" id="canvas_background" fill="#426e34"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <text transform="matrix(1,0,0,1,0,0) " fill="#bed3b3" stroke="#000" stroke-width="0" stroke-opacity="null" x="38.242188" y="18.5" id="svg_2" font-size="15" font-family="Microsoft JhengHei UI" text-anchor="start" xml:space="preserve" font-weight="bold"></text>\
+  <rect id="svg_1" height="25" width="1" y="0.75" x="0.750004" stroke-width="1.5" stroke="#dcdcdc" fill="#dcdcdc"/>
+  <rect id="svg_3" height="25" width="1" y="0.75" x="98.250003" stroke-width="1.5" stroke="#dcdcdc" fill="#dcdcdc"/>
+ 
+ </g>
+</svg>

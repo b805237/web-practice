@@ -1,0 +1,733 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>宿舍计费-宿舍设定</title>
+	<!-- CSS -->
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+		<!-- Top bar -->
+		<link href="css/bar.css" rel="stylesheet" type="text/css">
+		<!-- 樣式 tems-->
+		<link href="css/main-tems.css" rel="stylesheet" type="text/css">
+		<!-- jqGrid 擴充外掛 -->
+	    <link href="css/jquery/ui.jqgrid.css" rel="stylesheet" type="text/css">
+		<!-- timepicker 日期選取工具 -->
+	    <link href="css/Timepicker/jquery-ui.css" rel="stylesheet">
+	    <link href="css/Timepicker/jquery-ui-timepicker-addon.css" rel="stylesheet">
+	    
+	<!-- End CSS -->
+	<!-- CSS SET -->
+	<style type="text/css">
+	/* 調整container畫面大小、位置 */
+	.container{
+		padding-right: 0px;
+ 		padding-left: 0px;
+		width:1150;
+		float:left;
+	}
+	/* 調整panel區塊間距 */
+	.panel {
+	  margin-top: 5px;
+	  margin-bottom: 5px;
+	}
+	/* 調整jqgrid文字顏色 */
+	.ui-th-column, .ui-jqgrid .ui-jqgrid-htable th.ui-th-column {color: #1e6e8c;}
+	.ui-jqgrid tr.jqgrow td {color: #1e6e8c;}
+	.ui-jqgrid .ui-pg-selbox {color: #1e6e8c;}
+	/* 調整container1頂部間距 */
+	#container1{padding-top: 10px;}
+	/* 調整datepicker位置 */
+	.ui-datepicker { 
+		  margin-left: 200px;
+		  z-index: 1000;
+	}
+	</style>
+	<!-- End CSS SET -->
+	<!-- Javascript -->
+		<!-- bajaScript model -->
+		<script type="text/javascript" src="js/bajascript/bs.min.js"></script>
+		<!-- jQuery 套件工具 -->
+		<script src="js/jquery/jquery.js"></script>
+		<!-- Web相關函數 -->
+		<script type="text/javascript" src="js/WebTool.js"></script>
+		<!-- 時間相關函數 -->
+		<script type="text/javascript" src="js/TimeTool.js"></script>
+		<!-- Niagara資料讀取 -->
+		<script type="text/javascript" src="js/NiagaraDataJson.js"></script>
+		<!-- jqGrid 擴充外掛 -->
+	    <script src="js/jquery/jquery.jqGrid.js"></script>
+	    <script src="js/jquery/grid.locale-cn.js"></script>
+		<!-- 表格設定 -->
+    	<script type="text/javascript" src="js/TableGrid.js"></script>
+		<!-- timepicker 日期選取工具 -->
+		<script src="js/Timepicker/jquery-ui.js"></script>
+		<script src="js/Timepicker/jquery-ui-timepicker-addon.js"></script>
+		<script src="js/Timepicker/jquery-ui-sliderAccess.js"></script>
+	    <!-- timepicker 日曆 -->
+	    <script type="text/javascript" src="js/CalendarTool.js"></script>
+		<!-- 查詢語法函數 -->
+    	<script type="text/javascript" src="js/QueryLanguage.js"></script>
+		<!-- Data轉CSV -->
+	    <script type="text/javascript" src="js/Data2CSV.js"></script>
+		<!-- PDF 套件工具 -->
+	    <script type="text/javascript" src="js/PDF/pdfmake.js"></script>
+	    <script type="text/javascript" src="js/PDF/vfs_fonts.js"></script>
+		<!-- Data轉PDF -->
+	    <script type="text/javascript" src="js/Data2PDF.js"></script>
+	<!-- End Javascript -->
+	
+	<!-- Javascript Code-->
+	<script type="text/javascript">
+	// 啟動baja
+	baja.start();
+	// 初始表參數設定
+	var DBname = "[HJC_TEST].[dbo].[tems_dorm_set]";	// 資料庫名稱
+	var SelectDBname = "[HJC_TEST].[dbo].[tems_org_chart_dorm]";	// 資料庫名稱
+	var slot = "station:|slot:/Drivers/RdbmsNetwork/SqlServerDatabase";	// RDBMS slot名稱
+	var gridId = "grid";			// 表格Grid ID
+	var dialogId = "myEditDiv";		// 對話Dialog ID
+	// 資料標題行
+	var titleName = {	'pk_dorm_set_seq':'编号', 'building':'大楼', 'floor':'楼层/区域', 'room':'房间', 
+						'check_in_datetime':'入住日期','check_out_datetime':'离开日期', 
+						'people_count':'入住人数', 'create_datetime':'建立日期'};
+	// 資料標題寬度
+	var titleWidth = {	'pk_dorm_set_seq':30, 'building':90, 'floor':90, 'room':90, 
+						'check_in_datetime':90,'check_out_datetime':90, 
+						'people_count':90, 'create_datetime':'hidden'};
+	// 資料類型
+	var rowType = {	'pk_dorm_set_seq':'key', 'building':'select', 'floor':'select', 'room':'select', 
+					'check_in_datetime':'datetime','check_out_datetime':'datetime', 
+					'people_count':'text', 'create_datetime':'datetime'};
+	// 對照表(building,floor,room)(主要用於資料欄位select)
+	var option_temp = new Object();
+	option_temp.key = "pk_chart_id";
+	option_temp.value = "display_name";
+	option_temp.row = ["building","floor","room"];
+	option_temp.set = "mySystemSet";
+	// EditGrid DBSql
+	var mainSQL =	"SELECT [pk_dorm_set_seq]" + 
+					",SUBSTRING([fk_chart_id],0, CHARINDEX('/',[fk_chart_id],CHARINDEX('/',[fk_chart_id])+1) ) as building" + 
+					",SUBSTRING([fk_chart_id],0, CHARINDEX('/',[fk_chart_id],CHARINDEX('/',[fk_chart_id],CHARINDEX('/',[fk_chart_id])+1)+1) ) as floor" + 
+					",[fk_chart_id] as room" + 
+			      	",[check_in_datetime],[people_count],[check_out_datetime],[create_datetime] " + 
+					" FROM " + DBname;
+	var sql = mainSQL + " order by [pk_dorm_set_seq] Desc";
+	option_temp.dbsql = [slot + "|sql:" + sql];
+	//
+	var Select_sql_1 = "select [pk_chart_id],[display_name] from " + SelectDBname + " where property ='1' order by pk_chart_id,display_name";
+	var Select_sql_2 = "select [pk_chart_id],[display_name] from " + SelectDBname + " where property ='2' order by pk_chart_id,display_name";
+	var Select_sql_3 = "select [pk_chart_id],[display_name] from " + SelectDBname + " where property ='3' order by pk_chart_id,display_name";
+	
+	var DBbql = [slot + "|sql:" + Select_sql_1,
+				 slot + "|sql:" + Select_sql_2,
+				 slot + "|sql:" + Select_sql_3];
+	/*
+	讀取資料庫，產生對照表(building,floor,room)(主要用於資料欄位select)
+	Object data			Niagara資料
+	Object systemSet	函數相關設定。key：代號、value：名稱、row：對照資料名稱、dbbql：EditGrid DBSql、set：EditGrid System Set 存放區
+	*/
+	function SelectValue(data,systemSet)
+	{	// 存放對照表
+		var rowOptions = new Object();
+		
+		for(i=0;i<systemSet.row.length;i++)
+		{	// 資料庫選項
+			var mySelect = new Object();
+			var temp = "";
+			for(a=0;a<data[i].length;a++)
+			{
+				mySelect[data[i][a][systemSet.key]] = data[i][a][systemSet.value];
+			}
+			rowOptions[systemSet.row[i]] = mySelect;
+		}
+		// 以下為產生表格jqGrid程式，主要是為了產生對照表後，可以帶入表格設定，所以要用SelectValue程式包含住EditGrid
+		
+		// 系統參數設定
+		var system2 = new Object();
+			system2.set = EditGridSet(titleName,titleWidth,rowType,rowOptions,260,"pager");
+			system2.id = gridId;
+			system2.width = 1100;
+			// 資料類型
+			system2.data_type = rowType;
+			// 資料代號轉換類型
+			system2.data_code = rowOptions;
+			// 資料庫名稱
+			system2.db_name = DBname;
+			// RDBMS slot名稱
+			system2.slot = slot;
+			// EXCEL-CSV
+			system2.excel = true;
+			// PDF
+			system2.pdf = true;
+			
+			document.getElementById(systemSet.set).value = JSON.stringify(system2);
+			// 
+			NiagaraDataJson(systemSet.dbsql,"EditGrid",system2);
+	}
+	function Init()
+	{	// 產生對照表後，將其帶入設定，再執行EditGrid
+		NiagaraDataJson(DBbql,"SelectValue",option_temp);
+		// 動態產生SelectOption
+		mySelectOption("select1","");
+		mySelectOption("selectEdit1","");
+		// 編輯畫面
+		myEdit();
+	}
+	// 編輯畫面
+	function myEdit()
+	{	// dialog設定
+		var dialogSet = new Object();
+		dialogSet.autoOpen = false;
+		dialogSet.height = 420;
+		dialogSet.width = 400;
+		// show & hide 動作
+		dialogSet.show= "blind";
+        dialogSet.hide= "blind";
+		dialogSet.modal = 'show';
+	    $("#"+dialogId).dialog(dialogSet);
+	    
+	    // 按鈕-新增資料
+		$("#myAdd").click(function()
+		{ 	// 編輯畫面按鈕-新增&取消
+			dialogSet.buttons = new Object();
+			dialogSet.buttons["新增"] = function()
+			{
+				var dataCheck = 1;
+				// 資料條件檢查
+				checkpoint = inputCheck();
+				if ( checkpoint == 1 )
+				{
+					myEditAddData();
+					$(this).dialog("close");
+					NiagaraDataJson(DBbql,"SelectValue",option_temp);
+				}
+			};
+			dialogSet.buttons["取消"] = function()
+			{
+				$(this).dialog("close");
+			}
+	    	$("#"+dialogId).dialog(dialogSet);	// 重新產生dialog
+			myClearPage('edit');				// 清除畫面
+	        $("#"+dialogId).dialog("open");		// 開啟dialog
+	        return false;
+    	});
+ 		// 按鈕-修改資料
+		$("#myUpdate").click(function()
+		{ 	// 編輯畫面按鈕-修改&取消
+			dialogSet.buttons = new Object();
+			dialogSet.buttons["修改"] = function()
+			{
+				var dataCheck = 1;
+				// 資料條件檢查
+				checkpoint = inputCheck();
+				if ( checkpoint == 1 )
+				{
+					myEditUpdateData();
+					$(this).dialog("close");
+				}
+			};
+			dialogSet.buttons["取消"] = function()
+				{
+					$(this).dialog("close");
+				}
+			$("#"+dialogId).dialog(dialogSet);	// 重新產生dialog
+			myLoadPage();						// 讀取畫面
+	        return false;
+    	});
+    	// 按鈕-刪除資料
+		$("#myDelete").click(function()
+		{
+			myEditDeleteData();
+		});
+	}
+	// 新增資料
+	function myEditAddData()
+	{	// 將資料包成JSON
+		var postData = new Object();
+		postData.fk_chart_id = document.getElementById("myEditRoom").value;
+		postData.check_in_datetime = document.getElementById("myEditTimeSection1").value;
+		postData.people_count = document.getElementById("myEditPeopleCount").value;
+		postData.check_out_datetime = document.getElementById("myEditTimeSection2").value;
+		postData.create_datetime = document.getElementById("myEditTimeSection1").value;
+		// sql語法
+		var sql = JSONtoSQL(postData,DBname,"addNotOut","pk_dorm_set_seq");
+		// 透過RDBMS，新增資料
+		var DBbql = [ slot + "|sql:" + sql ];
+		// 新增資料不回傳，會出錯，所以用try catch包住
+		try
+		{
+			NiagaraDataJson(DBbql,"DataChange",postData);
+		}
+		catch(err)
+		{
+		}
+		alert("资料新增成功");
+	}
+	// 修改資料
+	function myEditUpdateData()
+	{	// 將資料包成JSON
+		var postData = new Object();
+		postData.pk_dorm_set_seq = document.getElementById("myEditSeq").value;
+		postData.fk_chart_id = document.getElementById("myEditRoom").value;
+		postData.check_in_datetime = document.getElementById("myEditTimeSection1").value;
+		postData.people_count = document.getElementById("myEditPeopleCount").value;
+		postData.check_out_datetime = document.getElementById("myEditTimeSection2").value;
+		// sql語法
+		var sql = JSONtoSQL(postData,DBname,"update","pk_dorm_set_seq");
+		// 透過RDBMS，新增資料
+		var DBbql = [ slot + "|sql:" + sql ];
+		NiagaraDataJson(DBbql,"DataChange",postData);
+		// 修改表格資料
+		var myGrid = $("#"+gridId);
+		var gr = myGrid.jqGrid('getGridParam','selarrrow');
+		myGrid.jqGrid('setCell',gr[0],'building', document.getElementById("myEditBuilding").value);
+		myGrid.jqGrid('setCell',gr[0],'floor', document.getElementById("myEditFloor").value);
+		myGrid.jqGrid('setCell',gr[0],'room', document.getElementById("myEditRoom").value);
+		myGrid.jqGrid('setCell',gr[0],'check_in_datetime', document.getElementById("myEditTimeSection1").value);
+		myGrid.jqGrid('setCell',gr[0],'check_out_datetime', document.getElementById("myEditTimeSection2").value);
+		myGrid.jqGrid('setCell',gr[0],'people_count', document.getElementById("myEditPeopleCount").value);
+		//
+		alert("资料修改成功");
+	}
+	// 刪除資料
+	function myEditDeleteData()
+	{
+		var myGrid = $("#"+gridId);
+		var gr = myGrid.jqGrid('getGridParam','selarrrow');
+		if( gr.length != 0 )
+		{	// 編輯表格設定
+			var deleteSet = new Object();
+			deleteSet.reloadAfterSubmit = false;
+			deleteSet.closeAfterEdit = true;	// 修改後關閉視窗
+			// 加入 delete 資料之後動作
+			deleteSet.onclickSubmit = function(params, postData)
+			{	// 得到要刪除的primaryName的值
+				var primaryData = new Array();
+				var grData = postData.split(",");
+				for (a=0;a<grData.length;a++)
+				{
+					var value = myGrid.jqGrid('getCell', grData[a], "pk_dorm_set_seq");
+					primaryData.push(value);
+				}
+				// sql語法
+				var sql = JSONtoSQL(primaryData,DBname,"delete","pk_dorm_set_seq");
+				// 透過RDBMS，更新資料
+				var DBbql = [ slot + "|sql:" + sql ];
+				NiagaraDataJson(DBbql,"DataChange",postData);
+				
+				return postData;
+			};
+			myGrid.jqGrid('delGridRow',gr,deleteSet);
+		}
+		else 
+			alert("請選取資料");
+	}
+	// 清除畫面
+	function myClearPage(mode)
+	{
+		switch ( mode )
+		{	
+			case "main":
+				document.getElementById("myTimeSection1").value = "";
+				document.getElementById("myTimeSection2").value = "";
+				document.getElementById("myBuilding").value = "";
+				var tempSelect = document.getElementById("myFloor");
+				tempSelect.options.length = 0
+				tempSelect.options[0] = new Option("请选择大楼","");
+				tempSelect = document.getElementById("myRoom");
+				tempSelect.options.length = 0
+				tempSelect.options[0] = new Option("请选择楼层/区域","");
+			break;
+			case "edit":
+				document.getElementById("myEditTimeSection1").value = "";
+				document.getElementById("myEditTimeSection2").value = "";
+				document.getElementById("myEditPeopleCount").value = "";
+				document.getElementById("myEditBuilding").value = "";
+				var tempSelect = document.getElementById("myEditFloor");
+				tempSelect.options.length = 0
+				tempSelect.options[0] = new Option("请选择大楼","");
+				tempSelect = document.getElementById("myEditRoom");
+				tempSelect.options.length = 0
+				tempSelect.options[0] = new Option("请选择楼层/区域","");
+			break;
+		}
+	}
+	// 讀取jqGrid資料，並放入修改畫面
+	function myLoadPage()
+	{
+		var myGrid = $("#"+gridId);
+		var gr = myGrid.jqGrid('getGridParam','selarrrow');
+		if( gr.length == 1 )
+		{	// 讀取jqGrid資料
+			var building = myGrid.jqGrid('getCell', gr[0], 'building');
+			var floor = myGrid.jqGrid('getCell', gr[0], 'floor');
+			var room = myGrid.jqGrid('getCell', gr[0], 'room');
+			mySelectOption('selectEdit1','');
+			mySelectOption('selectEdit2',building);
+			mySelectOption('selectEdit3',floor);
+			// 修改畫面資料呈現，會等待0.5秒
+			setTimeout(function () {
+				document.getElementById("myEditBuilding").value = building;
+				document.getElementById("myEditFloor").value = floor;
+				document.getElementById("myEditRoom").value = room;
+				
+				document.getElementById("myEditTimeSection1").value = myGrid.jqGrid('getCell', gr[0], 'check_in_datetime');
+				document.getElementById("myEditTimeSection2").value = myGrid.jqGrid('getCell', gr[0], 'check_out_datetime');
+				document.getElementById("myEditPeopleCount").value = myGrid.jqGrid('getCell', gr[0], 'people_count');
+				document.getElementById("myEditSeq").value = myGrid.jqGrid('getCell', gr[0], 'pk_dorm_set_seq');
+				$("#"+dialogId).dialog("open");		// 開啟dialog
+			},500);
+		}
+		else
+		{
+			alert("請選取一筆資料");
+		}
+	}
+	// 查詢條件組合SQL
+	function pageSelectSQL()
+	{
+		var temp = "";
+		var myBuilding = document.getElementById("myBuilding").value;
+		var myFloor = document.getElementById("myFloor").value;
+		var myRoom = document.getElementById("myRoom").value;
+		
+		if ( myBuilding == "ALL" && myFloor == "ALL" && myRoom == "ALL" )
+			temp = " and fk_chart_id like '/%' ";
+		else if ( myFloor == "ALL" && myRoom == "ALL" )
+			temp = " and fk_chart_id like '" + myBuilding +"%' ";
+		else if ( myRoom == "ALL" )
+			temp = " and fk_chart_id like '" + myFloor +"%' ";
+		else
+			temp = " and fk_chart_id like '" + myRoom +"%' ";
+		return temp;
+	}
+	// 查詢條件組合DBsql
+	function selectDBsql(TimeSection1,TimeSection2)
+	{	// SQL語法
+		var selectSQL = pageSelectSQL();
+		var timeSQL = " ( check_in_datetime between convert(datetime,'"+ TimeSection1 +"') and convert(datetime,'"+ TimeSection2 +"') ) " ;
+		var orderSQL = " order by pk_dorm_set_seq";
+		var SQL = mainSQL + " where " + timeSQL + selectSQL + orderSQL;
+		var DBsql = slot + "|sql:" + SQL;
+		return DBsql;
+	}
+	// 查詢條件檢查
+	function selectCheck()
+	{	// 日期
+		var tempcheck = 1;
+		var TimeSection1 = document.getElementById("myTimeSection1").value;
+		var TimeSection2 = document.getElementById("myTimeSection2").value;
+		if( TimeSection1 == "" || TimeSection2 == "" )
+		{
+			alert("请选择入住日期");
+			tempcheck = 0;
+		}
+		else
+		{
+			var Time1 = new Date(TimeSection1);
+			var Time2 = new Date(TimeSection2);
+			if ( Time1 > Time2 )
+			{
+				alert("资料起日不能超过资料迄日");
+				tempcheck = 0;
+			}
+			// 房間
+			var myBuilding = document.getElementById("myBuilding").value;
+			var myFloor = document.getElementById("myFloor").value;
+			var myRoom = document.getElementById("myRoom").value;
+			
+			if (myBuilding == "")
+			{
+				alert("请选择大楼");
+				tempcheck = 0;
+			}
+			else if (myFloor == "")
+			{
+				alert("请选择楼层/区域");
+				tempcheck = 0;
+			}
+			else if (myRoom == "")
+			{
+				alert("请选择房间");
+				tempcheck = 0;
+			}
+		}
+		return tempcheck;
+	}
+	// 資料條件檢查
+	function inputCheck()
+	{	// 日期
+		var tempcheck = 1;
+		var TimeSection1 = document.getElementById("myEditTimeSection1").value;
+		var TimeSection2 = document.getElementById("myEditTimeSection2").value;
+		if( TimeSection1 == "" )
+		{
+			alert("请选择入住日期");
+			tempcheck = 0;
+		}
+		else
+		{
+			/*
+			var Time1 = new Date(TimeSection1);
+			var Time2 = new Date(TimeSection2);
+			if ( Time1 > Time2 )
+			{
+				alert("入住日期不能超过离开日期");
+				tempcheck = 0;
+			}
+			*/
+			// 房間
+			var myBuilding = document.getElementById("myEditBuilding").value;
+			var myFloor = document.getElementById("myEditFloor").value;
+			var myRoom = document.getElementById("myEditRoom").value;
+			var myPeopleCount = document.getElementById("myEditPeopleCount").value;
+			
+			if ( myPeopleCount == "" )
+			{
+				alert("请填入人數");
+				tempcheck = 0;
+			}
+			if (myBuilding == "")
+			{
+				alert("请选择大楼");
+				tempcheck = 0;
+			}
+			else if (myFloor == "")
+			{
+				alert("请选择楼层/区域");
+				tempcheck = 0;
+			}
+			else if (myRoom == "")
+			{
+				alert("请选择房间");
+				tempcheck = 0;
+			}
+		}
+		return tempcheck;
+	}
+	// 查詢
+	function mySelect()
+	{	//
+		var checkpoint = 1;
+		var TimeSection1 = document.getElementById("myTimeSection1").value;
+		var TimeSection2 = document.getElementById("myTimeSection2").value;
+		// 查詢條件檢查
+		checkpoint = selectCheck();
+		//
+		if (checkpoint == 1)
+		{	// 查詢條件組合DBsql
+			var DBsql = [selectDBsql(TimeSection1,TimeSection2)];
+			var systemSet = JSON.parse(document.getElementById("mySystemSet").value);
+			NiagaraDataJson(DBsql,"EditGrid",systemSet);
+		}
+	}
+	// 動態產生select option，並與其他select option產生連動
+	function mySelectOption(mode,selectValue)
+	{
+		switch ( mode )
+		{	
+			case "select1":
+				var option1 = new Object();
+				option1.id = "myBuilding";
+				option1.text = "display_name";
+				option1.value = "pk_chart_id";
+				option1.default = {"":"请选择", "ALL":"ALL"};	// 預設選項
+				option1.initial = "请选择";	// 初始選項
+				//
+				var sql = "select [pk_chart_id],[display_name] from [HJC_TEST].[dbo].[tems_org_chart_dorm] where property ='1' order by pk_chart_id,display_name";
+				var DBbql = [slot + "|sql:" + sql];
+				NiagaraDataJson(DBbql,"MakeSelectOption",option1);
+			break;
+			case "select2":
+				var option2 = new Object();
+				option2.id = "myFloor";
+				option2.text = "display_name";
+				option2.value = "pk_chart_id";
+				option2.default = {"":"请选择", "ALL":"ALL"};	// 預設選項
+				option2.initial = "请选择大楼";	// 初始選項
+				//
+				if ( selectValue != "" )
+				{
+					if ( selectValue == "ALL")
+						var sql = "select [pk_chart_id],[display_name] from [HJC_TEST].[dbo].[tems_org_chart_dorm] where property ='2' order by pk_chart_id,display_name";
+					else
+						var sql = "select [pk_chart_id],[display_name] from [HJC_TEST].[dbo].[tems_org_chart_dorm] where property ='2' and parent_chart_id = '" +  selectValue + "' order by pk_chart_id,display_name";
+					var DBbql = [slot + "|sql:" + sql];
+					NiagaraDataJson(DBbql,"MakeSelectOption",option2);
+				}
+			break;
+			case "select3":
+				var option3 = new Object();
+				option3.id = "myRoom";
+				option3.text = "display_name";
+				option3.value = "pk_chart_id";
+				option3.default = {"":"请选择", "ALL":"ALL"};	// 預設選項
+				option3.initial = "请选择楼层/区域";	// 初始選項
+				//
+				if ( selectValue != "" )
+				{
+					if ( selectValue == "ALL")
+						var sql = "select [pk_chart_id],[display_name] from [HJC_TEST].[dbo].[tems_org_chart_dorm] where property ='3' order by pk_chart_id,display_name";
+					else
+						var sql = "select [pk_chart_id],[display_name] from [HJC_TEST].[dbo].[tems_org_chart_dorm] where property ='3' and parent_chart_id = '" +  selectValue + "' order by pk_chart_id,display_name";
+					var DBbql = [slot + "|sql:" + sql];
+					NiagaraDataJson(DBbql,"MakeSelectOption",option3);
+				}
+			break;
+			case "selectEdit1":
+				var option1 = new Object();
+				option1.id = "myEditBuilding";
+				option1.text = "display_name";
+				option1.value = "pk_chart_id";
+				option1.default = {"":"请选择"};	// 預設選項
+				option1.initial = "请选择";			// 初始選項
+				//
+				var sql = "select [pk_chart_id],[display_name] from [HJC_TEST].[dbo].[tems_org_chart_dorm] where property ='1' order by pk_chart_id,display_name";
+				var DBbql = [slot + "|sql:" + sql];
+				NiagaraDataJson(DBbql,"MakeSelectOption",option1);
+			break;
+			case "selectEdit2":
+				var option2 = new Object();
+				option2.id = "myEditFloor";
+				option2.text = "display_name";
+				option2.value = "pk_chart_id";
+				option2.default = {"":"请选择"};	// 預設選項
+				option2.initial = "请选择大楼";		// 初始選項
+				//
+				if ( selectValue != "" )
+				{
+					var sql = "select [pk_chart_id],[display_name] from [HJC_TEST].[dbo].[tems_org_chart_dorm] where property ='2' and parent_chart_id = '" +  selectValue + "' order by pk_chart_id,display_name";
+					var DBbql = [slot + "|sql:" + sql];
+					NiagaraDataJson(DBbql,"MakeSelectOption",option2);
+				}
+			break;
+			case "selectEdit3":
+				var option3 = new Object();
+				option3.id = "myEditRoom";
+				option3.text = "display_name";
+				option3.value = "pk_chart_id";
+				option3.default = {"":"请选择"};		// 預設選項
+				option3.initial = "请选择楼层/区域";	// 初始選項
+				//
+				if ( selectValue != "" )
+				{	
+					var sql = "select [pk_chart_id],[display_name] from [HJC_TEST].[dbo].[tems_org_chart_dorm] where property ='3' and parent_chart_id = '" +  selectValue + "' order by pk_chart_id,display_name";
+					var DBbql = [slot + "|sql:" + sql];
+					NiagaraDataJson(DBbql,"MakeSelectOption",option3);
+				}
+			break;
+		}
+	}
+	// 輸出CSV
+	function mySelectCSV(data)
+	{	// 資料轉換成CSV
+		JSONToCSVConvertor(data, "警告報表", true ,titleName);
+	}
+	// 輸出PDF
+	function mySelectPDF(data)
+	{	// 資料轉換成PDF
+		PDFObject(data,"MyReport");
+	}
+	</script>
+	<!-- END Javascript Code-->
+</head>
+<body onload="Init();">
+<div class="container">
+	<!-- MAIN -->
+	<div id="wrapper">
+		<div class="main">
+			<!-- MAIN CONTENT -->
+			<div class="main-content">
+			<div class="container-fluid">
+			<!-- 1 Row -->
+			<div class="row">
+				<div class="col-md-12">
+					<div class="panel">
+						大楼：
+						<select id="myBuilding" onchange="mySelectOption('select2',this.value);">
+						</select>
+						&nbsp
+						楼层/区域：
+						<select id="myFloor" onchange="mySelectOption('select3',this.value);">
+						<option value="">请选择大楼</option>
+						</select>
+						&nbsp
+						房间：
+						<select id="myRoom">
+						<option value="">请选择楼层/区域</option>
+						</select>
+						<br>
+						<br>
+						入住日期：
+						<input type="text" id="myTimeSection1" placeholder="资料起日">
+						至
+						<input type="text" id="myTimeSection2" placeholder="资料迄日">
+						<br>
+						<br>
+						<input type="hidden" id="mySystemSet" value="">
+						
+						<!-- Edit Div -->
+						<div id="myEditDiv" title="宿舍设定">
+							<form>
+						    	<fieldset>
+									※　大　楼　：
+									<select id="myEditBuilding" onchange="mySelectOption('selectEdit2',this.value);">
+									</select>
+									<br>
+									<br>
+									※楼层／区域：
+									<select id="myEditFloor" onchange="mySelectOption('selectEdit3',this.value);">
+									<option value="">请选择大楼</option>
+									</select>
+									<br>
+									<br>
+									※　房　间　：
+									<select id="myEditRoom">
+									<option value="">请选择楼层/区域</option>
+									</select>
+									<br>
+									<br>
+									※入住日期　：
+									<input type="text" id="myEditTimeSection1" placeholder="资料日期">
+									<br>
+									<br>
+									※入住人数　：
+									<input type="text" id="myEditPeopleCount">
+									<br>
+									<br>
+									　离开日期　：
+									<input type="text" id="myEditTimeSection2" placeholder="资料日期">
+									<input type="hidden" id="myEditSeq" value="">
+						    	</fieldset>
+						  	</form>
+						</div>
+						&nbsp
+						<button class = "btnSelect" onclick="mySelect();">查询</button>
+						<button class = "btnSelect" onclick="myClearPage('main');">清除</button>
+						&nbsp&nbsp
+						<button id = "myAdd">新增</button>
+						<button id = "myUpdate">修改</button>
+						<button id = "myDelete">删除</button>
+						&nbsp&nbsp
+						<button class = "btnReport" id = "excel" value="" onclick="mySelectCSV(this.value);">EXCEL</button>
+						<button class = "btnReport" id = "pdf" value="" onclick="mySelectPDF(this.value);">PDF</button>
+						
+						<!-- End Edit Div -->
+						<div id="pager"></div>
+						<table id="grid"></table>
+					</div>
+				</div>
+			</div>
+			<!-- END 1 Row -->
+			</div>
+			</div>
+			<!-- END MAIN CONTENT -->
+			<!-- Niagara Data Debug -->
+			<pre id="bajaScriptOut"></pre>
+		</div>
+		<!-- END MAIN -->
+	</div>
+</div>
+</body>
+</html>

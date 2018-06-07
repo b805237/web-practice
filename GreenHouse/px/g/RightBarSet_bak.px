@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="converters"/>
+  <module name="gx"/>
+  <module name="kitPx"/>
+</import>
+<content>
+<ScrollPane>
+
+  <CanvasPane name="content" viewSize="1000.0,500.0" valign="top">
+
+    <GridPane layout="270.0,150.0,430.0,40.0" columnCount="1" columnAlign="fill" uniformColumnWidth="true">
+
+      <ButtonGroupBinding/>
+
+      <WsAnnotation name="wsAnnotation" value="42,42,8"/>
+
+    </GridPane>
+
+    <ImageButton layout="135.0,70.0,130.0,38.0" font="bold 16.0pt Microsoft JhengHei" foreground="black" background="#bed2dc">
+      <ActionBinding ord="station:|slot:/GH/GreenHouse/RightBar/a13/set" widgetEvent="actionPerformed"/>
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+      <ValueBinding ord="station:|slot:/GH/GreenHouse/RightBar/a13/out/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </ImageButton>
+
+    <ImageButton layout="135.0,110.0,130.0,38.0" font="bold 16.0pt Microsoft JhengHei" foreground="black" background="#bbeedd">
+      <ActionBinding ord="station:|slot:/GH/GreenHouse/RightBar/b13/set" widgetEvent="actionPerformed"/>
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+      <ValueBinding ord="station:|slot:/GH/GreenHouse/RightBar/b13/out/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </ImageButton>
+
+    <ImageButton layout="135.0,150.0,130.0,38.0" font="bold 16.0pt Microsoft JhengHei" foreground="black" background="#bed2dc">
+      <ActionBinding ord="station:|slot:/GH/GreenHouse/RightBar/c13/set" widgetEvent="actionPerformed"/>
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+      <ValueBinding ord="station:|slot:/GH/GreenHouse/RightBar/c13/out/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </ImageButton>
+
+    <Label layout="0.0,70.0,130.0,38.0" text="1&#x5340;" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#1e6e8c"/>
+
+    <Label layout="0.0,110.0,130.0,38.0" text="2&#x5340;" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#1e6e8c"/>
+
+    <Label layout="0.0,150.0,130.0,38.0" text="3&#x5340;" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#1e6e8c"/>
+
+    <Label layout="135.0,30.0,130.0,38.0" text="&#x5340;&#x57df;&#x540d;&#x7a31;" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#00bebe"/>
+
+    <Label layout="270.0,30.0,445.0,38.0" text="&#x5340;&#x57df;&#x5716;&#x793a;" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#00bebe"/>
+
+    <Label layout="270.0,150.0,70.0,38.0" background="#bed2dc"/>
+
+    <Label layout="270.0,70.0,70.0,38.0" background="#bed2dc"/>
+
+    <Label layout="270.0,110.0,70.0,38.0" background="#bbeedd"/>
+
+    <Label layout="345.0,150.0,70.0,38.0" background="#bed2dc"/>
+
+    <Label layout="345.0,70.0,70.0,38.0" background="#bed2dc"/>
+
+    <Label layout="345.0,110.0,70.0,38.0" background="#bbeedd"/>
+
+    <Label layout="421.0,150.0,70.0,38.0" background="#bed2dc"/>
+
+    <Label layout="421.0,70.0,70.0,38.0" background="#bed2dc"/>
+
+    <Label layout="421.0,110.0,70.0,38.0" background="#bbeedd"/>
+
+    <Label layout="496.0,150.0,70.0,38.0" background="#bed2dc"/>
+
+    <Label layout="496.0,70.0,70.0,38.0" background="#bed2dc"/>
+
+    <Label layout="496.0,110.0,70.0,38.0" background="#bbeedd"/>
+
+    <Label layout="571.0,150.0,70.0,38.0" background="#bed2dc"/>
+
+    <Label layout="571.0,70.0,70.0,38.0" background="#bed2dc"/>
+
+    <Label layout="571.0,110.0,70.0,38.0" background="#bbeedd"/>
+
+    <Label layout="646.0,150.0,70.0,38.0" background="#bed2dc"/>
+
+    <Label layout="646.0,70.0,70.0,38.0" background="#bed2dc"/>
+
+    <Label layout="646.0,110.0,70.0,38.0" background="#bbeedd"/>
+
+    <GridPane layout="250.0,145.0,450.0,50.0" columnCount="6" columnAlign="center" columnGap="55.0" uniformColumnWidth="true">
+
+      <ButtonGroupBinding/>
+
+      <WsAnnotation name="wsAnnotation" value="42,42,8"/>
+
+      <CheckBox>
+        <WsAnnotation name="wsAnnotation" value="62,62,8"/>
+        <SetPointBinding ord="station:|slot:/GH/GreenHouse/RightBar/area3/Radio1" widgetEvent="actionPerformed" widgetProperty="selected"/>
+      </CheckBox>
+
+      <CheckBox>
+        <SetPointBinding ord="station:|slot:/GH/GreenHouse/RightBar/area3/Radio2" widgetEvent="actionPerformed" widgetProperty="selected">
+          <IStatusToBrush name="foreground" mode="foreground"/>
+          <IStatusToBrush name="background"/>
+        </SetPointBinding>
+        <WsAnnotation name="wsAnnotation" value="62,62,8"/>
+      </CheckBox>
+
+      <CheckBox styleClasses="selected" selected="true">
+        <SetPointBinding ord="station:|slot:/GH/GreenHouse/RightBar/area3/Radio3" widgetEvent="actionPerformed" widgetProperty="selected">
+          <IStatusToBrush name="foreground" mode="foreground"/>
+          <IStatusToBrush name="background"/>
+        </SetPointBinding>
+        <WsAnnotation name="wsAnnotation" value="62,62,8"/>
+      </CheckBox>
+
+      <CheckBox>
+        <SetPointBinding ord="station:|slot:/GH/GreenHouse/RightBar/area3/Radio4" widgetEvent="actionPerformed" widgetProperty="selected">
+          <IStatusToBrush name="foreground" mode="foreground"/>
+          <IStatusToBrush name="background"/>
+        </SetPointBinding>
+        <WsAnnotation name="wsAnnotation" value="62,62,8"/>
+      </CheckBox>
+
+      <CheckBox>
+        <SetPointBinding ord="station:|slot:/GH/GreenHouse/RightBar/area3/Radio5" widgetEvent="actionPerformed" widgetProperty="selected">
+          <IStatusToBrush name="foreground" mode="foreground"/>
+          <IStatusToBrush name="background"/>
+        </SetPointBinding>
+        <WsAnnotation name="wsAnnotation" value="62,62,8"/>
+      </CheckBox>
+
+      <CheckBox>
+        <SetPointBinding ord="station:|slot:/GH/GreenHouse/RightBar/area3/Radio6" widgetEvent="actionPerformed" widgetProperty="selected">
+          <IStatusToBrush name="foreground" mode="foreground"/>
+          <IStatusToBrush name="background"/>
+        </SetPointBinding>
+        <WsAnnotation name="wsAnnotation" value="62,62,8"/>
+      </CheckBox>
+
+    </GridPane>
+
+    <GridPane layout="250.0,105.0,450.0,50.0" columnCount="6" columnAlign="center" columnGap="55.0" uniformColumnWidth="true">
+
+      <ButtonGroupBinding/>
+
+      <WsAnnotation name="wsAnnotation" value="42,42,8"/>
+
+      <CheckBox>
+        <SetPointBinding ord="station:|slot:/GH/GreenHouse/RightBar/area2/Radio1" widgetEvent="actionPerformed" widgetProperty="selected">
+          <IStatusToBrush name="foreground" mode="foreground"/>
+          <IStatusToBrush name="background"/>
+        </SetPointBinding>
+        <WsAnnotation name="wsAnnotation" value="62,62,8"/>
+      </CheckBox>
+
+      <CheckBox>
+        <SetPointBinding ord="station:|slot:/GH/GreenHouse/RightBar/area2/Radio2" widgetEvent="actionPerformed" widgetProperty="selected">
+          <IStatusToBrush name="foreground" mode="foreground"/>
+          <IStatusToBrush name="background"/>
+        </SetPointBinding>
+        <WsAnnotation name="wsAnnotation" value="62,62,8"/>
+      </CheckBox>
+
+      <CheckBox>
+        <SetPointBinding ord="station:|slot:/GH/GreenHouse/RightBar/area2/Radio3" widgetEvent="actionPerformed" widgetProperty="selected">
+          <IStatusToBrush name="foreground" mode="foreground"/>
+          <IStatusToBrush name="background"/>
+        </SetPointBinding>
+        <WsAnnotation name="wsAnnotation" value="62,62,8"/>
+      </CheckBox>
+
+      <CheckBox>
+        <SetPointBinding ord="station:|slot:/GH/GreenHouse/RightBar/area2/Radio4" widgetEvent="actionPerformed" widgetProperty="selected">
+          <IStatusToBrush name="foreground" mode="foreground"/>
+          <IStatusToBrush name="background"/>
+        </SetPointBinding>
+        <WsAnnotation name="wsAnnotation" value="62,62,8"/>
+      </CheckBox>
+
+      <CheckBox styleClasses="selected" selected="true">
+        <SetPointBinding ord="station:|slot:/GH/GreenHouse/RightBar/area2/Radio5" widgetEvent="actionPerformed" widgetProperty="selected">
+          <IStatusToBrush name="foreground" mode="foreground"/>
+          <IStatusToBrush name="background"/>
+        </SetPointBinding>
+        <WsAnnotation name="wsAnnotation" value="62,62,8"/>
+      </CheckBox>
+
+      <CheckBox>
+        <SetPointBinding ord="station:|slot:/GH/GreenHouse/RightBar/area2/Radio6" widgetEvent="actionPerformed" widgetProperty="selected">
+          <IStatusToBrush name="foreground" mode="foreground"/>
+          <IStatusToBrush name="background"/>
+        </SetPointBinding>
+        <WsAnnotation name="wsAnnotation" value="62,62,8"/>
+      </CheckBox>
+
+    </GridPane>
+
+    <GridPane layout="250.0,65.0,450.0,50.0" columnCount="6" columnAlign="center" columnGap="55.0" uniformColumnWidth="true">
+
+      <ButtonGroupBinding/>
+
+      <WsAnnotation name="wsAnnotation" value="42,42,8"/>
+
+      <CheckBox>
+        <SetPointBinding ord="station:|slot:/GH/GreenHouse/RightBar/area1/Radio1" widgetEvent="actionPerformed" widgetProperty="selected">
+          <IStatusToBrush name="foreground" mode="foreground"/>
+          <IStatusToBrush name="background"/>
+        </SetPointBinding>
+        <WsAnnotation name="wsAnnotation" value="62,62,8"/>
+      </CheckBox>
+
+      <CheckBox>
+        <SetPointBinding ord="station:|slot:/GH/GreenHouse/RightBar/area1/Radio2" widgetEvent="actionPerformed" widgetProperty="selected">
+          <IStatusToBrush name="foreground" mode="foreground"/>
+          <IStatusToBrush name="background"/>
+        </SetPointBinding>
+        <WsAnnotation name="wsAnnotation" value="62,62,8"/>
+      </CheckBox>
+
+      <CheckBox styleClasses="selected" selected="true">
+        <SetPointBinding ord="station:|slot:/GH/GreenHouse/RightBar/area1/Radio3" widgetEvent="actionPerformed" widgetProperty="selected">
+          <IStatusToBrush name="foreground" mode="foreground"/>
+          <IStatusToBrush name="background"/>
+        </SetPointBinding>
+        <WsAnnotation name="wsAnnotation" value="62,62,8"/>
+      </CheckBox>
+
+      <CheckBox>
+        <SetPointBinding ord="station:|slot:/GH/GreenHouse/RightBar/area1/Radio4" widgetEvent="actionPerformed" widgetProperty="selected">
+          <IStatusToBrush name="foreground" mode="foreground"/>
+          <IStatusToBrush name="background"/>
+        </SetPointBinding>
+        <WsAnnotation name="wsAnnotation" value="62,62,8"/>
+      </CheckBox>
+
+      <CheckBox>
+        <SetPointBinding ord="station:|slot:/GH/GreenHouse/RightBar/area1/Radio5" widgetEvent="actionPerformed" widgetProperty="selected">
+          <IStatusToBrush name="foreground" mode="foreground"/>
+          <IStatusToBrush name="background"/>
+        </SetPointBinding>
+        <WsAnnotation name="wsAnnotation" value="62,62,8"/>
+      </CheckBox>
+
+      <CheckBox>
+        <SetPointBinding ord="station:|slot:/GH/GreenHouse/RightBar/area1/Radio6" widgetEvent="actionPerformed" widgetProperty="selected">
+          <IStatusToBrush name="foreground" mode="foreground"/>
+          <IStatusToBrush name="background"/>
+        </SetPointBinding>
+        <WsAnnotation name="wsAnnotation" value="62,62,8"/>
+      </CheckBox>
+
+    </GridPane>
+
+    <Label layout="295.0,155.0,30.0,25.0" image="file:^GreenHouse/image/icon/right/Strawberry.png"/>
+
+    <Label layout="370.0,155.0,30.0,25.0" image="file:^GreenHouse/image/icon/right/Flower.png"/>
+
+    <SaveButton layout="890.0,460.0,100.0,30.0" image="module://icons/x16/save.png">
+      <WsAnnotation name="wsAnnotation" value="14,14,8"/>
+    </SaveButton>
+
+    <GridPane layout="270.0,230.0,430.0,40.0" columnCount="1" columnAlign="fill" uniformColumnWidth="true">
+
+      <ButtonGroupBinding/>
+
+      <WsAnnotation name="wsAnnotation" value="42,42,8"/>
+
+    </GridPane>
+
+    <ImageButton layout="135.0,190.0,130.0,38.0" font="bold 16.0pt Microsoft JhengHei" foreground="black" background="#bbeedd">
+      <ActionBinding ord="station:|slot:/GH/GreenHouse/RightBar/d13/set" widgetEvent="actionPerformed"/>
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+      <ValueBinding ord="station:|slot:/GH/GreenHouse/RightBar/d13/out/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </ImageButton>
+
+    <ImageButton layout="135.0,230.0,130.0,38.0" font="bold 16.0pt Microsoft JhengHei" foreground="black" background="#bed2dc">
+      <ActionBinding ord="station:|slot:/GH/GreenHouse/RightBar/e13/set" widgetEvent="actionPerformed"/>
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+      <ValueBinding ord="station:|slot:/GH/GreenHouse/RightBar/e13/out/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </ImageButton>
+
+    <Label layout="0.0,190.0,130.0,38.0" text="4&#x5340;" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#1e6e8c"/>
+
+    <Label layout="0.0,230.0,130.0,38.0" text="5&#x5340;" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#1e6e8c"/>
+
+    <Label layout="270.0,230.0,70.0,38.0" background="#bed2dc"/>
+
+    <Label layout="270.0,190.0,70.0,38.0" background="#bbeedd"/>
+
+    <Label layout="345.0,230.0,70.0,38.0" background="#bed2dc"/>
+
+    <Label layout="345.0,190.0,70.0,38.0" background="#bbeedd"/>
+
+    <Label layout="421.0,230.0,70.0,38.0" background="#bed2dc"/>
+
+    <Label layout="421.0,190.0,70.0,38.0" background="#bbeedd"/>
+
+    <Label layout="496.0,230.0,70.0,38.0" background="#bed2dc"/>
+
+    <Label layout="496.0,190.0,70.0,38.0" background="#bbeedd"/>
+
+    <Label layout="571.0,230.0,70.0,38.0" background="#bed2dc"/>
+
+    <Label layout="571.0,190.0,70.0,38.0" background="#bbeedd"/>
+
+    <Label layout="646.0,230.0,70.0,38.0" background="#bed2dc"/>
+
+    <Label layout="646.0,190.0,70.0,38.0" background="#bbeedd"/>
+
+    <GridPane layout="250.0,225.0,450.0,50.0" columnCount="6" columnAlign="center" columnGap="55.0" uniformColumnWidth="true">
+
+      <ButtonGroupBinding/>
+
+      <WsAnnotation name="wsAnnotation" value="42,42,8"/>
+
+      <CheckBox>
+        <WsAnnotation name="wsAnnotation" value="62,62,8"/>
+        <SetPointBinding ord="station:|slot:/GH/GreenHouse/RightBar/area5/Radio1" widgetEvent="actionPerformed" widgetProperty="selected"/>
+      </CheckBox>
+
+      <CheckBox>
+        <SetPointBinding ord="station:|slot:/GH/GreenHouse/RightBar/area5/Radio2" widgetEvent="actionPerformed" widgetProperty="selected">
+          <IStatusToBrush name="foreground" mode="foreground"/>
+          <IStatusToBrush name="background"/>
+        </SetPointBinding>
+        <WsAnnotation name="wsAnnotation" value="62,62,8"/>
+      </CheckBox>
+
+      <CheckBox>
+        <SetPointBinding ord="station:|slot:/GH/GreenHouse/RightBar/area5/Radio3" widgetEvent="actionPerformed" widgetProperty="selected">
+          <IStatusToBrush name="foreground" mode="foreground"/>
+          <IStatusToBrush name="background"/>
+        </SetPointBinding>
+        <WsAnnotation name="wsAnnotation" value="62,62,8"/>
+      </CheckBox>
+
+      <CheckBox>
+        <SetPointBinding ord="station:|slot:/GH/GreenHouse/RightBar/area5/Radio4" widgetEvent="actionPerformed" widgetProperty="selected">
+          <IStatusToBrush name="foreground" mode="foreground"/>
+          <IStatusToBrush name="background"/>
+        </SetPointBinding>
+        <WsAnnotation name="wsAnnotation" value="62,62,8"/>
+      </CheckBox>
+
+      <CheckBox styleClasses="selected" selected="true">
+        <SetPointBinding ord="station:|slot:/GH/GreenHouse/RightBar/area5/Radio5" widgetEvent="actionPerformed" widgetProperty="selected">
+          <IStatusToBrush name="foreground" mode="foreground"/>
+          <IStatusToBrush name="background"/>
+        </SetPointBinding>
+        <WsAnnotation name="wsAnnotation" value="62,62,8"/>
+      </CheckBox>
+
+      <CheckBox>
+        <SetPointBinding ord="station:|slot:/GH/GreenHouse/RightBar/area5/Radio6" widgetEvent="actionPerformed" widgetProperty="selected">
+          <IStatusToBrush name="foreground" mode="foreground"/>
+          <IStatusToBrush name="background"/>
+        </SetPointBinding>
+        <WsAnnotation name="wsAnnotation" value="62,62,8"/>
+      </CheckBox>
+
+    </GridPane>
+
+    <GridPane layout="250.0,185.0,450.0,50.0" columnCount="6" columnAlign="center" columnGap="55.0" uniformColumnWidth="true">
+
+      <ButtonGroupBinding/>
+
+      <WsAnnotation name="wsAnnotation" value="42,42,8"/>
+
+      <CheckBox>
+        <SetPointBinding ord="station:|slot:/GH/GreenHouse/RightBar/area4/Radio1" widgetEvent="actionPerformed" widgetProperty="selected">
+          <IStatusToBrush name="foreground" mode="foreground"/>
+          <IStatusToBrush name="background"/>
+        </SetPointBinding>
+        <WsAnnotation name="wsAnnotation" value="62,62,8"/>
+      </CheckBox>
+
+      <CheckBox>
+        <SetPointBinding ord="station:|slot:/GH/GreenHouse/RightBar/area4/Radio2" widgetEvent="actionPerformed" widgetProperty="selected">
+          <IStatusToBrush name="foreground" mode="foreground"/>
+          <IStatusToBrush name="background"/>
+        </SetPointBinding>
+        <WsAnnotation name="wsAnnotation" value="62,62,8"/>
+      </CheckBox>
+
+      <CheckBox>
+        <SetPointBinding ord="station:|slot:/GH/GreenHouse/RightBar/area4/Radio3" widgetEvent="actionPerformed" widgetProperty="selected">
+          <IStatusToBrush name="foreground" mode="foreground"/>
+          <IStatusToBrush name="background"/>
+        </SetPointBinding>
+        <WsAnnotation name="wsAnnotation" value="62,62,8"/>
+      </CheckBox>
+
+      <CheckBox styleClasses="selected" selected="true">
+        <SetPointBinding ord="station:|slot:/GH/GreenHouse/RightBar/area4/Radio4" widgetEvent="actionPerformed" widgetProperty="selected">
+          <IStatusToBrush name="foreground" mode="foreground"/>
+          <IStatusToBrush name="background"/>
+        </SetPointBinding>
+        <WsAnnotation name="wsAnnotation" value="62,62,8"/>
+      </CheckBox>
+
+      <CheckBox>
+        <SetPointBinding ord="station:|slot:/GH/GreenHouse/RightBar/area4/Radio5" widgetEvent="actionPerformed" widgetProperty="selected">
+          <IStatusToBrush name="foreground" mode="foreground"/>
+          <IStatusToBrush name="background"/>
+        </SetPointBinding>
+        <WsAnnotation name="wsAnnotation" value="62,62,8"/>
+      </CheckBox>
+
+      <CheckBox>
+        <SetPointBinding ord="station:|slot:/GH/GreenHouse/RightBar/area4/Radio6" widgetEvent="actionPerformed" widgetProperty="selected">
+          <IStatusToBrush name="foreground" mode="foreground"/>
+          <IStatusToBrush name="background"/>
+        </SetPointBinding>
+        <WsAnnotation name="wsAnnotation" value="62,62,8"/>
+      </CheckBox>
+
+    </GridPane>
+
+    <Label layout="295.0,235.0,30.0,25.0" image="file:^GreenHouse/image/icon/right/Strawberry.png"/>
+
+    <Label layout="370.0,235.0,30.0,25.0" image="file:^GreenHouse/image/icon/right/Flower.png"/>
+
+    <ImageButton layout="135.0,270.0,130.0,38.0" font="bold 16.0pt Microsoft JhengHei" foreground="black" background="#bbeedd">
+      <ActionBinding ord="station:|slot:/GH/GreenHouse/RightBar/f13/set" widgetEvent="actionPerformed"/>
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+      <ValueBinding ord="station:|slot:/GH/GreenHouse/RightBar/f13/out/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </ImageButton>
+
+    <Label layout="0.0,270.0,130.0,38.0" text="6&#x5340;" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#1e6e8c"/>
+
+    <Label layout="270.0,270.0,70.0,38.0" background="#bbeedd"/>
+
+    <Label layout="345.0,270.0,70.0,38.0" background="#bbeedd"/>
+
+    <Label layout="421.0,270.0,70.0,38.0" background="#bbeedd"/>
+
+    <Label layout="496.0,270.0,70.0,38.0" background="#bbeedd"/>
+
+    <Label layout="571.0,270.0,70.0,38.0" background="#bbeedd"/>
+
+    <Label layout="646.0,270.0,70.0,38.0" background="#bbeedd"/>
+
+    <GridPane layout="250.0,265.0,450.0,50.0" columnCount="6" columnAlign="center" columnGap="55.0" uniformColumnWidth="true">
+
+      <ButtonGroupBinding/>
+
+      <WsAnnotation name="wsAnnotation" value="42,42,8"/>
+
+      <CheckBox>
+        <SetPointBinding ord="station:|slot:/GH/GreenHouse/RightBar/area6/Radio1" widgetEvent="actionPerformed" widgetProperty="selected">
+          <IStatusToBrush name="foreground" mode="foreground"/>
+          <IStatusToBrush name="background"/>
+        </SetPointBinding>
+        <WsAnnotation name="wsAnnotation" value="62,62,8"/>
+      </CheckBox>
+
+      <CheckBox>
+        <SetPointBinding ord="station:|slot:/GH/GreenHouse/RightBar/area6/Radi2" widgetEvent="actionPerformed" widgetProperty="selected">
+          <IStatusToBrush name="foreground" mode="foreground"/>
+          <IStatusToBrush name="background"/>
+        </SetPointBinding>
+        <WsAnnotation name="wsAnnotation" value="62,62,8"/>
+      </CheckBox>
+
+      <CheckBox>
+        <SetPointBinding ord="station:|slot:/GH/GreenHouse/RightBar/area6/Radio3" widgetEvent="actionPerformed" widgetProperty="selected">
+          <IStatusToBrush name="foreground" mode="foreground"/>
+          <IStatusToBrush name="background"/>
+        </SetPointBinding>
+        <WsAnnotation name="wsAnnotation" value="62,62,8"/>
+      </CheckBox>
+
+      <CheckBox>
+        <SetPointBinding ord="station:|slot:/GH/GreenHouse/RightBar/area6/Radio4" widgetEvent="actionPerformed" widgetProperty="selected">
+          <IStatusToBrush name="foreground" mode="foreground"/>
+          <IStatusToBrush name="background"/>
+        </SetPointBinding>
+        <WsAnnotation name="wsAnnotation" value="62,62,8"/>
+      </CheckBox>
+
+      <CheckBox>
+        <SetPointBinding ord="station:|slot:/GH/GreenHouse/RightBar/area6/Radio5" widgetEvent="actionPerformed" widgetProperty="selected">
+          <IStatusToBrush name="foreground" mode="foreground"/>
+          <IStatusToBrush name="background"/>
+        </SetPointBinding>
+        <WsAnnotation name="wsAnnotation" value="62,62,8"/>
+      </CheckBox>
+
+      <CheckBox styleClasses="selected" selected="true">
+        <SetPointBinding ord="station:|slot:/GH/GreenHouse/RightBar/area6/Radio6" widgetEvent="actionPerformed" widgetProperty="selected">
+          <IStatusToBrush name="foreground" mode="foreground"/>
+          <IStatusToBrush name="background"/>
+        </SetPointBinding>
+        <WsAnnotation name="wsAnnotation" value="62,62,8"/>
+      </CheckBox>
+
+    </GridPane>
+
+    <Label layout="295.0,195.0,30.0,25.0" image="file:^GreenHouse/image/icon/right/Strawberry.png"/>
+
+    <Label layout="295.0,275.0,30.0,25.0" image="file:^GreenHouse/image/icon/right/Strawberry.png"/>
+
+    <Label layout="370.0,275.0,30.0,25.0" image="file:^GreenHouse/image/icon/right/Flower.png"/>
+
+    <Label layout="370.0,195.0,30.0,25.0" image="file:^GreenHouse/image/icon/right/Flower.png"/>
+
+    <Label layout="370.0,75.0,30.0,25.0" image="file:^GreenHouse/image/icon/right/Flower.png"/>
+
+    <Label layout="370.0,115.0,30.0,25.0" image="file:^GreenHouse/image/icon/right/Flower.png"/>
+
+    <Label layout="295.0,115.0,30.0,25.0" image="file:^GreenHouse/image/icon/right/Strawberry.png"/>
+
+    <Label layout="295.0,75.0,30.0,25.0" image="file:^GreenHouse/image/icon/right/Strawberry.png"/>
+
+    <Label layout="445.0,75.0,30.0,30.0" image="file:^GreenHouse/image/Main_icon/ICON2/fruit30x30.png"/>
+
+    <Label layout="520.0,70.0,30.0,35.0" image="file:^GreenHouse/image/Main_icon/ICON2/nursery30x35.png"/>
+
+    <Label layout="595.0,75.0,30.0,30.0" image="file:^GreenHouse/image/Main_icon/ICON2/vegetables30x30.png"/>
+
+    <Label layout="670.0,75.0,30.0,30.0" image="file:^GreenHouse/image/Main_icon/ICON2/flower30x30.png"/>
+
+    <Label layout="670.0,115.0,30.0,30.0" image="file:^GreenHouse/image/Main_icon/ICON2/flower30x30.png"/>
+
+    <Label layout="595.0,115.0,30.0,30.0" image="file:^GreenHouse/image/Main_icon/ICON2/vegetables30x30.png"/>
+
+    <Label layout="520.0,110.0,30.0,35.0" image="file:^GreenHouse/image/Main_icon/ICON2/nursery30x35.png"/>
+
+    <Label layout="445.0,115.0,30.0,30.0" image="file:^GreenHouse/image/Main_icon/ICON2/fruit30x30.png"/>
+
+    <Label layout="669.0,155.0,30.0,30.0" image="file:^GreenHouse/image/Main_icon/ICON2/flower30x30.png"/>
+
+    <Label layout="594.0,155.0,30.0,30.0" image="file:^GreenHouse/image/Main_icon/ICON2/vegetables30x30.png"/>
+
+    <Label layout="519.0,150.0,30.0,35.0" image="file:^GreenHouse/image/Main_icon/ICON2/nursery30x35.png"/>
+
+    <Label layout="444.0,155.0,30.0,30.0" image="file:^GreenHouse/image/Main_icon/ICON2/fruit30x30.png"/>
+
+    <Label layout="668.0,195.0,30.0,30.0" image="file:^GreenHouse/image/Main_icon/ICON2/flower30x30.png"/>
+
+    <Label layout="593.0,195.0,30.0,30.0" image="file:^GreenHouse/image/Main_icon/ICON2/vegetables30x30.png"/>
+
+    <Label layout="518.0,190.0,30.0,35.0" image="file:^GreenHouse/image/Main_icon/ICON2/nursery30x35.png"/>
+
+    <Label layout="443.0,195.0,30.0,30.0" image="file:^GreenHouse/image/Main_icon/ICON2/fruit30x30.png"/>
+
+    <Label layout="667.0,235.0,30.0,30.0" image="file:^GreenHouse/image/Main_icon/ICON2/flower30x30.png"/>
+
+    <Label layout="592.0,235.0,30.0,30.0" image="file:^GreenHouse/image/Main_icon/ICON2/vegetables30x30.png"/>
+
+    <Label layout="517.0,230.0,30.0,35.0" image="file:^GreenHouse/image/Main_icon/ICON2/nursery30x35.png"/>
+
+    <Label layout="442.0,235.0,30.0,30.0" image="file:^GreenHouse/image/Main_icon/ICON2/fruit30x30.png"/>
+
+    <Label layout="666.0,275.0,30.0,30.0" image="file:^GreenHouse/image/Main_icon/ICON2/flower30x30.png"/>
+
+    <Label layout="591.0,275.0,30.0,30.0" image="file:^GreenHouse/image/Main_icon/ICON2/vegetables30x30.png"/>
+
+    <Label layout="516.0,270.0,30.0,35.0" image="file:^GreenHouse/image/Main_icon/ICON2/nursery30x35.png"/>
+
+    <Label layout="441.0,275.0,30.0,30.0" image="file:^GreenHouse/image/Main_icon/ICON2/fruit30x30.png"/>
+
+  </CanvasPane>
+
+</ScrollPane>
+</content>
+</px>

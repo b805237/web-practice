@@ -1,0 +1,145 @@
+<svg width="200" height="555" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+	<style type="text/css" >
+	/* 白色版面 */
+	.white-background rect{
+		fill: #ffffff;
+	}
+	.white-title text{
+		fill: #000000;
+		font-size:16px;
+		font-weight:bold;
+		font-family:Microsoft JhengHei UI;
+	}
+	.white-text text{
+		fill: #1e6e8c;
+		font-size:16px;
+		font-weight:bold;
+		font-family:Microsoft JhengHei UI;
+	}
+	.white-button rect{
+		fill: #1e6e8c;
+	}
+	.white-button text{
+		fill: #ffffff;
+		font-size:16px;
+		font-weight:bold;
+		font-family:Microsoft JhengHei UI;
+	}
+	/* 藍色版面 */
+	.blue-background rect{
+		fill: #bed2dc;
+	}
+	.blue-title text{
+		fill: #bed2dc;
+		font-size:16px;
+		font-weight:bold;
+		font-family:Microsoft JhengHei UI;
+	}
+	.blue-text text{
+		fill: #ffffff;
+		font-size:16px;
+		font-weight:bold;
+		font-family:Microsoft JhengHei UI;
+	}
+	.blue-button rect{
+		fill: #bed2dc;
+	}
+	.blue-button text{
+		fill: #1e6e8c;
+		font-size:16px;
+		font-weight:bold;
+		font-family:Microsoft JhengHei UI;
+	}
+	/* 共同版面 */
+	.common-use-button rect{
+		fill: #ff5023;
+	}
+	.common-use-button text{
+		fill: #ffffff;
+		font-size:16px;
+		font-weight:bold;
+		font-family:Microsoft JhengHei UI;
+	}
+	</style>
+	<g>
+		<title>资讯看板</title>
+		<!-- 底色 -->
+		<g id="background" class="blue-background">
+	  		<rect x="-1" y="-1" width="202" height="557"/>
+		</g>
+		<!-- 標題 -->
+		<g id="title" class="white-title">
+			<image x="5" y="5"   width="25" height="25" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAWCAYAAADXYyzPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuMTM0A1t6AAADhElEQVRIS+2T708adxzH+S82XZvVWXVuPNiWLduSAVN+CxygVJFaDsqPYinWQrEFUQ4pDo2/UHRGPKajdSUaa62tQrtl0dmkD/ZwfbJHfXSPlvRJExNH3juQruuGKe7RkvWdvHJ3yd37dZ/7fo/zOv+ZrCd//GTs8pKzn6SdFEvct7Ix27uam/DezDnGt3PW+G6um36Ui9j7nTtKnnPHoHQ+nhp2Fh8/WiZ9aduEO70WNtP7YROdY0GYpDHAHp8TYtGGHkBC3Yfhahrfa2XYVfEOUPOwQ3yx/7PLvP+TQWF7vJ78qFhdOlHHInnNurAXNiVfkpSiIKYeQB24g9W2VjxU8f8U72j4+OHsl9gICrF0XYpvtpp+X962rBQ1LzIfucMdc3/3rJTgMEKmeeiCGdBGB3YJPrbb+MhcbMDquAipWzIkN2WgMy+zcJ949m1Gyy1qOZyRizf2BtiigTIm/SujvX246xcinZRgYUOK5Ja0IJjPyv8hPUCOZFa5t7bteo8z27985ajC/P3DwRA7laJEeTnIKc64N0WFyaOJB90joO8RJQrLI7EppjjpmQwZIvOfubTk74Q7p5FYbS1ZWA6JLRm8Q59ThTX26MYRLEMetsxhJmUCnS1d+irm7kpg878PR7csWBB7O0bRpYnC1z6NQ6c3zyMWd/0raYLd4dFFPlosVRAoK7C4NGoriPsd8eAF9VdwKMLoVEXgOTWGQMcsKOPBS+R/ndFrfaC3XrGZsuyuzkrYcynm7kkxuSJEYOoznLJVoYGoBL/pTbh61ExB+jwefTRyQT0Iq5yCWRIAKfXDJOuFXTEANxnExE05pteEmLktwtfrecQF8tfxWyLElhsxnBLAP/kp7D4uNOQJiJuPga94gxVWQKCoRIed98vQlLeyqHyRPuskr1Mb+dUq74NR4kO7yItWgQcGwoxzQS5sgXp2jeph9dXD1PMuznjq0OaqRbP9JJSn34ZY9xYEBCthJ8tPlycvFGtO/Oa6rBkpag5Plz4iDpyPPTHK/U8Nwh7om6xwUFxYWanFWwvyUg3au2qgO38Sams1lOx0Mv1xiFpYsaoCDapjaCSOP23u+PBJo6pKHIv1Vhery0s6tVnnPjtI6KQ2YirVyVyJihhbD5cxdtcy7a4aRueoZjSWakZlfIfR2z9gLgVamKvUmYT29MfE0Iy3rljzOv/LcDh/ABakfSJh3Ss1AAAAAElFTkSuQmCC"/>
+			<image x="5" y="25"  width="25" height="25" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAApgAAAKYB3X3/OAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAOhSURBVEiJnZZNaFxVFMd/5828mUzmI0kn0yYdJh+tjWiwNqWlBBQ3rt2FCooFs4igCDEUF4IhdGEVxYUbEVSwKYKIi24UiiC4qIrRtGBaNDQJJnHyMTM6mY83772510WmM5kkMyE9u3fuuf/f+eDed0VrzcPa6x996zcz6ZcEJjTcUVpf/XDyxd92xsjDAN5877OwY/leEWQc6K5flZug3/3g7Re+PzTgtXe+iPodzzjwKtAOqO4j8nNvp0SKNqk/V3VP0dZ9FdCvoK56D5O5z/WMAG+J6FJPp/wYjxoJEYYBQgE4e1KU5citv1ZUe7aoz4F8fSgAkI1HudET81wwhKfLCFqEMmAAAobf1MNP9Bk4LjOzC6pw6Bl889WXHyOMAUwHT3PX7MROzuNtP4bREuZS/jYDTgoAAz102ArqbKtYwC1uoByLcj6Dsi3y1CdsNBMYm/qktdm60hrKLmiNVgrKLmpXzJ4KLr9/LaiKnhG0Gg1JcHjiyvWbovg0jO/G5OSI/SBOqzKPyhZBbxiXAh7DRLxC1M6Bp6ZXncHlK9cuKG2MAs8DYQARlNbVKjfRTJ97xIj4fbxcdmyKVhGF4LKtKYApEAhFKu3RQzIxdX1co0eBQQBDxD3VG5k5O9AuwYA5+O9W6fbMvXTLwmp+qKJBpJW5/mOSDrXIU81aaKCH5I2paQ3QEfItnB88spToCj4ucHRPvxV/L/6Tm/9lLjWQK7hxn1c2zp+S2EEAryCfX3w2EQ0FzeeAfg0suD4AkkWHroCJAfR67cSJeChxIh5Sq2vZ7+bupwLAM80AUJnB3Ts//YDeDna0cHGjDwBrcZaWvjO0imI6tlTdlM78d2ttIz18kPi+58DVGmtxdrstjoW1OIttGBALH6S3r+0BKMfhdDwBgL1+H9/RBH7ROE4G09wOdx3bdEvFJrKC19+yP8C2LMa82+0odRn4jSUEsEq+KiCXzbblNpON5Q2Dtu7e/QEdbWE62pokB2RSm62rKysN141mAK0Uf8z+XufzeDw89uSZ6ncg0OpEIpHGAE/tKO8FALlsth7grQ/TWotSu2+d/e3A2zQcaaNQyNf57FLJUygUGu4xjNod6gVQSnke/Bb0jsxEhGAkTKGQp7zDHwpH7M5Y40MsuwHJZKrfcd2KaC1Qa01yeRmvabK8slb1ZzLpzo319aYVRBMna4Djx2PzaOKValidv1e3QWtNb6L2eCiXCmvKthpOeWcF/wPuFnsXDRErjQAAAABJRU5ErkJggg=="/>
+			<image x="5" y="150" width="25" height="25" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAApgAAAKYB3X3/OAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAOhSURBVEiJnZZNaFxVFMd/5828mUzmI0kn0yYdJh+tjWiwNqWlBBQ3rt2FCooFs4igCDEUF4IhdGEVxYUbEVSwKYKIi24UiiC4qIrRtGBaNDQJJnHyMTM6mY83772510WmM5kkMyE9u3fuuf/f+eDed0VrzcPa6x996zcz6ZcEJjTcUVpf/XDyxd92xsjDAN5877OwY/leEWQc6K5flZug3/3g7Re+PzTgtXe+iPodzzjwKtAOqO4j8nNvp0SKNqk/V3VP0dZ9FdCvoK56D5O5z/WMAG+J6FJPp/wYjxoJEYYBQgE4e1KU5citv1ZUe7aoz4F8fSgAkI1HudET81wwhKfLCFqEMmAAAobf1MNP9Bk4LjOzC6pw6Bl889WXHyOMAUwHT3PX7MROzuNtP4bREuZS/jYDTgoAAz102ArqbKtYwC1uoByLcj6Dsi3y1CdsNBMYm/qktdm60hrKLmiNVgrKLmpXzJ4KLr9/LaiKnhG0Gg1JcHjiyvWbovg0jO/G5OSI/SBOqzKPyhZBbxiXAh7DRLxC1M6Bp6ZXncHlK9cuKG2MAs8DYQARlNbVKjfRTJ97xIj4fbxcdmyKVhGF4LKtKYApEAhFKu3RQzIxdX1co0eBQQBDxD3VG5k5O9AuwYA5+O9W6fbMvXTLwmp+qKJBpJW5/mOSDrXIU81aaKCH5I2paQ3QEfItnB88spToCj4ucHRPvxV/L/6Tm/9lLjWQK7hxn1c2zp+S2EEAryCfX3w2EQ0FzeeAfg0suD4AkkWHroCJAfR67cSJeChxIh5Sq2vZ7+bupwLAM80AUJnB3Ts//YDeDna0cHGjDwBrcZaWvjO0imI6tlTdlM78d2ttIz18kPi+58DVGmtxdrstjoW1OIttGBALH6S3r+0BKMfhdDwBgL1+H9/RBH7ROE4G09wOdx3bdEvFJrKC19+yP8C2LMa82+0odRn4jSUEsEq+KiCXzbblNpON5Q2Dtu7e/QEdbWE62pokB2RSm62rKysN141mAK0Uf8z+XufzeDw89uSZ6ncg0OpEIpHGAE/tKO8FALlsth7grQ/TWotSu2+d/e3A2zQcaaNQyNf57FLJUygUGu4xjNod6gVQSnke/Bb0jsxEhGAkTKGQp7zDHwpH7M5Y40MsuwHJZKrfcd2KaC1Qa01yeRmvabK8slb1ZzLpzo319aYVRBMna4Djx2PzaOKValidv1e3QWtNb6L2eCiXCmvKthpOeWcF/wPuFnsXDRErjQAAAABJRU5ErkJggg=="/>
+			<image x="5" y="215" width="25" height="25" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAApgAAAKYB3X3/OAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAOhSURBVEiJnZZNaFxVFMd/5828mUzmI0kn0yYdJh+tjWiwNqWlBBQ3rt2FCooFs4igCDEUF4IhdGEVxYUbEVSwKYKIi24UiiC4qIrRtGBaNDQJJnHyMTM6mY83772510WmM5kkMyE9u3fuuf/f+eDed0VrzcPa6x996zcz6ZcEJjTcUVpf/XDyxd92xsjDAN5877OwY/leEWQc6K5flZug3/3g7Re+PzTgtXe+iPodzzjwKtAOqO4j8nNvp0SKNqk/V3VP0dZ9FdCvoK56D5O5z/WMAG+J6FJPp/wYjxoJEYYBQgE4e1KU5citv1ZUe7aoz4F8fSgAkI1HudET81wwhKfLCFqEMmAAAobf1MNP9Bk4LjOzC6pw6Bl889WXHyOMAUwHT3PX7MROzuNtP4bREuZS/jYDTgoAAz102ArqbKtYwC1uoByLcj6Dsi3y1CdsNBMYm/qktdm60hrKLmiNVgrKLmpXzJ4KLr9/LaiKnhG0Gg1JcHjiyvWbovg0jO/G5OSI/SBOqzKPyhZBbxiXAh7DRLxC1M6Bp6ZXncHlK9cuKG2MAs8DYQARlNbVKjfRTJ97xIj4fbxcdmyKVhGF4LKtKYApEAhFKu3RQzIxdX1co0eBQQBDxD3VG5k5O9AuwYA5+O9W6fbMvXTLwmp+qKJBpJW5/mOSDrXIU81aaKCH5I2paQ3QEfItnB88spToCj4ucHRPvxV/L/6Tm/9lLjWQK7hxn1c2zp+S2EEAryCfX3w2EQ0FzeeAfg0suD4AkkWHroCJAfR67cSJeChxIh5Sq2vZ7+bupwLAM80AUJnB3Ts//YDeDna0cHGjDwBrcZaWvjO0imI6tlTdlM78d2ttIz18kPi+58DVGmtxdrstjoW1OIttGBALH6S3r+0BKMfhdDwBgL1+H9/RBH7ROE4G09wOdx3bdEvFJrKC19+yP8C2LMa82+0odRn4jSUEsEq+KiCXzbblNpON5Q2Dtu7e/QEdbWE62pokB2RSm62rKysN141mAK0Uf8z+XufzeDw89uSZ6ncg0OpEIpHGAE/tKO8FALlsth7grQ/TWotSu2+d/e3A2zQcaaNQyNf57FLJUygUGu4xjNod6gVQSnke/Bb0jsxEhGAkTKGQp7zDHwpH7M5Y40MsuwHJZKrfcd2KaC1Qa01yeRmvabK8slb1ZzLpzo319aYVRBMna4Djx2PzaOKValidv1e3QWtNb6L2eCiXCmvKthpOeWcF/wPuFnsXDRErjQAAAABJRU5ErkJggg=="/>
+	  		<image x="5" y="280" width="25" height="25" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAApgAAAKYB3X3/OAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAOhSURBVEiJnZZNaFxVFMd/5828mUzmI0kn0yYdJh+tjWiwNqWlBBQ3rt2FCooFs4igCDEUF4IhdGEVxYUbEVSwKYKIi24UiiC4qIrRtGBaNDQJJnHyMTM6mY83772510WmM5kkMyE9u3fuuf/f+eDed0VrzcPa6x996zcz6ZcEJjTcUVpf/XDyxd92xsjDAN5877OwY/leEWQc6K5flZug3/3g7Re+PzTgtXe+iPodzzjwKtAOqO4j8nNvp0SKNqk/V3VP0dZ9FdCvoK56D5O5z/WMAG+J6FJPp/wYjxoJEYYBQgE4e1KU5citv1ZUe7aoz4F8fSgAkI1HudET81wwhKfLCFqEMmAAAobf1MNP9Bk4LjOzC6pw6Bl889WXHyOMAUwHT3PX7MROzuNtP4bREuZS/jYDTgoAAz102ArqbKtYwC1uoByLcj6Dsi3y1CdsNBMYm/qktdm60hrKLmiNVgrKLmpXzJ4KLr9/LaiKnhG0Gg1JcHjiyvWbovg0jO/G5OSI/SBOqzKPyhZBbxiXAh7DRLxC1M6Bp6ZXncHlK9cuKG2MAs8DYQARlNbVKjfRTJ97xIj4fbxcdmyKVhGF4LKtKYApEAhFKu3RQzIxdX1co0eBQQBDxD3VG5k5O9AuwYA5+O9W6fbMvXTLwmp+qKJBpJW5/mOSDrXIU81aaKCH5I2paQ3QEfItnB88spToCj4ucHRPvxV/L/6Tm/9lLjWQK7hxn1c2zp+S2EEAryCfX3w2EQ0FzeeAfg0suD4AkkWHroCJAfR67cSJeChxIh5Sq2vZ7+bupwLAM80AUJnB3Ts//YDeDna0cHGjDwBrcZaWvjO0imI6tlTdlM78d2ttIz18kPi+58DVGmtxdrstjoW1OIttGBALH6S3r+0BKMfhdDwBgL1+H9/RBH7ROE4G09wOdx3bdEvFJrKC19+yP8C2LMa82+0odRn4jSUEsEq+KiCXzbblNpON5Q2Dtu7e/QEdbWE62pokB2RSm62rKysN141mAK0Uf8z+XufzeDw89uSZ6ncg0OpEIpHGAE/tKO8FALlsth7grQ/TWotSu2+d/e3A2zQcaaNQyNf57FLJUygUGu4xjNod6gVQSnke/Bb0jsxEhGAkTKGQp7zDHwpH7M5Y40MsuwHJZKrfcd2KaC1Qa01yeRmvabK8slb1ZzLpzo319aYVRBMna4Djx2PzaOKValidv1e3QWtNb6L2eCiXCmvKthpOeWcF/wPuFnsXDRErjQAAAABJRU5ErkJggg=="/>
+			
+	  		<text x="40" y="25"  text-anchor="start" xml:space="preserve" stroke="#000" stroke-width="0">总用量</text>
+			<text x="40" y="45"  text-anchor="start" xml:space="preserve" stroke="#000" stroke-width="0">行政楼</text>
+			<text x="40" y="170" text-anchor="start" xml:space="preserve" stroke="#000" stroke-width="0">综合服务中心</text>
+			<text x="40" y="235" text-anchor="start" xml:space="preserve" stroke="#000" stroke-width="0">第三宿舍</text>
+	  		<text x="40" y="300" text-anchor="start" xml:space="preserve" stroke="#000" stroke-width="0">第四宿舍</text>
+
+		</g>
+		<!-- 內容 -->
+		<g id="text" class="white-text">
+			<text x="40"  y="65" text-anchor="start" xml:space="preserve" stroke="#000" stroke-width="0">电</text>
+			<text x="40"  y="85"  text-anchor="start" xml:space="preserve" stroke="#000" stroke-width="0">加压水</text>
+			<text x="40"  y="105"  text-anchor="start" xml:space="preserve" stroke="#000" stroke-width="0">市政水</text>
+			<text x="40"  y="125" text-anchor="start" xml:space="preserve" stroke="#000" stroke-width="0">回用水</text>
+			<text x="40"  y="145" text-anchor="start" xml:space="preserve" stroke="#000" stroke-width="0">燃</text>
+			<text x="155" y="65" text-anchor="start" xml:space="preserve" stroke="#000" stroke-width="0">kWh</text>
+			<text x="155" y="85"  text-anchor="start" xml:space="preserve" stroke="#000" stroke-width="0">m³</text>
+			<text x="155" y="105"  text-anchor="start" xml:space="preserve" stroke="#000" stroke-width="0">m³</text>
+			<text x="155" y="125" text-anchor="start" xml:space="preserve" stroke="#000" stroke-width="0">m³</text>
+			<text x="155" y="145" text-anchor="start" xml:space="preserve" stroke="#000" stroke-width="0">m³</text>
+
+			<text x="40"  y="190" text-anchor="start" xml:space="preserve" stroke="#000" stroke-width="0">水</text>
+			<text x="40"  y="210" text-anchor="start" xml:space="preserve" stroke="#000" stroke-width="0">燃</text>
+			<text x="155" y="190" text-anchor="start" xml:space="preserve" stroke="#000" stroke-width="0">m³</text>
+			<text x="155" y="210" text-anchor="start" xml:space="preserve" stroke="#000" stroke-width="0">m³</text>
+
+			<text x="40"  y="255" text-anchor="start" xml:space="preserve" stroke="#000" stroke-width="0">电</text>
+			<text x="40"  y="275" text-anchor="start" xml:space="preserve" stroke="#000" stroke-width="0">水</text>
+			<text x="155" y="255" text-anchor="start" xml:space="preserve" stroke="#000" stroke-width="0">kWh</text>
+			<text x="155" y="275" text-anchor="start" xml:space="preserve" stroke="#000" stroke-width="0">m³</text>
+
+			<text x="40"  y="320" text-anchor="start" xml:space="preserve" stroke="#000" stroke-width="0">电</text>
+			<text x="40"  y="340" text-anchor="start" xml:space="preserve" stroke="#000" stroke-width="0">水</text>
+			<text x="155" y="320" text-anchor="start" xml:space="preserve" stroke="#000" stroke-width="0">kWh</text>
+			<text x="155" y="340" text-anchor="start" xml:space="preserve" stroke="#000" stroke-width="0">m³</text>
+
+			<text x="150" y="65"  id="value_1"  text-anchor="end" xml:space="preserve" stroke="#000" stroke-width="0"></text>
+			<text x="150" y="85"  id="value_2"  text-anchor="end" xml:space="preserve" stroke="#000" stroke-width="0"></text>
+			<text x="150" y="105" id="value_3"  text-anchor="end" xml:space="preserve" stroke="#000" stroke-width="0"></text>
+			<text x="150" y="125" id="value_4"  text-anchor="end" xml:space="preserve" stroke="#000" stroke-width="0"></text>
+			<text x="150" y="145" id="value_5"  text-anchor="end" xml:space="preserve" stroke="#000" stroke-width="0"></text>
+			<text x="150" y="190" id="value_6"  text-anchor="end" xml:space="preserve" stroke="#000" stroke-width="0"></text>
+			<text x="150" y="210" id="value_7"  text-anchor="end" xml:space="preserve" stroke="#000" stroke-width="0"></text>
+			<text x="150" y="255" id="value_8"  text-anchor="end" xml:space="preserve" stroke="#000" stroke-width="0"></text>
+			<text x="150" y="275" id="value_9"  text-anchor="end" xml:space="preserve" stroke="#000" stroke-width="0"></text>
+			<text x="150" y="320" id="value_10" text-anchor="end" xml:space="preserve" stroke="#000" stroke-width="0"></text>
+			<text x="150" y="340" id="value_11" text-anchor="end" xml:space="preserve" stroke="#000" stroke-width="0"></text>
+
+			<text x="53"  y="420" id="date"     text-anchor="start" xml:space="preserve" stroke="#000" stroke-width="0">YYYY/MM/DD</text>
+			<text x="35"  y="440" id="weekday"  text-anchor="start" xml:space="preserve" stroke="#000" stroke-width="0">星期　 </text>
+			<text x="95"  y="440" id="apm"      text-anchor="start" xml:space="preserve" stroke="#000" stroke-width="0">AM</text>
+			<text x="125" y="440" id="time"     text-anchor="start" xml:space="preserve" stroke="#000" stroke-width="0">hh:mm</text>
+
+		</g>
+		
+
+		<!-- 使用中按鈕 -->
+		<g id="room_1" class="common-use-button" style="visibility:hidden">
+			<rect x="125" y="490" width="67" height="27"/>
+			<text x="135" y="510" style="cursor: Pointer;" stroke="#000" stroke-width="0" text-anchor="start" xml:space="preserve">使用中</text>
+		</g>
+
+		<g id="room_2" class="common-use-button" style="visibility:hidden">
+			<rect x="125" y="520" width="67" height="27"/>
+			<text x="135" y="540" style="cursor: Pointer;" stroke="#000" stroke-width="0" text-anchor="start" xml:space="preserve">使用中</text>
+		</g>
+	</g>
+</svg>

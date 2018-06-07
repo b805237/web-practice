@@ -1,0 +1,177 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+	<title>警报查询</title>
+	<!-- CSS -->
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+		<!-- Top bar -->
+		<link href="css/bar.css" rel="stylesheet" type="text/css">
+		<!-- 樣式 -->
+		<link href="css/main.css" rel="stylesheet" type="text/css">
+	<!-- End CSS -->
+	<!-- CSS SET -->
+	<style type="text/css">
+	/* 調整main位置 */
+	#wrapper .main{
+	  	left: -15;
+	}
+	/* 調整container畫面大小 */
+	.container{
+		/* 比例放大 */
+		transform-origin:top;
+		transform:scale(1.0);
+		/* Firefox */
+		-moz-transform-origin:top;
+		-moz-transform:scale(1.0);
+		/* Safari 和 Chrome */
+		-webkit-transform-origin:top;
+		-webkit-transform:scale(1.0);
+	}
+	/* container編框距離 */
+	.container {
+	  padding-right: 0px;
+	  padding-left: 0px;
+	  margin-right: auto;
+	  margin-left: auto;
+	}
+	/* 調整board位置 */
+	.board{
+			margin-top:-55px;
+	}
+	</style>
+	<!-- End CSS SET -->
+	
+	<!-- Javascript -->
+		<!-- bajaScript model -->
+    	<script type="text/javascript" src="js/bajascript/bs.min.js"></script>
+		<!-- jQuery 套件工具 -->
+    	<script src="js/jquery/jquery.js"></script>
+    	<!-- Web相關函數 -->
+    	<script type="text/javascript" src="js/WebTool.js"></script>
+		<!-- Niagara資料讀取 -->
+    	<script type="text/javascript" src="js/NiagaraDataJson.js"></script>
+		<!-- Slot處理函數 -->
+    	<script type="text/javascript" src="js/SlotData.js"></script>
+		
+		<!-- 資訊看版資料 -->
+    	<script type="text/javascript" src="set/board.js"></script>
+		<!-- topbar網頁聯結 -->
+		<script type="text/javascript" src="set/topbar.js"></script>
+	<!-- End Javascript -->
+	
+	<!-- Javascript Code-->
+	<script type="text/javascript">
+	function Init()
+	{	// 重新指定px高度
+		document.getElementById("px").height = "120";
+		// 縮放比例
+		ScaleBody("page-body");
+		// 網頁聯結
+		topbar();
+		// 啟動baja
+		baja.start();
+	}
+	</script>
+	<!-- END Javascript Code-->
+</head>
+
+<body onload="Init();" onunload="baja.stop();">
+
+<div id="page-body" class="container">
+	<!-- Top Bar -->
+	<div class="col-sm-12 left-content">
+		<div class="row logout">
+			<b id="scale-text"></b>
+			<a href="#" id="out">登出</a>
+		</div>
+		<div class="row header-top">
+			<header>
+				<div class="header-home-btn">
+					<ul class="list-unstyled">
+						<li><a href="#" id="0"><img src="images/btn0.svg" width="140" height="60" alt=""></a></li>
+					</ul>
+				</div>
+				<div class="header-btn">
+					<ul class="list-unstyled">
+						<li><a href="#" id="1"><img src="images/btn1.svg" width="120" height="60" alt=""></a></li>
+						<li><a href="#" id="2"><img src="images/btn2.svg" width="120" height="60" alt=""></a></li>
+						<li><a href="#" id="3"><img src="images/btn3.svg" width="120" height="60" alt=""></a></li>
+						<li><a href="#" id="4"><img src="images/btn4.svg" width="120" height="60" alt=""></a></li>
+						<li><a href="#" id="5"><img src="images/btn5_click.svg" width="120" height="60" alt=""></a></li>
+						<li><a href="#" id="6"><img src="images/btn6.svg" width="120" height="60" alt=""></a></li>
+						<li><a href="#" id="7"><img src="images/btn7.svg" width="120" height="60" alt=""></a></li>
+						<li><a href="#" id="8"><img src="images/btn8.svg" width="120" height="60" alt=""></a></li>
+						<li><a href="#" id="9"><img src="images/btn9.svg" width="120" height="60" alt=""></a></li>
+						<li><a href="#" id="10"><img src="images/logo-tatung.svg" width="140" height="60" alt=""></a></li>
+					</ul>
+				</div>
+			</header>
+		</div>
+	</div>
+	<!-- End Top Bar -->
+	
+	<!-- Side Bar -->
+	<div class="col-sm-12 content">
+		<div class="col-sm-12">
+			<div class="row home_and_back_btn">
+			<a href="#" id="home" class="home_btn"> <img src="images/home_green.png" width="26" height="26" alt=""/>　回首页</a>
+			</div>
+			<div class="sidebar-btn">
+				<ul class="list-unstyled">
+					<li><a href="#" id="5-1"><img src="images/btn5-1.svg" width="119" height="25" alt=""></a></li>
+					<li><a href="#" id="5-2"><img src="images/btn5-2.svg" width="119" height="25" alt=""></a></li>
+					<li><a href="#" id="5-3"><img src="images/btn5-3.svg" width="119" height="25" alt=""></a></li>
+					<li><a href="#" id="5-4"><img src="images/btn5-4.svg" width="119" height="25" alt=""></a></li>
+					<li><a href="#" id="5-5"><img src="images/btn5-5_click.svg" width="119" height="25" alt=""></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-12 content">
+		<div class="col-sm-12">
+			<div class="row home_and_back_btn">
+			<a href="javascript:history.back(-1)" class="back_btn"> <img src="images/return_green.png" width="26" height="26" alt=""/>　回上页</a>
+			</div>
+		</div>
+	</div>
+	<!-- End Side Bar -->
+	
+	<!-- Board -->
+	<div class="board">
+			<embed id="board-body" src="images/board-blue.svg" width="200" height="555" type="image/svg+xml"></embed>
+	</div>
+	<!-- End Board -->
+	
+	<!-- MAIN -->
+	<div id="wrapper">
+		<div class="main">
+			<!-- MAIN CONTENT -->
+			<div class="main-content">
+			<div class="container-fluid">
+			<!-- 1 Row -->
+			<div class="row">
+				<div class="col-md-12">
+					<iframe src="Alarm1Main.html" width="1150" height="495" align="center" scrolling="no" frameborder="1"></iframe>
+				</div>
+			</div>
+			<!-- END 1 Row -->
+			<!-- 2 Row botton board -->
+			<div class="row">
+				<div class="col-md-12">
+					<div class="panel">
+						<!-- height = 120 -->
+						<iframe id="px" src="../px/HomeAlarm.px" width="1360" align="center" scrolling="no" frameborder="0"></iframe>
+					</div>
+				</div>
+			</div>
+			<!-- END 2 Row botton board -->
+			</div>
+			<!-- END MAIN CONTENT -->
+		</div>
+	</div>
+	<!-- END MAIN -->
+	
+</div>
+</body>
+</html>

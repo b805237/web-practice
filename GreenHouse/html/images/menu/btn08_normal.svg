@@ -1,0 +1,17 @@
+<svg width="100" height="80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+
+ <g>
+  <title>background</title>
+  <rect fill="#426e34" id="canvas_background" height="82" width="102" y="-1" x="-1"/>
+  <g display="none" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%" id="svg_2"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <text stroke="#000" transform="matrix(10.142857551574707,0,0,2.1577162742614746,-1214.5714828670025,-85.4539324939251) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_1" y="68.5" x="119.5" stroke-width="0" fill="#000000"/>
+  <text transform="matrix(1,0,0,1,0,0) " style="cursor: move;" stroke="#000" font-style="normal" font-weight="bold" xml:space="preserve" text-anchor="start" font-family="Microsoft JhengHei UI" font-size="15" id="svg_3" y="71" x="20" stroke-opacity="null" stroke-width="0" fill="#bed3b3">圖資管理</text>
+  <image xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGgAAABoCAYAAAAdHLWhAAAACXBIWXMAABcSAAAXEgFnn9JSAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABTdJREFUeNrsnU9u00AUxl0TWMCCrLpNWVZCSjgBuQEJK3Z1D1ApR8gRInGAuruuSHoDVxygDkJi2XSFBJtkUQkJSpkXvYAbHGf8b+Y5/j5plEhtE/v9+r15Mx6P9+7v7x3pOjkfN9VLR7Wuaqv39NrW/IipanPVQn4N6P37d/259HPfkwhIATlgGKvWKumrbhjWsilgMwBKhtJTzUvhjKJFTvNVm0iBZRUQpy6CMrAIJQnWiGHNawWI3eIxmOfCu4EFg/JtuMooIAYzVO3IqabO6PhNgjICiFPZoCKO0XXUyETqKx2QgtPjjrfqYOIqwIGCNKkkIE5nBOa1s9u6pEKnLDe5JbomrAEch89xxucsH5A6UHLNeAdTWpLoXMd87jJTHBcCgcDxjI3xU7eolOcWBIfmxmaAs1SbU15HBCA+kKBmKU0n5QVFQHJzwqHZgCvA2QjpimNkHhB/8Sk4bNVpHkiZigS27hVin0qvVOEQlu6gSJ8DpVOmPimVg7iUnqHPySyaxztIU4KndRCqtQKqu1JSHI+SMc4pYJyUZsZBK8XxPNMYsS1UfZ2Z8K2AeFY6zJPanj7Zc549lhOZ77ci1mFo9UcNjQ/y8/Y7rabrHO67YgB9+PxTSn9Ese1l7oM4tdXhkoEtvdl2mcLdUlL7iGHpGnGsUztoF9YPVEEtjrU+IC4MBoidMQ045toOGsI9xguGoVaZzSSvi/z2w/1HsVXcp693zuKH+ZJXSJkdpxfra+7iymzP2EBAwREcLBvy1p3kxlRu6Hvs9kXNJAf1bPU9b1/KmWr48u23ane2+qJedHjjxpTWkGUXxaY4Lg4wW21f7WjJ7a6lN0iGenGAPMRFVDX3DxDSm9w0t6riuhKPksZJNJg1rVsRVyOWTHzRgH7eOXUeyC4BuZIB1VxLJg0eubaqcMQ1G8y2iA05qIN/VrHquEhvstMcAWoiDmKFFFeFFAcHCXcQZhAEzyi4iIFsARAAQQAEQBAAQQAEQBAA1RHQFGEQqykBmiMOYjUnQCHiIFYhHFQBBwWIg1gFSHHCU1yDNlI4OR/THtClreyh1S+Wbueosm6IzWochDQnML1FB6oABEBQZkB8ZzFmFATNIKzu9o7OxfmIixj9ZREFNEFcxGjyHyCkOXnpbd1BpBHiY10PGDRirEW/YHyvBCGb7NnWYr2reeAg3p4RLrLonvUtMt2kCgKyV71tBMQd1BliZVxncU+XTNovboGYGe17hnE/iAXEJNEXme17ZtqAIuUeXFS+bpLMsBEQVxMe4le6Bkmbmyeui+Ot6y8Rw9J0se3xADo7z9POSzNHwCazH69/iYlsAdvFLHQyFB6uYU9aD9fQWvrLH4SxUbFjHq2rB2mfwEUrgHDTcT7RbLX21gdpF893UXrn7ne6af4gFSAuBwEpB5y0j5DGYzrNycxjOtlJ9EXHiLm2jrPAyQyIIfmApA3Hz/rHmVJcTLoLHDwtZVOfk2vte+5bIPkAUDiUAKcQQBFIBw5WBTkcg4Mi4BSS4mJSHuXboxrPEHhFfmDhd3nzAfZrlvLoXPtFwynFQREn0UaBNN+064/5vFDNSzsAtQ4oAopmwumKYWvHwNCV0IHupKdYQBE3DZzdePTngv/hRmW5xjigCCiq9IYVLiLokstw0wKPygNaA+VVxFErx/gmwVgFtJb6egxK2nWmKYOZmEhlIgHFuKrHzmpbhOIzlJmEuIgBFAOrG2llVYBUiQWrJgWKeEAbUmGHYa3eN1M4jZxBaSrkVwIS2kxduvojwABCxR9uzzraLwAAAABJRU5ErkJggg==" id="svg_12" height="38" width="38" y="11" x="31"/>
+ </g>
+</svg>

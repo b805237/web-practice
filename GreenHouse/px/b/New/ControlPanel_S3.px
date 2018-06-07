@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="gx"/>
+  <module name="kitPx"/>
+  <module name="workbench"/>
+</import>
+<content>
+<ScrollPane>
+
+  <CanvasPane name="content" viewSize="388.0,510.0">
+
+    <Label layout="0.0,340.0,390.0,170.0" background="image( source(file:^GreenHouse/image/oval_bg.png) )"/>
+
+    <Label layout="0.0,170.0,390.0,170.0" background="image( source(file:^GreenHouse/image/oval_bg.png) )"/>
+
+    <Label layout="0.0,0.0,390.0,170.0" background="image( source(file:^GreenHouse/image/oval_bg.png) )"/>
+
+    <Label layout="5.0,0.0,370.0,40.0" text="&#x98a8;&#x6247;(&#x591c;&#x9593;)" font="18.0pt Microsoft JhengHei UI"/>
+
+    <GridPane layout="160.0,40.0,pref,pref"/>
+
+    <GridPane layout="90.0,50.0,pref,pref" columnCount="3"/>
+
+    <ImageButton layout="70.0,130.0,100.0,30.0" text="&#x98a8;&#x6247;&#x958b;&#x555f;">
+      <ActionBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Fan/Active" widgetEvent="actionPerformed"/>
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+    </ImageButton>
+
+    <ImageButton layout="225.0,130.0,100.0,30.0" text="&#x98a8;&#x6247;&#x95dc;&#x9589;">
+      <ActionBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Fan/Inactive" widgetEvent="actionPerformed"/>
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+    </ImageButton>
+
+    <GridPane layout="75.0,38.0,pref,pref">
+
+      <GenericFieldEditor>
+        <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Flower/Spray/SetTemp/value"/>
+      </GenericFieldEditor>
+
+    </GridPane>
+
+    <Label layout="145.0,38.0,40.0,20.0" text="&#xb0;C"/>
+
+    <GridPane layout="260.0,38.0,pref,pref">
+
+      <GenericFieldEditor>
+        <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Flower/Spray/delay_Temp/value"/>
+      </GenericFieldEditor>
+
+    </GridPane>
+
+    <Label layout="340.0,38.0,40.0,20.0" text="&#xb0;C"/>
+
+    <GridPane layout="75.0,65.0,pref,pref">
+
+      <GenericFieldEditor>
+        <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Flower/Spray/SetHumidity/value"/>
+      </GenericFieldEditor>
+
+    </GridPane>
+
+    <GridPane layout="260.0,65.0,pref,pref">
+
+      <GenericFieldEditor>
+        <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Flower/Spray/delay_Humidity/value"/>
+      </GenericFieldEditor>
+
+    </GridPane>
+
+    <Label layout="5.0,170.0,370.0,40.0" text="&#x63db;&#x6c23;&#x8a2d;&#x5b9a;" font="18.0pt Microsoft JhengHei UI"/>
+
+    <GridPane layout="160.0,210.0,pref,pref"/>
+
+    <GridPane layout="90.0,220.0,pref,pref" columnCount="3"/>
+
+    <ImageButton layout="70.0,300.0,100.0,30.0" text="&#x624b;&#x52d5;&#x958b;&#x59cb;">
+      <ActionBinding ord="station:|slot:/Home/GreenHouse/Strawberry/TempSensor/Active_Flush" widgetEvent="actionPerformed"/>
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+    </ImageButton>
+
+    <ImageButton layout="225.0,300.0,100.0,30.0" text="&#x95dc;&#x9589;">
+      <ActionBinding ord="station:|slot:/Home/GreenHouse/Strawberry/TempSensor/Inactive_Flush" widgetEvent="actionPerformed"/>
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+    </ImageButton>
+
+    <GridPane layout="75.0,208.0,pref,pref">
+
+      <GenericFieldEditor>
+        <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Flower/Spray/SetTemp/value"/>
+      </GenericFieldEditor>
+
+    </GridPane>
+
+    <Label layout="145.0,208.0,40.0,20.0" text="&#xb0;C"/>
+
+    <GridPane layout="260.0,208.0,pref,pref">
+
+      <GenericFieldEditor>
+        <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Flower/Spray/delay_Temp/value"/>
+      </GenericFieldEditor>
+
+    </GridPane>
+
+    <Label layout="340.0,208.0,40.0,20.0" text="&#xb0;C"/>
+
+    <GridPane layout="75.0,235.0,pref,pref">
+
+      <GenericFieldEditor>
+        <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Flower/Spray/SetHumidity/value"/>
+      </GenericFieldEditor>
+
+    </GridPane>
+
+    <GridPane layout="260.0,235.0,pref,pref">
+
+      <GenericFieldEditor>
+        <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Flower/Spray/delay_Humidity/value"/>
+      </GenericFieldEditor>
+
+    </GridPane>
+
+    <Label layout="5.0,340.0,370.0,40.0" text="&#x6c34;&#x7246;&#x8a2d;&#x5b9a;" font="18.0pt Microsoft JhengHei UI"/>
+
+    <GridPane layout="160.0,380.0,pref,pref"/>
+
+    <GridPane layout="90.0,390.0,pref,pref" columnCount="3"/>
+
+    <ImageButton layout="70.0,470.0,100.0,30.0" text="&#x6c34;&#x7246;&#x958b;&#x555f;">
+      <ActionBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Spray/Active" widgetEvent="actionPerformed"/>
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+    </ImageButton>
+
+    <ImageButton layout="225.0,470.0,100.0,30.0" text="&#x95dc;&#x9589;">
+      <ActionBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Spray/Inactive" widgetEvent="actionPerformed"/>
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+    </ImageButton>
+
+    <GridPane layout="75.0,378.0,pref,pref">
+
+      <GenericFieldEditor>
+        <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Flower/Spray/SetTemp/value"/>
+      </GenericFieldEditor>
+
+    </GridPane>
+
+    <Label layout="145.0,378.0,40.0,20.0" text="&#xb0;C"/>
+
+    <GridPane layout="260.0,378.0,pref,pref">
+
+      <GenericFieldEditor>
+        <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Flower/Spray/delay_Temp/value"/>
+      </GenericFieldEditor>
+
+    </GridPane>
+
+    <Label layout="340.0,378.0,40.0,20.0" text="&#xb0;C"/>
+
+    <GridPane layout="75.0,405.0,pref,pref">
+
+      <GenericFieldEditor>
+        <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Flower/Spray/SetHumidity/value"/>
+      </GenericFieldEditor>
+
+    </GridPane>
+
+    <GridPane layout="260.0,405.0,pref,pref">
+
+      <GenericFieldEditor>
+        <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Flower/Spray/delay_Humidity/value"/>
+      </GenericFieldEditor>
+
+    </GridPane>
+
+    <Label layout="10.0,30.0,60.0,30.0" text="&#x6eab;&#x5ea6;&#x8a2d;&#x5b9a;"/>
+
+    <Label layout="10.0,60.0,60.0,30.0" text="&#x6fd5;&#x5ea6;&#x8a2d;&#x5b9a;"/>
+
+    <Label layout="175.0,32.0,90.0,30.0" text="&#x6eab;&#x5ea6;&#x4e0d;&#x611f;&#x5e36;"/>
+
+    <Label layout="175.0,59.0,90.0,30.0" text="&#x6fd5;&#x5ea6;&#x4e0d;&#x611f;&#x5e36;"/>
+
+    <Label layout="175.0,202.0,90.0,30.0" text="&#x6eab;&#x5ea6;&#x4e0d;&#x611f;&#x5e36;"/>
+
+    <Label layout="175.0,229.0,90.0,30.0" text="&#x6fd5;&#x5ea6;&#x4e0d;&#x611f;&#x5e36;"/>
+
+    <Label layout="10.0,200.0,60.0,30.0" text="&#x6eab;&#x5ea6;&#x8a2d;&#x5b9a;"/>
+
+    <Label layout="10.0,230.0,60.0,30.0" text="&#x6fd5;&#x5ea6;&#x8a2d;&#x5b9a;"/>
+
+    <Label layout="175.0,372.0,90.0,30.0" text="&#x6eab;&#x5ea6;&#x4e0d;&#x611f;&#x5e36;"/>
+
+    <Label layout="175.0,399.0,90.0,30.0" text="&#x6fd5;&#x5ea6;&#x4e0d;&#x611f;&#x5e36;"/>
+
+    <Label layout="10.0,370.0,60.0,30.0" text="&#x6eab;&#x5ea6;&#x8a2d;&#x5b9a;"/>
+
+    <Label layout="10.0,400.0,60.0,30.0" text="&#x6fd5;&#x5ea6;&#x8a2d;&#x5b9a;"/>
+
+  </CanvasPane>
+
+</ScrollPane>
+</content>
+</px>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="converters"/>
+  <module name="gx"/>
+</import>
+<content>
+<ScrollPane>
+
+  <CanvasPane name="content" viewSize="1360.0,765.0" valign="top">
+
+    <Picture layout="0.0,115.0,1360.0,660.0" image="file:^GreenHouse/image/version3.jpg" scale="fitRatio">
+      <ValueBinding hyperlink="file:^GreenHouse/html/Main.html"/>
+    </Picture>
+
+    <Label layout="0.0,10.0,1360.0,100.0" background="#1e6e8c"/>
+
+    <Label layout="0.0,10.0,330.0,100.0" background="#bed2dc"/>
+
+    <Label layout="0.0,10.0,120.0,100.0" image="file:^GreenHouse/image/topbar.png"/>
+
+    <Label layout="1194.0,30.0,146.25,66.25" font="bold 22.0pt SansSerif" foreground="white">
+      <ValueBinding ord="station:|slot:/Home/SystemTime/YMD">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="1194.0,71.0,60.0,40.0" font="bold 16.0pt SansSerif" foreground="white">
+      <ValueBinding ord="station:|slot:/Home/SystemTime/SWD">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="1244.0,72.0,60.0,40.0" font="bold 16.0pt SansSerif" foreground="white">
+      <ValueBinding ord="station:|slot:/Home/SystemTime/AMPMS">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="1259.0,71.0,100.0,40.0" font="bold 17.0pt SansSerif" foreground="white">
+      <ValueBinding ord="station:|slot:/Home/SystemTime/HM">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="320.0,10.0,640.0,50.0" text="Taoyuan Agriculture" font="bold 36.0pt Microsoft YaHei" foreground="white"/>
+
+    <Label layout="435.0,60.0,640.0,50.0" text="&#x6843;&#x5712;&#x6eab;&#x5ba4;&#x81ea;&#x52d5;&#x63a7;&#x5236;&#x7cfb;&#x7d71;" font="36.0pt Microsoft YaHei" foreground="white"/>
+
+    <Label layout="120.0,20.0,200.0,70.0" text="&#x6843;&#x5712;&#x8fb2;&#x696d;&#x535a;&#x89bd;&#x6703;" font="bold 28.0pt Microsoft YaHei" foreground="black"/>
+
+    <Label layout="38.0,65.0,337.0,30.0" text="TAOYUAN AGRICULTURE EXPO" font="bold 12.0pt SansSerif"/>
+
+  </CanvasPane>
+
+</ScrollPane>
+</content>
+</px>

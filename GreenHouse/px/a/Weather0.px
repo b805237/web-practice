@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="converters"/>
+  <module name="gx"/>
+  <module name="kitPx"/>
+  <module name="workbench"/>
+</import>
+<content>
+<ScrollPane>
+
+  <CanvasPane name="content" viewSize="490.0,150.0">
+
+    <Label layout="386.0,0.0,104.0,38.0" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#a39b86">
+      <ValueBinding ord="station:|slot:/GH/area$(area)/Schedule/TyphoonStat/out/value">
+        <IBooleanToSimple name="background">
+          <Brush name="trueValue" value="#8dafb1"/>
+          <Brush name="falseValue" value="#a39b86"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="247.0,41.0,137.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <Label layout="108.0,41.0,137.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="15.0,41.0,91.0,38.0" font="bold 14.0pt Microsoft YaHei" foreground="white" background="#666699">
+      <ValueBinding ord="station:|slot:/GH/areaName/area$(area)">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="108.0,1.0,137.0,38.0" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#a39b86">
+      <ValueBinding ord="station:|slot:/GH/area$(area)/CoolingSolSelectorDay/Enable/out/value">
+        <IBooleanToSimple name="background">
+          <Brush name="trueValue" value="#8dafb1"/>
+          <Brush name="falseValue" value="#a39b86"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="247.0,1.0,137.0,38.0" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#a39b86">
+      <ValueBinding ord="station:|slot:/GH/area$(area)/CoolingSolSelectorNight/Enable/out/value">
+        <IBooleanToSimple name="background">
+          <Brush name="trueValue" value="#8dafb1"/>
+          <Brush name="falseValue" value="#a39b86"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="160.0,49.0,30.0,20.0" text="&#xff1a;" font="bold 12.0pt Microsoft JhengHei"/>
+
+    <Label layout="300.0,49.0,30.0,20.0" text="&#xff1a;" font="bold 12.0pt Microsoft JhengHei"/>
+
+    <Label layout="386.0,40.0,104.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <SaveButton layout="390.0,120.0,100.0,30.0" image="module://icons/x16/save.png">
+      <WsAnnotation name="wsAnnotation" value="14,14,8"/>
+    </SaveButton>
+
+    <GenericFieldEditor layout="135.0,50.0,30.0,20.0" styleClasses="readonly">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area$(area)/Schedule/AM_Hour/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="185.0,50.0,30.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area$(area)/Schedule/AM_Min/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="275.0,50.0,30.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area$(area)/Schedule/PM_Hour/fallback/value"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="325.0,50.0,30.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area$(area)/Schedule/PM_Min/fallback/value"/>
+    </GenericFieldEditor>
+
+    <Label layout="250.0,0.0,130.0,40.0" text="&#x591c;&#x9593;&#x958b;&#x59cb;&#x6642;&#x9593;" image="file:^GreenHouse/image/night_30.png" font="bold 16.0pt Microsoft JhengHei" foreground="white"/>
+
+    <Label layout="110.0,0.0,130.0,40.0" text="&#x65e5;&#x9593;&#x958b;&#x59cb;&#x6642;&#x9593;" image="file:^GreenHouse/image/sun_30.png" font="bold 16.0pt Microsoft JhengHei" foreground="white"/>
+
+    <Label layout="385.0,0.0,105.0,40.0" text="&#x9632;&#x98b1;&#x6a21;&#x5f0f;" image="file:^GreenHouse/image/typhoon_30.png" font="bold 16.0pt Microsoft JhengHei" foreground="white"/>
+
+    <ImageButton layout="385.0,41.0,52.0,38.0" text="&#x958b;&#x555f;" font="bold 16.0pt Microsoft JhengHei">
+      <ActionBinding ord="station:|slot:/GH/area1/Schedule/setTyphoonOn/fireTopic" widgetEvent="actionPerformed"/>
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+    </ImageButton>
+
+    <ImageButton layout="438.0,41.0,52.0,38.0" text="&#x95dc;&#x9589;" font="bold 16.0pt Microsoft JhengHei">
+      <ActionBinding ord="station:|slot:/GH/area1/Schedule/setTyphoonOff/fireTopic" widgetEvent="actionPerformed"/>
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+    </ImageButton>
+
+  </CanvasPane>
+
+</ScrollPane>
+</content>
+</px>

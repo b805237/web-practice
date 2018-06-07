@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="converters"/>
+  <module name="gx"/>
+  <module name="kitPx"/>
+</import>
+<content>
+<ScrollPane>
+
+  <CanvasPane name="content" viewSize="855.0,25.0">
+
+    <Label layout="0.0,0.0,95.0,25.0" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#8dafb1"/>
+
+    <Label layout="99.99999999999994,0.0,135.00000000000006,25.0" font="bold 16.0pt Microsoft JhengHei" foreground="#202020" background="#d2d2d4"/>
+
+    <Label layout="240.0,0.0,190.0,25.0" font="bold 16.0pt Microsoft JhengHei" foreground="#202020" background="#b4b4b6" halign="left"/>
+
+    <Label layout="435.0,0.0,85.0,25.0" font="bold 16.0pt Microsoft JhengHei" foreground="#202020" background="#d2d2d4"/>
+
+    <Label layout="525.0,0.0,110.00000000000011,25.0" font="bold 16.0pt Microsoft JhengHei" foreground="#202020" background="#b4b4b6"/>
+
+    <Label layout="640.0,0.0,215.0,25.0" font="bold 16.0pt Microsoft JhengHei" foreground="#202020" background="#d2d2d4" halign="left"/>
+
+    <ImageButton layout="0.0,0.0,95.0,25.0" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#8dafb1" buttonStyle="none">
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+      <ValueBinding ord="station:|slot:/GH/System/Info/Company$(Num)/out/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+      <ActionBinding ord="station:|slot:/GH/System/Info/Company$(Num)/set" widgetEvent="actionPerformed"/>
+    </ImageButton>
+
+    <ImageButton layout="100.0,0.0,135.0,25.0" font="bold 16.0pt Microsoft JhengHei" foreground="#202020" background="#d2d2d4" buttonStyle="none">
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+      <ValueBinding ord="station:|slot:/GH/System/Info/Item$(Num)/out/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+      <ActionBinding ord="station:|slot:/GH/System/Info/Item$(Num)/set" widgetEvent="actionPerformed"/>
+    </ImageButton>
+
+    <ImageButton layout="240.0,0.0,190.0,25.0" font="bold 16.0pt Microsoft JhengHei" foreground="#202020" background="#b4b4b6" buttonStyle="none">
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+      <ValueBinding ord="station:|slot:/GH/System/Info/Phone$(Num)/out/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+      <ActionBinding ord="station:|slot:/GH/System/Info/Phone$(Num)/set" widgetEvent="actionPerformed"/>
+    </ImageButton>
+
+    <ImageButton layout="435.0,0.0,85.0,25.0" font="bold 16.0pt Microsoft JhengHei" foreground="#202020" background="#d2d2d4" buttonStyle="none">
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+      <ValueBinding ord="station:|slot:/GH/System/Info/Name$(Num)/out/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+      <ActionBinding ord="station:|slot:/GH/System/Info/Name$(Num)/set" widgetEvent="actionPerformed"/>
+    </ImageButton>
+
+    <ImageButton layout="640.0,0.0,215.0,25.0" font="bold 16.0pt Microsoft JhengHei" foreground="#202020" background="#d2d2d4" buttonStyle="none">
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+      <ValueBinding ord="station:|slot:/GH/System/Info/Email$(Num)/out/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+      <ActionBinding ord="station:|slot:/GH/System/Info/Email$(Num)/set" widgetEvent="actionPerformed"/>
+    </ImageButton>
+
+    <ImageButton layout="525.0,0.0,110.0,25.0" font="bold 16.0pt Microsoft JhengHei" foreground="#202020" background="#b4b4b6" buttonStyle="none">
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+      <ValueBinding ord="station:|slot:/GH/System/Info/CellPhone$(Num)/out/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+      <ActionBinding ord="station:|slot:/GH/System/Info/CellPhone$(Num)/set" widgetEvent="actionPerformed"/>
+    </ImageButton>
+
+  </CanvasPane>
+
+</ScrollPane>
+</content>
+</px>

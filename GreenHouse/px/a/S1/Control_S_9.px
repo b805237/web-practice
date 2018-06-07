@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="converters"/>
+  <module name="gx"/>
+  <module name="kitPx"/>
+</import>
+<content>
+<ScrollPane>
+
+  <CanvasPane name="content" viewSize="1000.0,550.0" valign="top">
+
+    <Label layout="200.0,0.0,800.0,550.0" image="file:^GreenHouse/image/Control_800x550.jpg" halign="left" valign="top"/>
+
+    <PxInclude layout="0.0,0.0,200.0,550.0" ord="file:^GreenHouse/px/a/LeftBar.px" variables="Select=s:c|area=s:$31"/>
+
+    <PxInclude layout="900.0,0.0,100.0,30.0" ord="file:^GreenHouse/px/a/Weather.px" variables="area=s:$31"/>
+
+    <PxInclude layout="790.0,380.0,200.0,160.0" ord="file:^GreenHouse/px/a/Obscure.px" variables="area=s:$31"/>
+
+    <Label layout="760.0,60.0,200.0,150.0" image="file:^GreenHouse/image/circle5.png"/>
+
+    <Path stroke="#f9ec7c" pen="3.0" geom="M200.0,165.0 L360.0,165.0 360.0,140.0 768.0,140.0"/>
+
+    <BoundLabel layout="640.0,255.0,40.0,20.0" background="white">
+      <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/JACE01/points/Temp5/out/value" statusEffect="none">
+        <ObjectToString name="text"/>
+      </BoundLabelBinding>
+    </BoundLabel>
+
+    <BoundLabel layout="810.0,255.0,40.0,20.0" background="white">
+      <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/JACE01/points/Temp4/out/value" statusEffect="none">
+        <ObjectToString name="text"/>
+      </BoundLabelBinding>
+    </BoundLabel>
+
+    <BoundLabel layout="570.0,290.0,40.0,20.0" background="white">
+      <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/JACE01/points/Temp1/out/value" statusEffect="none">
+        <ObjectToString name="text"/>
+      </BoundLabelBinding>
+    </BoundLabel>
+
+    <BoundLabel layout="260.0,275.0,40.0,20.0" background="white">
+      <BoundLabelBinding ord="station:|slot:/Drivers/NiagaraNetwork/JACE01/points/Temp2/out/value" statusEffect="none">
+        <ObjectToString name="text"/>
+      </BoundLabelBinding>
+    </BoundLabel>
+
+  </CanvasPane>
+
+</ScrollPane>
+</content>
+</px>

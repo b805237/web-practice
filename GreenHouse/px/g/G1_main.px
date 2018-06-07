@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="converters"/>
+  <module name="gx"/>
+  <module name="kitPx"/>
+</import>
+<content>
+<ScrollPane>
+
+  <CanvasPane name="content" viewSize="1000.0,550.0" valign="top">
+
+    <Label layout="95.0,55.0,95.0,25.0" text="&#x516c;&#x53f8;&#x540d;&#x7a31;" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#a39b86" wordWrapEnabled="true"/>
+
+    <Label layout="194.99999999999994,55.0,135.00000000000006,25.0" text="&#x71df;&#x696d;&#x9805;&#x76ee;" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#a39b86" wordWrapEnabled="true"/>
+
+    <Label layout="45.0,55.0,45.0,25.0" text="&#x7de8;&#x865f;" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#a39b86" wordWrapEnabled="true"/>
+
+    <Label layout="335.0,55.0,190.0,25.0" text="&#x96fb;&#x8a71;" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#a39b86" wordWrapEnabled="true"/>
+
+    <Label layout="530.0,55.0,85.0,25.0" text="&#x806f;&#x7d61;&#x4eba;" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#a39b86" wordWrapEnabled="true"/>
+
+    <Label layout="620.0,55.0,110.00000000000011,25.0" text="&#x884c;&#x52d5;&#x96fb;&#x8a71;" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#a39b86" wordWrapEnabled="true"/>
+
+    <Label layout="735.0,55.0,215.0,25.0" text="&#x96fb;&#x5b50;&#x90f5;&#x4ef6;" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#a39b86" wordWrapEnabled="true"/>
+
+    <Label layout="1000.0,60.0,110.0,25.0" text="&#x5099;&#x8a3b;" font="bold 16.0pt Microsoft JhengHei" foreground="#000040" wordWrapEnabled="true"/>
+
+    <Label layout="1000.0,90.0,110.0,25.0" font="bold 16.0pt Microsoft JhengHei" foreground="#384028" background="#bed2dc"/>
+
+    <Label layout="1000.0,120.0,110.0,25.0" font="bold 16.0pt Microsoft JhengHei" foreground="#384028" background="#bed2dc"/>
+
+    <Label layout="1000.0,150.0,110.0,25.0" font="bold 16.0pt Microsoft JhengHei" foreground="#384028" background="#bed2dc"/>
+
+    <Label layout="1000.0,180.0,110.0,25.0" font="bold 16.0pt Microsoft JhengHei" foreground="#384028" background="#bed2dc"/>
+
+    <Label layout="45.0,115.0,44.99999999999997,25.0" text="02" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#666699"/>
+
+    <Label layout="45.0,145.0,44.99999999999997,25.0" text="03" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#666699"/>
+
+    <Label layout="45.0,175.0,44.99999999999997,25.0" text="04" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#666699"/>
+
+    <Label layout="45.0,85.0,44.99999999999997,25.0" text="01" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#666699"/>
+
+    <Label layout="45.0,235.0,44.99999999999997,25.0" text="06" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#666699"/>
+
+    <Label layout="45.0,265.0,44.99999999999997,25.0" text="07" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#666699"/>
+
+    <Label layout="45.0,295.0,44.99999999999997,25.0" text="08" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#666699"/>
+
+    <Label layout="45.0,205.0,44.99999999999997,25.0" text="05" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#666699"/>
+
+    <Label layout="45.0,355.0,44.99999999999997,25.0" text="10" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#666699"/>
+
+    <Label layout="45.0,385.0,44.99999999999997,25.0" text="11" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#666699"/>
+
+    <Label layout="45.0,415.0,44.99999999999997,25.0" text="12" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#666699"/>
+
+    <Label layout="45.0,325.0,44.99999999999997,25.0" text="09" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#666699"/>
+
+    <PxInclude layout="95.0,85.0,855.0,25.0" ord="file:^GreenHouse/px/g/CompanyInfoContain.px" variables="Num=s:$31"/>
+
+    <PxInclude layout="95.0,115.0,855.0,25.0" ord="file:^GreenHouse/px/g/CompanyInfoContain.px" variables="Num=s:$32"/>
+
+    <PxInclude layout="95.0,145.0,855.0,25.0" ord="file:^GreenHouse/px/g/CompanyInfoContain.px" variables="Num=s:$33"/>
+
+    <PxInclude layout="95.0,175.0,855.0,25.0" ord="file:^GreenHouse/px/g/CompanyInfoContain.px" variables="Num=s:$34"/>
+
+    <PxInclude layout="95.0,205.0,855.0,25.0" ord="file:^GreenHouse/px/g/CompanyInfoContain.px" variables="Num=s:$35"/>
+
+    <PxInclude layout="95.0,235.0,855.0,25.0" ord="file:^GreenHouse/px/g/CompanyInfoContain.px" variables="Num=s:$36"/>
+
+    <PxInclude layout="95.0,265.0,855.0,25.0" ord="file:^GreenHouse/px/g/CompanyInfoContain.px" variables="Num=s:$37"/>
+
+    <PxInclude layout="95.0,295.0,855.0,25.0" ord="file:^GreenHouse/px/g/CompanyInfoContain.px" variables="Num=s:$38"/>
+
+    <PxInclude layout="95.0,325.0,855.0,25.0" ord="file:^GreenHouse/px/g/CompanyInfoContain.px" variables="Num=s:$39"/>
+
+    <PxInclude layout="95.0,355.0,855.0,25.0" ord="file:^GreenHouse/px/g/CompanyInfoContain.px" variables="Num=s:$310"/>
+
+    <PxInclude layout="95.0,385.0,855.0,25.0" ord="file:^GreenHouse/px/g/CompanyInfoContain.px" variables="Num=s:$311"/>
+
+    <PxInclude layout="95.0,415.0,855.0,25.0" ord="file:^GreenHouse/px/g/CompanyInfoContain.px" variables="Num=s:$312"/>
+
+  </CanvasPane>
+
+</ScrollPane>
+</content>
+</px>

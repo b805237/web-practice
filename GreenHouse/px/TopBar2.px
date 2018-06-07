@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="gx"/>
+  <module name="kitPx"/>
+</import>
+<content>
+<CanvasPane viewSize="120.0,63.0" scale="fitRatio" background="white">
+
+  <Label layout="0.0,0.0,140.0,29.999999999999996">
+    <ValueBinding hyperlink="file:^HJC/px/Home.px"/>
+  </Label>
+
+  <Picture layout="4.9999999999999964,0.0,40.0,30.0" image="file:^HJC/image/TopBar/home_green.png" scale="fitHeight">
+    <ValueBinding hyperlink="file:^GreenHouse/px/Home.px"/>
+  </Picture>
+
+  <Label layout="55.0,0.0,50.0,30.000000000000007" text="&#x56de;&#x9996;&#x9801;" font="bold 17.0pt Microsoft JhengHei" foreground="#00bebe">
+    <ValueBinding hyperlink="file:^GreenHouse/px/Home.px"/>
+  </Label>
+
+  <BackButton layout="0.0,26.0,40.0,40.0" image="file:^HJC/image/TopBar/return_green.png" textToIconAlign="center" textIconGap="0.0" buttonStyle="none" textOverride=" ">
+    <WsAnnotation name="wsAnnotation" value="26,26,8"/>
+  </BackButton>
+
+  <BackButton layout="55.0,32.5,49.99999999999997,29.5" image="module://kitPx/icons/NULL.png" font="bold 17.0pt Microsoft JhengHei" foreground="#00bebe" textToIconAlign="center" textIconGap="0.0" buttonStyle="none" textOverride="&#x56de;&#x4e0a;&#x9801;">
+    <WsAnnotation name="wsAnnotation" value="26,26,8"/>
+  </BackButton>
+
+</CanvasPane>
+</content>
+</px>

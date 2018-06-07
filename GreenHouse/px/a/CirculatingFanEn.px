@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="converters"/>
+  <module name="gx"/>
+  <module name="kitPx"/>
+</import>
+<content>
+<ScrollPane>
+
+  <CanvasPane name="content" viewSize="200.0,125.0">
+
+    <Label layout="0.0,25.0,200.0,105.0" background="#ffffc0"/>
+
+    <Label layout="0.0,0.0,200.0,30.0" image="file:^GreenHouse/image/Common/YE.png" font="bold 15.0pt Microsoft JhengHei" foreground="black"/>
+
+    <Label layout="0.0,0.0,200.0,30.0" text="INT Fan" font="bold 18.0pt Microsoft JhengHei" foreground="black"/>
+
+    <Label layout="28.0,40.0,90.0,42.0" text="Switch:" font="bold 18.0pt Microsoft JhengHei" foreground="black"/>
+
+    <Label layout="115.0,40.0,42.0,42.0" font="bold 18.0pt Microsoft JhengHei">
+      <ValueBinding ord="station:|slot:/GH/area$(area)/CirculatingFan/valControl/out/value">
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value="Open"/>
+          <String name="falseValue" value="Close"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Label>
+
+    <ImageButton layout="5.0,90.0,60.0,30.0" text="Open(M)">
+      <ActionBinding ord="station:|slot:/GH/area$(area)/CirculatingFan/emergencyActive/fireVoidAction" widgetEvent="actionPerformed"/>
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+      <ValueBinding ord="station:|slot:/GH/area$(area)/CirculatingFan/close_M/out/value">
+        <IBooleanToSimple name="background">
+          <Brush name="trueValue" value="white"/>
+          <Brush name="falseValue" value="#aaaaaa"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </ImageButton>
+
+    <ImageButton layout="71.0,90.0,60.0,30.0" text="Close(M)">
+      <ActionBinding ord="station:|slot:/GH/area$(area)/CirculatingFan/emergencyInactive/fireVoidAction" widgetEvent="actionPerformed"/>
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+      <ValueBinding ord="station:|slot:/GH/area$(area)/CirculatingFan/open_M/out/value">
+        <IBooleanToSimple name="background">
+          <Brush name="trueValue" value="white"/>
+          <Brush name="falseValue" value="#aaaaaa"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </ImageButton>
+
+    <ImageButton layout="135.0,90.0,60.0,30.0" text="Auto">
+      <ActionBinding ord="station:|slot:/GH/area$(area)/CirculatingFan/emergencyAuto/fireVoidAction" widgetEvent="actionPerformed"/>
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+      <ValueBinding ord="station:|slot:/GH/area$(area)/CirculatingFan/ControlStatus/overridden/value">
+        <IBooleanToSimple name="background">
+          <Brush name="trueValue" value="#aaaaaa"/>
+          <Brush name="falseValue" value="white"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </ImageButton>
+
+  </CanvasPane>
+
+</ScrollPane>
+</content>
+</px>

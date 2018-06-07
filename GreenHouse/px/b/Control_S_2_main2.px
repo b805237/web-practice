@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="converters"/>
+  <module name="gx"/>
+  <module name="kitPx"/>
+  <module name="workbench"/>
+</import>
+<content>
+<ScrollPane>
+
+  <CanvasPane name="content" viewSize="1000.0,550.0" valign="top">
+
+    <SaveButton layout="890.0,510.0,100.0,30.0" image="module://icons/x16/save.png">
+      <WsAnnotation name="wsAnnotation" value="14,14,8"/>
+    </SaveButton>
+
+    <Label layout="70.0,10.0,530.0,325.0" background="white"/>
+
+    <Label layout="70.0,90.0,91.0,38.0" font="bold 14.0pt Microsoft YaHei" foreground="white" background="#666699">
+      <ValueBinding ord="station:|slot:/GH/areaName/area1">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="70.0,130.0,91.0,38.0" font="bold 14.0pt Microsoft YaHei" foreground="white" background="#666699">
+      <ValueBinding ord="station:|slot:/GH/areaName/area2">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="165.0,10.0,430.0,38.0" text="&#x5167;&#x5faa;&#x74b0;&#x6247;&#x901a;&#x98a8;&#x6563;&#x71b1;" font="bold 22.0pt Microsoft JhengHei" foreground="white" background="#8dafb1"/>
+
+    <Label layout="70.0,170.0,91.0,38.0" font="bold 14.0pt Microsoft YaHei" foreground="white" background="#666699">
+      <ValueBinding ord="station:|slot:/GH/areaName/area3">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="70.0,210.0,91.0,38.0" font="bold 14.0pt Microsoft YaHei" foreground="white" background="#666699">
+      <ValueBinding ord="station:|slot:/GH/areaName/area4">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="70.0,251.0,91.0,38.0" font="bold 14.0pt Microsoft YaHei" foreground="white" background="#666699">
+      <ValueBinding ord="station:|slot:/GH/areaName/area5">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="70.0,291.0,91.0,38.0" font="bold 14.0pt Microsoft YaHei" foreground="white" background="#666699">
+      <ValueBinding ord="station:|slot:/GH/areaName/area6">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="272.0,90.0,120.0,38.0" text="&#x3000;&#x3000;&#x3000; &#x3000;&#x3000;%" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="165.0,50.0,105.0,38.0" text="&#x65e5;&#x9593;&#x9810;&#x671f;&#x6eab;&#x5ea6;" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#a39b86"/>
+
+    <Label layout="272.0,50.0,120.0,38.0" text="&#x65e5;&#x9593;&#x555f;&#x52d5;&#x767e;&#x5206;&#x6bd4;" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#a39b86"/>
+
+    <Label layout="165.0,90.0,105.0,38.0" text="&#x3000;&#x3000;&#x3000; &#x3000;&#x2103;" font="14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <Label layout="165.0,130.0,105.0,38.0" text="&#x3000;&#x3000;&#x3000; &#x3000;&#x2103;" font="14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <Label layout="165.0,170.0,105.0,38.0" text="&#x3000;&#x3000;&#x3000; &#x3000;&#x2103;" font="14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <Label layout="165.0,210.0,105.0,38.0" text="&#x3000;&#x3000;&#x3000; &#x3000;&#x2103;" font="14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <Label layout="165.0,251.0,105.0,38.0" text="&#x3000;&#x3000;&#x3000; &#x3000;&#x2103;" font="14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <Label layout="165.0,291.0,105.0,38.0" text="&#x3000;&#x3000;&#x3000; &#x3000;&#x2103;" font="14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <Label layout="395.0,50.0,102.0,38.0" text="&#x65e5;&#x9593;&#x555f;&#x52d5;&#x6eab;&#x5ea6;" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#a39b86"/>
+
+    <Label layout="395.0,90.0,102.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/JACE01/points/Area1_SolE_Temp/out/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="500.0,90.0,95.0,38.0" text="&#x3000;&#x3000;&#x3000; &#x3000;&#x2103;" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="500.0,50.0,95.0,38.0" text="&#x6eab;&#x5ea6;&#x4e0d;&#x611f;&#x5e36;" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#a39b86"/>
+
+    <GenericFieldEditor layout="185.0,98.0,50.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area1/CoolingSolSelectorDay/TempLimit/val/value"/>
+    </GenericFieldEditor>
+
+    <Label layout="272.0,130.0,120.0,38.0" text="&#x3000;&#x3000;&#x3000; &#x3000;&#x3000;%" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="272.0,170.0,120.0,38.0" text="&#x3000;&#x3000;&#x3000; &#x3000;&#x3000;%" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="272.0,210.0,120.0,38.0" text="&#x3000;&#x3000;&#x3000; &#x3000;&#x3000;%" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="272.0,250.0,120.0,38.0" text="&#x3000;&#x3000;&#x3000; &#x3000;&#x3000;%" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="272.0,291.0,120.0,38.0" text="&#x3000;&#x3000;&#x3000; &#x3000;&#x3000;%" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <GenericFieldEditor layout="295.0,98.0,60.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area1/CoolingSolSelectorDay/SolE_Percent/val/value"/>
+    </GenericFieldEditor>
+
+    <Label layout="500.0,130.0,95.0,38.0" text="&#x3000;&#x3000;&#x3000; &#x3000;&#x2103;" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="500.0,170.0,95.0,38.0" text="&#x3000;&#x3000;&#x3000; &#x3000;&#x2103;" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="500.0,210.0,95.0,38.0" text="&#x3000;&#x3000;&#x3000; &#x3000;&#x2103;" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="500.0,250.0,95.0,38.0" text="&#x3000;&#x3000;&#x3000; &#x3000;&#x2103;" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="500.0,290.0,95.0,38.0" text="&#x3000;&#x3000;&#x3000; &#x3000;&#x2103;" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <GenericFieldEditor layout="525.0,98.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area1/CoolingSolSelectorDay/SolE_Gap/val/value"/>
+    </GenericFieldEditor>
+
+    <Label layout="462.0,100.0,30.0,20.0" text="&#x2103;" font="14.0pt Microsoft YaHei"/>
+
+    <Label layout="395.0,130.0,102.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/JACE01/points/Area2_SolD_Temp/out/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="462.0,140.0,30.0,20.0" text="&#x2103;" font="14.0pt Microsoft YaHei"/>
+
+    <Label layout="395.0,170.0,102.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/JACE01/points/Area3_SolD_Temp/out/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="462.0,180.0,30.0,20.0" text="&#x2103;" font="14.0pt Microsoft YaHei"/>
+
+    <Label layout="395.0,210.0,102.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/JACE01/points/Area4_SolD_Temp/out/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="462.0,220.0,30.0,20.0" text="&#x2103;" font="14.0pt Microsoft YaHei"/>
+
+    <Label layout="395.0,250.0,102.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/JACE01/points/Area5_SolD_Temp/out/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="461.0,260.0,30.0,20.0" text="&#x2103;" font="14.0pt Microsoft YaHei"/>
+
+    <Label layout="395.0,290.0,102.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/JACE01/points/Area6_SolD_Temp/out/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="461.0,300.0,30.0,20.0" text="&#x2103;" font="14.0pt Microsoft YaHei"/>
+
+    <Label layout="602.0,90.0,120.0,38.0" text="&#x3000;&#x3000;&#x3000; &#x3000;&#x3000;%" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="602.0,50.0,120.0,38.0" text="&#x65e5;&#x9593;&#x555f;&#x52d5;&#x767e;&#x5206;&#x6bd4;" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#a39b86"/>
+
+    <Label layout="725.0,50.0,102.0,38.0" text="&#x65e5;&#x9593;&#x555f;&#x52d5;&#x6eab;&#x5ea6;" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#a39b86"/>
+
+    <Label layout="725.0,90.0,102.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/JACE01/points/Area1_SolH_Temp/out/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="830.0,90.0,95.0,38.0" text="&#x3000;&#x3000;&#x3000; &#x3000;&#x2103;" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="830.0,50.0,95.0,38.0" text="&#x6eab;&#x5ea6;&#x4e0d;&#x611f;&#x5e36;" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#a39b86"/>
+
+    <Label layout="602.0,130.0,120.0,38.0" text="&#x3000;&#x3000;&#x3000; &#x3000;&#x3000;%" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="602.0,170.0,120.0,38.0" text="&#x3000;&#x3000;&#x3000; &#x3000;&#x3000;%" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="602.0,210.0,120.0,38.0" text="&#x3000;&#x3000;&#x3000; &#x3000;&#x3000;%" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="602.0,250.0,120.0,38.0" text="&#x3000;&#x3000;&#x3000; &#x3000;&#x3000;%" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="602.0,291.0,120.0,38.0" text="&#x3000;&#x3000;&#x3000; &#x3000;&#x3000;%" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <GenericFieldEditor layout="625.0,98.0,60.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area1/CoolingSolSelectorDay/SolH_Percent/val/value"/>
+    </GenericFieldEditor>
+
+    <Label layout="830.0,130.0,95.0,38.0" text="&#x3000;&#x3000;&#x3000; &#x3000;&#x2103;" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="830.0,170.0,95.0,38.0" text="&#x3000;&#x3000;&#x3000; &#x3000;&#x2103;" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="830.0,210.0,95.0,38.0" text="&#x3000;&#x3000;&#x3000; &#x3000;&#x2103;" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="830.0,250.0,95.0,38.0" text="&#x3000;&#x3000;&#x3000; &#x3000;&#x2103;" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="830.0,290.0,95.0,38.0" text="&#x3000;&#x3000;&#x3000; &#x3000;&#x2103;" font="14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <GenericFieldEditor layout="855.0,98.0,40.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/area1/CoolingSolSelectorDay/SolH_Gap/val/value"/>
+    </GenericFieldEditor>
+
+    <Label layout="792.0,100.0,30.0,20.0" text="&#x2103;" font="14.0pt Microsoft YaHei"/>
+
+    <Label layout="725.0,130.0,102.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/JACE01/points/Area2_SolD_Temp/out/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="792.0,140.0,30.0,20.0" text="&#x2103;" font="14.0pt Microsoft YaHei"/>
+
+    <Label layout="725.0,170.0,102.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/JACE01/points/Area3_SolD_Temp/out/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="792.0,180.0,30.0,20.0" text="&#x2103;" font="14.0pt Microsoft YaHei"/>
+
+    <Label layout="725.0,210.0,102.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/JACE01/points/Area4_SolD_Temp/out/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="792.0,220.0,30.0,20.0" text="&#x2103;" font="14.0pt Microsoft YaHei"/>
+
+    <Label layout="725.0,250.0,102.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/JACE01/points/Area5_SolD_Temp/out/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="791.0,260.0,30.0,20.0" text="&#x2103;" font="14.0pt Microsoft YaHei"/>
+
+    <Label layout="725.0,290.0,102.0,38.0" font="14.0pt Microsoft YaHei" background="#b4b4b6">
+      <ValueBinding ord="station:|slot:/Drivers/NiagaraNetwork/JACE01/points/Area6_SolD_Temp/out/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="791.0,300.0,30.0,20.0" text="&#x2103;" font="14.0pt Microsoft YaHei"/>
+
+    <Label layout="602.0,10.0,325.0,38.0" text="&#x5169;&#x5074;&#x901a;&#x98a8;(&#x5074;&#x6372;)" font="bold 22.0pt Microsoft JhengHei" foreground="white" background="#8dafb1"/>
+
+    <ImageButton layout="0.0,240.0,50.0,50.0" image="file:^GreenHouse/image/Button_Left.png" buttonStyle="none">
+      <ValueBinding hyperlink="file:^GreenHouse/px/b/Control_S_2_main.px"/>
+      <WsAnnotation name="wsAnnotation" value="10,10,8"/>
+    </ImageButton>
+
+  </CanvasPane>
+
+</ScrollPane>
+</content>
+</px>

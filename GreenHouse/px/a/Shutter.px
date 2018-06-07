@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="converters"/>
+  <module name="gx"/>
+  <module name="kitPx"/>
+</import>
+<content>
+<ScrollPane>
+
+  <CanvasPane name="content" viewSize="200.0,160.0">
+
+    <Label layout="0.0,25.0,200.0,135.0" background="#ffffc0"/>
+
+    <Label layout="0.0,0.0,200.0,30.0" image="file:^GreenHouse/image/Common/YE.png" font="bold 15.0pt Microsoft JhengHei" foreground="black"/>
+
+    <Label layout="0.0,0.0,200.0,30.0" text="&#x5074;&#x6372;" font="bold 18.0pt Microsoft JhengHei" foreground="black"/>
+
+    <Label layout="8.0,40.0,90.0,42.0" text="&#x958b;&#x95dc;&#x72c0;&#x614b;:" font="bold 15.0pt Microsoft JhengHei" foreground="black"/>
+
+    <Label layout="120.0,45.0,30.0,30.0">
+      <ValueBinding ord="station:|slot:/GH/area$(area)/Shutter/valControl/out/value">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^GreenHouse/image/icon/G.png"/>
+          <Image name="falseValue" value="file:^GreenHouse/image/icon/R.png"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Label>
+
+    <ImageButton layout="5.0,120.0,60.0,30.0" text="&#x624b;&#x52d5;&#x958b;&#x555f;">
+      <ActionBinding ord="station:|slot:/GH/area$(area)/Shutter/emergencyActive/fireVoidAction" widgetEvent="actionPerformed"/>
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+    </ImageButton>
+
+    <ImageButton layout="71.0,120.0,60.0,30.0" text="&#x624b;&#x52d5;&#x95dc;&#x9589;">
+      <ActionBinding ord="station:|slot:/GH/area$(area)/Shutter/emergencyInactive/fireVoidAction" widgetEvent="actionPerformed"/>
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+    </ImageButton>
+
+    <ImageButton layout="135.0,120.0,60.0,30.0" text="&#x7cfb;&#x7d71;&#x63a7;&#x5236;">
+      <ActionBinding ord="station:|slot:/GH/area$(area)/Shutter/emergencyAuto/fireVoidAction" widgetEvent="actionPerformed"/>
+      <WsAnnotation name="wsAnnotation" value="6,6,8"/>
+    </ImageButton>
+
+    <Label layout="8.0,75.0,90.0,42.0" text="&#x4eba;&#x5de5;&#x63a7;&#x5236;:" font="bold 15.0pt Microsoft JhengHei" foreground="black"/>
+
+    <Label layout="120.0,80.0,30.0,30.0">
+      <ValueBinding ord="station:|slot:/GH/area$(area)/Shutter/ControlStatus/overridden/value">
+        <IBooleanToSimple name="image">
+          <Image name="trueValue" value="file:^GreenHouse/image/icon/G.png"/>
+          <Image name="falseValue" value="file:^GreenHouse/image/icon/R.png"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </Label>
+
+  </CanvasPane>
+
+</ScrollPane>
+</content>
+</px>

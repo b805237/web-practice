@@ -1,0 +1,34 @@
+華加彩 1360*765
+
+/////////////////////////////
+
+桃園地院(每區塊間隔5)
+
+PX 長寬 1200*765
+
+topbar 1200*80
+	topbar icon 100*60 共12個
+
+sidebar 1200*60
+	sidebar icon 99(100)*25
+
+px 1200*125(120)
+
+
+home body 1200*560(PX高度550)
+
+body 1200*500
+
+
+alarm 1200*12(or 120) 位置在640
+
+
+
+
+80+5+550+5=640(home body)
+80+60+500(body)
+
+頁面會分為
+1.body html+alarm PX 1200*495 + 1200*120 中間間隔 5
+2.body px(include alarm PX) 1200*620
+3.home+alarm PX

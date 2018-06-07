@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="converters"/>
+  <module name="gx"/>
+  <module name="kitPx"/>
+</import>
+<content>
+<ScrollPane>
+
+  <CanvasPane name="content" viewSize="1360.0,765.0" valign="top">
+
+    <PxInclude layout="0.0,15.0,1360.0,80.0" ord="file:^GreenHouse/px/TopBar.px" variables="Select=s:b"/>
+
+    <PxInclude layout="1180.0,100.0,180.0,580.0" ord="file:^GreenHouse/px/Right.px"/>
+
+    <PxInclude layout="0.0,100.0,140.0,60.0" ord="file:^GreenHouse/px/TopBar2.px"/>
+
+    <PxInclude layout="195.0,100.0,250.0,25.0" ord="file:^GreenHouse/px/a/Topbar.px" variables="Select=s:a"/>
+
+    <Label layout="240.0,165.0,935.0,375.0" image="file:^GreenHouse/image/Control_935x375.jpg"/>
+
+    <Label layout="5.0,550.0,230.0,130.0" background="black"/>
+
+    <Label layout="240.0,550.0,230.0,130.0" background="black"/>
+
+    <Label layout="475.0,550.0,230.0,130.0" background="black"/>
+
+    <Label layout="710.0,550.0,230.0,130.0" background="black"/>
+
+    <Label layout="946.0,550.0,230.0,130.0" background="black"/>
+
+    <Label layout="5.0,550.0,227.0,127.0" background="#1e6e8c"/>
+
+    <Label layout="240.0,550.0,227.0,127.0" background="#1e6e8c"/>
+
+    <Label layout="475.0,550.0,227.0,127.0" background="#1e6e8c"/>
+
+    <Label layout="945.0,550.0,227.0,127.0" background="#1e6e8c"/>
+
+    <Label layout="710.0,550.0,227.0,127.0" background="#1e6e8c"/>
+
+    <Label layout="5.0,550.0,227.0,30.0" text="&#x5929;&#x7a97;" font="bold 18.0pt Microsoft JhengHei" foreground="white" background="#999943"/>
+
+    <Label layout="240.0,550.0,227.0,30.0" text="&#x906e;&#x852d;&#x7db2;" font="bold 18.0pt Microsoft JhengHei" foreground="white" background="#999943"/>
+
+    <Label layout="475.0,550.0,227.0,30.0" text="&#x5faa;&#x74b0;&#x98a8;&#x6247;" font="bold 18.0pt Microsoft JhengHei" foreground="white" background="#999943"/>
+
+    <Label layout="945.0,550.0,227.0,30.0" text="&#x6c34;&#x7246;&#x6cf5;&#x6d66;" font="bold 18.0pt Microsoft JhengHei" foreground="white" background="#999943"/>
+
+    <Label layout="710.0,550.0,227.0,30.0" text="&#x5674;&#x9727;" font="bold 18.0pt Microsoft JhengHei" foreground="white" background="#999943"/>
+
+    <Label layout="15.0,575.0,215.0,30.0" text="&#x958b;&#x555f;&#x72c0;&#x614b;&#xff1a;" font="bold 14.0pt SansSerif" foreground="white" halign="left"/>
+
+    <Label layout="250.0,575.0,215.0,30.0" text="&#x958b;&#x555f;&#x72c0;&#x614b;&#xff1a;" font="bold 14.0pt SansSerif" foreground="white" halign="left"/>
+
+    <Label layout="485.0,575.0,215.0,30.0" text="&#x958b;&#x555f;&#x72c0;&#x614b;&#xff1a;" font="bold 14.0pt SansSerif" foreground="white" halign="left"/>
+
+    <Label layout="720.0,575.0,215.0,30.0" text="&#x958b;&#x555f;&#x72c0;&#x614b;&#xff1a;" font="bold 14.0pt SansSerif" foreground="white" halign="left"/>
+
+    <Label layout="5.0,165.0,230.0,378.0" background="black"/>
+
+    <Label layout="5.0,165.0,227.0,375.0" background="#1e6e8c"/>
+
+    <Label layout="5.0,165.0,227.0,30.0" text="&#x6eab;&#x5ba4;&#x74b0;&#x5883;" font="bold 18.0pt Microsoft JhengHei" foreground="white" background="#999943"/>
+
+    <BoundLabel layout="110.0,200.0,38.0,26.0" text="623" font="bold 16.0pt Microsoft JhengHei" foreground="white" textToIconAlign="center"/>
+
+    <Label layout="30.0,203.0,70.0,20.0" text="&#x5ba4;&#x5916;&#x7167;&#x5ea6;" font="bold 16.0pt Microsoft JhengHei" foreground="white" halign="left" textIconGap="15.0"/>
+
+    <BoundLabel layout="170.0,203.0,30.0,20.0" text="lux" font="bold 16.0pt Microsoft JhengHei" foreground="white" halign="left" textToIconAlign="center"/>
+
+    <BoundLabel layout="110.0,228.0,38.0,28.0" font="bold 16.0pt Microsoft JhengHei" foreground="white" textToIconAlign="center">
+      <ValueBinding ord="station:|slot:/Home/GreenHouse/TempSensor1/Humidity/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </BoundLabel>
+
+    <BoundLabel layout="170.0,231.0,30.0,20.0" text="%" font="bold 16.0pt Microsoft JhengHei" foreground="white" halign="left" textToIconAlign="center"/>
+
+    <Label layout="30.0,231.0,70.0,20.0" text="&#x5ba4;&#x5916;&#x6fd5;&#x5ea6;" font="bold 16.0pt Microsoft JhengHei" foreground="white" halign="left" textIconGap="15.0"/>
+
+    <BoundLabel layout="170.0,258.0,30.0,20.0" text="&#xb0;C" font="bold 16.0pt Microsoft JhengHei" foreground="white" halign="left" textToIconAlign="center"/>
+
+    <Label layout="30.0,258.0,70.0,20.0" text="&#x5ba4;&#x5916;&#x6eab;&#x5ea6;" font="bold 16.0pt Microsoft JhengHei" foreground="white" halign="left" textIconGap="15.0"/>
+
+    <BoundLabel layout="110.0,255.0,38.0,28.0" font="bold 16.0pt Microsoft JhengHei" foreground="white" textToIconAlign="center">
+      <ValueBinding ord="station:|slot:/Home/GreenHouse/TempSensor1/Temp/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </BoundLabel>
+
+    <BoundLabel layout="170.0,283.0,30.0,20.0" text="%" font="bold 16.0pt Microsoft JhengHei" foreground="white" halign="left" textToIconAlign="center"/>
+
+    <Label layout="30.0,284.5,70.0,20.0" text="&#x5ba4;&#x5167;&#x6fd5;&#x5ea6;" font="bold 16.0pt Microsoft JhengHei" foreground="white" halign="left" textIconGap="15.0"/>
+
+    <BoundLabel layout="170.0,310.0,30.0,20.0" text="&#xb0;C" font="bold 16.0pt Microsoft JhengHei" foreground="white" halign="left" textToIconAlign="center"/>
+
+    <Label layout="30.0,310.0,70.0,20.0" text="&#x5ba4;&#x5167;&#x6eab;&#x5ea6;" font="bold 16.0pt Microsoft JhengHei" foreground="white" halign="left" textIconGap="15.0"/>
+
+    <Label layout="955.0,575.0,215.0,30.0" text="&#x958b;&#x555f;&#x72c0;&#x614b;&#xff1a;" font="bold 14.0pt SansSerif" foreground="white" halign="left"/>
+
+    <BoundLabel layout="110.0,280.0,38.0,28.0" font="bold 16.0pt Microsoft JhengHei" foreground="white" textToIconAlign="center">
+      <ValueBinding ord="station:|slot:/Home/GreenHouse/Strawberry/TempSensor/Humidity_indoor/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </BoundLabel>
+
+    <BoundLabel layout="110.0,307.0,38.0,28.0" font="bold 16.0pt Microsoft JhengHei" foreground="white" textToIconAlign="center">
+      <ValueBinding ord="station:|slot:/Home/GreenHouse/Strawberry/TempSensor/Temp_indoor/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </BoundLabel>
+
+    <BoundLabel layout="320.0,575.0,41.0,30.0" font="bold 16.0pt Microsoft JhengHei" foreground="white" textToIconAlign="center">
+      <ValueBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Net/Status/value">
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value="&#x958b;&#x555f;"/>
+          <String name="falseValue" value="&#x95dc;&#x9589;"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </BoundLabel>
+
+    <BoundLabel layout="85.0,575.0,41.0,30.0" font="bold 16.0pt Microsoft JhengHei" foreground="white" textToIconAlign="center">
+      <ValueBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Window/Status/value">
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value="&#x958b;&#x555f;"/>
+          <String name="falseValue" value="&#x95dc;&#x9589;"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </BoundLabel>
+
+    <BoundLabel layout="555.0,575.0,41.0,30.0" font="bold 16.0pt Microsoft JhengHei" foreground="white" textToIconAlign="center">
+      <ValueBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Fan/Status/value">
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value="&#x958b;&#x555f;"/>
+          <String name="falseValue" value="&#x95dc;&#x9589;"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </BoundLabel>
+
+    <BoundLabel layout="790.0,575.0,41.0,30.0" font="bold 16.0pt Microsoft JhengHei" foreground="white" textToIconAlign="center">
+      <ValueBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Spray/Status/value">
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value="&#x958b;&#x555f;"/>
+          <String name="falseValue" value="&#x95dc;&#x9589;"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </BoundLabel>
+
+    <BoundLabel layout="1025.0,575.0,41.0,30.0" font="bold 16.0pt Microsoft JhengHei" foreground="white" textToIconAlign="center">
+      <ValueBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Spray/Status/value">
+        <IBooleanToSimple name="text">
+          <String name="trueValue" value="&#x958b;&#x555f;"/>
+          <String name="falseValue" value="&#x95dc;&#x9589;"/>
+        </IBooleanToSimple>
+      </ValueBinding>
+    </BoundLabel>
+
+    <Label layout="30.0,335.0,70.0,20.0" text="&#x63a7;&#x5236;&#x72c0;&#x614b;" font="bold 16.0pt Microsoft JhengHei" foreground="white" halign="left" textIconGap="15.0"/>
+
+    <Label layout="110.0,335.0,70.0,20.0" text="&#x7cfb;&#x7d71;&#x81ea;&#x52d5;" font="bold 16.0pt Microsoft JhengHei" foreground="white" halign="left" textIconGap="15.0"/>
+
+    <Label layout="45.0,167.0,35.0,25.0" image="file:^GreenHouse/image/icon/humidity.png"/>
+
+    <Label layout="720.0,595.0,215.0,30.0" text="&#x65e5;&#x9593;&#x6eab;&#x5ea6;&#xff1a;&#x3000;&#x3000;&#x3000;&#xb0;C" font="bold 14.0pt SansSerif" foreground="white" halign="left"/>
+
+    <BoundLabel layout="790.0,595.0,41.0,30.0" font="bold 16.0pt Microsoft JhengHei" foreground="white" textToIconAlign="center">
+      <ValueBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Spray/SetTemp_AM/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </BoundLabel>
+
+    <Label layout="720.0,634.0,215.0,30.0" text="&#x65e5;&#x9593;&#x6fd5;&#x5ea6;&#xff1a;&#x3000;&#x3000; " font="bold 14.0pt SansSerif" foreground="white" halign="left"/>
+
+    <BoundLabel layout="790.0,634.0,41.0,30.0" font="bold 16.0pt Microsoft JhengHei" foreground="white" textToIconAlign="center">
+      <ValueBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Spray/SetHumidity_AM/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </BoundLabel>
+
+    <Label layout="955.0,595.0,215.0,30.0" text="&#x65e5;&#x9593;&#x6eab;&#x5ea6;&#xff1a;&#x3000;&#x3000;&#x3000;&#xb0;C" font="bold 14.0pt SansSerif" foreground="white" halign="left"/>
+
+    <Label layout="955.0,615.0,215.0,30.0" text="&#x591c;&#x9593;&#x6eab;&#x5ea6;&#xff1a;&#x3000;&#x3000;&#x3000;&#xb0;C" font="bold 14.0pt SansSerif" foreground="white" halign="left"/>
+
+    <Label layout="955.0,635.0,215.0,30.0" text="&#x6eab;&#x5ea6;&#x4e0d;&#x611f;&#x5e36;&#xff1a;" font="bold 14.0pt SansSerif" foreground="white" halign="left"/>
+
+    <BoundLabel layout="1025.0,595.0,41.0,30.0" font="bold 16.0pt Microsoft JhengHei" foreground="white" textToIconAlign="center">
+      <ValueBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Spray/SetTemp_AM/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </BoundLabel>
+
+    <BoundLabel layout="1025.0,615.0,41.0,30.0" font="bold 16.0pt Microsoft JhengHei" foreground="white" textToIconAlign="center">
+      <ValueBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Spray/SetTemp_PM/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </BoundLabel>
+
+    <BoundLabel layout="1035.0,635.0,41.0,30.0" font="bold 16.0pt Microsoft JhengHei" foreground="white" textToIconAlign="center">
+      <ValueBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Spray/delay_Temp/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </BoundLabel>
+
+    <Label layout="720.0,615.0,215.0,30.0" text="&#x591c;&#x9593;&#x6eab;&#x5ea6;&#xff1a;&#x3000;&#x3000;&#x3000;&#xb0;C" font="bold 14.0pt SansSerif" foreground="white" halign="left"/>
+
+    <BoundLabel layout="790.0,615.0,41.0,30.0" font="bold 16.0pt Microsoft JhengHei" foreground="white" textToIconAlign="center">
+      <ValueBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Spray/SetTemp_PM/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </BoundLabel>
+
+    <Label layout="720.0,653.0,215.0,30.0" text="&#x591c;&#x9593;&#x6fd5;&#x5ea6;&#xff1a;&#x3000;&#x3000; " font="bold 14.0pt SansSerif" foreground="white" halign="left"/>
+
+    <BoundLabel layout="790.0,653.0,41.0,30.0" font="bold 16.0pt Microsoft JhengHei" foreground="white" textToIconAlign="center">
+      <ValueBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Spray/SetHumidity_PM/value">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </BoundLabel>
+
+    <Label layout="485.0,595.0,215.0,30.0" text="On&#x9593;&#x6b47;&#x8a08;&#x6642;&#xff1a; &#x3000;&#x3000;&#x79d2;" font="bold 14.0pt SansSerif" foreground="white" halign="left"/>
+
+    <BoundLabel layout="570.0,595.0,40.0,30.0" font="bold 16.0pt Microsoft JhengHei" foreground="white" textToIconAlign="center">
+      <ValueBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Fan/Work_Time">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </BoundLabel>
+
+    <Label layout="485.0,615.0,215.0,30.0" text="Off&#x9593;&#x6b47;&#x8a08;&#x6642;&#xff1a;&#x3000;&#x3000; &#x79d2;" font="bold 14.0pt SansSerif" foreground="white" halign="left"/>
+
+    <BoundLabel layout="570.0,615.0,41.0,30.0" font="bold 16.0pt Microsoft JhengHei" foreground="white" textToIconAlign="center">
+      <ValueBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Fan/Delay_Time">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </BoundLabel>
+
+    <Label layout="250.0,595.0,215.0,30.0" text="&#x65e5;&#x9593;&#x6eab;&#x5ea6;&#xff1a;&#x3000;&#x3000;&#x3000; &#xb0;C" font="bold 14.0pt SansSerif" foreground="white" halign="left"/>
+
+    <BoundLabel layout="320.0,595.0,50.0,30.0" font="bold 16.0pt Microsoft JhengHei" foreground="white" textToIconAlign="center">
+      <ValueBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Net/SetTemp_AM">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </BoundLabel>
+
+    <BoundLabel layout="320.0,615.0,50.0,30.0" font="bold 16.0pt Microsoft JhengHei" foreground="white" textToIconAlign="center">
+      <ValueBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Net/SetTemp_PM">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </BoundLabel>
+
+    <Label layout="250.0,615.0,215.0,30.0" text="&#x591c;&#x9593;&#x6eab;&#x5ea6;&#xff1a;&#x3000;&#x3000;&#x3000; &#xb0;C" font="bold 14.0pt SansSerif" foreground="white" halign="left"/>
+
+    <Label layout="14.0,595.0,215.0,30.0" text="&#x65e5;&#x9593;&#x6eab;&#x5ea6;&#xff1a;&#x3000;&#x3000; &#x3000;&#xb0;C" font="bold 14.0pt SansSerif" foreground="white" halign="left"/>
+
+    <BoundLabel layout="84.0,595.0,46.0,30.0" font="bold 16.0pt Microsoft JhengHei" foreground="white" textToIconAlign="center">
+      <ValueBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Window/SetTemp_AM">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </BoundLabel>
+
+    <BoundLabel layout="84.0,615.0,46.0,30.0" font="bold 16.0pt Microsoft JhengHei" foreground="white" textToIconAlign="center">
+      <ValueBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Window/SetTemp_PM">
+        <ObjectToString name="text"/>
+      </ValueBinding>
+    </BoundLabel>
+
+    <Label layout="14.0,615.0,215.0,30.0" text="&#x591c;&#x9593;&#x6eab;&#x5ea6;&#xff1a;&#x3000;&#x3000;&#x3000; &#xb0;C" font="bold 14.0pt SansSerif" foreground="white" halign="left"/>
+
+  </CanvasPane>
+
+</ScrollPane>
+</content>
+</px>

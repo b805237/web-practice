@@ -1,0 +1,538 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>歷史資料查詢</title>
+	<!-- CSS -->
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+		<!-- Top bar -->
+		<link href="css/bar.css" rel="stylesheet" type="text/css">
+		<!-- 樣式 tems-->
+		<link href="css/main-tems.css" rel="stylesheet" type="text/css">
+		<!-- jqGrid 擴充外掛 -->
+	    <link href="css/jquery/ui.jqgrid.css" rel="stylesheet" type="text/css">
+		<!-- timepicker 日期選取工具 -->
+	    <link href="css/Timepicker/jquery-ui.css" rel="stylesheet">
+	    <link href="css/Timepicker/jquery-ui-timepicker-addon.css" rel="stylesheet">
+	    <!-- 樹狀清單工具 -->
+		<link href="css/fancytree/skin-win8/ui.fancytree.css" rel="stylesheet">
+	<!-- End CSS -->
+	<!-- CSS SET -->
+	<style type="text/css">
+	/* 調整container畫面大小、位置 */
+	.container{
+		padding-right: 0px;
+ 		padding-left: 0px;
+		width:1150;
+		float:left;
+	}
+	/* 調整panel區塊間距 */
+	.panel {
+	  margin-top: 5px;
+	  margin-bottom: 5px;
+	}
+	/* 調整jqgrid文字顏色 */
+	.ui-th-column, .ui-jqgrid .ui-jqgrid-htable th.ui-th-column {color: #1e6e8c;}
+	.ui-jqgrid tr.jqgrow td {color: #1e6e8c;}
+	.ui-jqgrid .ui-pg-selbox {color: #1e6e8c;}
+	/* 調整container1頂部間距 */
+	#container1{padding-top: 10px;}
+	/* 設備選擇外框設定 */
+	/*
+	ul { height: 150px; overflow: auto; width: 250px; border: 1px solid #E7E7E7;}
+	ul { list-style-type: none; margin: 0; padding: 0; overflow-x: auto; }
+	*/
+	/* Table設置 */
+	#table-board .titleMax {
+		border: 2px solid white;
+		text-align: center;
+		width: 120px;
+		height: 30px;
+		color:#ffffff;
+		background-color: #ff5023;
+		font-size: 16px;
+		font-weight:bold;
+	}
+	#table-board .titleMin {
+		border: 2px solid white;
+		text-align: center;
+		width: 120px;
+		height: 30px;
+		color:#ffffff;
+		background-color: #ffbf00;
+		font-size: 16px;
+		font-weight:bold;
+	}
+	#table-board .titleSum {
+		border: 2px solid white;
+		text-align: center;
+		width: 120px;
+		height: 30px;
+		color:#ffffff;
+		background-color: #1e6e8c;
+		font-size: 16px;
+		font-weight:bold;
+	}
+	#table-board .dataRow {
+		border: 2px solid white;
+		text-align: left;
+		width: 180px;
+		height: 30px;
+		color:#1e6e8c;
+		background-color: #bed2dc;
+		font-size: 16px;
+		padding-left: 10px;
+		font-weight:bold;
+	}
+	/* 提示框滾動軸設置 */
+	#scrolltooltip { 
+		height: 400px;
+		overflow-y: scroll; 
+	}
+	//
+	
+	.col-md-12{
+		position: absolute;
+	}
+	</style>
+	<!-- End CSS SET -->
+	<!-- Javascript -->
+		<!-- bajaScript model -->
+		<script type="text/javascript" src="js/bajascript/bs.min.js"></script>
+		<!-- Niagara資料讀取 -->
+		<script type="text/javascript" src="js/NiagaraDataJson.js"></script>
+		<!-- Slot處理函數 -->
+		<script type="text/javascript" src="js/SlotData.js"></script>
+		<!-- jQuery 套件工具 -->
+		<script src="js/jquery/jquery.js"></script>
+		<!-- jQuery 套件工具 螢幕畫面鎖定(遮罩)套件-->
+		<script src="js/jquery/jquery.blockUI.js"></script>
+		<!-- Web相關函數 -->
+		<script type="text/javascript" src="js/WebTool.js"></script>
+		<!-- 樹狀清單工具 -->
+		<script src="js/fancytree/jquery-ui.custom.js"></script>
+		<script src="js/fancytree/jquery.fancytree.js"></script>
+		<!-- 時間相關函數 -->
+		<script type="text/javascript" src="js/TimeTool.js"></script>
+		<!-- echarts 圖表 -->
+		<script type="text/javascript" src="js/echarts/echarts.js"></script>
+		<script type="text/javascript" src="js/echarts/macarons.js"></script>
+		<!-- 圖表設定與函數 -->
+		<script type="text/javascript" src="js/GraphChart.js"></script>
+		<!-- jqGrid 擴充外掛 -->
+	    <script src="js/jquery/jquery.jqGrid.js"></script>
+	    <script src="js/jquery/grid.locale-tw.js"></script>
+		<!-- 表格設定 -->
+    	<script type="text/javascript" src="js/TableGrid.js"></script>
+		<!-- timepicker 日期選取工具 -->
+		<script src="js/Timepicker/jquery-ui.js"></script>
+		<script src="js/Timepicker/jquery-ui-timepicker-addon.js"></script>
+		<script src="js/Timepicker/jquery-ui-sliderAccess.js"></script>
+	    <!-- timepicker 日曆 -->
+	    <script type="text/javascript" src="js/CalendarTool.js"></script>
+		<!-- servlet套件 -->
+	    <script src="js/temsUtil.js"></script>
+	    <script src="js/ServletTool.js"></script>
+	    <!-- Excel套件 -->
+		<script type="text/javascript" src="js/js-xlsx/Blob.js"></script>
+		<script type="text/javascript" src="js/js-xlsx/FileSaver.js"></script>
+	    <script type="text/javascript" src="js/js-xlsx/shim.min.js"></script>
+		<script type="text/javascript" src="js/js-xlsx/xlsx.full.min.js"></script>
+
+	<!-- End Javascript -->
+	<!-- CSS SET -->
+	<style type="text/css">
+	/* 調整container畫面大小、位置 */
+	.container{
+		padding-right: 0px;
+ 		padding-left: 0px;
+		width:1000;
+		float:left;
+	}
+	/* 調整panel區塊間距 */
+	.panel {
+	  margin-top: 5px;
+	  margin-bottom: 5px;
+	}
+
+	/* 調整jqgrid文字顏色 */
+	.ui-th-column, .ui-jqgrid .ui-jqgrid-htable th.ui-th-column {color: #1e6e8c;}
+	.ui-jqgrid tr.jqgrow td {color: #1e6e8c;}
+	.ui-jqgrid .ui-pg-selbox {color: #1e6e8c;}
+	/* 調整container1頂部間距 */
+	#container1{padding-top: 10px;}
+	/* 設備選擇外框設定 */
+	/*
+	ul { height: 150px; overflow: auto; width: 250px; border: 1px solid #E7E7E7;}
+	ul { list-style-type: none; margin: 0; padding: 0; overflow-x: auto; }
+	*/
+	/* Table設置 */
+	#table-board .titleMax {
+		border: 2px solid white;
+		text-align: center;
+		width: 120px;
+		height: 30px;
+		color:#ffffff;
+		background-color: #ff5023;
+		font-size: 16px;
+		font-weight:bold;
+	}
+	#table-board .titleMin {
+		border: 2px solid white;
+		text-align: center;
+		width: 120px;
+		height: 30px;
+		color:#ffffff;
+		background-color: #ffbf00;
+		font-size: 16px;
+		font-weight:bold;
+	}
+	#table-board .titleSum {
+		border: 2px solid white;
+		text-align: center;
+		width: 120px;
+		height: 30px;
+		color:#ffffff;
+		background-color: #1e6e8c;
+		font-size: 16px;
+		font-weight:bold;
+	}
+	#table-board .dataRow {
+		border: 2px solid white;
+		text-align: left;
+		width: 180px;
+		height: 30px;
+		color:#1e6e8c;
+		background-color: #bed2dc;
+		font-size: 16px;
+		padding-left: 10px;
+		font-weight:bold;
+	}
+	/* 提示框滾動軸設置 */
+	#scrolltooltip { 
+		height: 400px;
+		overflow-y: scroll; 
+	}
+	//
+	</style>
+	<!-- Javascript Code-->
+	<script type="text/javascript">
+	var dataNameSelect;
+	var chartStatus = 1;
+	// 預設參數-日期
+	var today = new Date();
+	var tomorrow = new Date(today);
+	tomorrow.setDate(tomorrow.getDate()+1);
+	var DefaultDate = new Array();
+	//
+	DefaultDate["today"] = today.customFormat("#YYYY#/#MM#/#DD# 00:00:00");
+	DefaultDate["tomorrow"] = tomorrow.customFormat("#YYYY#/#MM#/#DD# 00:00:00");
+	
+	// 表格匯出設定
+	var excelSystem = new Object();
+	excelSystem.fileName = "export";
+	excelSystem.data = new Object();
+	
+	function Init(){
+		baja.start();
+		buttonSet();
+		areaClick("area1");
+		document.getElementById("myTimeSection1").value = DefaultDate["today"];
+		document.getElementById("myTimeSection2").value = DefaultDate["tomorrow"];
+		// 查詢資料
+		RawdataChartSet();
+	}
+	function buttonSet(){
+		var areaName1 = "station:|slot:/GH/RightBar/a_areaName/out/value";
+		var areaName2 = "station:|slot:/GH/RightBar/b_areaName/out/value";
+		var areaName3 = "station:|slot:/GH/RightBar/c_areaName/out/value";
+		var areaName4 = "station:|slot:/GH/RightBar/d_areaName/out/value";
+		var areaName5 = "station:|slot:/GH/RightBar/e_areaName/out/value";
+		var areaName6 = "station:|slot:/GH/RightBar/f_areaName/out/value";
+		var button01 = new Object();
+		button01.htmlid ="area1";
+		var button02 = new Object();
+		button02.htmlid ="area2";
+		var button03 = new Object();
+		button03.htmlid ="area3";
+		var button04 = new Object();
+		button04.htmlid ="area4";
+		var button05 = new Object();
+		button05.htmlid ="area5";
+		var button06 = new Object();
+		button06.htmlid ="area6";
+		NiagaraSlotData(areaName1,"SlotData2HTML",button01);
+		NiagaraSlotData(areaName2,"SlotData2HTML",button02);
+		NiagaraSlotData(areaName3,"SlotData2HTML",button03);
+		NiagaraSlotData(areaName4,"SlotData2HTML",button04);
+		NiagaraSlotData(areaName5,"SlotData2HTML",button05);
+		NiagaraSlotData(areaName6,"SlotData2HTML",button06);
+	}
+	function areaClick(areaType)
+	{	// button切換
+		buttonSwitch("areaButton",areaType,"","btnSelect");
+		document.getElementById("areaType").value = areaType;
+	}
+	function dateFormat(myDate){
+		return myDate.substring(0,10)+myDate.substring(11,17);
+	}
+	
+	// 資料匯出為Excel
+	function dataToExcel(type, fn, dl) 
+	{	// 
+		var wb = XLSX.utils.book_new();
+		
+
+		for (i=0;i<excelSystem.data.length;i++)
+		{	
+			var tempArray = new Array();
+			for(j=0;j<excelSystem.data[i].length;j++)
+			{
+				var tempObject = new Object();
+				var device = "";
+				for(var key in excelSystem.data[i][j])
+				{
+					var keyName = excelSystem.titleName[key];
+					var keyValue = excelSystem.data[i][j][key];
+					// 資料代碼(device)轉換
+					if ( key == "device" )
+					{
+						device = keyValue;
+						keyValue = excelSystem.sheetName[i];
+					}
+					if ( key == "value" )
+					{
+						switch (device)
+						{
+							case "Area1_CirculatingFan":
+							case "Area1_Spritz":
+							case "Area1_FCU":
+							case "Area2_CirculatingFan":
+							case "Area2_Spritz":
+							case "Area2_FCU":
+								if ( keyValue == "true" )
+									keyValue = "on";
+								else if ( keyValue == "false" )
+									keyValue = "off";
+								break;
+							case "Area1_DormerWindowL":
+							case "Area1_DormerWindowR":
+							case "Area1_TempNet":
+							case "Area1_Obscure":
+							case "Area1_WindowOutside":
+							case "Area1_WindowInside":
+							case "Area2_DormerWindowL":
+							case "Area2_DormerWindowR":
+							case "Area2_TempNet":
+							case "Area2_Obscure":
+							case "Area2_WindowOutside":
+							case "Area2_WindowInside":
+								if ( keyValue == "1" )
+									keyValue = "on";
+								else if ( keyValue == "2" )
+									keyValue = "off";
+								break;
+						}
+					}
+					tempObject[keyName] = keyValue;
+				}
+				tempArray.push(tempObject);
+			}
+			
+			var ws = XLSX.utils.json_to_sheet(tempArray);
+			XLSX.utils.book_append_sheet(wb, ws, excelSystem.sheetName[i]);
+		}
+		return dl ?
+		XLSX.write(wb, {bookType:type, bookSST:true, type: 'base64'}) :
+		XLSX.writeFile(wb, fn || (excelSystem.fileName + '.' + (type || 'xlsx')));
+	}
+	
+	function RawdataChartSet(){
+		var areaType
+		var areaSelect = document.getElementById("areaType").value;
+		switch(areaSelect){
+			case "area1" :
+				areaType = "Strawberry";
+				break;
+			case "area2" :
+				areaType = "Flower";
+				break;
+		}
+		// 區域選擇
+		if(areaType == "Strawberry")
+		{	// 草莓園
+			var sensorName =	["草莓園1號感測器溫度","草莓園1號感測器濕度","草莓園2號感測器溫度","草莓園2號感測器濕度"
+								,"草莓園4號感測器溫度","草莓園4號感測器濕度","草莓園5號感測器溫度","草莓園5號感測器濕度"
+								,"室外溫度","室外濕度"];
+			var deviceName =	["內循環扇","左側天窗","右側天窗","噴霧","內保溫網","內遮光網","空調"];
+			
+			var dataName = sensorName.concat(deviceName);
+			var dataGrid =	["0-1","0-2","0-1","0-2","0-1","0-2","0-1","0-2","0-1","0-2"
+							,"1","2","3","4","5","6","7"];
+							
+			var mainSQL =	["SELECT fk_device_id as device,rawdata_date as date,CAST(JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.inTempatrue') as decimal(18,2)) as value FROM tems_rawdata_list where fk_device_id = 'Area1_2in1Sensor1'"
+							,"SELECT fk_device_id as device,rawdata_date as date,CAST(JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.inHumidity') as decimal(18,2)) as value FROM tems_rawdata_list where fk_device_id = 'Area1_2in1Sensor1'"
+							,"SELECT fk_device_id as device,rawdata_date as date,CAST(JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.inTempatrue') as decimal(18,2)) as value FROM tems_rawdata_list where fk_device_id = 'Area1_2in1Sensor2'"
+							,"SELECT fk_device_id as device,rawdata_date as date,CAST(JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.inHumidity') as decimal(18,2)) as value FROM tems_rawdata_list where fk_device_id = 'Area1_2in1Sensor2'"
+							,"SELECT fk_device_id as device,rawdata_date as date,CAST(JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.inTempatrue') as decimal(18,2)) as value FROM tems_rawdata_list where fk_device_id = 'Area1_2in1Sensor4'"
+							,"SELECT fk_device_id as device,rawdata_date as date,CAST(JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.inHumidity') as decimal(18,2)) as value FROM tems_rawdata_list where fk_device_id = 'Area1_2in1Sensor4'"
+							,"SELECT fk_device_id as device,rawdata_date as date,CAST(JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.inTempatrue') as decimal(18,2)) as value FROM tems_rawdata_list where fk_device_id = 'Area1_2in1Sensor5'"
+							,"SELECT fk_device_id as device,rawdata_date as date,CAST(JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.inHumidity') as decimal(18,2)) as value FROM tems_rawdata_list where fk_device_id = 'Area1_2in1Sensor5'"
+							,"SELECT fk_device_id as device,rawdata_date as date,CAST(JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.inTempatrue') as decimal(18,2)) as value FROM tems_rawdata_list where fk_device_id = 'Area1_2in1Sensor3'"
+							,"SELECT fk_device_id as device,rawdata_date as date,CAST(JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.inHumidity') as decimal(18,2)) as value FROM tems_rawdata_list where fk_device_id = 'Area1_2in1Sensor3'"
+							,"SELECT fk_device_id as device,rawdata_date as date,(JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.val')) as value FROM tems_rawdata_list where fk_device_id = 'Area1_CirculatingFan'"
+							,"SELECT fk_device_id as device,rawdata_date as date,(JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.twinStatus')) as value FROM tems_rawdata_list where fk_device_id = 'Area1_DormerWindowL' and ( JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.twinStatus') = '1' or JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.twinStatus') = '2' )"
+							,"SELECT fk_device_id as device,rawdata_date as date,(JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.twinStatus')) as value FROM tems_rawdata_list where fk_device_id = 'Area1_DormerWindowR' and ( JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.twinStatus') = '1' or JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.twinStatus') = '2' )"
+							,"SELECT fk_device_id as device,rawdata_date as date,(JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.val')) as value FROM tems_rawdata_list where fk_device_id = 'Area1_Spritz'"
+							,"SELECT fk_device_id as device,rawdata_date as date,(JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.twinStatus')) as value FROM tems_rawdata_list where fk_device_id = 'Area1_TempNet' and ( JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.twinStatus') = '1' or JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.twinStatus') = '2' )"
+							,"SELECT fk_device_id as device,rawdata_date as date,(JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.twinStatus')) as value FROM tems_rawdata_list where fk_device_id = 'Area1_Obscure' and ( JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.twinStatus') = '1' or JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.twinStatus') = '2' )"
+							//,"SELECT fk_device_id as device,rawdata_date as date,(JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.twinStatus')) as value FROM tems_rawdata_list where fk_device_id = 'Area1_WindowOutside' and ( JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.twinStatus') = '1' or JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.twinStatus') = '2' )"
+							//,"SELECT fk_device_id as device,rawdata_date as date,(JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.twinStatus')) as value FROM tems_rawdata_list where fk_device_id = 'Area1_WindowInside' and ( JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.twinStatus') = '1' or JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.twinStatus') = '2' )"
+							,"SELECT fk_device_id as device,rawdata_date as date,(JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.m1RunningStatus')) as value FROM tems_rawdata_list where fk_device_id = 'Area1_FCU'"];
+		}
+		else if(areaType == "Flower")
+		{	// 花卉區
+			var sensorName =	["花卉區溫度","花卉區濕度","室外溫度","室外濕度"];
+			var deviceName =	["內循環扇","左側天窗","右側天窗","噴霧","內保溫網","內遮光網","空調"];
+			
+			var dataName = sensorName.concat(deviceName);
+			var dataGrid =	["0-1","0-2","0-1","0-2"
+							,"1","2","3","4","5","6","7"];
+							
+			var mainSQL =	["SELECT fk_device_id as device,rawdata_date as date,CAST(JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.inTempatrue') as decimal(18,2)) as value FROM tems_rawdata_list where fk_device_id = 'Area2_2in1Sensor1'"
+							,"SELECT fk_device_id as device,rawdata_date as date,CAST(JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.inHumidity') as decimal(18,2)) as value FROM tems_rawdata_list where fk_device_id = 'Area2_2in1Sensor1'"
+							,"SELECT fk_device_id as device,rawdata_date as date,CAST(JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.inTempatrue') as decimal(18,2)) as value FROM tems_rawdata_list where fk_device_id = 'Area1_2in1Sensor3'"
+							,"SELECT fk_device_id as device,rawdata_date as date,CAST(JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.inHumidity') as decimal(18,2)) as value FROM tems_rawdata_list where fk_device_id = 'Area1_2in1Sensor3'"
+							,"SELECT fk_device_id as device,rawdata_date as date,(JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.val')) as value FROM tems_rawdata_list where fk_device_id = 'Area1_CirculatingFan'"
+							,"SELECT fk_device_id as device,rawdata_date as date,(JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.twinStatus')) as value FROM tems_rawdata_list where fk_device_id = 'Area2_DormerWindowL' and ( JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.twinStatus') = '1' or JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.twinStatus') = '2' )"
+							,"SELECT fk_device_id as device,rawdata_date as date,(JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.twinStatus')) as value FROM tems_rawdata_list where fk_device_id = 'Area2_DormerWindowR' and ( JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.twinStatus') = '1' or JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.twinStatus') = '2' )"
+							,"SELECT fk_device_id as device,rawdata_date as date,(JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.val')) as value FROM tems_rawdata_list where fk_device_id = 'Area2_Spritz'"
+							,"SELECT fk_device_id as device,rawdata_date as date,(JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.twinStatus')) as value FROM tems_rawdata_list where fk_device_id = 'Area2_TempNet' and ( JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.twinStatus') = '1' or JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.twinStatus') = '2' )"
+							,"SELECT fk_device_id as device,rawdata_date as date,(JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.twinStatus')) as value FROM tems_rawdata_list where fk_device_id = 'Area2_Obscure' and ( JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.twinStatus') = '1' or JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.twinStatus') = '2' )"
+							//,"SELECT fk_device_id as device,rawdata_date as date,(JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.twinStatus')) as value FROM tems_rawdata_list where fk_device_id = 'Area2_WindowOutside' and ( JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.twinStatus') = '1' or JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.twinStatus') = '2' )"
+							//,"SELECT fk_device_id as device,rawdata_date as date,(JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.twinStatus')) as value FROM tems_rawdata_list where fk_device_id = 'Area2_WindowInside' and ( JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.twinStatus') = '1' or JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.twinStatus') = '2' )"
+							,"SELECT fk_device_id as device,rawdata_date as date,(JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.m1RunningStatus')) as value FROM tems_rawdata_list where fk_device_id = 'Area2_FCU'"];
+		}
+		else
+		{
+			alert("請選擇區域！");
+			chartStatus = 0;
+		}
+		
+		if(chartStatus != 0)
+		{
+			var myDateSelect1 = document.getElementById("myTimeSection1").value;
+			var myDateSelect2 = document.getElementById("myTimeSection2").value;
+			var title = document.getElementById(areaSelect).innerHTML+" 歷史曲線("+ myDateSelect1+")～("+myDateSelect2+")";
+			var set = new Object();
+			set.xName = "時間";
+			set.xMin = myDateSelect1;
+			set.xMax = myDateSelect2;
+			set.yName1 = "溫度";
+			set.yUnit1 = "℃";
+			set.yName2 = "濕度";
+			set.yUnit2 = "%";
+			set.title = title;
+			set.statusDevice = deviceName.length;
+			// 表格匯出設定
+			excelSystem.sheetName = dataName;
+			excelSystem.titleName = {"device":"資料名稱","date":"日期","value":"數值"};
+			
+			var system = new Object();
+			system.id = "chart";
+			system.set = LineHistoryChartSet(dataName,dataGrid,deviceName,set);
+			// 資料查詢
+			
+			var orderSQL = " ORDER BY rawdata_date";
+			var timeSQL = " AND rawdata_date between '"+myDateSelect1+"' and '"+myDateSelect2+"'";
+			
+			var DBSql = new Array();
+			for(var i=0 ; i<mainSQL.length ; i++)
+			{
+				if ( mainSQL[i] != "" )
+				{
+					var sql = mainSQL[i] +timeSQL+" "+orderSQL;
+					DBSql.push(sql);
+				}
+			}
+			var cmdSQL = document.getElementById("cmd");
+				cmdSQL.value = JSON.stringify(DBSql);
+				postForJSON('/tatungService/dbCmd/queryMultiData', formToMap('formSQL'), function (ret) 
+				{	
+					getMultiData(ret,function (status,msg,data)
+					{	// 清除畫面
+						cleanPage();
+						if ( status == 1 )
+						{	
+							//alert(JSON.stringify(data));
+							// 成功，呈現畫面
+							LineHistoryChart(data,system);
+							// 呈現Excel按鈕
+							excelSystem.data = data;
+							document.getElementById('excel').style.display = "";
+						}
+						else
+						{	// 失敗
+							//alert("歷史資料查詢，建置失敗\n原因："+msg);
+						}
+					});
+			});
+		}
+	}
+	// 清空表格與圖表內容
+	function cleanPage()
+	{
+		document.getElementById("div1").innerHTML = "<div class='col-md-12' id='chart' style='width:980px;height:500px;'>";
+	}
+	</script>
+	<!-- END Javascript Code-->
+</head>
+<body onload="Init();" onunload="baja.stop();">
+<div class="container">
+	<!-- MAIN -->
+	<div id="wrapper">
+		<div class="main">
+			<!-- MAIN CONTENT -->
+			<div class="main-content">
+			<div class="container-fluid">
+					<div class="row">
+						<div class='col-md-12' >
+							<div class="panel">
+								<input type="text" id="myTimeSection1" 	name="mySection1" value="2018/04/15 10:00:00" size="20" width="100" readonly>
+								
+								至
+								<input type="text" id="myTimeSection2" 	name="mySection2" value="2018/04/15 11:00:00" size="20" readonly>
+								&nbsp
+								&nbsp
+								<button id = "area1" name="areaButton" type="button" onclick="areaClick(this.id)" value=""></button>
+								<button id = "area2" name="areaButton" type="button" onclick="areaClick(this.id)" value=""></button>
+								<button id = "area3" name="areaButton" type="button" onclick="areaClick(this.id)" value=""></button>
+								<button id = "area4" name="areaButton" type="button" onclick="areaClick(this.id)" value=""></button>
+								<button id = "area5" name="areaButton" type="button" onclick="areaClick(this.id)" value=""></button>
+								<button id = "area6" name="areaButton" type="button" onclick="areaClick(this.id)" value=""></button>
+								<input type = "hidden" id = "areaType" value = "">
+								&nbsp
+								&nbsp
+								<button onclick="RawdataChartSet();">查詢</button>
+								<button id = "excel" value="" onclick="dataToExcel('xlsx');" style= "display:none;">EXCEL</button>
+							</div>
+						</div>
+						<div id = "div1">
+							<div class='col-md-12' id="chart" style="width:980px;height:500px;">
+						</div>
+					</div>
+					</div>
+			</div>
+
+			</div>
+			<!-- SQL語法 -->
+			<form id="formSQL">
+				<input type = "hidden" id="cmd" name="cmd" value = "">
+			</form>
+		</div>
+		<!-- END MAIN -->
+	</div>
+</div>
+</body>
+</html>

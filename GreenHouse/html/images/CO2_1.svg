@@ -1,0 +1,18 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+
+ <g>
+  <title>總減碳量</title>
+  <rect fill="#fff" id="canvas_background" height="182" width="182" y="-1" x="-1"/>
+  <g id="svg_2" display="none">
+   <rect id="svg_3" fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>總減碳量</title>
+  <image xlink:href="data:image/gif;base64,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" id="svg_1" height="98.999997" width="122.999999" y="40.500004" x="28.5"/>
+  <text style="cursor: move;" id="svg_4" font-weight="bold" xml:space="preserve" text-anchor="start" font-family="Microsoft JhengHei UI" font-size="24" y="33.1875" x="42" stroke-width="0" stroke="#000" fill="#1e6e8c">總減碳量</text>
+  <text id="CO2Tree" font-weight="bold" xml:space="preserve" text-anchor="start" font-family="Microsoft JhengHei UI" font-size="24" y="164.398438" x="30" stroke-width="0" stroke="#000" fill="#1e6e8c">0</text>
+  <text font-weight="bold" xml:space="preserve" text-anchor="start" font-family="Microsoft JhengHei UI" font-size="24" y="164.398438" x="120" stroke-width="0" stroke="#000" fill="#1e6e8c">棵樹</text>
+ </g>
+</svg>

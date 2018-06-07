@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="converters"/>
+  <module name="gx"/>
+</import>
+<content>
+<ScrollPane>
+
+  <CanvasPane name="content" viewSize="1000.0,550.0" valign="top">
+
+    <PxInclude layout="5.0,40.0,990.0,30.0" ord="file:^GreenHouse/px/g/ListContent.px" variables="Style=s:a|area=s:$31|device=s:CirculatingFan"/>
+
+    <Label layout="5.0,5.0,130.0,29.0" text="&#x5340;&#x57df;" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#a39b86"/>
+
+    <Label layout="140.0,5.0,135.0,29.0" text="&#x8a2d;&#x5099;&#x540d;&#x7a31;" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#a39b86"/>
+
+    <Label layout="280.0,5.0,165.0,29.0" text="&#x901a;&#x8a0a;&#x72c0;&#x614b;" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#a39b86"/>
+
+    <Label layout="450.0,5.0,305.0,29.0" text="&#x4e0a;&#x6b21;&#x8b80;&#x8868;&#x6642;&#x9593;" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#a39b86"/>
+
+    <Label layout="760.0,5.0,235.0,29.0" text="&#x901a;&#x8a0a;&#x8a2d;&#x5b9a;" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#a39b86"/>
+
+    <PxInclude layout="5.0,75.0,990.0,30.0" ord="file:^GreenHouse/px/g/ListContent.px" variables="Style=s:b|area=s:$31|device=s:DormerWindowL"/>
+
+    <PxInclude layout="5.0,110.0,990.0,30.0" ord="file:^GreenHouse/px/g/ListContent.px" variables="Style=s:a|area=s:$31|device=s:DormerWindowR"/>
+
+    <PxInclude layout="5.0,145.0,990.0,30.0" ord="file:^GreenHouse/px/g/ListContent_FCU.px" variables="Style=s:b|area=s:$31|device=s:Area1_FCU"/>
+
+    <PxInclude layout="5.0,180.0,990.0,30.0" ord="file:^GreenHouse/px/g/ListContent.px" variables="Style=s:b|area=s:$31|device=s:TempNet"/>
+
+    <PxInclude layout="5.0,215.0,990.0,30.0" ord="file:^GreenHouse/px/g/ListContent.px" variables="Style=s:a|area=s:$31|device=s:Obscure"/>
+
+    <PxInclude layout="5.0,250.0,990.0,30.0" ord="file:^GreenHouse/px/g/ListContent.px" variables="Style=s:a|area=s:$31|device=s:WindowInside"/>
+
+    <PxInclude layout="5.0,285.0,990.0,30.0" ord="file:^GreenHouse/px/g/ListContent.px" variables="Style=s:a|area=s:$31|device=s:WindowOutside"/>
+
+    <PxInclude layout="5.0,320.0,990.0,30.0" ord="file:^GreenHouse/px/g/ListContent.px" variables="Style=s:a|area=s:$31|device=s:Spritz"/>
+
+    <PxInclude layout="5.0,355.0,990.0,30.0" ord="file:^GreenHouse/px/g/ListContent.px" variables="Style=s:b|area=s:$32|device=s:DormerWindowL"/>
+
+    <PxInclude layout="5.0,390.0,990.0,30.0" ord="file:^GreenHouse/px/g/ListContent.px" variables="Style=s:a|area=s:$32|device=s:DormerWindowR"/>
+
+    <PxInclude layout="5.0,425.0,990.0,30.0" ord="file:^GreenHouse/px/g/ListContent.px" variables="Style=s:b|area=s:$32|device=s:TempNet"/>
+
+    <PxInclude layout="5.0,460.0,990.0,30.0" ord="file:^GreenHouse/px/g/ListContent.px" variables="Style=s:a|area=s:$32|device=s:Obscure"/>
+
+  </CanvasPane>
+
+</ScrollPane>
+</content>
+</px>

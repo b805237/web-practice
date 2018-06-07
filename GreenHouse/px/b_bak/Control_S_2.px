@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="converters"/>
+  <module name="gx"/>
+  <module name="kitPx"/>
+  <module name="workbench"/>
+</import>
+<content>
+<ScrollPane>
+
+  <CanvasPane name="content" viewSize="1360.0,765.0" valign="top">
+
+    <PxInclude layout="0.0,15.0,1360.0,80.0" ord="file:^GreenHouse/px/TopBar.px" variables="Select=s:c"/>
+
+    <PxInclude layout="1180.0,100.0,180.0,580.0" ord="file:^GreenHouse/px/Right.px"/>
+
+    <PxInclude layout="0.0,100.0,170.0,60.0" ord="file:^GreenHouse/px/TopBar2.px"/>
+
+    <PxInclude layout="195.0,100.0,875.0,25.0" ord="file:^GreenHouse/px/b/Topbar2.px" variables="Select=s:b|Type=s:S"/>
+
+    <Label layout="110.0,170.0,531.0,158.0" background="white"/>
+
+    <Label layout="313.0,250.0,108.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#bed2dc"/>
+
+    <Label layout="423.0,250.0,108.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#bed2dc"/>
+
+    <Label layout="533.0,250.0,108.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#bed2dc"/>
+
+    <Label layout="533.0,290.0,108.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#bed2dc"/>
+
+    <Label layout="423.0,290.0,108.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#bed2dc"/>
+
+    <Label layout="313.0,290.0,108.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#bed2dc"/>
+
+    <Label layout="203.0,290.0,108.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#bed2dc"/>
+
+    <Label layout="203.0,250.0,108.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#bed2dc"/>
+
+    <Label layout="110.0,170.0,531.0,40.0" text="&#x5929;&#x7a97;" font="bold 18.0pt Microsoft YaHei" foreground="white" background="#1e6e8c"/>
+
+    <Label layout="110.0,211.0,91.0,38.0" background="#1e6e8c"/>
+
+    <GenericFieldEditor layout="210.0,258.0,70.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Window/SetTemp_AM"/>
+    </GenericFieldEditor>
+
+    <Label layout="110.0,250.0,91.0,38.0" text="&#x8349;&#x8393;&#x5340;" font="bold 14.0pt Microsoft YaHei" foreground="white" background="#1e6e8c"/>
+
+    <Label layout="203.0,211.0,108.0,38.0" text="&#x65e5;&#x9593;&#x6eab;&#x5ea6;&#x8a2d;&#x5b9a;" font="bold 14.0pt Microsoft YaHei" foreground="white" background="#1e6e8c"/>
+
+    <Label layout="313.0,211.0,108.0,38.0" text="&#x591c;&#x9593;&#x6eab;&#x5ea6;&#x8a2d;&#x5b9a;" font="bold 14.0pt Microsoft YaHei" foreground="white" background="#1e6e8c"/>
+
+    <Label layout="423.0,211.0,108.0,38.0" text="&#x6eab;&#x5ea6;&#x4e0d;&#x611f;&#x5e36;" font="bold 14.0pt Microsoft YaHei" foreground="white" background="#1e6e8c"/>
+
+    <Label layout="110.0,290.0,91.0,38.0" text="&#x82b1;&#x5349;&#x5340;" font="bold 14.0pt Microsoft YaHei" foreground="white" background="#1e6e8c"/>
+
+    <Label layout="533.0,211.0,108.0,38.0" text="&#x81ea;&#x52d5;&#x72c0;&#x614b;" font="bold 14.0pt Microsoft YaHei" foreground="white" background="#1e6e8c"/>
+
+    <Label layout="275.0,258.0,30.0,20.0" text="&#x2103;"/>
+
+    <GenericFieldEditor layout="320.0,258.0,70.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Window/SetTemp_PM"/>
+    </GenericFieldEditor>
+
+    <Label layout="385.0,258.0,30.0,20.0" text="&#x2103;"/>
+
+    <GenericFieldEditor layout="430.0,258.0,70.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Window/DelayTemp"/>
+    </GenericFieldEditor>
+
+    <Label layout="495.0,258.0,30.0,20.0" text="&#x2103;"/>
+
+    <GenericFieldEditor layout="560.0,258.0,70.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Window/System_Control"/>
+    </GenericFieldEditor>
+
+    <Label layout="275.0,298.0,30.0,20.0" text="&#x2103;"/>
+
+    <Label layout="385.0,298.0,30.0,20.0" text="&#x2103;"/>
+
+    <Label layout="495.0,298.0,30.0,20.0" text="&#x2103;"/>
+
+    <Label layout="110.0,340.0,531.0,158.0" background="white"/>
+
+    <Label layout="313.0,420.0,108.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#bed2dc"/>
+
+    <Label layout="423.0,420.0,108.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#bed2dc"/>
+
+    <Label layout="533.0,420.0,108.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#bed2dc"/>
+
+    <Label layout="533.0,460.0,108.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#bed2dc"/>
+
+    <Label layout="423.0,460.0,108.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#bed2dc"/>
+
+    <Label layout="313.0,460.0,108.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#bed2dc"/>
+
+    <Label layout="203.0,460.0,108.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#bed2dc"/>
+
+    <Label layout="203.0,420.0,108.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#bed2dc"/>
+
+    <Label layout="110.0,340.0,531.0,40.0" text="&#x906e;&#x852d;&#x7db2;" font="bold 18.0pt Microsoft YaHei" foreground="white" background="#1e6e8c"/>
+
+    <Label layout="110.0,381.0,91.0,38.0" background="#1e6e8c"/>
+
+    <GenericFieldEditor layout="210.0,428.0,70.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Net/SetTemp_AM"/>
+    </GenericFieldEditor>
+
+    <Label layout="110.0,420.0,91.0,38.0" text="&#x8349;&#x8393;&#x5340;" font="bold 14.0pt Microsoft YaHei" foreground="white" background="#1e6e8c"/>
+
+    <Label layout="203.0,381.0,108.0,38.0" text="&#x4f4e;&#x5149;&#x8a2d;&#x5b9a;" font="bold 14.0pt Microsoft YaHei" foreground="white" background="#1e6e8c"/>
+
+    <Label layout="313.0,381.0,108.0,38.0" text="&#x9ad8;&#x5149;&#x8a2d;&#x5b9a;" font="bold 14.0pt Microsoft YaHei" foreground="white" background="#1e6e8c"/>
+
+    <Label layout="423.0,381.0,108.0,38.0" text="&#x4e0d;&#x611f;&#x5e36;" font="bold 14.0pt Microsoft YaHei" foreground="white" background="#1e6e8c"/>
+
+    <Label layout="110.0,460.0,91.0,38.0" text="&#x82b1;&#x5349;&#x5340;" font="bold 14.0pt Microsoft YaHei" foreground="white" background="#1e6e8c"/>
+
+    <Label layout="533.0,381.0,108.0,38.0" text="&#x81ea;&#x52d5;&#x72c0;&#x614b;" font="bold 14.0pt Microsoft YaHei" foreground="white" background="#1e6e8c"/>
+
+    <GenericFieldEditor layout="320.0,428.0,70.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Net/SetTemp_PM"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="430.0,428.0,70.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Net/DelayTemp"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="560.0,428.0,70.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Net/System_Control"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="210.0,298.0,70.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Flower/Window/SetTemp_AM"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="320.0,298.0,70.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Flower/Window/SetTemp_PM"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="430.0,298.0,70.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Flower/Window/DelayTemp"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="560.0,298.0,70.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Flower/Window/System_Control"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="560.0,468.0,70.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Net/System_Control"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="430.0,468.0,70.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Flower/Net/DelayTemp"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="320.0,468.0,70.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Flower/Net/SetTemp_PM"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="210.0,468.0,70.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Flower/Net/SetTemp_AM"/>
+    </GenericFieldEditor>
+
+    <Label layout="110.0,510.0,531.0,158.0" background="white"/>
+
+    <Label layout="313.0,590.0,108.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#bed2dc"/>
+
+    <Label layout="423.0,590.0,108.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#bed2dc"/>
+
+    <Label layout="533.0,590.0,108.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#bed2dc"/>
+
+    <Label layout="533.0,630.0,108.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#bed2dc"/>
+
+    <Label layout="423.0,630.0,108.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#bed2dc"/>
+
+    <Label layout="313.0,630.0,108.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#bed2dc"/>
+
+    <Label layout="203.0,630.0,108.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#bed2dc"/>
+
+    <Label layout="203.0,590.0,108.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#bed2dc"/>
+
+    <Label layout="110.0,510.0,531.0,40.0" text="&#x4fdd;&#x6eab;&#x7db2;" font="bold 18.0pt Microsoft YaHei" foreground="white" background="#1e6e8c"/>
+
+    <Label layout="110.0,551.0,91.0,38.0" background="#1e6e8c"/>
+
+    <GenericFieldEditor layout="210.0,598.0,70.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Net/SetTemp_AM"/>
+    </GenericFieldEditor>
+
+    <Label layout="110.0,590.0,91.0,38.0" text="&#x8349;&#x8393;&#x5340;" font="bold 14.0pt Microsoft YaHei" foreground="white" background="#1e6e8c"/>
+
+    <Label layout="203.0,551.0,108.0,38.0" text="&#x65e5;&#x9593;&#x6eab;&#x5ea6;&#x8a2d;&#x5b9a;" font="bold 14.0pt Microsoft YaHei" foreground="white" background="#1e6e8c"/>
+
+    <Label layout="313.0,551.0,108.0,38.0" text="&#x591c;&#x9593;&#x6eab;&#x5ea6;&#x8a2d;&#x5b9a;" font="bold 14.0pt Microsoft YaHei" foreground="white" background="#1e6e8c"/>
+
+    <Label layout="423.0,551.0,108.0,38.0" text="&#x6eab;&#x5ea6;&#x4e0d;&#x611f;&#x5e36;" font="bold 14.0pt Microsoft YaHei" foreground="white" background="#1e6e8c"/>
+
+    <Label layout="110.0,630.0,91.0,38.0" text="&#x82b1;&#x5349;&#x5340;" font="bold 14.0pt Microsoft YaHei" foreground="white" background="#1e6e8c"/>
+
+    <Label layout="533.0,551.0,108.0,38.0" text="&#x81ea;&#x52d5;&#x72c0;&#x614b;" font="bold 14.0pt Microsoft YaHei" foreground="white" background="#1e6e8c"/>
+
+    <Label layout="275.0,598.0,30.0,20.0" text="&#x2103;"/>
+
+    <GenericFieldEditor layout="320.0,598.0,70.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Net/SetTemp_PM"/>
+    </GenericFieldEditor>
+
+    <Label layout="385.0,598.0,30.0,20.0" text="&#x2103;"/>
+
+    <GenericFieldEditor layout="430.0,598.0,70.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Net/DelayTemp"/>
+    </GenericFieldEditor>
+
+    <Label layout="495.0,598.0,30.0,20.0" text="&#x2103;"/>
+
+    <GenericFieldEditor layout="560.0,598.0,70.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Net/System_Control"/>
+    </GenericFieldEditor>
+
+    <Label layout="275.0,638.0,30.0,20.0" text="&#x2103;"/>
+
+    <Label layout="385.0,638.0,30.0,20.0" text="&#x2103;"/>
+
+    <Label layout="495.0,638.0,30.0,20.0" text="&#x2103;"/>
+
+    <GenericFieldEditor layout="560.0,638.0,70.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Strawberry/Net/System_Control"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="430.0,638.0,70.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Flower/Net/DelayTemp"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="320.0,638.0,70.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Flower/Net/SetTemp_PM"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="210.0,638.0,70.0,20.0">
+      <WbFieldEditorBinding ord="station:|slot:/Home/GreenHouse/Flower/Net/SetTemp_AM"/>
+    </GenericFieldEditor>
+
+    <SaveButton layout="970.0,638.0,100.0,30.0" image="module://icons/x16/save.png">
+      <WsAnnotation name="wsAnnotation" value="14,14,8"/>
+    </SaveButton>
+
+  </CanvasPane>
+
+</ScrollPane>
+</content>
+</px>

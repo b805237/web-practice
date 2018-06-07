@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="gx"/>
+</import>
+<content>
+<ScrollPane>
+
+  <CanvasPane name="content" viewSize="1000.0,550.0" valign="top">
+
+    <Label layout="200.0,95.0,800.0,355.0" image="file:^GreenHouse/image/Control_935x375.jpg" halign="left" valign="top"/>
+
+    <Label layout="0.0,195.0,200.0,31.0" text="&#x3000;&#x3000;&#x53f3;&#x5074; &#x5929;&#x7a97;" font="bold 20.0pt Microsoft JhengHei" foreground="#404040" background="white" halign="left"/>
+
+    <Label layout="0.0,227.0,200.0,31.0" text="&#x3000;&#x3000;&#x5de6;&#x5074; &#x5929;&#x7a97;" font="bold 20.0pt Microsoft JhengHei" foreground="#404040" background="white" halign="left"/>
+
+    <Label layout="0.0,323.0,200.0,31.0" text="&#x3000;&#x3000;&#x5167;&#x906e;&#x5149;&#x7db2;" font="bold 20.0pt Microsoft JhengHei" foreground="#404040" background="white" halign="left"/>
+
+    <Label layout="0.0,355.0,200.0,31.0" text="&#x3000;&#x3000;&#x5167;&#x4fdd;&#x6eab;&#x7db2;" font="bold 20.0pt Microsoft JhengHei" foreground="#404040" background="white" halign="left"/>
+
+    <Label layout="0.0,387.0,200.0,31.0" text="&#x3000;&#x3000;&#x5167;&#x5faa;&#x74b0;&#x6247;" font="bold 20.0pt Microsoft JhengHei" foreground="#404040" background="white" halign="left"/>
+
+    <Label layout="0.0,291.0,200.0,31.0" text="&#x3000;&#x3000;&#x5916;&#x5074; &#x5074;&#x7a97;" font="bold 20.0pt Microsoft JhengHei" foreground="#404040" background="white" halign="left"/>
+
+    <Label layout="0.0,67.0,200.0,31.0" text="&#x3000;&#x3000;&#x5074;&#x6372;" font="bold 20.0pt Microsoft JhengHei" foreground="#404040" background="white" halign="left"/>
+
+    <Label layout="0.0,99.0,200.0,31.0" text="&#x3000;&#x3000;&#x5674;&#x9727;" font="bold 20.0pt Microsoft JhengHei" foreground="#404040" background="white" halign="left"/>
+
+    <Label layout="0.0,131.0,200.0,31.0" text="&#x3000;&#x3000;&#x6f86;&#x704c;" font="bold 20.0pt Microsoft JhengHei" foreground="#404040" background="white" halign="left"/>
+
+    <Label layout="0.0,163.0,200.0,31.0" text="&#x3000;&#x3000;&#x6c34;&#x7246;" font="bold 20.0pt Microsoft JhengHei" foreground="#404040" background="white" halign="left"/>
+
+    <Label layout="0.0,419.0,200.0,31.0" text="&#x3000;&#x3000;&#x63db;&#x6c23;&#x98a8;&#x6247;" font="bold 20.0pt Microsoft JhengHei" foreground="#404040" background="white" halign="left"/>
+
+    <Label layout="0.0,483.0,200.0,31.0" text="&#x3000;&#x3000;&#x7a7a;&#x8abf;&#x9001;&#x98a8;&#x6a5f;" font="bold 20.0pt Microsoft JhengHei" foreground="#404040" background="white" halign="left"/>
+
+    <Label layout="0.0,451.0,200.0,31.0" text="&#x3000;&#x3000;&#x51b0;&#x6c34;&#x4e3b;&#x6a5f;" font="bold 20.0pt Microsoft JhengHei" foreground="#404040" background="white" halign="left"/>
+
+    <Label layout="0.0,259.0,200.0,31.0" text="&#x3000;&#x3000;&#x5167;&#x5074; &#x5074;&#x7a97;" font="bold 20.0pt Microsoft JhengHei" foreground="#404040" background="white" halign="left"/>
+
+    <Label layout="0.0,34.0,200.0,31.0" text="&#x3000;&#x3000;&#x6a21;&#x5f0f;&#x8a2d;&#x5b9a;" font="bold 20.0pt Microsoft JhengHei" foreground="#404040" background="white" halign="left"/>
+
+    <Label layout="120.0,70.0,100.0,25.0" text="ON" font="bold 18.0pt Microsoft JhengHei" foreground="lime"/>
+
+    <Label layout="120.0,390.0,100.0,25.0" text="ON" font="bold 18.0pt Microsoft JhengHei" foreground="lime"/>
+
+    <Label layout="120.0,135.0,100.0,25.0" text="OFF" font="bold 18.0pt Microsoft JhengHei" foreground="grey"/>
+
+    <Label layout="120.0,165.0,100.0,25.0" text="Alarm" font="bold 18.0pt Microsoft JhengHei" foreground="#ff8000"/>
+
+    <Label layout="120.0,485.0,100.0,25.0" text="OFF" font="bold 18.0pt Microsoft JhengHei" foreground="grey"/>
+
+    <Label layout="120.0,200.0,100.0,25.0" text="ON" font="bold 18.0pt Microsoft JhengHei" foreground="lime"/>
+
+    <Label layout="120.0,230.0,100.0,25.0" text="ON" font="bold 18.0pt Microsoft JhengHei" foreground="lime"/>
+
+    <Label layout="120.0,260.0,100.0,25.0" text="OFF" font="bold 18.0pt Microsoft JhengHei" foreground="grey"/>
+
+    <Label layout="120.0,295.0,100.0,25.0" text="OFF" font="bold 18.0pt Microsoft JhengHei" foreground="grey"/>
+
+    <Label layout="120.0,100.0,100.0,25.0" text="OFF" font="bold 18.0pt Microsoft JhengHei" foreground="grey"/>
+
+    <Label layout="120.0,325.0,100.0,25.0" text="ON" font="bold 18.0pt Microsoft JhengHei" foreground="lime"/>
+
+    <Label layout="120.0,360.0,100.0,25.0" text="ON" font="bold 18.0pt Microsoft JhengHei" foreground="lime"/>
+
+    <Label layout="120.0,425.0,100.0,25.0" text="OFF" font="bold 18.0pt Microsoft JhengHei" foreground="grey"/>
+
+    <Label layout="120.0,455.0,100.0,25.0" text="OFF" font="bold 18.0pt Microsoft JhengHei" foreground="grey"/>
+
+    <Label layout="120.0,35.0,100.0,25.0" text="&#x65e5;&#x9593;" font="bold 18.0pt Microsoft JhengHei" foreground="lime"/>
+
+    <Label layout="205.0,35.0,100.0,25.0" text="&#x591c;&#x9593;" font="bold 18.0pt Microsoft JhengHei" foreground="grey"/>
+
+    <Label layout="290.0,35.0,100.0,25.0" text="&#x9632;&#x98b1;" font="bold 18.0pt Microsoft JhengHei" foreground="#ff8000"/>
+
+  </CanvasPane>
+
+</ScrollPane>
+</content>
+</px>

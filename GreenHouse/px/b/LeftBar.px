@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="converters"/>
+  <module name="gx"/>
+</import>
+<content>
+<ScrollPane>
+
+  <CanvasPane name="content" viewSize="200.0,550.0">
+
+    <Label layout="0.0,40.0,200.0,30.0" image="file:^GreenHouse/image/common/YE.png">
+      <ValueBinding ord="station:|slot:/GH/Topbar/$(Select)2/out/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="0.0,110.0,200.0,30.0" image="file:^GreenHouse/image/common/YE.png">
+      <ValueBinding ord="station:|slot:/GH/Topbar/$(Select)4/out/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="0.0,75.0,200.0,30.0" image="file:^GreenHouse/image/common/YE.png">
+      <ValueBinding ord="station:|slot:/GH/Topbar/$(Select)3/out/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="0.0,180.0,200.0,30.0" image="file:^GreenHouse/image/common/YE.png">
+      <ValueBinding ord="station:|slot:/GH/Topbar/$(Select)6/out/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="0.0,145.0,200.0,30.0" image="file:^GreenHouse/image/common/YE.png">
+      <ValueBinding ord="station:|slot:/GH/Topbar/$(Select)5/out/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="0.0,5.0,200.0,30.0" image="file:^GreenHouse/image/common/YE.png">
+      <ValueBinding ord="station:|slot:/GH/Topbar/$(Select)1/out/value">
+        <IBooleanToSimple name="visible"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="0.0,5.0,200.0,31.0" font="bold 15.0pt Microsoft JhengHei" foreground="#404040" halign="left">
+      <ValueBinding ord="station:|slot:/GH/areaName/area1" hyperlink="file:^GreenHouse/px/b/Control_S_$(topbar)_main1.px">
+        <ObjectToString name="text" format="&#x3000;%.%"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="0.0,40.0,200.0,31.0" font="bold 15.0pt Microsoft JhengHei" foreground="#404040" halign="left">
+      <ValueBinding ord="station:|slot:/GH/areaName/area2" hyperlink="file:^GreenHouse/px/b/Control_S_$(topbar)_main2.px">
+        <ObjectToString name="text" format="&#x3000;%.%"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="0.0,145.0,200.0,31.0" font="bold 15.0pt Microsoft JhengHei" foreground="#404040" halign="left">
+      <ValueBinding ord="station:|slot:/GH/areaName/area5" hyperlink="file:^GreenHouse/px/b/Control_S_$(topbar)_main5.px">
+        <ObjectToString name="text" format="&#x3000;%.%"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="0.0,180.0,200.0,31.0" font="bold 15.0pt Microsoft JhengHei" foreground="#404040" halign="left">
+      <ValueBinding ord="station:|slot:/GH/areaName/area6" hyperlink="file:^GreenHouse/px/b/Control_S_$(topbar)_main6.px">
+        <ObjectToString name="text" format="&#x3000;%.%"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="0.0,110.0,200.0,31.0" font="bold 15.0pt Microsoft JhengHei" foreground="#404040" halign="left">
+      <ValueBinding ord="station:|slot:/GH/areaName/area4" hyperlink="file:^GreenHouse/px/b/Control_S_$(topbar)_main4.px">
+        <ObjectToString name="text" format="&#x3000;%.%"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="0.0,75.0,200.0,31.0" font="bold 15.0pt Microsoft JhengHei" foreground="#404040" halign="left">
+      <ValueBinding ord="station:|slot:/GH/areaName/area3" hyperlink="file:^GreenHouse/px/b/Control_S_$(topbar)_main3.px">
+        <ObjectToString name="text" format="&#x3000;%.%"/>
+      </ValueBinding>
+    </Label>
+
+    <Label layout="0.0,105.0,10.0,105.0" background="#e6e0d0"/>
+
+    <Label layout="0.0,5.0,10.0,105.0" background="#efefef"/>
+
+    <Label layout="0.0,210.0,10.0,105.0" background="#efefef"/>
+
+    <Label layout="0.0,315.0,10.0,120.0" background="#e6e0d0"/>
+
+    <Label layout="0.0,435.0,10.0,115.0" background="#efefef"/>
+
+  </CanvasPane>
+
+</ScrollPane>
+</content>
+</px>

@@ -1,0 +1,677 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>歷史資料查詢</title>
+	<!-- CSS -->
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+		<!-- Top bar -->
+		<link href="css/bar.css" rel="stylesheet" type="text/css">
+		<!-- 樣式 tems-->
+		<link href="css/main-tems.css" rel="stylesheet" type="text/css">
+		<!-- jqGrid 擴充外掛 -->
+	    <link href="css/jquery/ui.jqgrid.css" rel="stylesheet" type="text/css">
+		<!-- timepicker 日期選取工具 -->
+	    <link href="css/Timepicker/jquery-ui.css" rel="stylesheet">
+	    <link href="css/Timepicker/jquery-ui-timepicker-addon.css" rel="stylesheet">
+	    <!-- 樹狀清單工具 -->
+		<link href="css/fancytree/skin-win8/ui.fancytree.css" rel="stylesheet">
+	<!-- End CSS -->
+	<!-- CSS SET -->
+	<style type="text/css">
+	/* 調整container畫面大小、位置 */
+	.container{
+		padding-right: 0px;
+ 		padding-left: 0px;
+		width:1000;
+		float:left;
+	}
+	/* 調整panel區塊間距 */
+	.panel {
+	  margin-top: 5px;
+	  margin-bottom: 5px;
+	  margin-left: -15px;
+	}
+
+	/* 調整jqgrid文字顏色 */
+	.ui-th-column, .ui-jqgrid .ui-jqgrid-htable th.ui-th-column {color: #1e6e8c;}
+	.ui-jqgrid tr.jqgrow td {color: #1e6e8c;}
+	.ui-jqgrid .ui-pg-selbox {color: #1e6e8c;}
+	/* 調整container1頂部間距 */
+	#container1{padding-top: 10px;}
+	/* 設備選擇外框設定 */
+	/*
+	ul { height: 150px; overflow: auto; width: 250px; border: 1px solid #E7E7E7;}
+	ul { list-style-type: none; margin: 0; padding: 0; overflow-x: auto; }
+	*/
+	/* Table設置 */
+	#table-board .titleMax {
+		border: 2px solid white;
+		text-align: center;
+		width: 120px;
+		height: 30px;
+		color:#ffffff;
+		background-color: #ff5023;
+		font-size: 16px;
+		font-weight:bold;
+	}
+	#table-board .titleMin {
+		border: 2px solid white;
+		text-align: center;
+		width: 120px;
+		height: 30px;
+		color:#ffffff;
+		background-color: #ffbf00;
+		font-size: 16px;
+		font-weight:bold;
+	}
+	#table-board .titleSum {
+		border: 2px solid white;
+		text-align: center;
+		width: 120px;
+		height: 30px;
+		color:#ffffff;
+		background-color: #1e6e8c;
+		font-size: 16px;
+		font-weight:bold;
+	}
+	#table-board .dataRow {
+		border: 2px solid white;
+		text-align: left;
+		width: 180px;
+		height: 30px;
+		color:#1e6e8c;
+		background-color: #bed2dc;
+		font-size: 16px;
+		padding-left: 10px;
+		font-weight:bold;
+	}
+	/* 提示框滾動軸設置 */
+	#scrolltooltip { 
+		height: 400px;
+		overflow-y: scroll; 
+	}
+	//
+	</style>
+	<!-- End CSS SET -->
+	<!-- Javascript -->
+		<!-- jQuery 套件工具 -->
+		<script src="js/jquery/jquery.js"></script>
+		<!-- jQuery 套件工具 螢幕畫面鎖定(遮罩)套件-->
+		<script src="js/jquery/jquery.blockUI.js"></script>
+		<!-- Web相關函數 -->
+		<script type="text/javascript" src="js/WebTool.js"></script>
+		<!-- 樹狀清單工具 -->
+		<script src="js/fancytree/jquery-ui.custom.js"></script>
+		<script src="js/fancytree/jquery.fancytree.js"></script>
+		<!-- 時間相關函數 -->
+		<script type="text/javascript" src="js/TimeTool.js"></script>
+		<!-- echarts 圖表 -->
+		<script type="text/javascript" src="js/echarts/echarts.js"></script>
+		<script type="text/javascript" src="js/echarts/macarons.js"></script>
+		<!-- 圖表設定與函數 -->
+		<script type="text/javascript" src="js/GraphChart.js"></script>
+		<!-- jqGrid 擴充外掛 -->
+	    <script src="js/jquery/jquery.jqGrid.js"></script>
+	    <script src="js/jquery/grid.locale-tw.js"></script>
+		<!-- 表格設定 -->
+    	<script type="text/javascript" src="js/TableGrid.js"></script>
+		<!-- timepicker 日期選取工具 -->
+		<script src="js/Timepicker/jquery-ui.js"></script>
+		<script src="js/Timepicker/jquery-ui-timepicker-addon.js"></script>
+		<script src="js/Timepicker/jquery-ui-sliderAccess.js"></script>
+	    <!-- timepicker 日曆 -->
+	    <script type="text/javascript" src="js/CalendarTool.js"></script>
+		<!-- servlet套件 -->
+	    <script src="js/temsUtil.js"></script>
+	    <script src="js/ServletTool.js"></script>
+		<!-- Data轉CSV -->
+	    <script type="text/javascript" src="js/Data2CSV.js"></script>
+		<!-- Excel套件 -->
+		<script type="text/javascript" src="js/js-xlsx/Blob.js"></script>
+		<script type="text/javascript" src="js/js-xlsx/FileSaver.js"></script>
+	    <script type="text/javascript" src="js/js-xlsx/shim.min.js"></script>
+		<script type="text/javascript" src="js/js-xlsx/xlsx.full.min.js"></script>
+	<!-- End Javascript -->
+	
+	<!-- Javascript Code-->
+	<script type="text/javascript">
+	var DateSection = new Array();
+	DateSection["day"] = "myDaySection";
+	DateSection["month"] = "myMonthSection";
+	DateSection["year"] = "myYearSection";
+	var today = new Date();
+	var yesterday = new Date(today);
+	var beforeMonth = new Date(yesterday);
+	beforeMonth.setMonth(beforeMonth.getMonth()-1);
+	var DefaultDate = new Array();
+	//
+	DefaultDate["day1"] = beforeMonth.customFormat("#YYYY##MM##DD#");
+	DefaultDate["month1"] = beforeMonth.customFormat("#YYYY##MM#");
+	DefaultDate["year1"] = beforeMonth.customFormat("#YYYY#");
+	//
+	DefaultDate["day2"] = yesterday.customFormat("#YYYY##MM##DD#");
+	DefaultDate["month2"] = yesterday.customFormat("#YYYY##MM#");
+	DefaultDate["year2"] = yesterday.customFormat("#YYYY#");
+	var gridId = "grid";
+	// 表格匯出設定
+	var excelSystem = new Object();
+	excelSystem.fileName = "export";
+	excelSystem.data = new Object();
+	excelSystem.titleName = new Object();
+	excelSystem.sheetName = new Array();
+	excelSystem.mapping = ["device"];
+	excelSystem.device = new Object();
+	
+	function Init(){
+		dateClick("day");
+		energyClick("power");
+		myEditDialog("myEditDiv");
+	}
+	// 日期click動作
+	function dateClick(dateType)
+	{	// calendar切換
+		inputSwitch("mySection1",DateSection[dateType]+"1",DefaultDate[dateType+"1"]);
+		inputSwitch("mySection2",DateSection[dateType]+"2",DefaultDate[dateType+"2"]);
+		// button切換
+		buttonSwitch("dateButton",dateType,"","btnSelect");
+		document.getElementById("dateType").value = dateType;
+	}
+	function energyClick(energyType)
+	{	// calendar切換
+		//inputSwitch("mySection1",DateSection[energyType]+"1",DefaultDate[energyType+"1"]);
+		//inputSwitch("mySection2",DateSection[energyType]+"2",DefaultDate[energyType+"2"]);
+		// button切換
+		buttonSwitch("energyButton",energyType,"","btnSelect");
+		document.getElementById("energyType").value = energyType;
+	}
+	function myEditDialog(dialogId)
+	{	// dialog設定
+		var dialogSet = new Object();
+		dialogSet.autoOpen = false;
+		dialogSet.height = 470;
+		dialogSet.width = 400;
+		dialogSet.position = { my: "right", at: "right", of: window };
+		// show & hide 動作
+		dialogSet.show= "blind";
+        dialogSet.hide= "blind";
+		dialogSet.modal = 'show';
+		// dialog open 動作
+		dialogSet.open = function()
+		{	// 清空已選擇設備資料
+			document.getElementById("myClickDevice").innerHTML = "";
+			document.getElementById("myClickDeviceValue").innerHTML = "";
+			// 自動呈現裝備清單
+			AutoRadioOption();
+		};
+		// dialog 設定
+	    $("#"+dialogId).dialog(dialogSet);
+	    // 按鈕-設備-click
+		$("#myDevice").click(function()
+		{ 	// 編輯畫面按鈕-查詢&新增&取消
+			dialogSet.buttons = new Object();
+			//
+			dialogSet.buttons["新增設備"] = function()
+			{	// 取得選取設備名稱與代號，name Array()，value Object()
+				var tempDevice = document.getElementById("myClickDevice").innerHTML;
+				document.getElementById("myDevice").value = tempDevice;
+				// stringify：Object to String
+				var tempDeviceValue = document.getElementById("myClickDeviceValue").innerHTML;
+				document.getElementById("deviceType").value = tempDeviceValue;
+				$(this).dialog("close");
+			}
+			//
+			dialogSet.buttons["取消選擇"] = function()
+			{	
+				$(this).dialog("close");
+			}
+	    	$("#"+dialogId).dialog(dialogSet);	// 重新產生dialog
+	        $("#"+dialogId).dialog("open");		// 開啟dialog
+	        return false;
+    	});
+	}
+	
+	function AutoRadioOption()
+	{	// 參數設定
+		// 能源類型
+	//	var energyType = EnergyDigitalCode[document.getElementById("energyType").value];
+		
+		var energyType = document.getElementById("energyType").value;
+		// SQL語法
+		var DBSql = new Array();
+		var mainSQL =	"select A.pk_chart_id,A.display_name,A.parent_chart_id,B.device_category " + 
+						"from tems_test3 A left join tems_test7 B " + 
+						"on A.pk_chart_id = B.pk_device_id "; 
+		
+		var orderSQL = 	"order by pk_chart_id,display_name";
+		//判斷能源類型
+		//alert(energyType);
+		switch(energyType){
+			
+			case "power":
+				var sql = "select A.pk_chart_id,A.display_name,A.parent_chart_id,B.device_category from tems_test3 A left join tems_test7 B on A.pk_chart_id = B.pk_device_id  where A.property ='1' and B.device_category = 1   order by pk_chart_id,display_name";
+			break;
+			case "water":
+				var sql = "select A.pk_chart_id,A.display_name,A.parent_chart_id,B.device_category from tems_test3 A left join tems_test7 B on A.pk_chart_id = B.pk_device_id  where A.property ='2' and B.device_category = 2   order by pk_chart_id,display_name";
+			break;
+		}
+		
+			//	var sql = mainSQL + "where" + selectSQL + orderSQL;
+				DBSql.push(sql);
+				
+			
+		
+		
+		//
+		var cmdSQL = document.getElementById("cmd");
+		cmdSQL.value = JSON.stringify(DBSql);
+		// 動態數據Tree
+		postForJSON('/tatungService/dbCmd/queryMultiData', formToMap('formSQL'), function (ret) 
+		{	
+			getMultiData(ret,function (status,msg,data)
+			{
+				if ( status == 1 )
+				{	// 成功
+					// 設定
+					var option = new Object();
+					option.id = "myClickTree";
+					// 選擇模式1(single selection) 2 (multiple selection) 3 (hierarchical multi-selection)
+					var selectMode = 3;
+					option.set = TreeListSet("myClickDevice","myClickDeviceValue",selectMode,9999);
+					// 已選擇設備種類
+					//option.selectDevice = energyType;
+					// 產生tree
+					TreeList(data,option);
+				}
+				else
+				{	// 失敗
+					alert("myEditDiv建置失败\n原因："+msg);
+				}
+			});
+    	});
+	}
+	function RawdataChartSet(){	// 資料檢查
+		var dataMsg = dataCheck();
+		if ( dataMsg.status == 1 )
+		{	// 資料檢查成功，設定資料
+			var getData = dataMsg.data;
+			for(var key in getData)
+				eval("var " + key + " = '" + getData[key] + "'");
+			// 已選設備清單
+			deviceType = JSON.parse(deviceType);
+			// 設備名稱與設備key-title
+			var dataName = new Array();
+			var dataKey = new Object();
+			for (var i=0; i<deviceType.length; i++)
+			{	
+				//alert(JSON.stringify(deviceType));
+				var deviceTemp = deviceType[i];
+				dataKey[deviceTemp.key] = deviceTemp.title;
+				dataName.push(deviceTemp.title);
+			}
+			// 表格匯出設定
+			excelSystem.device = dataKey;
+			excelSystem.sheetName = dataName;
+			// 圖表參數設定
+			var system1 = new Object();
+			system1.id = "container1";
+			// 標題
+			var title = "時段起讫 ("+dateFoematISO(TimeSection1)+"～"+dateFoematISO(TimeSection2)+")";
+			// 能源分枝
+			
+			var energyType = document.getElementById("energyType").value;
+				switch(energyType){
+					case "power":
+						var energyName = "用電量";
+						var energyUnit = "kWh";
+						var energyTitle = "電量(kWh)";
+					break;
+					case "water":
+						var energyName = "用水量";
+						var energyUnit = "公升";
+						var energyTitle = "水量(公升)";
+					break;
+				}
+			
+
+			// 圖表設定
+					system1.set = BarChartSet(dataName,title,"日期",energyName,energyUnit);
+
+			// 日期分枝
+			switch (dateType)
+			{	// 日期
+				case "day":
+					// SQL語法
+					var mainSQL = "SELECT fk_device_id as device,rawdata_yyyymmdd as date,usage as value FROM tems_usage_day";
+					//var selectSQL1 = " fk_device_id = '"+ deviceType +"' ";
+					var timeSQL = " ( rawdata_yyyymmdd between '"+ TimeSection1 +"' and '"+ TimeSection2 +"' ) " ;
+					var orderSQL = " order by date";
+					// 資料庫
+					var DBSql = new Array();
+					for(var key in dataKey)
+					{
+						var selectSQL1 = " fk_device_id = '"+ key +"' ";
+						var sql = mainSQL + " where " + selectSQL1 + " and " + timeSQL + orderSQL;
+						DBSql.push(sql);
+					}
+					break;
+				case "month":
+					var mainSQL = "SELECT fk_device_id as device,rawdata_yyyymm as date,usage as value FROM tems_test6";
+					//var selectSQL1 = " fk_device_id = '"+ deviceType +"' ";
+					var timeSQL = " ( rawdata_yyyymm between '"+ TimeSection1 +"' and '"+ TimeSection2 +"' ) " ;
+					var orderSQL = " order by date";
+					// 資料庫
+					var DBSql = new Array();
+					for(var key in dataKey)
+					{
+						var selectSQL1 = " fk_device_id = '"+ key +"' ";
+						var sql = mainSQL + " where " + selectSQL1 +  " and " + timeSQL + orderSQL;
+						DBSql.push(sql);
+						//alert(sql);
+					}
+					break;
+				case "year":
+					// 年份數值改寫，因為只有月檔資料
+					TimeSection1 = TimeSection1 + '01';
+					TimeSection2 = TimeSection2 + '12';
+					var mainSQL = "SELECT fk_device_id as device,SUBSTRING(rawdata_yyyymm,1,4) as date,CAST(sum(usage)as decimal(18,2)) as value FROM tems_test6";
+					//var selectSQL1 = " fk_device_id = '"+ deviceType +"' ";
+					var timeSQL = " ( rawdata_yyyymm between '"+ TimeSection1 +"' and '"+ TimeSection2 +"' ) " ;
+					var groupSQL = " group by fk_device_id,SUBSTRING(rawdata_yyyymm,1,4)";	// 分組
+					var orderSQL = " order by date";
+					// 資料庫
+					var DBSql = new Array();
+					for(var key in dataKey)
+					{
+						var selectSQL1 = " fk_device_id = '"+ key +"' ";
+						var sql = mainSQL + " where " + selectSQL1 + " and "  + timeSQL + groupSQL + orderSQL;
+						DBSql.push(sql);
+					}
+					break;
+			}
+			//alert(sql);
+			// 資料標題行
+			var titleName = { 'device':'設備名稱', 'date':'日期', 'value':energyTitle};
+			excelSystem.titleName = titleName;	// 表格匯出設定
+			// 資料標題寬度
+			var titleWidth = { 'device':160, 'date':160, 'value':140 };
+			// 資料類型
+			var rowType = {	'device':'select', 'date':'date', 'value':'integer'};
+			// 圖表分枝
+
+			// 表格設定
+			var gridID = "grid2"
+			var pagerID = "pager2";
+			var gridHeight = 125;
+			var gridWidth = 720;
+	
+			// 對照表(主要用於資料欄位select)
+			var rowOptions = new Object();
+			rowOptions.device = dataKey
+			//alert(JSON.stringify(dataKey));
+			// 表格參數設定
+			var system2 = new Object();
+				system2.set = TableGridSet(titleName,titleWidth,rowType,rowOptions,gridHeight,pagerID);
+				system2.id = gridID;
+				system2.width = gridWidth;
+				// 資料類型
+				system2.data_type = rowType;
+				// 資料代號轉換類型
+				system2.data_code = rowOptions;
+			var energyType = document.getElementById("energyType").value;
+			var system3 = new Object();
+				system3.id = "table-board";
+				system3.devicename = dataKey;
+				switch(energyType){
+					case "power":
+						system3.unit = "kWh";
+					break;
+					case "water":
+						system3.unit = "公升";
+					break;
+				}
+				
+			// 資料呈現
+			// SQL語法與取值
+			var cmdSQL = document.getElementById("cmd");
+			cmdSQL.value = JSON.stringify(DBSql);
+			postForJSON('/tatungService/dbCmd/queryMultiData', formToMap('formSQL'), function (ret) 
+			{	
+			
+				//alert(JSON.stringify(ret));
+				getMultiData(ret,function (status,msg,data)
+				{
+					if ( status == 1 )
+					{	
+						//alert(JSON.stringify(data));
+						cleanPage("bar");
+						// 成功，呈現畫面
+						BarChart(data,system1);
+						TableGrid(data,system2);
+						TableBoard(data,system3);
+						
+						excelSystem.data = data;
+						// 呈現Excel按鈕
+						document.getElementById('excel').style.display = "";
+					}
+					else
+					{	// 失敗
+						alert("能耗查询，建置失败\n原因："+msg);
+					}
+				});
+			});
+		}
+	}
+		// 清空表格與圖表內容
+	function cleanPage(chartType)
+	{
+		switch (chartType)
+		{
+			case "bar":
+			case "line":
+				document.getElementById("table1").innerHTML = "<div id='container1' style='height: 215px; margin: 0 auto'></div>";
+				break;
+			case "table":
+				document.getElementById("table1").innerHTML = "<div id='pager1'></div><table id='grid1'></table>";
+				break;
+		}
+		document.getElementById("table2").innerHTML = "<div id='pager2'></div><table id='grid2'></table>";
+		document.getElementById("table-board").innerHTML = "";
+	}
+	
+	function TableBoard(data,systemSet)
+	{	// 參數
+		var sum = 0;
+		var max = 0;
+		var maxDate = "";
+		var maxDevic = "";
+		var min = 0;
+		var minDate = "";
+		var minDevic = "";
+		// 計數
+		var dataNumber = 0;
+		// 計算相關資料
+		for(a=0;a<data.length;a++)
+		{
+			for(b=0;b<data[a].length;b++)
+			{	// 取值並轉換
+				var dataValue = parseFloat(data[a][b].value);
+				// 總和
+				sum += dataValue;
+				// 計數
+				dataNumber++;
+				if ( dataNumber == 1 )
+				{	// 初始化
+					max = dataValue;
+					maxDate = data[a][b].date;
+					maxDevice = data[a][b].device;
+					min = dataValue;
+					minDate = data[a][b].date
+					minDevice = data[a][b].device;
+				}
+				else
+				{	// 最大
+					if ( max < dataValue )
+					{
+						max = dataValue;
+						maxDate = data[a][b].date;
+						maxDevice = data[a][b].device;
+					}
+					// 最小
+					if ( min > dataValue )
+					{
+						min = dataValue;
+						minDate = data[a][b].date;
+						minDevice = data[a][b].device;
+					}
+				}
+			}
+		}
+		// Table 對應名稱
+		var tableArray = [ { title:"設備",style:"titleMax",name:systemSet.devicename[maxDevice] },
+						   { title:"最高",style:"titleMax",name:max.toFixed(2) + " " + systemSet.unit },
+						   { title:"日期",style:"titleMax",name:dateFoematISO(maxDate) },
+						   { title:"設備",style:"titleMin",name:systemSet.devicename[minDevice] },
+						   { title:"最低",style:"titleMin",name:min.toFixed(2) + " " + systemSet.unit },
+						   { title:"日期",style:"titleMin",name:dateFoematISO(minDate) },
+						   { title:"加總",style:"titleSum",name:sum.toFixed(2) + " " + systemSet.unit }];
+		var table = document.getElementById(systemSet.id);
+		// 清除表格
+		table.innerHTML = "";
+		//
+		for(a=0;a<tableArray.length;a++)
+		{
+			var dataRow = table.insertRow(a);
+			var cellData = dataRow.insertCell(0);
+			cellData.innerHTML = tableArray[a].title;
+			cellData.className = tableArray[a].style;
+			var cellData = dataRow.insertCell(1);
+			cellData.innerHTML = tableArray[a].name;
+			cellData.className = 'dataRow';
+		}
+	}
+	// 表格匯出設定
+	// Key轉換、資料代碼(device)轉換
+	function tableToExcel(type, fn, dl) 
+	{	
+		var wb = XLSX.utils.book_new();
+		var excelAllDataArray = new Array();
+		for(var Key in excelSystem.data)
+		{	
+			var excelDataArray = new Array();
+			for(var Key1 in excelSystem.data[Key])
+			{	
+				var excelDataObject = new Object();
+				// 資料標題行
+				for(var titleKey in excelSystem.titleName)
+				{
+					var titleKeyName = excelSystem.titleName[titleKey];
+					var titleKeyValue = excelSystem.data[Key][Key1][titleKey];
+					// 資料代碼(device)轉換
+					if ( excelSystem.mapping.indexOf(titleKey) > -1 )
+					{
+						titleKeyValue = excelSystem[titleKey][titleKeyValue];
+					}
+					excelDataObject[titleKeyName] = titleKeyValue;
+				}
+				excelDataArray.push(excelDataObject);
+				excelAllDataArray.push(excelDataObject);
+			}
+			// 放入轉換過資料
+			var ws = XLSX.utils.json_to_sheet(excelDataArray);
+			XLSX.utils.book_append_sheet(wb, ws, excelSystem.sheetName[Key]);
+		}
+		// 放入全部轉換過資料
+		var ws = XLSX.utils.json_to_sheet(excelAllDataArray);
+		XLSX.utils.book_append_sheet(wb, ws, "全部設備");
+		return dl ?
+		XLSX.write(wb, {bookType:type, bookSST:true, type: 'base64'}) :
+		XLSX.writeFile(wb, fn || (excelSystem.fileName + '.' + (type || 'xlsx')));
+	}
+	
+		</script>
+	<!-- END Javascript Code-->
+</head>
+<body onload="Init();">
+<div class="container">
+	<!-- MAIN -->
+	<div id="wrapper">
+		<div class="main">
+			<!-- MAIN CONTENT -->
+			<div class="main-content">
+				<div class="container-fluid">
+					<div class="row">
+						<div class='col-md-12' >
+							<div class="panel">
+								<button id = "day"  	name="dateButton" type="button" onclick="dateClick(this.id);">日</button>
+								<button id = "month"  	name="dateButton" type="button" onclick="dateClick(this.id);">月</button>
+								<button id = "year" 	name="dateButton" type="button" onclick="dateClick(this.id);">年</button>
+								<input type = "hidden" id = "dateType" value = "">
+								&nbsp
+								<button id = "power"  	name="energyButton" type="button" onclick="energyClick(this.id);">電</button>
+								<button id = "water" 	name="energyButton" type="button" onclick="energyClick(this.id);">水</button>
+								<input type = "hidden" id = "energyType" value = "">
+								
+								&nbsp
+								<input type="text" id="myDaySection1" 	name="mySection1" placeholder="资料起日" size="14" readonly>
+								<input type="text" id="myMonthSection1" name="mySection1" placeholder="资料起日" size="14" readonly>
+								<input type="text" id="myYearSection1" 	name="mySection1" placeholder="资料起日" size="14" readonly>
+								至
+								<input type="text" id="myDaySection2" 	name="mySection2" placeholder="资料迄日" size="14" readonly>
+								<input type="text" id="myMonthSection2" name="mySection2" placeholder="资料迄日" size="14" readonly>
+								<input type="text" id="myYearSection2" 	name="mySection2" placeholder="资料迄日" size="14" readonly>
+								&nbsp
+								&nbsp
+								設備選擇：
+								<input type = "text" 	id = "myDevice" placeholder="-請選擇-" readonly>
+								<input type = "hidden" 	id = "deviceType" value = "">
+								&nbsp
+								<button onclick="RawdataChartSet();">查詢</button>
+								
+								<button id = "excel" value="" onclick="tableToExcel('xlsx');" style= "display:none;">EXCEL</button>
+								<!-- SQL語法 -->
+								<form id="formSQL">
+									<input type = "hidden" id="cmd" name="cmd" value = "">
+								</form>
+								
+								<div id="myEditDiv" title="設備選擇">
+									<form>
+										<fieldset>
+											※設備選擇(可多選)：
+											<span id="myClickDevice"></span>
+											<span hidden id="myClickDeviceValue"></span>
+											<br><div id="myClickTree"></div>
+										</fieldset>
+									</form>
+								</div>
+								<div class="panel" id="table1">
+									<div id="pager1"></div>
+									<table id="grid1" ></table>
+									<div id="container1" style="height: 215px; margin: 0 auto"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+							
+					<div class="row">
+						<div class="col-md-9">
+							<div class="panel" id="table2">
+								<div id="pager2"></div>
+								<table id="grid2"  ></table>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="panel2">
+								<table align="left" id="table-board"></table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>		
+		</div>
+		<!-- END MAIN -->
+	</div>
+</div>
+</body>
+</html>

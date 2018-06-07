@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Niagara Presentation XML -->
+<px version="1.0" media="workbench:WbPxMedia">
+<import>
+  <module name="baja"/>
+  <module name="bajaui"/>
+  <module name="gx"/>
+  <module name="kitPx"/>
+  <module name="workbench"/>
+</import>
+<content>
+<ScrollPane>
+
+  <CanvasPane name="content" viewSize="1000.0,550.0" valign="top">
+
+    <Label layout="247.0,112.0,137.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <Label layout="247.0,152.0,137.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#b4b4b6"/>
+
+    <Label layout="108.0,112.0,137.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <Label layout="108.0,152.0,137.0,38.0" font="bold 14.0pt Microsoft YaHei" background="#d2d2d4"/>
+
+    <GenericFieldEditor layout="125.0,120.0,47.0,19.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/GreenHouse/AMPMSet/Hour_AMS1/schedule"/>
+    </GenericFieldEditor>
+
+    <Label layout="108.0,30.0,277.0,40.0" text="&#x65e5;&#x591c;&#x9593;&#x8a2d;&#x5b9a;" font="bold 22.0pt Microsoft JhengHei" foreground="white" background="#8dafb1"/>
+
+    <Label layout="15.0,112.0,91.0,38.0" text="&#x8349;&#x8393;&#x5340;" font="bold 14.0pt Microsoft YaHei" foreground="white" background="#666699"/>
+
+    <Label layout="15.0,152.0,91.0,38.0" text="&#x82b1;&#x5349;&#x5340;" font="bold 14.0pt Microsoft YaHei" foreground="white" background="#666699"/>
+
+    <SaveButton layout="890.0,510.0,100.0,30.0" image="module://icons/x16/save.png">
+      <WsAnnotation name="wsAnnotation" value="14,14,8"/>
+    </SaveButton>
+
+    <Label layout="108.0,72.0,137.0,38.0" text="&#x65e5;&#x9593;&#x958b;&#x59cb;&#x6642;&#x9593;" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#a39b86"/>
+
+    <Label layout="247.0,72.0,137.0,38.0" text="&#x591c;&#x9593;&#x958b;&#x59cb;&#x6642;&#x9593;" font="bold 16.0pt Microsoft JhengHei" foreground="white" background="#a39b86"/>
+
+    <Label layout="160.0,120.0,30.0,20.0" text="&#xff1a;" font="bold 12.0pt Microsoft JhengHei"/>
+
+    <GenericFieldEditor layout="180.0,120.0,50.0,19.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/GreenHouse/AMPMSet/Min_AMS1/schedule"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="320.0,120.0,50.0,19.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/GreenHouse/AMPMSet/Min_PMS1/schedule"/>
+    </GenericFieldEditor>
+
+    <Label layout="300.0,120.0,30.0,20.0" text="&#xff1a;" font="bold 12.0pt Microsoft JhengHei"/>
+
+    <GenericFieldEditor layout="265.0,120.0,47.0,19.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/GreenHouse/AMPMSet/Hour_PMS1/schedule"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="125.0,160.0,47.0,19.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/GreenHouse/AMPMSet/Hour_AMF1/schedule"/>
+    </GenericFieldEditor>
+
+    <Label layout="160.0,160.0,30.0,20.0" text="&#xff1a;" font="bold 12.0pt Microsoft JhengHei"/>
+
+    <GenericFieldEditor layout="180.0,160.0,50.0,19.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/GreenHouse/AMPMSet/Min_AMF1/schedule"/>
+    </GenericFieldEditor>
+
+    <GenericFieldEditor layout="320.0,160.0,50.0,19.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/GreenHouse/AMPMSet/Min_PMF1/schedule"/>
+    </GenericFieldEditor>
+
+    <Label layout="300.0,160.0,30.0,20.0" text="&#xff1a;" font="bold 12.0pt Microsoft JhengHei"/>
+
+    <GenericFieldEditor layout="265.0,160.0,47.0,19.0">
+      <WbFieldEditorBinding ord="station:|slot:/GH/GreenHouse/AMPMSet/Hour_PMF1/schedule"/>
+    </GenericFieldEditor>
+
+  </CanvasPane>
+
+</ScrollPane>
+</content>
+</px>

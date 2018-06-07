@@ -1,0 +1,11 @@
+<svg width="30" height="30" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="32" width="32" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <text xml:space="preserve" text-anchor="start" font-weight="bold" font-family="Microsoft JhengHei UI" font-size="14" id="alarm_number" y="20.5" x="1.101563" stroke-width="0" stroke="#000" fill="#000000">99+</text>
+ </g>
+</svg>

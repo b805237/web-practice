@@ -1,0 +1,416 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>资讯看板</title>
+	<!-- CSS -->
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+		<!-- Top bar -->
+		<link href="css/bar.css" rel="stylesheet" type="text/css">
+		<!-- 樣式 -->
+		<link href="css/main.css" rel="stylesheet" type="text/css">
+	<!-- End CSS -->
+	<!-- CSS SET -->
+	<style type="text/css">
+	/* 調整container畫面大小、位置 */
+	.container{
+		padding-right: 0px;
+ 		padding-left: 15px;
+		width:1150;
+		float:left;
+	}
+	/* 調整panel區塊間距 */
+	.panel {
+	  margin-top: 5px;
+	  margin-bottom: 5px;
+	}
+	
+	</style>
+	<!-- End CSS SET -->
+	<!-- Javascript -->
+		<!-- bajaScript model -->
+		<script type="text/javascript" src="js/bajascript/bs.min.js"></script>
+		<!-- jQuery 套件工具 -->
+		<script src="js/jquery/jquery.js"></script>
+		<!-- Web相關函數 -->
+		<script type="text/javascript" src="js/WebTool.js"></script>
+		<!-- Niagara資料讀取 -->
+		<script type="text/javascript" src="js/NiagaraDataJson.js"></script>
+		<!-- Slot處理函數 -->
+		<script type="text/javascript" src="js/SlotData.js"></script>
+		<!-- echarts 圖表 -->
+		<script type="text/javascript" src="js/echarts/echarts.js"></script>
+		<script type="text/javascript" src="js/echarts/macarons.js"></script>
+		<!-- 圖表設定與函數 -->
+		<script type="text/javascript" src="js/GraphChart.js"></script>
+		<!-- servlet套件 -->
+	    <script src="js/temsUtil.js"></script>
+	    <script src="js/ServletTool.js"></script>
+		<!-- 時間相關函數 -->
+		<script type="text/javascript" src="js/TimeTool.js"></script>
+		<!-- Dashboard -->
+		<!--<script type="text/javascript" src="set/Dashboard.js"></script>-->
+	<!-- End Javascript -->
+	
+	<!-- Javascript Code-->
+	<script type="text/javascript">
+	// 預設參數-7日小時內資料
+	var Now = new Date();
+	var Last7Days = new Date();
+	Last7Days.setDate(Last7Days.getDate()-6);
+	var Tomorrow = new Date();
+	Tomorrow.setDate(Tomorrow.getDate()+1);
+	// 預設參數
+	var DefaultDate = new Array();
+	DefaultDate["Now"] = Now.customFormat("#YYYY##MM##DD#");
+	DefaultDate["Last7Days"] = Last7Days.customFormat("#YYYY##MM##DD#");
+	DefaultDate["Tomorrow"] = Tomorrow.customFormat("#YYYY##MM##DD#");
+	
+	function Init()
+	{	// 啟動baja
+		baja.start();
+		// 執行showTime()
+		showTime(15*60,'time-text');
+		// container1
+		var dataName1 = ["日照時數"];
+		var system1 = new Object();
+		system1.id = "container1";
+		var title1 = "近七日日照時數　";
+		var xName1 = ""
+		var yName1 = "小時";
+		var yUnit1 = "";
+		system1.set = BarChartSet22(dataName1,title1,xName1,yName1,yUnit1,system1.id);
+		var DBSql1 = new Array();
+		var sql1 = "SELECT date,max(value) as value FROM " +
+					"(	SELECT " +
+					"	replace(convert(varchar, TIMESTAMP, 111), '/','-') as date," +
+					"	DATEPART(hour, TIMESTAMP) as hour," +
+					"	(JSON_VALUE(CAST(VALUE as nvarchar(max)),'$.d_ts')) as value" +
+					"	FROM HISTORYSTRINGTRENDRECORD where" +
+					"	HISTORY_ID = '/GH/Area0_WBCCollection_Cov01'" +
+					"	and DATEPART(hour, TIMESTAMP) != 0 " +
+					"	and CAST((JSON_VALUE(CAST(VALUE as nvarchar(max)),'$.d_ts')) as decimal(18,2) ) > 0 " +
+					") as A " +
+					" where ( date between '"+ DefaultDate["Last7Days"] +"' and '"+ DefaultDate["Tomorrow"] +"' ) " +
+					"GROUP by date " +
+					"order by date ";
+		DBSql1.push(sql1);
+		var cmdSQL = document.getElementById("cmd");
+			cmdSQL.value = JSON.stringify(DBSql1);
+			postForJSON('/tatungService/dbCmd/queryMultiData', formToMap('formSQL'), function (ret) 
+			{	
+				getMultiData(ret,function (status,msg,data)
+				{
+					if ( status == 1 )
+					{	
+						//alert(JSON.stringify(data));
+						// 成功，呈現畫面
+						SunBarChart(data,system1);
+					}
+					else
+					{	// 失敗
+						//alert("近七日日照時數，建置失败\n原因："+msg);
+					}
+				});
+			});
+		// 室外溫度 Area1_2in1Sensor3
+		// 草莓園溫度 Area1_2in1Sensor1 Area1_2in1Sensor2 Area1_2in1Sensor4 Area1_2in1Sensor5
+		// 花卉區溫度 Area2_2in1Sensor1
+		
+		// container2
+		var dataname = ["室外溫度","草莓園溫度","花卉區溫度"];
+		var system2 = new Object();
+		system2.set = PeriodComparisonChartSet(dataname,"line","本日溫度曲線","溫度","°C");
+		system2.id = "container2";
+		system2.period = "day";
+		// 
+		var nowday = DefaultDate["Now"];
+		//var nowday = '20180407';
+		// Sql
+		var sql1 =	"SELECT DATEPART(hour, rawdata_date) as unit, " +
+					"CAST(AVG(CAST (JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.temp') as float)) as decimal(18,2) ) AS value " +
+  					"FROM tems_rawdata_list where " +
+					"fk_device_id = 'Area0_WBCCollection' and " +
+					"CAST((JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.temp')) as decimal(18,2) ) > 0 and " +
+					"rawdata_yyyymmdd = '"+nowday+"' " +
+  					"group by DATEPART(hour, rawdata_date) order by DATEPART(hour, rawdata_date) ";
+		var sql2 =	"SELECT DATEPART(hour, rawdata_date) as unit, " +
+					"CAST(AVG(CAST (JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.inTempatrue') as float)) as decimal(18,2) ) AS value " +
+  					"FROM tems_rawdata_list where " +
+  					" fk_device_id in ('Area1_2in1Sensor1','Area1_2in1Sensor2','Area1_2in1Sensor4','Area1_2in1Sensor5') and " +
+					"rawdata_yyyymmdd = '"+nowday+"' " +
+  					"group by DATEPART(hour, rawdata_date) order by DATEPART(hour, rawdata_date) ";
+		var sql3 =	"SELECT DATEPART(hour, rawdata_date) as unit, " +
+					"CAST(AVG(CAST (JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.inTempatrue') as float)) as decimal(18,2) ) AS value " +
+  					"FROM tems_rawdata_list where " +
+  					"fk_device_id = 'Area2_2in1Sensor1' and " +
+					"rawdata_yyyymmdd = '"+nowday+"' " +
+  					"group by DATEPART(hour, rawdata_date) order by DATEPART(hour, rawdata_date) ";
+  					
+		var DBSql = [ sql1, sql2,sql3 ];
+		var cmdSQL = document.getElementById("cmd");
+			cmdSQL.value = JSON.stringify(DBSql);
+			postForJSON('/tatungService/dbCmd/queryMultiData', formToMap('formSQL'), function (ret) 
+				{	
+					getMultiData(ret,function (status,msg,data)
+					{
+						if ( status == 1 )
+						{	
+							//alert(JSON.stringify(data));
+							// 成功，呈現畫面
+							PeriodComparisonChart(data,system2);
+						}
+						else
+						{	// 失敗
+							//alert("本日溫度曲線，建置失敗\n原因："+msg);
+						}
+					});
+			});
+		
+		// container3
+		var dataname = ["室外高溫","室外低溫","草莓園高溫","草莓園低溫","花卉區高溫","花卉區低溫"];
+		var system3 = new Object();
+		system3.set = LineChartSet33(dataname,"近七日高低溫","","溫度","°C",null);
+		system3.id = "container3";
+		// SQL
+		var sql1 =	"SELECT rawdata_yyyymmdd as date, " +
+					"CAST(MAX(CAST (JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.temp') as float)) as decimal(18,2) ) AS value " +
+  					"FROM tems_rawdata_list where " +
+  					"fk_device_id = 'Area0_WBCCollection' and " +
+					"CAST((JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.temp')) as decimal(18,2) ) > 0 and " +
+					"( rawdata_yyyymmdd between '"+ DefaultDate["Last7Days"] +"' and '"+ DefaultDate["Now"] +"' ) " +
+  					"group by rawdata_yyyymmdd order by rawdata_yyyymmdd ";
+					
+		var sql2 =	"SELECT rawdata_yyyymmdd as date, " +
+					"CAST(MIN(CAST (JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.temp') as float)) as decimal(18,2) ) AS value " +
+  					"FROM tems_rawdata_list where " +
+  					"fk_device_id = 'Area0_WBCCollection' and " +
+					"CAST((JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.temp')) as decimal(18,2) ) > 0 and " +
+					"( rawdata_yyyymmdd between '"+ DefaultDate["Last7Days"] +"' and '"+ DefaultDate["Now"] +"' ) " +
+  					"group by rawdata_yyyymmdd order by rawdata_yyyymmdd ";
+  					
+		var sql3 =	"SELECT rawdata_yyyymmdd as date, " +
+					"CAST(MAX(CAST (JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.inTempatrue') as float)) as decimal(18,2) ) AS value " +
+  					"FROM tems_rawdata_list where " +
+  					"( fk_device_id = 'Area1_2in1Sensor1' or fk_device_id = 'Area1_2in1Sensor2' or fk_device_id = 'Area1_2in1Sensor4' or fk_device_id = 'Area1_2in1Sensor5') and " +
+					"( rawdata_yyyymmdd between '"+ DefaultDate["Last7Days"] +"' and '"+ DefaultDate["Now"] +"' ) " +
+  					"group by rawdata_yyyymmdd order by rawdata_yyyymmdd ";
+  					
+		var sql4 =	"SELECT rawdata_yyyymmdd as date, " +
+					"CAST(MIN(CAST (JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.inTempatrue') as float)) as decimal(18,2) ) AS value " +
+  					"FROM tems_rawdata_list where " +
+  					"( fk_device_id = 'Area1_2in1Sensor1' or fk_device_id = 'Area1_2in1Sensor2' or fk_device_id = 'Area1_2in1Sensor4' or fk_device_id = 'Area1_2in1Sensor5') and " +
+					"( rawdata_yyyymmdd between '"+ DefaultDate["Last7Days"] +"' and '"+ DefaultDate["Now"] +"' ) " +
+  					"group by rawdata_yyyymmdd order by rawdata_yyyymmdd ";
+		var sql5 =	"SELECT rawdata_yyyymmdd as date, " +
+					"CAST(MAX(CAST (JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.inTempatrue') as float)) as decimal(18,2) ) AS value " +
+  					"FROM tems_rawdata_list where " +
+  					"fk_device_id = 'Area2_2in1Sensor1' and " +
+					"( rawdata_yyyymmdd between '"+ DefaultDate["Last7Days"] +"' and '"+ DefaultDate["Now"] +"' ) " +
+  					"group by rawdata_yyyymmdd order by rawdata_yyyymmdd ";
+  					
+		var sql6 =	"SELECT rawdata_yyyymmdd as date, " +
+					"CAST(MIN(CAST (JSON_VALUE(CAST(rawdata as nvarchar(max)),'$.inTempatrue') as float)) as decimal(18,2) ) AS value " +
+  					"FROM tems_rawdata_list where " +
+  					"fk_device_id = 'Area2_2in1Sensor1' and " +
+					"( rawdata_yyyymmdd between '"+ DefaultDate["Last7Days"] +"' and '"+ DefaultDate["Now"] +"' ) " +
+  					"group by rawdata_yyyymmdd order by rawdata_yyyymmdd ";
+		// 
+
+		var DBSql = [ sql1,sql2,sql3,sql4,sql5,sql6 ];
+		var cmdSQL = document.getElementById("cmd");
+			cmdSQL.value = JSON.stringify(DBSql);
+			postForJSON('/tatungService/dbCmd/queryMultiData', formToMap('formSQL'), function (ret) 
+				{	
+					getMultiData(ret,function (status,msg,data)
+					{
+						if ( status == 1 )
+						{	
+							//alert(JSON.stringify(data));
+							
+							// 成功，呈現畫
+							LineChart(data,system3);
+						}
+						else
+						{	// 失敗
+							//alert("近七日高溫，建置失敗\n原因："+msg);
+						}
+					});
+			});
+		// container4
+		var dataname = ["草莓園","花卉區"];
+		var system4 = new Object();
+		system4.set = LineChartSet33(dataname,"近七日用電曲線","","  電耗量","°C",null);
+		system4.id = "container4";
+		// SQL
+		var mainSQL = "SELECT fk_device_id as device,rawdata_yyyymmdd as date,usage as value FROM tems_usage_day";
+		var timeSQL = " ( rawdata_yyyymmdd between '"+ DefaultDate["Last7Days"] +"' and '"+ DefaultDate["Now"] +"' ) " ;
+		var orderSQL = " order by date";
+		var selectSQL1 = " fk_device_id = 'Area1_EMETER' ";
+		var selectSQL2 = " fk_device_id = 'Area2_EMETER' ";
+		//
+		var sql1 = mainSQL + " where " + selectSQL1 + " and " + timeSQL + orderSQL;
+		var sql2 = mainSQL + " where " + selectSQL2 + " and " + timeSQL + orderSQL;
+		// 上期資料、本期資料
+		var DBSql = [ sql1,sql2 ];
+		// 資料呈現
+		// SQL語法與取值
+		var cmdSQL = document.getElementById("cmd");
+		cmdSQL.value = JSON.stringify(DBSql);
+		postForJSON('/tatungService/dbCmd/queryMultiData', formToMap('formSQL'), function (ret) 
+		{	
+			getMultiData(ret,function (status,msg,data)
+			{
+				if ( status == 1 )
+				{	// 成功，呈現畫面
+					LineChart(data,system4);
+				}
+				else
+				{	// 失敗
+					//alert("近七日用電曲線，建置失敗\n原因："+msg);
+				}
+			});
+		});
+		// container5
+		var dataname = ["溫室太陽能板"];
+		var system5 = new Object();
+		system5.set = LineChartSet33(dataname,"近七日發電曲線","","  發電量","kWh",null);
+		system5.id = "container5";
+		// SQL
+		var mainSQL = "SELECT fk_device_id as device,rawdata_yyyymmdd as date,usage as value FROM tems_usage_day";
+		var timeSQL = " ( rawdata_yyyymmdd between '"+ DefaultDate["Last7Days"] +"' and '"+ DefaultDate["Now"] +"' ) " ;
+		var orderSQL = " order by date";
+		var selectSQL1 = " fk_device_id = 'Area2_PV' ";
+		//var selectSQL2 = " fk_device_id = 'Area2_EMETER' ";
+		//
+		var sql1 = mainSQL + " where " + selectSQL1 + " and " + timeSQL + orderSQL;
+		//var sql2 = mainSQL + " where " + selectSQL2 + " and " + timeSQL + orderSQL;
+		// 上期資料、本期資料
+		var DBSql = [ sql1 ];
+		// 資料呈現
+		// SQL語法與取值
+		var cmdSQL = document.getElementById("cmd");
+		cmdSQL.value = JSON.stringify(DBSql);
+		postForJSON('/tatungService/dbCmd/queryMultiData', formToMap('formSQL'), function (ret) 
+		{	
+			getMultiData(ret,function (status,msg,data)
+			{
+				if ( status == 1 )
+				{	// 成功，呈現畫面
+					LineChart(data,system5);
+				}
+				else
+				{	// 失敗
+					//alert("近七日發電曲線，建置失敗\n原因："+msg);
+				}
+			});
+		});
+		// container6
+		var CO2Data = "station:|slot:/GH/CO2/out/value";
+		var CO2Object = new Object();
+		CO2Object.dataname = "out";
+		CO2Object.svgid = "CO2";
+		CO2Object.itemid = "CO2";
+		NiagaraSlotData(CO2Data, "SlotData2SVG",CO2Object);
+		var CO2TreeData = "station:|slot:/GH/CO2_Tree/out/value";
+		var CO2TreeObject = new Object();
+		CO2TreeObject.dataname = "out";
+		CO2TreeObject.svgid = "CO2";
+		CO2TreeObject.itemid = "CO2Tree";
+		NiagaraSlotData(CO2TreeData, "SlotData2SVG",CO2TreeObject);
+	}
+	// 網頁重整
+	function showTime(second)
+	{	// 網頁重整
+		if( second == 0 )
+		    window.location.reload();
+		// 倒數
+		second -= 1;
+		// 每秒執行一次,showTime()
+		var tempFun = "showTime(" + second + ")";
+		setTimeout(tempFun,1000);
+	}
+	</script>
+	<!-- END Javascript Code-->
+</head>
+<body onload="Init();">
+<div class="container">
+	<!-- MAIN -->
+	<div id="wrapper">
+		<div class="main">
+			<!-- MAIN CONTENT -->
+			<div class="main-content" style="background-color:#c7c7c9 ;width:1000px;height:555px;">
+			<div class="container-fluid">
+			<!-- 1 Row -->
+			<div class="row" style="margin-top: 15px;">
+				<div class="col-md-4">
+					<div class="panel">
+						<div class="panel-body">
+							<div id="container1" style="height: 225px; margin: 0 auto"></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="panel">
+						<div class="panel-body">
+							<div id="container2" style="height: 225px; margin: 0 auto"></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="panel">
+						<div class="panel-body">
+							<div id="container3" style="height: 225px; margin: 0 auto"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- END 1 Row -->
+			<!-- 2 Row -->
+			<div class="row" style="margin-top: 5px;">
+				<div class="col-md-4">
+					<div class="panel">
+						<div class="panel-body">
+							<div id="container4" style="height: 225px; margin: 0 auto;"></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="panel">
+						<div class="panel-body">
+							<div id="container5" style="height: 225px; margin: 0 auto;"></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="panel">
+						<div class="panel-body">
+							<div id="container6" style="height: 225px; margin: 0 auto;">
+								<embed id="CO2" src="images/CO2.svg" type="image/svg+xml" style="margin-left:20%; margin-top:5%"></embed>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- SQL語法 -->
+				<form id="formSQL">
+					<input type = "hidden" id="cmd" name="cmd" value = "">
+				</form>
+					<text id="sun" name="sun" style="display: none;"></text>
+					
+					<text id="areaName01" name="areaName01" style="display: none;"></text>
+					<text id="areaName02" name="areaName02" style="display: none;"></text>
+					<text id="areaName03" name="areaName03" style="display: none;"></text>
+					<text id="areaName04" name="areaName04" style="display: none;"></text>
+					<text id="areaName05" name="areaName05" style="display: none;"></text>
+					<text id="areaName06" name="areaName06" style="display: none;"></text>
+			</div>
+			<!-- END 3 Row -->
+			<!-- Niagara Data Debug -->
+			<!--<pre id="bajaScriptOut"></pre>-->
+		</div>
+		<!-- END MAIN -->
+	</div>
+</div>
+</body>
+</html>
